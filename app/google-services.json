@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "906048269168",
+    "project_id": "musicignitedatabase",
+    "storage_bucket": "musicignitedatabase.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:906048269168:android:a8f189fa986934acf9bdb5",
+        "android_client_info": {
+          "package_name": "com.example.musicignite"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAyIg-19CxQiBqn86jaMJq0KngDEjSMZcg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

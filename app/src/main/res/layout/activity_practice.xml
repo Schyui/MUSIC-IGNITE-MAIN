@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#DCDED3"
+    tools:context=".Practice_Activity">
+
+    <!--Test -->
+    <ImageView
+        android:id="@+id/musicIgniteLbl"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:src="@drawable/bgmenu2"
+        android:layout_marginBottom="60dp"
+        android:layout_marginTop="25dp"
+        android:layout_alignParentEnd="true"
+        />
+    <ImageView
+        android:id="@+id/bgmenu1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/bgmenuu"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="16dp"
+        android:adjustViewBounds="true"
+        android:scaleType="centerCrop"
+
+        />
+    <ImageView
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/backbtn"
+        android:layout_marginTop="50dp"
+        android:layout_marginLeft="20dp"
+        android:id="@+id/backBtn"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="200dp"
+        android:text="SELECT\nMODES"
+        android:textSize="50dp"
+        android:textAlignment="center"
+        android:layout_marginBottom="30dp"
+        android:scaleType="fitCenter"
+
+        />
+    <Button
+        android:id="@+id/perfectpitchBtn"
+        android:layout_width="250dp"
+        android:layout_height="70dp"
+
+        android:text="PERFECT PITCH"
+        android:textColor="@color/black"
+        android:backgroundTint="#F0F0F0"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="400dp"
+        android:layout_marginBottom="40dp"
+        android:textSize="20sp"
+        />
+
+    <Button
+        android:id="@+id/guessBtn"
+        android:layout_width="250dp"
+        android:layout_height="70dp"
+        android:text="GUESS THE NOTE"
+        android:layout_below="@+id/perfectpitchBtn"
+        android:textColor="@color/black"
+        android:backgroundTint="#F0F0F0"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp"
+        android:textSize="20sp"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+</RelativeLayout>
