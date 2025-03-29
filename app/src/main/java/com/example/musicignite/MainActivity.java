@@ -27,7 +27,7 @@ import com.google.android.material.navigation.NavigationView;
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
     private DrawerLayout drawerLayout;
     TextView username;
-    String usernameStr;
+    String usernameStr, name, test;
     Button learnBtn, practiceBtn,musicSheetBtn;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
