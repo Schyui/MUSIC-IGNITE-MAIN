@@ -2,6 +2,7 @@ package com.example.musicignite;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.widget.Button;
 import android.widget.ImageView;
 
 import androidx.activity.EdgeToEdge;
@@ -13,6 +14,7 @@ import androidx.core.view.WindowInsetsCompat;
 public class Practice_Activity extends AppCompatActivity {
 
     ImageView backBtn;
+    Button PerfectPitch;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -24,12 +26,17 @@ public class Practice_Activity extends AppCompatActivity {
             return insets;
         });
         backBtn = findViewById(R.id.backBtn);
+        PerfectPitch = findViewById(R.id.perfectpitchBtn);
     }
     @Override
     protected void onStart() {
         super.onStart();
         backBtn.setOnClickListener(view -> {
             Intent intent = new Intent(this, MainActivity.class);
+            startActivity(intent);
+        });
+        PerfectPitch.setOnClickListener(view -> {
+            Intent intent = new Intent(this, PerfectPitch.class);
             startActivity(intent);
         });
     }
