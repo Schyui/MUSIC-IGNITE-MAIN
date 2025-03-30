@@ -50,6 +50,18 @@ public class SignUpActivity extends AppCompatActivity {
                 String email = signupEmail.getText().toString();
                 String username = signupUsername.getText().toString();
                 String password = signupPassword.getText().toString();
+
+                if (name.isEmpty() || email.isEmpty() || username.isEmpty() || password.isEmpty()) {
+                    Toast.makeText(SignUpActivity.this, "Please fill in all fields!", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+
+                String emailPattern = "^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$";
+                if (!email.matches(emailPattern)) {
+                    Toast.makeText(SignUpActivity.this, "\"Invalid email! Format should be: example@domain.com", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+
                 HelperClass helperClass = new HelperClass(name, email, username, password);
                 reference.child(username).setValue(helperClass);
                 Toast.makeText(SignUpActivity.this, "You have signup successfully!", Toast.LENGTH_SHORT).show();
