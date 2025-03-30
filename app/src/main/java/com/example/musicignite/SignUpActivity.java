@@ -55,12 +55,21 @@ public class SignUpActivity extends AppCompatActivity {
                     Toast.makeText(SignUpActivity.this, "Please fill in all fields!", Toast.LENGTH_SHORT).show();
                     return;
                 }
-
+                if (name.length() > 15) {
+                    Toast.makeText(SignUpActivity.this, "Name cannot exceed 25 characters!", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+                if (username.length() > 15) {
+                    Toast.makeText(SignUpActivity.this, "Username cannot exceed 25 characters!", Toast.LENGTH_SHORT).show();
+                    return;
+                }
                 String emailPattern = "^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$";
                 if (!email.matches(emailPattern)) {
                     Toast.makeText(SignUpActivity.this, "\"Invalid email! Format should be: example@domain.com", Toast.LENGTH_SHORT).show();
                     return;
                 }
+
+
 
                 HelperClass helperClass = new HelperClass(name, email, username, password);
                 reference.child(username).setValue(helperClass);
