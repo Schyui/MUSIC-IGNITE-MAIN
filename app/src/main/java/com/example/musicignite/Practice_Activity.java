@@ -14,7 +14,8 @@ import androidx.core.view.WindowInsetsCompat;
 public class Practice_Activity extends AppCompatActivity {
 
     ImageView backBtn;
-    Button PerfectPitch;
+    Button PerfectPitchBtn;
+    Button GuessTheNoteBtn;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -26,7 +27,8 @@ public class Practice_Activity extends AppCompatActivity {
             return insets;
         });
         backBtn = findViewById(R.id.backBtn);
-        PerfectPitch = findViewById(R.id.perfectpitchBtn);
+        PerfectPitchBtn = findViewById(R.id.perfectpitchBtn);
+        GuessTheNoteBtn = findViewById(R.id.guessBtn);
     }
     @Override
     protected void onStart() {
@@ -35,8 +37,12 @@ public class Practice_Activity extends AppCompatActivity {
             Intent intent = new Intent(this, MainActivity.class);
             startActivity(intent);
         });
-        PerfectPitch.setOnClickListener(view -> {
+        PerfectPitchBtn.setOnClickListener(view -> {
             Intent intent = new Intent(this, PerfectPitch.class);
+            startActivity(intent);
+        });
+        GuessTheNoteBtn.setOnClickListener(view -> {
+            Intent intent = new Intent(this, GuessTheNote.class);
             startActivity(intent);
         });
     }
