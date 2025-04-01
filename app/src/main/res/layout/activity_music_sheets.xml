@@ -7,15 +7,14 @@
     android:layout_height="match_parent"
     android:background="#EDE7F6"
     tools:context=".MusicSheets_Activity">
+
     <ImageView
         android:id="@+id/musicIgniteLbl"
         android:layout_width="130dp"
         android:layout_height="130dp"
-        android:src="@drawable/bgmenu2"
-        android:layout_marginBottom="60dp"
-        android:layout_marginTop="25dp"
         android:layout_alignParentEnd="true"
-        />
+        android:layout_marginTop="25dp"
+        android:src="@drawable/bgmenu2" />
     <ImageView
         android:id="@+id/bgmenu1"
         android:layout_width="wrap_content"
@@ -53,19 +52,28 @@
         android:layout_toRightOf="@+id/search"
         android:layout_marginLeft="10dp"
         />
+
     <SearchView
         android:id="@+id/search"
         android:layout_width="295dp"
         android:layout_height="50dp"
-        tools:layout_editor_absoluteX="89dp"
-        tools:layout_editor_absoluteY="133dp"
         android:layout_marginTop="125dp"
         android:layout_marginLeft="30dp"
         android:queryHint="Search here..."
         android:iconifiedByDefault="false"
         android:background="@drawable/btn_border"
+        android:elevation="4dp"
         />
-
-
+    <ListView
+        android:id="@+id/listView"
+        android:layout_width="380dp"
+        android:layout_height="500dp"
+        android:layout_below="@id/search"
+        android:layout_centerHorizontal="true"
+        android:divider="@android:color/darker_gray"
+        android:dividerHeight="1dp"
+        android:background="@drawable/btn_border"
+        android:layout_marginTop="5dp"
+        />
 
 </RelativeLayout>
