@@ -16,6 +16,19 @@
         android:layout_marginLeft="20dp"
         android:id="@+id/backBtn"
         />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="150dp"
+        android:text="PERFECT\nPITCH"
+        android:textSize="50dp"
+        android:textAlignment="center"
+        android:layout_marginBottom="30dp"
+        android:scaleType="fitCenter"
+        android:fontFamily="@font/irish"
+        android:textColor="#000000"
+        />
     <ImageView
         android:id="@+id/bgmenu1"
         android:layout_width="wrap_content"
@@ -37,26 +50,30 @@
         android:layout_alignParentEnd="true"
         />
     <Button
-        android:id="@+id/perfectpitchBtn"
+        android:id="@+id/TimeRushBtn"
         android:layout_width="250dp"
         android:layout_height="70dp"
         android:text="TIME RUSH!"
-        android:textColor="@color/black"
-        android:backgroundTint="#F0F0F0"
+        android:textColor="@color/lavender"
+
+        android:background="@drawable/btn_border"
         android:fontFamily="@font/irish"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="300dp"
         android:layout_marginBottom="40dp"
         android:textSize="25sp"
+
         />
+
     <Button
-        android:id="@+id/guessBtn"
+        android:id="@+id/allInBtn"
         android:layout_width="250dp"
         android:layout_height="70dp"
         android:text="ALL IN!"
-        android:layout_below="@+id/perfectpitchBtn"
-        android:textColor="@color/black"
-        android:backgroundTint="#F0F0F0"
+        android:layout_below="@+id/TimeRushBtn"
+        android:textColor="@color/lavender"
+
+        android:background="@drawable/btn_border"
         android:fontFamily="@font/irish"
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true"
