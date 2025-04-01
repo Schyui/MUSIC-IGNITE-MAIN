@@ -1,5 +1,6 @@
 package com.example.musicignite;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
@@ -14,6 +15,10 @@ import androidx.core.view.WindowInsetsCompat;
 public class GuessTheNote extends AppCompatActivity {
 
     ImageView backBtn;
+    Button easyBtn;
+    Button mediumBtn;
+    Button hardBtn;
+    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -25,6 +30,9 @@ public class GuessTheNote extends AppCompatActivity {
             return insets;
         });
         backBtn = findViewById(R.id.backBtn);
+        easyBtn = findViewById(R.id.easyBtn);
+        mediumBtn = findViewById(R.id.mediumBtn);
+        hardBtn = findViewById(R.id.hardBtn);
     }
 
     @Override
@@ -32,6 +40,18 @@ public class GuessTheNote extends AppCompatActivity {
         super.onStart();
         backBtn.setOnClickListener(v -> {
             Intent intent = new Intent(this, Practice_Activity.class);
+            startActivity(intent);
+        });
+        easyBtn.setOnClickListener(v -> {
+            Intent intent = new Intent(this, GtnEasy.class);
+            startActivity(intent);
+        });
+        mediumBtn.setOnClickListener(v -> {
+            Intent intent = new Intent(this, GtnMedium.class);
+            startActivity(intent);
+        });
+        hardBtn.setOnClickListener(v -> {
+            Intent intent = new Intent(this, GtnHard.class);
             startActivity(intent);
         });
     }

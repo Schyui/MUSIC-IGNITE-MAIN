@@ -50,7 +50,7 @@
         android:layout_alignParentEnd="true"
         />
     <Button
-        android:id="@+id/beginnerBtn"
+        android:id="@+id/easyBtn"
         android:layout_width="250dp"
         android:layout_height="70dp"
         android:text="Easy"
@@ -65,11 +65,11 @@
         />
 
     <Button
-        android:id="@+id/intermediateBtn"
+        android:id="@+id/mediumBtn"
         android:layout_width="250dp"
         android:layout_height="70dp"
         android:text="Medium"
-        android:layout_below="@+id/beginnerBtn"
+        android:layout_below="@+id/easyBtn"
         android:textColor="#FADF04"
 
         android:background="@drawable/medium_btn"
@@ -81,11 +81,11 @@
         />
 
     <Button
-        android:id="@+id/advancedBtn"
+        android:id="@+id/hardBtn"
         android:layout_width="250dp"
         android:layout_height="70dp"
         android:text="Hard"
-        android:layout_below="@id/intermediateBtn"
+        android:layout_below="@id/mediumBtn"
         android:textColor="#FD3F3F"
 
         android:background="@drawable/hard_btn"

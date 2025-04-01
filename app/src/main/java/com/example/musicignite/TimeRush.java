@@ -1,7 +1,9 @@
 package com.example.musicignite;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
+import android.widget.Button;
 import android.widget.ImageView;
 
 import androidx.activity.EdgeToEdge;
@@ -12,6 +14,8 @@ import androidx.core.view.WindowInsetsCompat;
 
 public class TimeRush extends AppCompatActivity {
     ImageView backBtn;
+
+    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -23,6 +27,7 @@ public class TimeRush extends AppCompatActivity {
             return insets;
         });
         backBtn = findViewById(R.id.backBtn);
+
     }
     @Override
     protected void onStart() {

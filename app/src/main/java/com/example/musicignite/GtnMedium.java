@@ -1,9 +1,8 @@
 package com.example.musicignite;
 
-import android.annotation.SuppressLint;
 import android.content.Intent;
+import android.media.Image;
 import android.os.Bundle;
-import android.widget.Button;
 import android.widget.ImageView;
 
 import androidx.activity.EdgeToEdge;
@@ -12,15 +11,13 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-public class AllIn extends AppCompatActivity {
+public class GtnMedium extends AppCompatActivity {
     ImageView backBtn;
-   Button AllInBtn;
-    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_all_in);
+        setContentView(R.layout.activity_gtn_medium);
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
@@ -29,12 +26,11 @@ public class AllIn extends AppCompatActivity {
         backBtn = findViewById(R.id.backBtn);
     }
     @Override
-    protected void onStart() {
+    protected void  onStart() {
         super.onStart();
         backBtn.setOnClickListener(v -> {
-            Intent intent = new Intent(this, PerfectPitch.class);
+            Intent intent = new Intent(this, GuessTheNote.class);
             startActivity(intent);
         });
     }
-
 }
