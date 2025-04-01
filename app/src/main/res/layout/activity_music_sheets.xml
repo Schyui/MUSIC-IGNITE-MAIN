@@ -50,8 +50,8 @@
         android:layout_height="50dp"
         android:src="@drawable/plusicon"
         android:layout_marginTop="120dp"
-        android:layout_toRightOf="@+id/searchEditTxt"
-        android:layout_marginLeft="30dp"
+        android:layout_toRightOf="@+id/search"
+        android:layout_marginLeft="10dp"
         />
     <SearchView
         android:id="@+id/search"
@@ -60,20 +60,12 @@
         tools:layout_editor_absoluteX="89dp"
         tools:layout_editor_absoluteY="133dp"
         android:layout_marginTop="125dp"
-        android:layout_marginLeft="15dp"
+        android:layout_marginLeft="30dp"
+        android:queryHint="Search here..."
+        android:iconifiedByDefault="false"
+        android:background="@drawable/btn_border"
         />
-    <EditText
-        android:id="@+id/searchEditTxt"
-        android:layout_width="250dp"
-        android:layout_height="40dp"
-        android:ems="10"
-        android:inputType="text"
-        android:hint="Search"
-        tools:layout_editor_absoluteX="89dp"
-        tools:layout_editor_absoluteY="133dp"
-        android:layout_marginTop="130dp"
-        android:layout_marginLeft="60dp"
-        />
+
 
 
 </RelativeLayout>
