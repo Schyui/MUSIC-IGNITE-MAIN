@@ -37,7 +37,6 @@
         android:src="@drawable/speakerquiz_btn"
         android:background="@drawable/btn_border"/>
 
-    <!-- Countdown Timer Display -->
     <TextView
         android:id="@+id/timerText"
         android:layout_width="wrap_content"
@@ -50,7 +49,6 @@
         android:textStyle="bold"
         android:textColor="#000"/>
 
-    <!-- Six Choices in Two Rows and Three Columns -->
     <GridLayout
         android:id="@+id/choicesGrid"
         android:layout_width="wrap_content"
