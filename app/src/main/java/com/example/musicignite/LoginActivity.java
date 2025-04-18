@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.annotation.NonNull;
@@ -15,6 +16,8 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -90,49 +93,56 @@ public class LoginActivity extends AppCompatActivity {
             return true;
         }
     }
-    public void checkUser(){
-        String userUsername = loginUsername.getText().toString().trim();
-        String userPassword = loginPassword.getText().toString().trim();
-
+    public void checkUser() {
+        String usernameInput = loginUsername.getText().toString().trim();
+        String passwordInput = loginPassword.getText().toString().trim();
 
         DatabaseReference reference = FirebaseDatabase.getInstance().getReference("users");
-        Query checkUserDatabase = reference.orderByChild("username").equalTo(userUsername);
+        Query checkUserDatabase = reference.orderByChild("username").equalTo(usernameInput);
+
         checkUserDatabase.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
-                if (snapshot.exists()){
-                    loginUsername.setError(null);
-                    String passwordFromDB = snapshot.child(userUsername).child("password").getValue(String.class);
-                    if (passwordFromDB.equals(userPassword)) {
-                        loginUsername.setError(null);
-                        String nameFromDB = snapshot.child(userUsername).child("name").getValue(String.class);
-                        String emailFromDB = snapshot.child(userUsername).child("email").getValue(String.class);
-                        String usernameFromDB = snapshot.child(userUsername).child("username").getValue(String.class);
-                        Intent intent = new Intent(LoginActivity.this, MainActivity.class);
-                        intent.putExtra("name", nameFromDB);
-                        intent.putExtra("email", emailFromDB);
-                        intent.putExtra("username", usernameFromDB);
-                        intent.putExtra("password", passwordFromDB);
+                if (snapshot.exists()) {
+                    for (DataSnapshot userSnapshot : snapshot.getChildren()) {
+                        String email = userSnapshot.child("email").getValue(String.class);
 
-                        //SEND TO MAIN ACTIVITY: para naka stay lang ang username
-                        SharedPreferences prefs = getSharedPreferences("MyPrefs", MODE_PRIVATE);
-                        SharedPreferences.Editor editor = prefs.edit();
-                        editor.putString("username", usernameFromDB);
-                        editor.apply();
+                        // login using email and password via Firebase Authenticblahblah
+                        FirebaseAuth.getInstance().signInWithEmailAndPassword(email, passwordInput)
+                                .addOnCompleteListener(task -> {
+                                    if (task.isSuccessful()) {
+                                        String name = userSnapshot.child("name").getValue(String.class);
 
-                        startActivity(intent);
-                    } else {
-                        loginPassword.setError("Invalid Credentials");
-                        loginPassword.requestFocus();
+                                        Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+                                        intent.putExtra("name", name);
+                                        intent.putExtra("username", usernameInput);
+                                        intent.putExtra("email", email);
+
+                                        SharedPreferences prefs = getSharedPreferences("MyPrefs", MODE_PRIVATE);
+                                        SharedPreferences.Editor editor = prefs.edit();
+                                        editor.putString("username", usernameInput);
+                                        editor.apply();
+
+                                        startActivity(intent);
+                                    } else {
+                                        loginPassword.setError("Invalid password");
+                                        loginPassword.requestFocus();
+                                    }
+                                });
                     }
                 } else {
-                    loginUsername.setError("User does not exist");
+                    loginUsername.setError("Username not found");
                     loginUsername.requestFocus();
                 }
             }
+
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
+                Toast.makeText(LoginActivity.this, "Database error: " + error.getMessage(), Toast.LENGTH_SHORT).show();
             }
         });
     }
+
 }
+
+
