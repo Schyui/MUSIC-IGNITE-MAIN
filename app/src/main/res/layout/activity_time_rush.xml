@@ -44,7 +44,7 @@
         android:layout_below="@id/speakerQuizBtn"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="10dp"
-        android:text="10"
+        android:text=""
         android:textSize="24sp"
         android:textStyle="bold"
         android:textColor="#000"/>

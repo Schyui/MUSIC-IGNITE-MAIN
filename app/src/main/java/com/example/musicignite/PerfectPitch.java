@@ -2,10 +2,13 @@ package com.example.musicignite;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.LayoutInflater;
+import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 
 import androidx.activity.EdgeToEdge;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
@@ -16,6 +19,7 @@ public class PerfectPitch extends AppCompatActivity {
     ImageView backBtn;
     Button TimeRushBtn;
     Button AllInBtn;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -29,7 +33,58 @@ public class PerfectPitch extends AppCompatActivity {
         backBtn = findViewById(R.id.backBtn);
         TimeRushBtn = findViewById(R.id.TimeRushBtn);
         AllInBtn = findViewById(R.id.allInBtn);
+
     }
+
+    private void timeOptions() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        LayoutInflater inflater = this.getLayoutInflater();
+        View dialogView = inflater.inflate(R.layout.time_options, null);
+        builder.setView(dialogView);
+        AlertDialog dialog = builder.create();
+
+        // back btn ng drawable
+        ImageView timeOptionsBackBtn = dialogView.findViewById(R.id.timeOptionsBackBtn);
+        timeOptionsBackBtn.setOnClickListener(v -> dialog.dismiss());
+
+
+
+        Button min1 = dialogView.findViewById(R.id.min1btn);
+        Button min3 = dialogView.findViewById(R.id.min3btn);
+        Button min5 = dialogView.findViewById(R.id.min5btn);
+        Button min10 = dialogView.findViewById(R.id.min10btn);
+
+        // mga click listeners ng btn
+        min1.setOnClickListener(v -> {
+            startTimeRush(1);
+            dialog.dismiss();
+        });
+
+        min3.setOnClickListener(v -> {
+            startTimeRush(3);
+            dialog.dismiss();
+        });
+
+        min5.setOnClickListener(v -> {
+            startTimeRush(5);
+            dialog.dismiss();
+        });
+
+        min10.setOnClickListener(v -> {
+            startTimeRush(10);
+            dialog.dismiss();
+        });
+
+        dialog.show();
+    }
+
+    // method nung mga timers
+    private void startTimeRush(int minutes) {
+        Intent intent = new Intent(this, TimeRush.class);
+        intent.putExtra("timeLimit", minutes); // pag pasa nung selected time
+        startActivity(intent);
+    }
+
     @Override
     protected void onStart(){
         super.onStart();
@@ -37,10 +92,7 @@ public class PerfectPitch extends AppCompatActivity {
             Intent intent = new Intent(this, Practice_Activity.class);
             startActivity(intent);
         });
-        TimeRushBtn.setOnClickListener(v -> {
-            Intent intent = new Intent (this, TimeRush.class);
-            startActivity(intent);
-        });
+        TimeRushBtn.setOnClickListener(v -> timeOptions());
         AllInBtn.setOnClickListener(v -> {
             Intent intent = new Intent (this, AllIn.class);
             startActivity(intent);

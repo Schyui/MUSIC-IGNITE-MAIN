@@ -33,9 +33,9 @@ public class TimeRush extends AppCompatActivity {
     private MediaPlayer mediaPlayer;
     private CountDownTimer timer;
     private boolean quizStarted = false;
-    private boolean timerRunning = false; // New flag to track timer state
+    private boolean timerRunning = false;
 
-    // tunog ng mga quiz
+    // tunog ng mga quiz and answer, yung may"" yung ans na nandun sa loob ng button yung raw naman ano sha location nung tunog
     private final HashMap<String, Integer> soundMap = new HashMap<String, Integer>() {{
         put("A", R.raw.note_a);
         put("B", R.raw.note_b);
@@ -46,11 +46,18 @@ public class TimeRush extends AppCompatActivity {
         put("G", R.raw.note_g);
     }};
 
+    private long totalTimeInMillis; // <-- added to hold selected time
+
     @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_time_rush);
+
+        // get the selected time from PerfectPitch (default 60 seconds if none)
+        Intent intent = getIntent();
+        int timeLimit = intent.getIntExtra("timeLimit", 1); // default 1 min if not passed
+        totalTimeInMillis = timeLimit * 60 * 1000;
 
         backBtn = findViewById(R.id.backBtn);
         speakerQuizBtn = findViewById(R.id.speakerQuizBtn);
@@ -65,9 +72,18 @@ public class TimeRush extends AppCompatActivity {
         choiceButtons[5] = findViewById(R.id.choice6);
 
         backBtn.setOnClickListener(v -> {
-            Intent intent = new Intent(this, PerfectPitch.class);
-            startActivity(intent);
+
+            AlertDialog.Builder builder = new AlertDialog.Builder(TimeRush.this);
+            builder.setTitle("Warning!")
+                    .setMessage("You will lose your progress")
+                    .setPositiveButton("Yes", (dialog, which) -> {
+                        Intent backIntent = new Intent(this, PerfectPitch.class);
+                        startActivity(backIntent);
+                    })
+                    .setNegativeButton("No", (dialog, which) -> {})
+                    .show();
         });
+
         // if napindot na yung speaker na image tsaka lang lalabas yung mga answers na pagpipilian sa buttons
         speakerQuizBtn.setOnClickListener(v -> {
             if (!quizStarted) {
@@ -75,6 +91,7 @@ public class TimeRush extends AppCompatActivity {
                 currentQuestionIndex = 0;
                 score = 0;
                 quizStarted = true;
+                startTimer(); // start timer once
                 playQuestion(currentQuestionIndex);
             } else {
                 playCurrentSound(); // Play sound without restarting the quiz
@@ -85,6 +102,7 @@ public class TimeRush extends AppCompatActivity {
             button.setOnClickListener(this::handleAnswer);
         }
     }
+
     // eto yung nag s-shuffle ng mga tanong everytime na pininpindot yung time rush
     private void generateQuestions() {
         List<String> notes = new ArrayList<>(soundMap.keySet());
@@ -105,6 +123,26 @@ public class TimeRush extends AppCompatActivity {
         }
     }
 
+    private void startTimer() {
+        if (!timerRunning) {
+            timerRunning = true;
+            timer = new CountDownTimer(totalTimeInMillis, 1000) {
+                @Override
+                public void onTick(long millisUntilFinished) {
+                    long seconds = (millisUntilFinished / 1000) % 60;
+                    long minutes = (millisUntilFinished / 1000) / 60;
+                    timerText.setText(String.format("Time Left: %02d:%02d", minutes, seconds));
+                }
+
+                @Override
+                public void onFinish() {
+                    timerRunning = false;
+                    showQuizEndDialog(); // end the whole quiz when time runs out
+                }
+            }.start();
+        }
+    }
+
     private void playQuestion(int index) {
         resetButtons();
         Question q = questions.get(index);
@@ -115,23 +153,6 @@ public class TimeRush extends AppCompatActivity {
         }
 
         playCurrentSound();
-
-        if (!timerRunning) { // eto yung nag p-prevent ng muliple timer pag ni click uli yung speaker btn
-            timerRunning = true; // eto yung nag p-prevent para di na ma reset yung timer everytime na
-            // gusto ni user na pindutin uli yung speaker btn
-            timer = new CountDownTimer(10000, 1000) {
-                @Override
-                public void onTick(long millisUntilFinished) {
-                    timerText.setText("Time Left: " + millisUntilFinished / 1000 + "s");
-                }
-
-                @Override
-                public void onFinish() {
-                    timerRunning = false;
-                    revealAnswer(null);
-                }
-            }.start();
-        }
     }
 
     private void playCurrentSound() {
@@ -148,8 +169,6 @@ public class TimeRush extends AppCompatActivity {
             return;
         }
 
-        timer.cancel();
-        timerRunning = false;
         Button selectedButton = (Button) view;
         String selectedText = selectedButton.getText().toString();
         revealAnswer(selectedText);
@@ -184,8 +203,14 @@ public class TimeRush extends AppCompatActivity {
             }
         }, 1500);
     }
+
     private void showQuizEndDialog() {
-        runOnUiThread(() -> { // Ensures yung UI update na mag run sa main thread
+        runOnUiThread(() -> {
+            if (timer != null) {
+                timer.cancel(); // stop timer if still running
+                timerRunning = false;
+            }
+
             AlertDialog.Builder builder = new AlertDialog.Builder(TimeRush.this);
             builder.setTitle("Quiz Finished!")
                     .setMessage("Your score: " + score + "/10\nDo you want to take the quiz again?")
@@ -193,8 +218,9 @@ public class TimeRush extends AppCompatActivity {
                         quizStarted = false;
                         score = 0;
                         currentQuestionIndex = 0;
+                        timerText.setText("Time Left: 00:00");
                         generateQuestions();
-                        timerText.setText("Time Left: 10s");
+                        startTimer();
                         quizStarted = true;
                         playQuestion(currentQuestionIndex);
                     })
@@ -202,6 +228,7 @@ public class TimeRush extends AppCompatActivity {
                     .show();
         });
     }
+
     private void resetButtons() {
         for (Button b : choiceButtons) {
             b.setBackgroundResource(R.drawable.btn_border);
