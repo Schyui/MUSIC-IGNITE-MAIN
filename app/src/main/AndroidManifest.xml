@@ -2,8 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
     <application
         android:allowBackup="true"
@@ -15,6 +15,21 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar"
         tools:targetApi="31">
+        <activity
+            android:name=".Learn_Chords"
+            android:exported="false" />
+        <activity
+            android:name=".Learn_Intervals"
+            android:exported="false" />
+        <activity
+            android:name=".Learn_ScalesAndSignatures"
+            android:exported="false" />
+        <activity
+            android:name=".Learn_Rhythm"
+            android:exported="false" />
+        <activity
+            android:name=".Learn_Basics"
+            android:exported="false" />
         <activity
             android:name=".GtnHard"
             android:exported="false" />

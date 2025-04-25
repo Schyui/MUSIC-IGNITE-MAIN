@@ -14,7 +14,7 @@ import androidx.core.view.WindowInsetsCompat;
 public class Learn_Activity extends AppCompatActivity {
 
     ImageView backBtn;
-    Button beginnerBtn, intermediateBtn, advancedBtn;
+    Button Basics, Rhythm, ScalesAndSignatures, Intervals, Chords;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -25,9 +25,12 @@ public class Learn_Activity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
-        beginnerBtn = findViewById(R.id.beginnerBtn);
-        intermediateBtn = findViewById(R.id.intermediateBtn);
-        advancedBtn = findViewById(R.id.advancedBtn);
+        Basics = findViewById(R.id.basicBtn);
+        Rhythm = findViewById(R.id.rhythmBtn);
+        ScalesAndSignatures = findViewById(R.id.scales_signaturesBtn);
+        Intervals = findViewById(R.id.intervalsBtn);
+        Chords = findViewById(R.id.chordsBtn);
+
         backBtn = findViewById(R.id.backBtn);
     }
 
@@ -39,18 +42,28 @@ public class Learn_Activity extends AppCompatActivity {
             startActivity(intent);
 
         });
-        beginnerBtn.setOnClickListener(view -> {
-            Intent intent = new Intent(this, Beginner_path.class);
+        Basics.setOnClickListener(view -> {
+            Intent intent = new Intent(this, Learn_Basics.class);
             startActivity(intent);
         });
 
-        intermediateBtn.setOnClickListener(view -> {
-            Intent intent = new Intent(this, Intermediate_path.class);
+        Rhythm.setOnClickListener(view -> {
+            Intent intent = new Intent(this, Learn_Rhythm.class);
             startActivity(intent);
         });
 
-        advancedBtn.setOnClickListener(view -> {
-            Intent intent = new Intent(this, Advanced_path.class);
+        ScalesAndSignatures.setOnClickListener(view -> {
+            Intent intent = new Intent(this, Learn_ScalesAndSignatures.class);
+            startActivity(intent);
+        });
+
+        Intervals.setOnClickListener(view -> {
+            Intent intent = new Intent(this, Learn_Intervals.class);
+            startActivity(intent);
+        });
+
+        Chords.setOnClickListener(view -> {
+            Intent intent = new Intent(this, Learn_Chords.class);
             startActivity(intent);
         });
     }

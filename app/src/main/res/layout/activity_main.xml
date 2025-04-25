@@ -45,7 +45,7 @@
             android:layout_height="300dp"
             android:scaleType="fitCenter"
             android:src="@drawable/bgmenu2"
-            android:layout_marginTop="190dp"
+            android:layout_marginTop="130dp"
             android:layout_marginBottom="60dp"
             android:layout_centerHorizontal="true" />
         <!--
