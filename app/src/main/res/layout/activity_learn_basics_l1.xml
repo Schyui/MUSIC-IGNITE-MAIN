@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EDE7F6"
+    tools:context=".Learn_Basics_L1">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" >
+
+                        <ImageView
+                            android:id="@+id/backBtn"
+                            android:layout_width="30dp"
+                            android:layout_height="40dp"
+                            android:src="@drawable/backbtn"
+                            />
+
+                        <TextView
+                            android:id="@+id/l1_title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="20dp"
+                            android:layout_centerHorizontal="true"
+                            android:text="The Staff, Clefs, and Ledger Lines"
+                            android:textSize="25sp"
+                            android:textAlignment="center"
+                            android:textColor="@color/black"
+                            android:fontFamily="@font/tagesschriftregular"
+                            />
+
+                        <View
+                            android:id="@+id/line1"
+                            android:layout_width="450dp"
+                            android:layout_height="1dp"
+                            android:layout_below="@+id/l1_title"
+                            android:layout_marginTop="15dp"
+                            android:background="@color/black" />
+
+                        <TextView
+                            android:id="@+id/l1_text1"
+                            android:layout_width="380sp"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/line1"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="20dp"
+                            android:fontFamily="@font/tienneregular"
+                            android:text="• The staff is the foundation upon which notes are drawn."
+                            android:textColor="@color/black"
+                            android:textSize="16sp" />
+
+                        <ImageView
+                            android:id="@+id/l1_img1"
+                            android:layout_width="match_parent"
+                            android:layout_height="130dp"
+                            android:layout_below="@+id/l1_text1"
+                            android:background="@drawable/l1_image1"
+                            android:layout_marginTop="10dp"
+                            />
+
+                        <View
+                            android:id="@+id/line2"
+                            android:layout_width="450dp"
+                            android:layout_height="1dp"
+                            android:layout_below="@+id/l1_img1"
+                            android:layout_marginTop="15dp"
+                            android:background="@color/black" />
+
+                        <TextView
+                            android:id="@+id/l1_text2"
+                            android:layout_width="380sp"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/line2"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="20dp"
+                            android:fontFamily="@font/tienneregular"
+                            android:text="• The Modern staff compromises five lines and four spaces."
+                            android:textColor="@color/black"
+                            android:textSize="16sp" />
+
+                        <ImageView
+                            android:id="@+id/l1_img2"
+                            android:layout_width="match_parent"
+                            android:layout_height="130dp"
+                            android:layout_below="@+id/l1_text2"
+                            android:background="@drawable/l1_image2"
+                            android:layout_marginTop="10dp"
+                            />
+
+
+                        <!--<ImageButton
+                            android:id="@+id/nxtPg2"
+                            android:layout_width="100dp"
+                            android:layout_height="50dp"
+                            android:layout_marginStart="260dp"
+                            android:layout_marginTop="800dp"
+                            android:background="@drawable/btn_border"
+                            android:src="@drawable/baseline_navigate_next_24" />
+                            -->
+                </RelativeLayout>
+        </ScrollView>
+
+
+</RelativeLayout>

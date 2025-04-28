@@ -9,6 +9,7 @@
     android:fitsSystemWindows="true"
     tools:context=".Learn_Basics"
     tools:openDrawer="start">
+
     <RelativeLayout
         android:id="@+id/main"
         android:layout_width="match_parent"
@@ -51,6 +52,129 @@
             android:adjustViewBounds="true"
             android:scaleType="centerCrop"
             android:src="@drawable/bgmenuu" />
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="120dp"
+            android:text="The Basics"
+            android:textSize="45dp"
+            android:textAlignment="center"
+            android:layout_marginBottom="60dp"
+            android:scaleType="fitCenter"
+            android:fontFamily="@font/irish"
+            android:textColor="@color/black"
+            />
+
+        <Button
+            android:id="@+id/basics_Lesson1"
+            android:layout_width="130dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="200dp"
+            android:layout_marginStart="30dp"
+            android:text="Lesson 1"
+            android:textColor="@color/lavender"
+            android:background="@drawable/btn_border"
+            android:fontFamily="@font/irish"
+            android:textSize="18sp"/>
+        
+        <View
+            android:layout_width="90sp"
+            android:layout_height="5dp"
+            android:background="@color/lavender"
+            android:layout_marginTop="250dp"
+            android:layout_marginStart="160dp"/>
+
+
+        <Button
+            android:id="@+id/basics_Lesson2"
+            android:layout_width="130dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="200dp"
+            android:layout_marginStart="250dp"
+            android:text="Lesson 2"
+            android:textColor="@color/lavender"
+            android:background="@drawable/btn_border"
+            android:fontFamily="@font/irish"
+            android:textSize="18sp"/>
+
+        <View
+            android:layout_width="4dp"
+            android:layout_height="70dp"
+            android:background="@color/lavender"
+            android:layout_marginTop="300dp"
+            android:layout_marginStart="310dp"/>
+
+        <Button
+            android:id="@+id/basics_Lesson3"
+            android:layout_width="130dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="370dp"
+            android:layout_marginStart="250dp"
+            android:text="Lesson 3"
+            android:textColor="@color/lavender"
+            android:background="@drawable/btn_border"
+            android:fontFamily="@font/irish"
+            android:textSize="18sp"/>
+
+        <View
+            android:layout_width="90sp"
+            android:layout_height="5dp"
+            android:background="@color/lavender"
+            android:layout_marginTop="420dp"
+            android:layout_marginStart="160dp"/>
+
+        <Button
+            android:id="@+id/basics_Lesson4"
+            android:layout_width="130dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="370dp"
+            android:layout_marginStart="30dp"
+            android:text="Lesson 4"
+            android:textColor="@color/lavender"
+            android:background="@drawable/btn_border"
+            android:fontFamily="@font/irish"
+            android:textSize="18sp"/>
+
+        <View
+            android:layout_width="4dp"
+            android:layout_height="70dp"
+            android:background="@color/lavender"
+            android:layout_marginTop="470dp"
+            android:layout_marginStart="90dp"/>
+
+        <Button
+            android:id="@+id/basics_Lesson5"
+            android:layout_width="130dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="540dp"
+            android:layout_marginStart="30dp"
+            android:text="Lesson 5"
+            android:textColor="@color/lavender"
+            android:background="@drawable/btn_border"
+            android:fontFamily="@font/irish"
+            android:textSize="18sp"/>
+
+        <View
+            android:layout_width="90dp"
+            android:layout_height="5dp"
+            android:background="@color/lavender"
+            android:layout_marginTop="590dp"
+            android:layout_marginStart="160dp"/>
+
+        <Button
+            android:id="@+id/basics_Lesson6"
+            android:layout_width="130dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="540dp"
+            android:layout_marginStart="250dp"
+            android:text="Lesson 6"
+            android:textColor="@color/lavender"
+            android:background="@drawable/btn_border"
+            android:fontFamily="@font/irish"
+            android:textSize="18sp"/>
 
     </RelativeLayout>
 
