@@ -60,6 +60,7 @@
         android:layout_marginTop="125dp"
         android:layout_marginLeft="30dp"
         android:queryHint="Search here..."
+
         android:iconifiedByDefault="false"
         android:background="@drawable/btn_border"
         android:elevation="4dp"
@@ -72,7 +73,7 @@
         android:layout_centerHorizontal="true"
         android:divider="@android:color/darker_gray"
         android:dividerHeight="1dp"
-        android:background="@drawable/btn_border"
+        android:background="@drawable/btn_custom"
         android:layout_marginTop="5dp"
         />
 

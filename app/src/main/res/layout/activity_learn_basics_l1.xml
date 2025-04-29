@@ -1,0 +1,599 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EDE7F6"
+    tools:context=".Learn_Basics_L1">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" >
+
+                        <ImageView
+                            android:id="@+id/backBtn"
+                            android:layout_width="30dp"
+                            android:layout_height="40dp"
+                            android:src="@drawable/backbtn"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="35dp"
+                            />
+
+                        <TextView
+                            android:id="@+id/l1_title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="40dp"
+                            android:layout_centerHorizontal="true"
+                            android:text="The Staff, Clefs, and Ledger Lines"
+                            android:textSize="21sp"
+                            android:textAlignment="center"
+                            android:textColor="@color/black"
+                            android:fontFamily="@font/tagesschriftregular"
+                            />
+
+                        <View
+                            android:id="@+id/line1"
+                            android:layout_width="450dp"
+                            android:layout_height="1dp"
+                            android:layout_below="@+id/l1_title"
+                            android:layout_marginTop="15dp"
+                            android:background="@color/black" />
+
+                        <TextView
+                            android:id="@+id/l1_text1"
+                            android:layout_width="380sp"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/line1"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="20dp"
+                            android:fontFamily="@font/tienneregular"
+                            android:text="• The staff is the foundation upon which notes are drawn."
+                            android:textColor="@color/black"
+                            android:textSize="16sp" />
+
+                        <ImageView
+                            android:id="@+id/l1_img1"
+                            android:layout_width="match_parent"
+                            android:layout_height="130dp"
+                            android:layout_below="@+id/l1_text1"
+                            android:background="@drawable/l1_image1"
+                            android:layout_marginTop="10dp"
+                            />
+
+                        <View
+                            android:id="@+id/line2"
+                            android:layout_width="450dp"
+                            android:layout_height="1dp"
+                            android:layout_below="@+id/l1_img1"
+                            android:layout_marginTop="15dp"
+                            android:background="@color/black" />
+
+                        <TextView
+                            android:id="@+id/l1_text2"
+                            android:layout_width="380sp"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/line2"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="20dp"
+                            android:fontFamily="@font/tienneregular"
+                            android:text="• The Modern staff compromises five lines and four spaces."
+                            android:textColor="@color/black"
+                            android:textSize="16sp" />
+
+                        <ImageView
+                            android:id="@+id/l1_img2"
+                            android:layout_width="match_parent"
+                            android:layout_height="130dp"
+                            android:layout_below="@+id/l1_text2"
+                            android:background="@drawable/l1_image2"
+                            android:layout_marginTop="10dp"
+                            />
+
+                        <View
+                            android:id="@+id/line3"
+                            android:layout_width="450dp"
+                            android:layout_height="1dp"
+                            android:layout_below="@+id/l1_img2"
+                            android:layout_marginTop="15dp"
+                            android:background="@color/black" />
+
+                        <TextView
+                            android:id="@+id/l1_text3"
+                            android:layout_width="380sp"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/line3"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="20dp"
+                            android:fontFamily="@font/tienneregular"
+                            android:text="• Every line or space on the staff represents a white key on the keyboard."
+                            android:textColor="@color/black"
+                            android:textSize="16sp" />
+
+                        <ImageView
+                            android:id="@+id/l1_gif1"
+                            android:layout_width="match_parent"
+                            android:layout_height="130dp"
+                            android:layout_below="@+id/l1_text3"
+                            android:layout_marginTop="10dp"
+                            />
+
+                        <View
+                            android:id="@+id/line4"
+                            android:layout_width="450dp"
+                            android:layout_height="1dp"
+                            android:layout_below="@+id/l1_gif1"
+                            android:layout_marginTop="15dp"
+                            android:background="@color/black" />
+
+                        <TextView
+                            android:id="@+id/l1_text4"
+                            android:layout_width="380sp"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/line4"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="20dp"
+                            android:fontFamily="@font/tienneregular"
+                            android:text="• Clefs assign individual notes to certain lines or spaces."
+                            android:textColor="@color/black"
+                            android:textSize="16sp" />
+
+                        <ImageView
+                            android:id="@+id/l1_img3"
+                            android:layout_width="match_parent"
+                            android:layout_height="130dp"
+                            android:layout_below="@+id/l1_text4"
+                            android:background="@drawable/l1_img3"
+                            android:layout_marginTop="10dp"
+                            />
+
+                        <View
+                            android:id="@+id/line5"
+                            android:layout_width="450dp"
+                            android:layout_height="1dp"
+                            android:layout_below="@+id/l1_img3"
+                            android:layout_marginTop="15dp"
+                            android:background="@color/black" />
+
+                        <TextView
+                            android:id="@+id/l1_text5"
+                            android:layout_width="380sp"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/line5"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="20dp"
+                            android:fontFamily="@font/tienneregular"
+                            android:text="• Two clefs are normally used: the Treble and Bass clefs."
+                            android:textColor="@color/black"
+                            android:textSize="16sp" />
+
+                        <ImageView
+                            android:id="@+id/l1_img4"
+                            android:layout_width="match_parent"
+                            android:layout_height="130dp"
+                            android:layout_below="@+id/l1_text5"
+                            android:background="@drawable/l1_img4"
+                            android:layout_marginTop="10dp"
+                            />
+
+                        <View
+                            android:id="@+id/line6"
+                            android:layout_width="450dp"
+                            android:layout_height="1dp"
+                            android:layout_below="@+id/l1_img4"
+                            android:layout_marginTop="15dp"
+                            android:background="@color/black" />
+
+                        <TextView
+                            android:id="@+id/l1_text6"
+                            android:layout_width="380sp"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/line6"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="20dp"
+                            android:fontFamily="@font/tienneregular"
+                            android:text="• First, we will discuss the Treble Clef (also called the G Clef)."
+                            android:textColor="@color/black"
+                            android:textSize="16sp" />
+
+                        <ImageView
+                            android:id="@+id/l1_img5"
+                            android:layout_width="match_parent"
+                            android:layout_height="130dp"
+                            android:layout_below="@+id/l1_text6"
+                            android:background="@drawable/l1_img5"
+                            android:layout_marginTop="10dp"
+                            />
+
+                        <View
+                            android:id="@+id/line7"
+                            android:layout_width="450dp"
+                            android:layout_height="1dp"
+                            android:layout_below="@+id/l1_img5"
+                            android:layout_marginTop="15dp"
+                            android:background="@color/black" />
+
+                        <TextView
+                            android:id="@+id/l1_text7"
+                            android:layout_width="380sp"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/line7"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="20dp"
+                            android:fontFamily="@font/tienneregular"
+                            android:text="• The staff line which the clef wraps around
+                            (shown in red) is known as G. Any note placed on this line becomes G."
+                            android:textColor="@color/black"
+                            android:textSize="16sp" />
+
+                        <ImageView
+                            android:id="@+id/l1_img6"
+                            android:layout_width="match_parent"
+                            android:layout_height="130dp"
+                            android:layout_below="@+id/l1_text7"
+                            android:background="@drawable/l1_img6"
+                            android:layout_marginTop="10dp"
+                            />
+
+                        <View
+                            android:id="@+id/line8"
+                            android:layout_width="450dp"
+                            android:layout_height="1dp"
+                            android:layout_below="@+id/l1_img6"
+                            android:layout_marginTop="15dp"
+                            android:background="@color/black" />
+
+                        <TextView
+                            android:id="@+id/l1_text8"
+                            android:layout_width="380sp"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/line8"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="20dp"
+                            android:fontFamily="@font/tienneregular"
+                            android:text="• The note on the space above G is A.
+                            (Remember, there is not an H note.)"
+                            android:textColor="@color/black"
+                            android:textSize="16sp" />
+
+                        <ImageView
+                            android:id="@+id/l1_img7"
+                            android:layout_width="match_parent"
+                            android:layout_height="130dp"
+                            android:layout_below="@+id/l1_text8"
+                            android:background="@drawable/l1_img7"
+                            android:layout_marginTop="10dp"
+                            />
+
+                        <View
+                            android:id="@+id/line9"
+                            android:layout_width="450dp"
+                            android:layout_height="1dp"
+                            android:layout_below="@+id/l1_img7"
+                            android:layout_marginTop="15dp"
+                            android:background="@color/black" />
+
+                        <TextView
+                            android:id="@+id/l1_text9"
+                            android:layout_width="380sp"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/line9"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="20dp"
+                            android:fontFamily="@font/tienneregular"
+                            android:text="• The note on the line above A is B."
+                            android:textColor="@color/black"
+                            android:textSize="16sp" />
+
+                        <ImageView
+                            android:id="@+id/l1_img8"
+                            android:layout_width="match_parent"
+                            android:layout_height="130dp"
+                            android:layout_below="@+id/l1_text9"
+                            android:background="@drawable/l1_img8"
+                            android:layout_marginTop="10dp"
+                            />
+
+                        <View
+                            android:id="@+id/line10"
+                            android:layout_width="450dp"
+                            android:layout_height="1dp"
+                            android:layout_below="@+id/l1_img8"
+                            android:layout_marginTop="15dp"
+                            android:background="@color/black" />
+
+                        <TextView
+                            android:id="@+id/l1_text10"
+                            android:layout_width="380sp"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/line10"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="20dp"
+                            android:fontFamily="@font/tienneregular"
+                            android:text="• This process continues. Uh-oh.
+                            We just ran out of room to place notes, what happens now?"
+                            android:textColor="@color/black"
+                            android:textSize="16sp" />
+
+                        <ImageView
+                            android:id="@+id/l1_img9"
+                            android:layout_width="match_parent"
+                            android:layout_height="130dp"
+                            android:layout_below="@+id/l1_text10"
+                            android:background="@drawable/l1_img9"
+                            android:layout_marginTop="10dp"
+                            />
+
+                        <View
+                            android:id="@+id/line11"
+                            android:layout_width="450dp"
+                            android:layout_height="1dp"
+                            android:layout_below="@+id/l1_img9"
+                            android:layout_marginTop="15dp"
+                            android:background="@color/black" />
+
+                        <TextView
+                            android:id="@+id/l1_text11"
+                            android:layout_width="380sp"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/line11"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="20dp"
+                            android:fontFamily="@font/tienneregular"
+                            android:text="• Ledger Lines will solve our dilemma. A ledger line is a small line that extends the staff when we run out of room."
+                            android:textColor="@color/black"
+                            android:textSize="16sp" />
+
+                        <ImageView
+                            android:id="@+id/l1_img10"
+                            android:layout_width="match_parent"
+                            android:layout_height="130dp"
+                            android:layout_below="@+id/l1_text11"
+                            android:background="@drawable/l1_img10"
+                            android:layout_marginTop="10dp"
+                            />
+
+                        <View
+                            android:id="@+id/line12"
+                            android:layout_width="450dp"
+                            android:layout_height="1dp"
+                            android:layout_below="@+id/l1_img10"
+                            android:layout_marginTop="15dp"
+                            android:background="@color/black" />
+
+                        <TextView
+                            android:id="@+id/l1_text12"
+                            android:layout_width="380sp"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/line12"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="20dp"
+                            android:fontFamily="@font/tienneregular"
+                            android:text="• With the ledger line drawn, we can place the A."
+                            android:textColor="@color/black"
+                            android:textSize="16sp" />
+
+                        <ImageView
+                            android:id="@+id/l1_img11"
+                            android:layout_width="match_parent"
+                            android:layout_height="130dp"
+                            android:layout_below="@+id/l1_text12"
+                            android:background="@drawable/l1_img11"
+                            android:layout_marginTop="10dp"
+                            />
+
+                        <View
+                            android:id="@+id/line13"
+                            android:layout_width="450dp"
+                            android:layout_height="1dp"
+                            android:layout_below="@+id/l1_img11"
+                            android:layout_marginTop="15dp"
+                            android:background="@color/black" />
+
+                        <TextView
+                            android:id="@+id/l1_text13"
+                            android:layout_width="380sp"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/line13"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="20dp"
+                            android:fontFamily="@font/tienneregular"
+                            android:text="• Next, let's discuss the Bass Clef (also called the F Clef)."
+                            android:textColor="@color/black"
+                            android:textSize="16sp" />
+
+                        <ImageView
+                            android:id="@+id/l1_img12"
+                            android:layout_width="match_parent"
+                            android:layout_height="130dp"
+                            android:layout_below="@+id/l1_text13"
+                            android:background="@drawable/l1_img12"
+                            android:layout_marginTop="10dp"
+                            />
+
+                        <View
+                            android:id="@+id/line14"
+                            android:layout_width="450dp"
+                            android:layout_height="1dp"
+                            android:layout_below="@+id/l1_img12"
+                            android:layout_marginTop="15dp"
+                            android:background="@color/black" />
+
+                        <TextView
+                            android:id="@+id/l1_text14"
+                            android:layout_width="380sp"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/line14"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="20dp"
+                            android:fontFamily="@font/tienneregular"
+                            android:text="• The staff line in between the two dots of the clef is F."
+                            android:textColor="@color/black"
+                            android:textSize="16sp" />
+
+                        <ImageView
+                            android:id="@+id/l1_img13"
+                            android:layout_width="match_parent"
+                            android:layout_height="130dp"
+                            android:layout_below="@+id/l1_text14"
+                            android:background="@drawable/l1_img13"
+                            android:layout_marginTop="10dp"
+                            />
+
+                        <View
+                            android:id="@+id/line15"
+                            android:layout_width="450dp"
+                            android:layout_height="1dp"
+                            android:layout_below="@+id/l1_img13"
+                            android:layout_marginTop="15dp"
+                            android:background="@color/black" />
+
+                        <TextView
+                            android:id="@+id/l1_text15"
+                            android:layout_width="380sp"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/line15"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="20dp"
+                            android:fontFamily="@font/tienneregular"
+                            android:text="• We can now fill the rest of the staff with notes."
+                            android:textColor="@color/black"
+                            android:textSize="16sp" />
+
+                        <ImageView
+                            android:id="@+id/l1_img14"
+                            android:layout_width="match_parent"
+                            android:layout_height="130dp"
+                            android:layout_below="@+id/l1_text15"
+                            android:background="@drawable/l1_img14"
+                            android:layout_marginTop="10dp"
+                            />
+
+                        <View
+                            android:id="@+id/line16"
+                            android:layout_width="450dp"
+                            android:layout_height="1dp"
+                            android:layout_below="@+id/l1_img14"
+                            android:layout_marginTop="15dp"
+                            android:background="@color/black" />
+
+                        <TextView
+                            android:id="@+id/l1_text16"
+                            android:layout_width="380sp"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/line16"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="20dp"
+                            android:fontFamily="@font/tienneregular"
+                            android:text="• Finally, we will discuss the Grand Staff, a theoretical staff consisting of eleven lines."
+                            android:textColor="@color/black"
+                            android:textSize="16sp" />
+
+                        <ImageView
+                            android:id="@+id/l1_img15"
+                            android:layout_width="match_parent"
+                            android:layout_height="130dp"
+                            android:layout_below="@+id/l1_text16"
+                            android:background="@drawable/l1_img15"
+                            android:layout_marginTop="10dp"
+                            />
+
+                        <View
+                            android:id="@+id/line17"
+                            android:layout_width="450dp"
+                            android:layout_height="1dp"
+                            android:layout_below="@+id/l1_img15"
+                            android:layout_marginTop="15dp"
+                            android:background="@color/black" />
+
+                        <TextView
+                            android:id="@+id/l1_text17"
+                            android:layout_width="380sp"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/line17"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="20dp"
+                            android:fontFamily="@font/tienneregular"
+                            android:text="• Watch what happens when we eliminate the middle line — we end up with two regular staffs."
+                            android:textColor="@color/black"
+                            android:textSize="16sp" />
+
+                        <ImageView
+                            android:id="@+id/l1_img16"
+                            android:layout_width="match_parent"
+                            android:layout_height="130dp"
+                            android:layout_below="@+id/l1_text17"
+                            android:background="@drawable/l1_img16"
+                            android:layout_marginTop="10dp"
+                            />
+
+                        <View
+                            android:id="@+id/line18"
+                            android:layout_width="450dp"
+                            android:layout_height="1dp"
+                            android:layout_below="@+id/l1_img16"
+                            android:layout_marginTop="15dp"
+                            android:background="@color/black" />
+
+                        <TextView
+                            android:id="@+id/l1_text18"
+                            android:layout_width="380sp"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/line18"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="20dp"
+                            android:fontFamily="@font/tienneregular"
+                            android:text="• By adding a Treble Clef to the top staff and a Bass Clef to the bottom staff, we can see the relationship between the two staffs."
+                            android:textColor="@color/black"
+                            android:textSize="16sp" />
+
+                        <ImageView
+                            android:id="@+id/l1_img17"
+                            android:layout_width="match_parent"
+                            android:layout_height="130dp"
+                            android:layout_below="@+id/l1_text18"
+                            android:background="@drawable/l1_img17"
+                            android:layout_marginTop="10dp"
+                            />
+
+                        <View
+                            android:id="@+id/line19"
+                            android:layout_width="450dp"
+                            android:layout_height="1dp"
+                            android:layout_below="@+id/l1_img17"
+                            android:layout_marginTop="15dp"
+                            android:background="@color/black" />
+
+                        <TextView
+                            android:id="@+id/l1_text19"
+                            android:layout_width="380sp"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/line19"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="20dp"
+                            android:fontFamily="@font/tienneregular"
+                            android:text="•  Notice how the two clefs are joined by the C (shown in red). This C is commonly called middle C since it corresponds to the middle staff line on the Grand Staff."
+                            android:textColor="@color/black"
+                            android:textSize="16sp" />
+
+                        <ImageView
+                            android:id="@+id/l1_img18"
+                            android:layout_width="match_parent"
+                            android:layout_height="130dp"
+                            android:layout_below="@+id/l1_text19"
+                            android:background="@drawable/l1_img18"
+                            android:layout_marginTop="10dp"
+                            />
+
+                </RelativeLayout>
+        </ScrollView>
+
+
+</RelativeLayout>

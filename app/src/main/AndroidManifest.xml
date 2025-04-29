@@ -16,6 +16,15 @@
         android:theme="@style/Theme.AppCompat.Light.NoActionBar"
         tools:targetApi="31">
         <activity
+            android:name=".Learn_Basics_L3"
+            android:exported="false" />
+        <activity
+            android:name=".Learn_Basics_L2"
+            android:exported="false" />
+        <activity
+            android:name=".Learn_Basics_L1"
+            android:exported="false" />
+        <activity
             android:name=".Learn_Chords"
             android:exported="false" />
         <activity

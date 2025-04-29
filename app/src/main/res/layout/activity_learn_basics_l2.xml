@@ -1,0 +1,452 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EDE7F6"
+    tools:context=".Learn_Basics_L2">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:id="@+id/backBtn"
+                android:layout_width="30dp"
+                android:layout_height="40dp"
+                android:src="@drawable/backbtn"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="35dp"
+                />
+
+            <TextView
+                android:id="@+id/l1_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:layout_centerHorizontal="true"
+                android:text="Note Duration"
+                android:textSize="25sp"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:fontFamily="@font/tagesschriftregular"
+                />
+
+            <View
+                android:id="@+id/line1"
+                android:layout_width="450dp"
+                android:layout_height="1dp"
+                android:layout_below="@+id/l1_title"
+                android:layout_marginTop="15dp"
+                android:background="@color/black" />
+
+            <TextView
+                android:id="@+id/l1_text1"
+                android:layout_width="380sp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/line1"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/tienneregular"
+                android:text="• The length of time that a note is played is called its note duration, which is determined by the type of note."
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/l1_img1"
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:layout_below="@+id/l1_text1"
+                android:background="@drawable/l2_img1"
+                android:layout_marginTop="10dp"
+                />
+
+            <View
+                android:id="@+id/line2"
+                android:layout_width="450dp"
+                android:layout_height="1dp"
+                android:layout_below="@+id/l1_img1"
+                android:layout_marginTop="15dp"
+                android:background="@color/black" />
+
+            <TextView
+                android:id="@+id/l1_text2"
+                android:layout_width="380sp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/line2"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/tienneregular"
+                android:text="• The whole note has the longest note duration in modern music."
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/l1_img2"
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:layout_below="@+id/l1_text2"
+                android:background="@drawable/l2_img2"
+                android:layout_marginTop="10dp"
+                />
+
+            <View
+                android:id="@+id/line3"
+                android:layout_width="450dp"
+                android:layout_height="1dp"
+                android:layout_below="@+id/l1_img2"
+                android:layout_marginTop="15dp"
+                android:background="@color/black" />
+
+            <TextView
+                android:id="@+id/l1_text3"
+                android:layout_width="380sp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/line3"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/tienneregular"
+                android:text="• The half note has half the duration of a whole note."
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/l1_gif1"
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:layout_below="@+id/l1_text3"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/l2_img3"
+                />
+
+            <View
+                android:id="@+id/line4"
+                android:layout_width="450dp"
+                android:layout_height="1dp"
+                android:layout_below="@+id/l1_gif1"
+                android:layout_marginTop="15dp"
+                android:background="@color/black" />
+
+            <TextView
+                android:id="@+id/l1_text4"
+                android:layout_width="380sp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/line4"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/tienneregular"
+                android:text="• Two half notes occupy the same amount of time as one whole note."
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/l1_img3"
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:layout_below="@+id/l1_text4"
+                android:background="@drawable/l2_img4"
+                android:layout_marginTop="10dp"
+                />
+
+            <View
+                android:id="@+id/line5"
+                android:layout_width="450dp"
+                android:layout_height="1dp"
+                android:layout_below="@+id/l1_img3"
+                android:layout_marginTop="15dp"
+                android:background="@color/black" />
+
+            <TextView
+                android:id="@+id/l1_text5"
+                android:layout_width="380sp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/line5"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/tienneregular"
+                android:text="• The quarter note is a fourth (or a quarter) of a whole note."
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/l1_img4"
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:layout_below="@+id/l1_text5"
+                android:background="@drawable/l2_img5"
+                android:layout_marginTop="10dp"
+                />
+
+            <View
+                android:id="@+id/line6"
+                android:layout_width="450dp"
+                android:layout_height="1dp"
+                android:layout_below="@+id/l1_img4"
+                android:layout_marginTop="15dp"
+                android:background="@color/black" />
+
+            <TextView
+                android:id="@+id/l1_text6"
+                android:layout_width="380sp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/line6"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/tienneregular"
+                android:text="• Four quarter notes occupy the same amount of time as one whole note. Two quarter notes equal the duration of a half note."
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/l1_img5"
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:layout_below="@+id/l1_text6"
+                android:background="@drawable/l2_img6"
+                android:layout_marginTop="10dp"
+                />
+
+            <View
+                android:id="@+id/line7"
+                android:layout_width="450dp"
+                android:layout_height="1dp"
+                android:layout_below="@+id/l1_img5"
+                android:layout_marginTop="15dp"
+                android:background="@color/black" />
+
+            <TextView
+                android:id="@+id/l1_text7"
+                android:layout_width="380sp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/line7"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/tienneregular"
+                android:text="• Notes smaller in duration than a quarter note have flags. Each flag halves the value of a note."
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/l1_img6"
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:layout_below="@+id/l1_text7"
+                android:background="@drawable/l2_img7"
+                android:layout_marginTop="10dp"
+                />
+
+            <View
+                android:id="@+id/line8"
+                android:layout_width="450dp"
+                android:layout_height="1dp"
+                android:layout_below="@+id/l1_img6"
+                android:layout_marginTop="15dp"
+                android:background="@color/black" />
+
+            <TextView
+                android:id="@+id/l1_text8"
+                android:layout_width="380sp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/line8"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/tienneregular"
+                android:text="• An eighth note has one flag."
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/l1_img7"
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:layout_below="@+id/l1_text8"
+                android:background="@drawable/l2_img8"
+                android:layout_marginTop="10dp"
+                />
+
+            <View
+                android:id="@+id/line9"
+                android:layout_width="450dp"
+                android:layout_height="1dp"
+                android:layout_below="@+id/l1_img7"
+                android:layout_marginTop="15dp"
+                android:background="@color/black" />
+
+            <TextView
+                android:id="@+id/l1_text9"
+                android:layout_width="380sp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/line9"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/tienneregular"
+                android:text="• Therefore, two eighth notes occupy the same amount of time as one quarter note."
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/l1_img8"
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:layout_below="@+id/l1_text9"
+                android:background="@drawable/l2_img9"
+                android:layout_marginTop="10dp"
+                />
+
+            <View
+                android:id="@+id/line10"
+                android:layout_width="450dp"
+                android:layout_height="1dp"
+                android:layout_below="@+id/l1_img8"
+                android:layout_marginTop="15dp"
+                android:background="@color/black" />
+
+            <TextView
+                android:id="@+id/l1_text10"
+                android:layout_width="380sp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/line10"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/tienneregular"
+                android:text="• A sixteenth note has two flags, halving the value again."
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/l1_img9"
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:layout_below="@+id/l1_text10"
+                android:background="@drawable/l2_img10"
+                android:layout_marginTop="10dp"
+                />
+
+            <View
+                android:id="@+id/line11"
+                android:layout_width="450dp"
+                android:layout_height="1dp"
+                android:layout_below="@+id/l1_img9"
+                android:layout_marginTop="15dp"
+                android:background="@color/black" />
+
+            <TextView
+                android:id="@+id/l1_text11"
+                android:layout_width="380sp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/line11"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/tienneregular"
+                android:text="• Two sixteenth notes equal the duration of an eighth note."
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/l1_img10"
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:layout_below="@+id/l1_text11"
+                android:background="@drawable/l2_img11"
+                android:layout_marginTop="10dp"
+                />
+
+            <View
+                android:id="@+id/line12"
+                android:layout_width="450dp"
+                android:layout_height="1dp"
+                android:layout_below="@+id/l1_img10"
+                android:layout_marginTop="15dp"
+                android:background="@color/black" />
+
+            <TextView
+                android:id="@+id/l1_text12"
+                android:layout_width="380sp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/line12"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/tienneregular"
+                android:text="• Four sixteenth notes occupy the same amount of time as one quarter note."
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/l1_img11"
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:layout_below="@+id/l1_text12"
+                android:background="@drawable/l2_img12"
+                android:layout_marginTop="10dp"
+                />
+
+            <View
+                android:id="@+id/line13"
+                android:layout_width="450dp"
+                android:layout_height="1dp"
+                android:layout_below="@+id/l1_img11"
+                android:layout_marginTop="15dp"
+                android:background="@color/black" />
+
+            <TextView
+                android:id="@+id/l1_text13"
+                android:layout_width="380sp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/line13"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/tienneregular"
+                android:text="• Although it is possible to have notes with three or more flags, they are seldom used."
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/l1_img12"
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:layout_below="@+id/l1_text13"
+                android:background="@drawable/l2_img13"
+                android:layout_marginTop="10dp"
+                />
+
+            <View
+                android:id="@+id/line14"
+                android:layout_width="450dp"
+                android:layout_height="1dp"
+                android:layout_below="@+id/l1_img12"
+                android:layout_marginTop="15dp"
+                android:background="@color/black" />
+
+            <TextView
+                android:id="@+id/l1_text14"
+                android:layout_width="380sp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/line14"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/tienneregular"
+                android:text="• This chart displays the relationship of all five note types discussed in this lesson."
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/l1_img13"
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:layout_below="@+id/l1_text14"
+                android:background="@drawable/l2_img14"
+                android:layout_marginTop="10dp"
+                />
+
+        </RelativeLayout>
+    </ScrollView>
+
+
+</RelativeLayout>
