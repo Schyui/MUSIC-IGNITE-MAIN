@@ -44,10 +44,10 @@
         android:text="Learn \nMusic Theory!"
         android:textSize="45dp"
         android:textAlignment="center"
-        android:layout_marginBottom="60dp"
         android:scaleType="fitCenter"
         android:fontFamily="@font/irish"
         android:textColor="@color/black"
+        android:id="@+id/txtSkillPath"
         />
     <Button
         android:id="@+id/basicBtn"
@@ -61,6 +61,8 @@
         android:layout_marginBottom="20dp"
         android:layout_marginTop="240dp"
         android:textSize="25sp"
+        android:layout_alignTop="@+id/txtSkillPath"
+        android:layout_marginTop="150dp"
         />
 
     <Button
