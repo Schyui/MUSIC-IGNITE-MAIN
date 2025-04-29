@@ -26,8 +26,8 @@
 
         <ImageView
             android:id="@+id/musicIgniteLbl"
-            android:layout_width="130dp"
-            android:layout_height="130dp"
+            android:layout_width="110dp"
+            android:layout_height="110dp"
             android:layout_alignParentEnd="true"
             android:layout_marginTop="25dp"
             android:layout_marginBottom="60dp"

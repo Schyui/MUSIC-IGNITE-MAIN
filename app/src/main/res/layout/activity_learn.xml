@@ -9,8 +9,8 @@
     tools:context=".Learn_Activity">
     <ImageView
         android:id="@+id/musicIgniteLbl"
-        android:layout_width="130dp"
-        android:layout_height="130dp"
+        android:layout_width="110dp"
+        android:layout_height="110dp"
         android:src="@drawable/bgmenu2"
         android:layout_marginBottom="60dp"
         android:layout_marginTop="25dp"
@@ -36,7 +36,6 @@
         android:id="@+id/backBtn"
         />
     <TextView
-        android:id="@+id/title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
@@ -59,7 +58,6 @@
         android:layout_centerHorizontal="true"
         android:fontFamily="@font/irish"
         android:layout_marginBottom="20dp"
-        android:layout_marginTop="240dp"
         android:textSize="25sp"
         android:layout_alignTop="@+id/txtSkillPath"
         android:layout_marginTop="150dp"
