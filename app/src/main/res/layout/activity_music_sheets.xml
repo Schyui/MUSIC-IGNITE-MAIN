@@ -10,8 +10,8 @@
 
     <ImageView
         android:id="@+id/musicIgniteLbl"
-        android:layout_width="110dp"
-        android:layout_height="110dp"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
         android:layout_alignParentEnd="true"
         android:layout_marginTop="25dp"
         android:src="@drawable/bgmenu2" />
@@ -48,17 +48,17 @@
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:src="@drawable/plusicon"
-        android:layout_marginTop="125dp"
+        android:layout_marginTop="120dp"
         android:layout_toRightOf="@+id/search"
-        android:layout_marginLeft="5dp"
+        android:layout_marginLeft="10dp"
         />
 
     <SearchView
         android:id="@+id/search"
-        android:layout_width="320dp"
+        android:layout_width="295dp"
         android:layout_height="50dp"
         android:layout_marginTop="125dp"
-        android:layout_marginLeft="16dp"
+        android:layout_marginLeft="30dp"
         android:queryHint="Search here..."
 
         android:iconifiedByDefault="false"
@@ -68,13 +68,13 @@
     <ListView
         android:id="@+id/listView"
         android:layout_width="380dp"
-        android:layout_height="650dp"
+        android:layout_height="500dp"
         android:layout_below="@id/search"
         android:layout_centerHorizontal="true"
         android:divider="@android:color/darker_gray"
         android:dividerHeight="1dp"
         android:background="@drawable/btn_custom"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="5dp"
         />
 
 </RelativeLayout>
