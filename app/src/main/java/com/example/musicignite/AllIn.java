@@ -24,7 +24,7 @@ public class AllIn extends AppCompatActivity {
     ImageView backBtn, speakerQuizBtn;
     Button[] choiceButtons = new Button[6];
     GridLayout choicesGrid;
-    TextView timerText;
+
 
     private List<Question> questions = new ArrayList<>();
     private int currentQuestionIndex = 0;
@@ -52,7 +52,7 @@ public class AllIn extends AppCompatActivity {
         backBtn = findViewById(R.id.backBtn);
         speakerQuizBtn = findViewById(R.id.speakerQuizBtn);
         choicesGrid = findViewById(R.id.choicesGrid);
-        timerText = findViewById(R.id.timerText);
+
 
         choiceButtons[0] = findViewById(R.id.choice1);
         choiceButtons[1] = findViewById(R.id.choice2);
@@ -183,7 +183,7 @@ public class AllIn extends AppCompatActivity {
                         score = 0;
                         currentQuestionIndex = 0;
                         generateQuestions();
-                        timerText.setText(""); // cleared na yung timer
+
                         quizStarted = true;
                         playQuestion(currentQuestionIndex);
                     })
