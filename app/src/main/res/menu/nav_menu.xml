@@ -7,11 +7,6 @@
     <group
         android:checkableBehavior="single">
         <item
-            android:id="@+id/nav_profile"
-            android:icon="@drawable/baseline_person_24"
-            android:title="Profile"
-            />
-        <item
             android:id="@+id/nav_home"
             android:icon="@drawable/nav_home"
             android:title="Home"
@@ -21,7 +16,11 @@
             android:icon="@drawable/nav_settings"
             android:title="Settings"
             />
-
+        <item
+            android:id="@+id/nav_share"
+            android:icon="@drawable/nav_share"
+            android:title="Share"
+            />
         <item
             android:id="@+id/nav_about"
             android:icon="@drawable/nav_about"

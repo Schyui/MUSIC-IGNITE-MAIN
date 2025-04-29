@@ -1,15 +1,11 @@
 package com.example.musicignite;
 
-import static android.view.View.INVISIBLE;
-import static android.view.View.VISIBLE;
-
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
-import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -33,7 +29,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     TextView username;
     String usernameStr, name, test;
     Button learnBtn, practiceBtn,musicSheetBtn;
-    ImageView icon, design;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -52,8 +47,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
 
         //IDS
-        icon = findViewById(R.id.bgmenu1);
-        design = findViewById(R.id.musicIgniteLbl);
         learnBtn = findViewById(R.id.learnBtn);
         practiceBtn = findViewById(R.id.practiceBtn);
         musicSheetBtn = findViewById(R.id.musicSheetBtn);
@@ -89,22 +82,18 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
         int id = item.getItemId();
         if (id == R.id.nav_home) {
-            showContent();
             getSupportFragmentManager().beginTransaction()
                     .replace(R.id.fragment_container, new HomeFragment())
                     .commit();
         } else if (id == R.id.nav_settings) {
-            hideContent();
             getSupportFragmentManager().beginTransaction()
                     .replace(R.id.fragment_container, new SettingsFragment())
                     .commit();
-        } else if (id == R.id.nav_profile) {
-            hideContent();
+        } else if (id == R.id.nav_share) {
             getSupportFragmentManager().beginTransaction()
                     .replace(R.id.fragment_container, new ShareFragment())
                     .commit();
         } else if (id == R.id.nav_about) {
-            hideContent();
             getSupportFragmentManager().beginTransaction()
                     .replace(R.id.fragment_container, new AboutFragment())
                     .commit();
@@ -147,19 +136,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
     }
 
-    public void hideContent(){
-        learnBtn.setVisibility(INVISIBLE);
-        practiceBtn.setVisibility(INVISIBLE);
-        musicSheetBtn.setVisibility(INVISIBLE);
-        icon.setVisibility(INVISIBLE);
-        design.setVisibility(INVISIBLE);
-    }
-    public void showContent(){
-        learnBtn.setVisibility(VISIBLE);
-        practiceBtn.setVisibility(VISIBLE);
-        musicSheetBtn.setVisibility(VISIBLE);
-        icon.setVisibility(VISIBLE);
-        design.setVisibility(VISIBLE);
+    public void onClickProfile(View v){
+
     }
 
 }

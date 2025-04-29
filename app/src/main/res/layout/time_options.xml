@@ -1,22 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="350dp"
-    android:layout_height="220dp"
-    android:layout_gravity="center"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="30dp"
     android:background="@drawable/time_options_border"
     android:orientation="vertical"
-    android:clipToPadding="true"
-    android:padding="8dp"
+    android:padding="4dp"
     android:backgroundTint="#EDE7F6">
 
+    <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="24dp">
 
     <ImageView
         android:id="@+id/timeOptionsBackBtn"
         android:layout_width="40dp"
         android:layout_height="40dp"
         android:src="@drawable/backbtn"
-        android:layout_marginTop="15dp"
-        android:layout_marginBottom="15dp"
+        android:layout_marginBottom="20dp"
         android:layout_gravity="start"
         android:layout_marginStart="10dp"
         android:clickable="true" />
@@ -30,7 +33,6 @@
         android:columnOrderPreserved="false"
         android:rowCount="2"
         android:useDefaultMargins="true"
-        android:layout_below="@+id/timeOptionsBackBtn"
         android:gravity="center">
 
         <Button
@@ -69,6 +71,7 @@
             android:background="@drawable/btn_border"
             android:text="10 min" />
     </GridLayout>
+</LinearLayout>
 
-</RelativeLayout>
+</LinearLayout>
 
