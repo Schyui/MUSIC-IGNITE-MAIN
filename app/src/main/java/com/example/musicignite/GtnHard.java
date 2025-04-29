@@ -101,7 +101,7 @@ public class GtnHard extends AppCompatActivity {
 
     private void playQuestion(int index) {
         if (index >= questions.size()) {
-            showQuizEndDialog(); //
+            showQuizEndDialog();
             return;
         }
 
