@@ -95,13 +95,6 @@
             android:fontFamily="@font/irish"
             android:textSize="25sp" />
 
-        <ImageView
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:src="@drawable/profileicon"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="23dp"
-            android:onClick="onClickProfile" />
 
         <ImageView
             android:id="@+id/bgmenu1"
@@ -123,9 +116,9 @@
         android:layout_gravity="start"
         app:headerLayout="@layout/activity_navi_header"
         app:menu="@menu/nav_menu"
-        android:backgroundTint="@color/cream"
+        android:backgroundTint="#EDE7F6"
 
-        app:itemIconTint="#BCBDB0"
+        app:itemIconTint="@color/lavender"
         app:itemTextColor="#6B6B65" >
         <TextView android:layout_width="wrap_content"
             android:layout_height="wrap_content"

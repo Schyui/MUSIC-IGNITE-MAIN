@@ -40,7 +40,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="105dp"
+        android:layout_marginTop="125dp"
         android:text="Learn \nMusic Theory!"
         android:textSize="45dp"
         android:textAlignment="center"
@@ -59,7 +59,7 @@
         android:layout_centerHorizontal="true"
         android:fontFamily="@font/irish"
         android:layout_marginBottom="20dp"
-        android:layout_marginTop="240dp"
+        android:layout_marginTop="270dp"
         android:textSize="25sp"
         />
 

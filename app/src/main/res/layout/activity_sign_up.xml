@@ -11,11 +11,11 @@
     <!--Test -->
     <ImageView
         android:id="@+id/musicIgniteLbl"
-        android:layout_width="210dp"
-        android:layout_height="210dp"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
         android:src="@drawable/bgmenu2"
         android:layout_marginBottom="60dp"
-        android:layout_marginTop="25dp"
+        android:layout_marginTop="50dp"
         android:layout_centerHorizontal="true"
 
         />
