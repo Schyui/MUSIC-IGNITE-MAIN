@@ -29,8 +29,8 @@ public class Learn_Basics extends AppCompatActivity {
         Lesson1 = findViewById(R.id.basics_Lesson1);
         Lesson2 = findViewById(R.id.basics_Lesson2);
         Lesson3 = findViewById(R.id.basics_Lesson3);
-        Lesson4 = findViewById(R.id.basics_Lesson4);
-        Lesson5 = findViewById(R.id.basics_Lesson5);
+        //Lesson4 = findViewById(R.id.basics_Lesson4);
+        //Lesson5 = findViewById(R.id.basics_Lesson5);
     }
 
     @Override

@@ -18,8 +18,8 @@
 
     <ImageView
         android:id="@+id/musicIgniteLbl"
-        android:layout_width="110dp"
-        android:layout_height="110dp"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
         android:src="@drawable/bgmenu2"
         android:layout_marginBottom="60dp"
         android:layout_marginTop="25dp"
@@ -37,23 +37,13 @@
         android:src="@drawable/speakerquiz_btn"
         android:background="@drawable/btn_border"/>
 
-    <TextView
-        android:id="@+id/timerText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/speakerQuizBtn"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="10dp"
-        android:hint=""
-        android:textSize="24sp"
-        android:textStyle="bold"
-        android:textColor="#000"/>
+
 
     <GridLayout
         android:id="@+id/choicesGrid"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/timerText"
+        android:layout_below="@+id/speakerQuizBtn"
         android:layout_centerHorizontal="true"
         android:columnCount="3"
         android:rowCount="2"
