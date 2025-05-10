@@ -64,7 +64,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="130dp"
                 android:layout_below="@+id/l1_text1"
-                android:background="@drawable/l2_img1"
+                android:background="@drawable/basics_l2_img1"
                 android:layout_marginTop="10dp"
                 />
 
@@ -93,7 +93,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="130dp"
                 android:layout_below="@+id/l1_text2"
-                android:background="@drawable/l2_img2"
+                android:background="@drawable/basics_l2_img2"
                 android:layout_marginTop="10dp"
                 />
 
@@ -123,7 +123,7 @@
                 android:layout_height="130dp"
                 android:layout_below="@+id/l1_text3"
                 android:layout_marginTop="10dp"
-                android:background="@drawable/l2_img3"
+                android:background="@drawable/basics_l2_img3"
                 />
 
             <View
@@ -151,7 +151,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="130dp"
                 android:layout_below="@+id/l1_text4"
-                android:background="@drawable/l2_img4"
+                android:background="@drawable/basics_l2_img4"
                 android:layout_marginTop="10dp"
                 />
 
@@ -180,7 +180,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="130dp"
                 android:layout_below="@+id/l1_text5"
-                android:background="@drawable/l2_img5"
+                android:background="@drawable/basics_l2_img5"
                 android:layout_marginTop="10dp"
                 />
 
@@ -209,7 +209,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="130dp"
                 android:layout_below="@+id/l1_text6"
-                android:background="@drawable/l2_img6"
+                android:background="@drawable/basics_l2_img6"
                 android:layout_marginTop="10dp"
                 />
 
@@ -238,7 +238,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="130dp"
                 android:layout_below="@+id/l1_text7"
-                android:background="@drawable/l2_img7"
+                android:background="@drawable/basics_l2_img7"
                 android:layout_marginTop="10dp"
                 />
 
@@ -267,7 +267,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="130dp"
                 android:layout_below="@+id/l1_text8"
-                android:background="@drawable/l2_img8"
+                android:background="@drawable/basics_l2_img8"
                 android:layout_marginTop="10dp"
                 />
 
@@ -296,7 +296,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="130dp"
                 android:layout_below="@+id/l1_text9"
-                android:background="@drawable/l2_img9"
+                android:background="@drawable/basics_l2_img9"
                 android:layout_marginTop="10dp"
                 />
 
@@ -325,7 +325,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="130dp"
                 android:layout_below="@+id/l1_text10"
-                android:background="@drawable/l2_img10"
+                android:background="@drawable/basics_l2_img10"
                 android:layout_marginTop="10dp"
                 />
 
@@ -354,7 +354,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="130dp"
                 android:layout_below="@+id/l1_text11"
-                android:background="@drawable/l2_img11"
+                android:background="@drawable/basics_l2_img11"
                 android:layout_marginTop="10dp"
                 />
 
@@ -383,7 +383,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="130dp"
                 android:layout_below="@+id/l1_text12"
-                android:background="@drawable/l2_img12"
+                android:background="@drawable/basics_l2_img12"
                 android:layout_marginTop="10dp"
                 />
 
@@ -412,7 +412,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="130dp"
                 android:layout_below="@+id/l1_text13"
-                android:background="@drawable/l2_img13"
+                android:background="@drawable/basics_l2_img13"
                 android:layout_marginTop="10dp"
                 />
 
@@ -441,7 +441,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="130dp"
                 android:layout_below="@+id/l1_text14"
-                android:background="@drawable/l2_img14"
+                android:background="@drawable/basics_l2_img14"
                 android:layout_marginTop="10dp"
                 />
 

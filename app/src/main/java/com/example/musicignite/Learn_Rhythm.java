@@ -2,6 +2,7 @@ package com.example.musicignite;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.widget.Button;
 import android.widget.ImageView;
 
 import androidx.activity.EdgeToEdge;
@@ -12,6 +13,7 @@ import androidx.core.view.WindowInsetsCompat;
 
 public class Learn_Rhythm extends AppCompatActivity {
 
+    Button lesson1, lesson2;
     ImageView backBtn;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,6 +26,8 @@ public class Learn_Rhythm extends AppCompatActivity {
             return insets;
         });
         backBtn = findViewById(R.id.backBtn);
+        lesson1 = findViewById(R.id.basics_Lesson1);
+        lesson2 = findViewById(R.id.basics_Lesson2);
 
     }
     @Override
@@ -31,6 +35,15 @@ public class Learn_Rhythm extends AppCompatActivity {
         super.onStart();
         backBtn.setOnClickListener(view -> {
             Intent intent = new Intent(this, Learn_Activity.class);
+            startActivity(intent);
+        });
+        lesson1.setOnClickListener(view -> {
+            Intent intent = new Intent(this, Learn_Rhythm_L1.class);
+            startActivity(intent);
+        });
+
+        lesson2.setOnClickListener(view -> {
+            Intent intent = new Intent(this, Learn_Rhythm_L2.class);
             startActivity(intent);
         });
     }

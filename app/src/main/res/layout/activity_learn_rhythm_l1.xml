@@ -1,0 +1,834 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EDE7F6"
+    tools:context=".Learn_Basics_L1">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:id="@+id/backBtn"
+                android:layout_width="30dp"
+                android:layout_height="40dp"
+                android:src="@drawable/backbtn"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="35dp"
+                />
+
+            <TextView
+                android:id="@+id/l1_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:layout_centerHorizontal="true"
+                android:text="Simple and Compound Meter"
+                android:textSize="21sp"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:fontFamily="@font/tagesschriftregular"
+                />
+
+            <View
+                android:id="@+id/line1"
+                android:layout_width="450dp"
+                android:layout_height="1dp"
+                android:layout_below="@+id/l1_title"
+                android:layout_marginTop="15dp"
+                android:background="@color/black" />
+
+            <TextView
+                android:id="@+id/l1_text1"
+                android:layout_width="380sp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/line1"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/tienneregular"
+                android:text="• Each time signature can be classified into a certain meter."
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/img1"
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:layout_below="@+id/l1_text1"
+                android:background="@drawable/rhythm_l1_img1"
+                android:layout_marginTop="10dp"
+                />
+
+            <TextView
+                android:id="@+id/add_l1_text1"
+                android:layout_width="380sp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/img1"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/tienneregular"
+                android:text="• The terms duple, triple, and quadruple refer to the number of beats in a measure."
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/add_l1_text2"
+                android:layout_width="380sp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/add_l1_text1"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/tienneregular"
+                android:text="• The term simple means that each of these beats can be broken into two notes."
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <View
+                android:id="@+id/line2"
+                android:layout_width="450dp"
+                android:layout_height="1dp"
+                android:layout_below="@+id/add_l1_text2"
+                android:layout_marginTop="15dp"
+                android:background="@color/black" />
+
+            <TextView
+                android:id="@+id/l1_text2"
+                android:layout_width="380sp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/line2"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/tienneregular"
+                android:text="• For example, 2/4 time is classified as simple duple."
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/img2"
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:layout_below="@+id/l1_text2"
+                android:background="@drawable/rhythm_l1_img2"
+                android:layout_marginTop="10dp"
+                />
+
+            <View
+                android:id="@+id/line3"
+                android:layout_width="450dp"
+                android:layout_height="1dp"
+                android:layout_below="@+id/img2"
+                android:layout_marginTop="15dp"
+                android:background="@color/black" />
+
+            <TextView
+                android:id="@+id/l1_text3"
+                android:layout_width="380sp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/line3"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/tienneregular"
+                android:text="• &quot;Duple&quot; refers to the two beats per measure."
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/img3"
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:layout_below="@+id/l1_text3"
+                android:background="@drawable/rhythm_l1_img3"
+                android:layout_marginTop="10dp"
+                />
+
+            <View
+                android:id="@+id/line4"
+                android:layout_width="450dp"
+                android:layout_height="1dp"
+                android:layout_below="@+id/img3"
+                android:layout_marginTop="15dp"
+                android:background="@color/black" />
+
+            <TextView
+                android:id="@+id/l1_text4"
+                android:layout_width="380sp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/line4"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/tienneregular"
+                android:text="• &quot;Simple&quot; states that each of these beats can be divided into two notes."
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/img4"
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:layout_below="@+id/l1_text4"
+                android:background="@drawable/rhythm_l1_img4"
+                android:layout_marginTop="10dp"
+                />
+
+            <View
+                android:id="@+id/line5"
+                android:layout_width="450dp"
+                android:layout_height="1dp"
+                android:layout_below="@+id/img4"
+                android:layout_marginTop="15dp"
+                android:background="@color/black" />
+
+            <TextView
+                android:id="@+id/l1_text5"
+                android:layout_width="380sp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/line5"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/tienneregular"
+                android:text="• 2/2 and 2/8 are also simple duple."
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/img5"
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:layout_below="@+id/l1_text5"
+                android:background="@drawable/rhythm_l1_img5"
+                android:layout_marginTop="10dp"
+                />
+
+            <View
+                android:id="@+id/line6"
+                android:layout_width="450dp"
+                android:layout_height="1dp"
+                android:layout_below="@+id/img5"
+                android:layout_marginTop="15dp"
+                android:background="@color/black" />
+
+            <TextView
+                android:id="@+id/l1_text6"
+                android:layout_width="380sp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/line6"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/tienneregular"
+                android:text="• 3/4 time is classified as simple triple."
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/img6"
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:layout_below="@+id/l1_text6"
+                android:background="@drawable/rhythm_l1_img6"
+                android:layout_marginTop="10dp"
+                />
+
+            <View
+                android:id="@+id/line7"
+                android:layout_width="450dp"
+                android:layout_height="1dp"
+                android:layout_below="@+id/img6"
+                android:layout_marginTop="15dp"
+                android:background="@color/black" />
+
+            <TextView
+                android:id="@+id/l1_text7"
+                android:layout_width="380sp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/line7"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/tienneregular"
+                android:text="• &quot;Triple&quot; refers to the three beats per measure."
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/img7"
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:layout_below="@+id/l1_text7"
+                android:background="@drawable/rhythm_l1_img7"
+                android:layout_marginTop="10dp"
+                />
+
+            <View
+                android:id="@+id/line8"
+                android:layout_width="450dp"
+                android:layout_height="1dp"
+                android:layout_below="@+id/img7"
+                android:layout_marginTop="15dp"
+                android:background="@color/black" />
+
+            <TextView
+                android:id="@+id/l1_text8"
+                android:layout_width="380sp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/line8"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/tienneregular"
+                android:text="• Again, &quot;simple&quot; states that each of these beats can be divided into two notes."
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/img8"
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:layout_below="@+id/l1_text8"
+                android:background="@drawable/rhythm_l1_img8"
+                android:layout_marginTop="10dp"
+                />
+
+            <View
+                android:id="@+id/line9"
+                android:layout_width="450dp"
+                android:layout_height="1dp"
+                android:layout_below="@+id/img8"
+                android:layout_marginTop="15dp"
+                android:background="@color/black" />
+
+            <TextView
+                android:id="@+id/l1_text9"
+                android:layout_width="380sp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/line9"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/tienneregular"
+                android:text="• 3/2 and 3/8 are also simple triple."
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/img9"
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:layout_below="@+id/l1_text9"
+                android:background="@drawable/rhythm_l1_img9"
+                android:layout_marginTop="10dp"
+                />
+
+            <View
+                android:id="@+id/line10"
+                android:layout_width="450dp"
+                android:layout_height="1dp"
+                android:layout_below="@+id/img9"
+                android:layout_marginTop="15dp"
+                android:background="@color/black" />
+
+            <TextView
+                android:id="@+id/l1_text10"
+                android:layout_width="380sp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/line10"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/tienneregular"
+                android:text="• 4/4 time is classified as simple quadruple due to its four beats which can be divided into two notes."
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/img10"
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:layout_below="@+id/l1_text10"
+                android:background="@drawable/rhythm_l1_img10"
+                android:layout_marginTop="10dp"
+                />
+
+            <View
+                android:id="@+id/line11"
+                android:layout_width="450dp"
+                android:layout_height="1dp"
+                android:layout_below="@+id/img10"
+                android:layout_marginTop="15dp"
+                android:background="@color/black" />
+
+            <TextView
+                android:id="@+id/l1_text11"
+                android:layout_width="380sp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/line11"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/tienneregular"
+                android:text="• 4/2 and 4/8 are also simple quadruple."
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/img11"
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:layout_below="@+id/l1_text11"
+                android:background="@drawable/rhythm_l1_img11"
+                android:layout_marginTop="10dp"
+                />
+
+            <View
+                android:id="@+id/line12"
+                android:layout_width="450dp"
+                android:layout_height="1dp"
+                android:layout_below="@+id/img11"
+                android:layout_marginTop="15dp"
+                android:background="@color/black" />
+
+            <TextView
+                android:id="@+id/l1_text12"
+                android:layout_width="380sp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/line12"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/tienneregular"
+                android:text="• Notice that a time signature in simple meter will always have a 2, 3, or 4 for the top number."
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/img12"
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:layout_below="@+id/l1_text12"
+                android:background="@drawable/rhythm_l1_img12"
+                android:layout_marginTop="10dp"
+                />
+
+            <View
+                android:id="@+id/line13"
+                android:layout_width="450dp"
+                android:layout_height="1dp"
+                android:layout_below="@+id/img12"
+                android:layout_marginTop="15dp"
+                android:background="@color/black" />
+
+            <TextView
+                android:id="@+id/l1_text13"
+                android:layout_width="380sp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/line13"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/tienneregular"
+                android:text="• While beats in simple meter are divided into two notes, beats in compound meter are divided into three."
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/img13"
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:layout_below="@+id/l1_text13"
+                android:background="@drawable/rhythm_l1_img1"
+                android:layout_marginTop="10dp"
+                />
+
+            <View
+                android:id="@+id/line14"
+                android:layout_width="450dp"
+                android:layout_height="1dp"
+                android:layout_below="@+id/img13"
+                android:layout_marginTop="15dp"
+                android:background="@color/black" />
+
+            <TextView
+                android:id="@+id/l1_text14"
+                android:layout_width="380sp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/line14"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/tienneregular"
+                android:text="• To demonstrate this, we will examine 6/8 time."
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/img14"
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:layout_below="@+id/l1_text14"
+                android:background="@drawable/rhythm_l1_img13"
+                android:layout_marginTop="10dp"
+                />
+
+            <View
+                android:id="@+id/line15"
+                android:layout_width="450dp"
+                android:layout_height="1dp"
+                android:layout_below="@+id/img14"
+                android:layout_marginTop="15dp"
+                android:background="@color/black" />
+
+            <TextView
+                android:id="@+id/l1_text15"
+                android:layout_width="380sp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/line15"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/tienneregular"
+                android:text="• The six eighth notes can either be grouped into two beats (compound duple) or three beats (simple triple).
+
+"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/img15"
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:layout_below="@+id/l1_text15"
+                android:background="@drawable/rhythm_l1_img14"
+                android:layout_marginTop="10dp"
+                />
+
+            <View
+                android:id="@+id/line16"
+                android:layout_width="450dp"
+                android:layout_height="1dp"
+                android:layout_below="@+id/img15"
+                android:layout_marginTop="15dp"
+                android:background="@color/black" />
+
+            <TextView
+                android:id="@+id/l1_text16"
+                android:layout_width="380sp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/line16"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/tienneregular"
+                android:text="• Since the simple triple pattern already belongs to 3/4 time, 6/8 is compound duple."
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/img16"
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:layout_below="@+id/l1_text16"
+                android:background="@drawable/rhythm_l1_img15"
+                android:layout_marginTop="10dp"
+                />
+
+            <View
+                android:id="@+id/line17"
+                android:layout_width="450dp"
+                android:layout_height="1dp"
+                android:layout_below="@+id/img16"
+                android:layout_marginTop="15dp"
+                android:background="@color/black" />
+
+            <TextView
+                android:id="@+id/l1_text17"
+                android:layout_width="380sp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/line17"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/tienneregular"
+                android:text="• Notice that each beat in 6/8 is a dotted quarter note. In fact, all compound meters will have some dotted note as its beat."
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/img17"
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:layout_below="@+id/l1_text17"
+                android:background="@drawable/rhythm_l1_img16"
+                android:layout_marginTop="10dp"
+                />
+
+            <View
+                android:id="@+id/line18"
+                android:layout_width="450dp"
+                android:layout_height="1dp"
+                android:layout_below="@+id/img17"
+                android:layout_marginTop="15dp"
+                android:background="@color/black" />
+
+            <TextView
+                android:id="@+id/l1_text18"
+                android:layout_width="380sp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/line18"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/tienneregular"
+                android:text="• Any time signature with a 6 on top is compound duple. 6/8 and 6/4 are the most commonly used."
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/img18"
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:layout_below="@+id/l1_text18"
+                android:background="@drawable/rhythm_l1_img17"
+                android:layout_marginTop="10dp"
+                />
+
+            <View
+                android:id="@+id/line19"
+                android:layout_width="450dp"
+                android:layout_height="1dp"
+                android:layout_below="@+id/img18"
+                android:layout_marginTop="15dp"
+                android:background="@color/black" />
+
+            <TextView
+                android:id="@+id/l1_text19"
+                android:layout_width="380sp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/line19"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/tienneregular"
+                android:text="•  9/8 time is classified as compound triple."
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/img19"
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:layout_below="@+id/l1_text19"
+                android:background="@drawable/rhythm_l1_img18"
+                android:layout_marginTop="10dp"
+                />
+
+            <View
+                android:id="@+id/line20"
+                android:layout_width="450dp"
+                android:layout_height="1dp"
+                android:layout_below="@+id/img19"
+                android:layout_marginTop="15dp"
+                android:background="@color/black" />
+
+            <TextView
+                android:id="@+id/l1_text20"
+                android:layout_width="380sp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/line20"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/tienneregular"
+                android:text="•  There are three beats (three dotted quarter notes), thus making the meter triple."
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/img20"
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:layout_below="@+id/l1_text20"
+                android:background="@drawable/rhythm_l1_img19"
+                android:layout_marginTop="10dp"
+                />
+
+            <View
+                android:id="@+id/line21"
+                android:layout_width="450dp"
+                android:layout_height="1dp"
+                android:layout_below="@+id/img20"
+                android:layout_marginTop="15dp"
+                android:background="@color/black" />
+
+            <TextView
+                android:id="@+id/l1_text21"
+                android:layout_width="380sp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/line21"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/tienneregular"
+                android:text="•  Since each beat is made up of three notes, the meter is compound."
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/img21"
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:layout_below="@+id/l1_text21"
+                android:background="@drawable/rhythm_l1_img20"
+                android:layout_marginTop="10dp"
+                />
+
+            <View
+                android:id="@+id/line22"
+                android:layout_width="450dp"
+                android:layout_height="1dp"
+                android:layout_below="@+id/img21"
+                android:layout_marginTop="15dp"
+                android:background="@color/black" />
+
+            <TextView
+                android:id="@+id/l1_text22"
+                android:layout_width="380sp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/line22"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/tienneregular"
+                android:text="•  Any time signature with a 9 on top is compound triple. Although 9/8 is the most common; 9/2, 9/4, and 9/16 can also be used."
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/img22"
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:layout_below="@+id/l1_text22"
+                android:background="@drawable/rhythm_l1_img21"
+                android:layout_marginTop="10dp"
+                />
+
+            <View
+                android:id="@+id/line23"
+                android:layout_width="450dp"
+                android:layout_height="1dp"
+                android:layout_below="@+id/img22"
+                android:layout_marginTop="15dp"
+                android:background="@color/black" />
+
+            <TextView
+                android:id="@+id/l1_text23"
+                android:layout_width="380sp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/line23"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/tienneregular"
+                android:text="•  Finally, 12/8 time is classified as compound quadruple."
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/img23"
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:layout_below="@+id/l1_text23"
+                android:background="@drawable/rhythm_l1_img22"
+                android:layout_marginTop="10dp"
+                />
+
+            <View
+                android:id="@+id/line24"
+                android:layout_width="450dp"
+                android:layout_height="1dp"
+                android:layout_below="@+id/img23"
+                android:layout_marginTop="15dp"
+                android:background="@color/black" />
+
+            <TextView
+                android:id="@+id/l1_text24"
+                android:layout_width="380sp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/line24"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/tienneregular"
+                android:text="•  There are four beats, thus making the meter quadruple."
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/img24"
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:layout_below="@+id/l1_text24"
+                android:background="@drawable/rhythm_l1_img23"
+                android:layout_marginTop="10dp"
+                />
+
+            <View
+                android:id="@+id/line25"
+                android:layout_width="450dp"
+                android:layout_height="1dp"
+                android:layout_below="@+id/img24"
+                android:layout_marginTop="15dp"
+                android:background="@color/black" />
+
+            <TextView
+                android:id="@+id/l1_text25"
+                android:layout_width="380sp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/line25"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/tienneregular"
+                android:text="•  Since each beat is made up of three notes, the meter is compound."
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/img25"
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:layout_below="@+id/l1_text25"
+                android:background="@drawable/rhythm_l1_img24"
+                android:layout_marginTop="10dp"
+                />
+
+            <View
+                android:id="@+id/line26"
+                android:layout_width="450dp"
+                android:layout_height="1dp"
+                android:layout_below="@+id/img25"
+                android:layout_marginTop="15dp"
+                android:background="@color/black" />
+
+            <TextView
+                android:id="@+id/l1_text26"
+                android:layout_width="380sp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/line26"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/tienneregular"
+                android:text="•  Any time signature with a 12 on top is compound quadruple. 12/8 and 12/16 are the most commonly used."
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/img26"
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:layout_below="@+id/l1_text26"
+                android:background="@drawable/rhythm_l1_img25"
+                android:layout_marginTop="10dp"
+                />
+
+            <View
+                android:id="@+id/line27"
+                android:layout_width="450dp"
+                android:layout_height="1dp"
+                android:layout_below="@+id/img26"
+                android:layout_marginTop="15dp"
+                android:background="@color/black" />
+
+        </RelativeLayout>
+    </ScrollView>
+
+
+</RelativeLayout>

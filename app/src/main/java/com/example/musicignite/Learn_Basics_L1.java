@@ -30,7 +30,7 @@ public class Learn_Basics_L1 extends AppCompatActivity {
         @SuppressLint({"MissingInflatedId", "LocalSuppress"}) ImageView gif = findViewById(R.id.l1_gif1);
 
         Glide.with(this)
-                .load(R.drawable.l1_gif1)
+                .load(R.drawable.basics_l1_gif1)
                 .into(gif);
 
     }
