@@ -67,25 +67,10 @@
             android:name=".TimeRush"
             android:exported="false" />
         <activity
-            android:name=".testdelete"
-            android:exported="false" />
-        <activity
-            android:name=".testDelete"
-            android:exported="false" />
-        <activity
             android:name=".GuessTheNote"
             android:exported="false" />
         <activity
             android:name=".PerfectPitch"
-            android:exported="false" />
-        <activity
-            android:name=".Advanced_path"
-            android:exported="false" />
-        <activity
-            android:name=".Intermediate_path"
-            android:exported="false" />
-        <activity
-            android:name=".Beginner_path"
             android:exported="false" />
         <activity
             android:name=".NaviHeader"
