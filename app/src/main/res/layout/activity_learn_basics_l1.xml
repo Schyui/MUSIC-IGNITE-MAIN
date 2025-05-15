@@ -64,7 +64,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="130dp"
                             android:layout_below="@+id/l1_text1"
-                            android:background="@drawable/basics_l1_img1"
+                            android:background="@drawable/basics_l1_img01"
                             android:layout_marginTop="10dp"
                             />
 
@@ -93,7 +93,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="130dp"
                             android:layout_below="@+id/l1_text2"
-                            android:background="@drawable/basics_l1_img2"
+                            android:background="@drawable/basics_l1_img02"
                             android:layout_marginTop="10dp"
                             />
 
@@ -150,7 +150,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="130dp"
                             android:layout_below="@+id/l1_text4"
-                            android:background="@drawable/basics_l1_img3"
+                            android:background="@drawable/basics_l1_img03"
                             android:layout_marginTop="10dp"
                             />
 
@@ -179,7 +179,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="130dp"
                             android:layout_below="@+id/l1_text5"
-                            android:background="@drawable/basics_l1_img4"
+                            android:background="@drawable/basics_l1_img04"
                             android:layout_marginTop="10dp"
                             />
 
@@ -208,7 +208,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="130dp"
                             android:layout_below="@+id/l1_text6"
-                            android:background="@drawable/basics_l1_img5"
+                            android:background="@drawable/basics_l1_img05"
                             android:layout_marginTop="10dp"
                             />
 
@@ -238,7 +238,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="130dp"
                             android:layout_below="@+id/l1_text7"
-                            android:background="@drawable/basics_l1_img6"
+                            android:background="@drawable/basics_l1_img06"
                             android:layout_marginTop="10dp"
                             />
 
@@ -268,7 +268,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="130dp"
                             android:layout_below="@+id/l1_text8"
-                            android:background="@drawable/basics_l1_img7"
+                            android:background="@drawable/basics_l1_img07"
                             android:layout_marginTop="10dp"
                             />
 
@@ -297,7 +297,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="130dp"
                             android:layout_below="@+id/l1_text9"
-                            android:background="@drawable/basics_l1_img8"
+                            android:background="@drawable/basics_l1_img08"
                             android:layout_marginTop="10dp"
                             />
 
@@ -327,7 +327,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="130dp"
                             android:layout_below="@+id/l1_text10"
-                            android:background="@drawable/basics_l1_img9"
+                            android:background="@drawable/basics_l1_img09"
                             android:layout_marginTop="10dp"
                             />
 

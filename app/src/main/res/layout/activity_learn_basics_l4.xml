@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#EDE7F6"
-    tools:context=".Learn_Basics_L2">
+    tools:context=".Learn_Basics_L4">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -32,8 +32,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="40dp"
                 android:layout_centerHorizontal="true"
-                android:text="Note Duration"
-                android:textSize="25sp"
+                android:text="Odd Meter"
+                android:textSize="30sp"
                 android:textAlignment="center"
                 android:textColor="@color/black"
                 android:fontFamily="@font/tagesschriftregular"
@@ -55,16 +55,28 @@
                 android:layout_marginStart="10dp"
                 android:layout_marginTop="20dp"
                 android:fontFamily="@font/tienneregular"
-                android:text="• The length of time that a note is played is called its note duration, which is determined by the type of note."
+                android:text="• An odd meter is a meter which contains both simple and compound beats."
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/l1_text2"
+                android:layout_width="380sp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/l1_text1"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/tienneregular"
+                android:text="• Each type of rest shares a duration with a certain type of note."
                 android:textColor="@color/black"
                 android:textSize="16sp" />
 
             <ImageView
-                android:id="@+id/l1_img1"
+                android:id="@+id/img1"
                 android:layout_width="match_parent"
                 android:layout_height="130dp"
-                android:layout_below="@+id/l1_text1"
-                android:background="@drawable/basics_l2_img01"
+                android:layout_below="@+id/l1_text2"
+                android:background="@drawable/rhythm_l2_img01"
                 android:layout_marginTop="10dp"
                 />
 
@@ -72,28 +84,16 @@
                 android:id="@+id/line2"
                 android:layout_width="450dp"
                 android:layout_height="1dp"
-                android:layout_below="@+id/l1_img1"
+                android:layout_below="@+id/img1"
                 android:layout_marginTop="15dp"
                 android:background="@color/black" />
 
-            <TextView
-                android:id="@+id/l1_text2"
-                android:layout_width="380sp"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/line2"
-                android:layout_marginStart="10dp"
-                android:layout_marginTop="20dp"
-                android:fontFamily="@font/tienneregular"
-                android:text="• The whole note has the longest note duration in modern music."
-                android:textColor="@color/black"
-                android:textSize="16sp" />
-
             <ImageView
-                android:id="@+id/l1_img2"
+                android:id="@+id/img2"
                 android:layout_width="match_parent"
                 android:layout_height="130dp"
                 android:layout_below="@+id/l1_text2"
-                android:background="@drawable/basics_l2_img02"
+                android:background="@drawable/basics_l4_img01"
                 android:layout_marginTop="10dp"
                 />
 
@@ -101,7 +101,7 @@
                 android:id="@+id/line3"
                 android:layout_width="450dp"
                 android:layout_height="1dp"
-                android:layout_below="@+id/l1_img2"
+                android:layout_below="@+id/img2"
                 android:layout_marginTop="15dp"
                 android:background="@color/black" />
 
@@ -113,53 +113,35 @@
                 android:layout_marginStart="10dp"
                 android:layout_marginTop="20dp"
                 android:fontFamily="@font/tienneregular"
-                android:text="• The half note has half the duration of a whole note."
+                android:text="• For example, both a quarter rest and a quarter note occupy the same amount of time."
                 android:textColor="@color/black"
                 android:textSize="16sp" />
 
             <ImageView
-                android:id="@+id/l1_gif1"
+                android:id="@+id/img3"
                 android:layout_width="match_parent"
                 android:layout_height="130dp"
                 android:layout_below="@+id/l1_text3"
+                android:background="@drawable/basics_l4_img02"
                 android:layout_marginTop="10dp"
-                android:background="@drawable/basics_l2_img03"
                 />
-
-            <View
-                android:id="@+id/line4"
-                android:layout_width="450dp"
-                android:layout_height="1dp"
-                android:layout_below="@+id/l1_gif1"
-                android:layout_marginTop="15dp"
-                android:background="@color/black" />
 
             <TextView
                 android:id="@+id/l1_text4"
                 android:layout_width="380sp"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/line4"
+                android:layout_below="@+id/img3"
                 android:layout_marginStart="10dp"
                 android:layout_marginTop="20dp"
                 android:fontFamily="@font/tienneregular"
-                android:text="• Two half notes occupy the same amount of time as one whole note."
+                android:text="• While the note would make a sound, the rest is silent."
                 android:textColor="@color/black"
                 android:textSize="16sp" />
-
-            <ImageView
-                android:id="@+id/l1_img3"
-                android:layout_width="match_parent"
-                android:layout_height="130dp"
-                android:layout_below="@+id/l1_text4"
-                android:background="@drawable/basics_l2_img04"
-                android:layout_marginTop="10dp"
-                />
-
             <View
-                android:id="@+id/line5"
+                android:id="@+id/line4"
                 android:layout_width="450dp"
                 android:layout_height="1dp"
-                android:layout_below="@+id/l1_img3"
+                android:layout_below="@+id/l1_text4"
                 android:layout_marginTop="15dp"
                 android:background="@color/black" />
 
@@ -167,57 +149,41 @@
                 android:id="@+id/l1_text5"
                 android:layout_width="380sp"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/line5"
+                android:layout_below="@+id/line4"
                 android:layout_marginStart="10dp"
                 android:layout_marginTop="20dp"
                 android:fontFamily="@font/tienneregular"
-                android:text="• The quarter note is a fourth (or a quarter) of a whole note."
+                android:text="• To demonstrate this, let's fill a measure of 4/4 time with quarter notes."
                 android:textColor="@color/black"
                 android:textSize="16sp" />
-
-            <ImageView
-                android:id="@+id/l1_img4"
-                android:layout_width="match_parent"
-                android:layout_height="130dp"
-                android:layout_below="@+id/l1_text5"
-                android:background="@drawable/basics_l2_img05"
-                android:layout_marginTop="10dp"
-                />
-
-            <View
-                android:id="@+id/line6"
-                android:layout_width="450dp"
-                android:layout_height="1dp"
-                android:layout_below="@+id/l1_img4"
-                android:layout_marginTop="15dp"
-                android:background="@color/black" />
 
             <TextView
                 android:id="@+id/l1_text6"
                 android:layout_width="380sp"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/line6"
+                android:layout_below="@+id/l1_text5"
                 android:layout_marginStart="10dp"
                 android:layout_marginTop="20dp"
                 android:fontFamily="@font/tienneregular"
-                android:text="• Four quarter notes occupy the same amount of time as one whole note. Two quarter notes equal the duration of a half note."
+                android:text="• When played, all four notes sound."
                 android:textColor="@color/black"
                 android:textSize="16sp" />
 
-            <ImageView
-                android:id="@+id/l1_img5"
-                android:layout_width="match_parent"
-                android:layout_height="130dp"
+            <androidx.media3.ui.PlayerView
+                android:id="@+id/vid1"
+                android:layout_width="430dp"
+                android:layout_height="180dp"
                 android:layout_below="@+id/l1_text6"
-                android:background="@drawable/basics_l2_img06"
+                app:use_controller="true"
+                app:resize_mode="fit"
                 android:layout_marginTop="10dp"
                 />
 
             <View
-                android:id="@+id/line7"
+                android:id="@+id/line5"
                 android:layout_width="450dp"
                 android:layout_height="1dp"
-                android:layout_below="@+id/l1_img5"
+                android:layout_below="@+id/vid1"
                 android:layout_marginTop="15dp"
                 android:background="@color/black" />
 
@@ -225,57 +191,40 @@
                 android:id="@+id/l1_text7"
                 android:layout_width="380sp"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/line7"
+                android:layout_below="@+id/line5"
                 android:layout_marginStart="10dp"
                 android:layout_marginTop="20dp"
                 android:fontFamily="@font/tienneregular"
-                android:text="• Notes smaller in duration than a quarter note have flags. Each flag halves the value of a note."
+                android:text="• Next, we will replace the second quarter note with a quarter rest."
                 android:textColor="@color/black"
                 android:textSize="16sp" />
-
-            <ImageView
-                android:id="@+id/l1_img6"
-                android:layout_width="match_parent"
-                android:layout_height="130dp"
-                android:layout_below="@+id/l1_text7"
-                android:background="@drawable/basics_l2_img07"
-                android:layout_marginTop="10dp"
-                />
-
-            <View
-                android:id="@+id/line8"
-                android:layout_width="450dp"
-                android:layout_height="1dp"
-                android:layout_below="@+id/l1_img6"
-                android:layout_marginTop="15dp"
-                android:background="@color/black" />
 
             <TextView
                 android:id="@+id/l1_text8"
                 android:layout_width="380sp"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/line8"
+                android:layout_below="@+id/l1_text7"
                 android:layout_marginStart="10dp"
                 android:layout_marginTop="20dp"
                 android:fontFamily="@font/tienneregular"
-                android:text="• An eighth note has one flag."
+                android:text="• When played, the second beat is now silent."
                 android:textColor="@color/black"
                 android:textSize="16sp" />
 
-            <ImageView
-                android:id="@+id/l1_img7"
-                android:layout_width="match_parent"
-                android:layout_height="130dp"
+            <androidx.media3.ui.PlayerView
+                android:id="@+id/vid2"
+                android:layout_width="430dp"
+                android:layout_height="180dp"
                 android:layout_below="@+id/l1_text8"
-                android:background="@drawable/basics_l2_img08"
-                android:layout_marginTop="10dp"
-                />
+                app:use_controller="true"
+                app:resize_mode="fit"
+                android:layout_marginTop="10dp" />
 
             <View
-                android:id="@+id/line9"
+                android:id="@+id/line6"
                 android:layout_width="450dp"
                 android:layout_height="1dp"
-                android:layout_below="@+id/l1_img7"
+                android:layout_below="@+id/vid2"
                 android:layout_marginTop="15dp"
                 android:background="@color/black" />
 
@@ -283,28 +232,28 @@
                 android:id="@+id/l1_text9"
                 android:layout_width="380sp"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/line9"
+                android:layout_below="@+id/line6"
                 android:layout_marginStart="10dp"
                 android:layout_marginTop="20dp"
                 android:fontFamily="@font/tienneregular"
-                android:text="• Therefore, two eighth notes occupy the same amount of time as one quarter note."
+                android:text="• Next, let's discuss the other types of rests."
                 android:textColor="@color/black"
                 android:textSize="16sp" />
 
             <ImageView
-                android:id="@+id/l1_img8"
+                android:id="@+id/img6"
                 android:layout_width="match_parent"
                 android:layout_height="130dp"
                 android:layout_below="@+id/l1_text9"
-                android:background="@drawable/basics_l2_img09"
+                android:background="@drawable/basics_l4_img03"
                 android:layout_marginTop="10dp"
                 />
 
             <View
-                android:id="@+id/line10"
+                android:id="@+id/line7"
                 android:layout_width="450dp"
                 android:layout_height="1dp"
-                android:layout_below="@+id/l1_img8"
+                android:layout_below="@+id/img6"
                 android:layout_marginTop="15dp"
                 android:background="@color/black" />
 
@@ -312,28 +261,30 @@
                 android:id="@+id/l1_text10"
                 android:layout_width="380sp"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/line10"
+                android:layout_below="@+id/line7"
                 android:layout_marginStart="10dp"
                 android:layout_marginTop="20dp"
                 android:fontFamily="@font/tienneregular"
-                android:text="• A sixteenth note has two flags, halving the value again."
+                android:text="• A whole rest occupies the same amount of time as a whole note."
                 android:textColor="@color/black"
                 android:textSize="16sp" />
 
+
+
             <ImageView
-                android:id="@+id/l1_img9"
+                android:id="@+id/img7"
                 android:layout_width="match_parent"
                 android:layout_height="130dp"
                 android:layout_below="@+id/l1_text10"
-                android:background="@drawable/basics_l2_img10"
+                android:background="@drawable/basics_l4_img04"
                 android:layout_marginTop="10dp"
                 />
 
             <View
-                android:id="@+id/line11"
+                android:id="@+id/line8"
                 android:layout_width="450dp"
                 android:layout_height="1dp"
-                android:layout_below="@+id/l1_img9"
+                android:layout_below="@+id/img7"
                 android:layout_marginTop="15dp"
                 android:background="@color/black" />
 
@@ -341,28 +292,28 @@
                 android:id="@+id/l1_text11"
                 android:layout_width="380sp"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/line11"
+                android:layout_below="@+id/line8"
                 android:layout_marginStart="10dp"
                 android:layout_marginTop="20dp"
                 android:fontFamily="@font/tienneregular"
-                android:text="• Two sixteenth notes equal the duration of an eighth note."
+                android:text="• It is drawn as a box descending from the fourth staff line."
                 android:textColor="@color/black"
                 android:textSize="16sp" />
 
             <ImageView
-                android:id="@+id/l1_img10"
+                android:id="@+id/img8"
                 android:layout_width="match_parent"
                 android:layout_height="130dp"
                 android:layout_below="@+id/l1_text11"
-                android:background="@drawable/basics_l2_img11"
+                android:background="@drawable/basics_l4_img05"
                 android:layout_marginTop="10dp"
                 />
 
             <View
-                android:id="@+id/line12"
+                android:id="@+id/line9"
                 android:layout_width="450dp"
                 android:layout_height="1dp"
-                android:layout_below="@+id/l1_img10"
+                android:layout_below="@+id/img8"
                 android:layout_marginTop="15dp"
                 android:background="@color/black" />
 
@@ -370,28 +321,30 @@
                 android:id="@+id/l1_text12"
                 android:layout_width="380sp"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/line12"
+                android:layout_below="@+id/line9"
                 android:layout_marginStart="10dp"
                 android:layout_marginTop="20dp"
                 android:fontFamily="@font/tienneregular"
-                android:text="• Four sixteenth notes occupy the same amount of time as one quarter note."
+                android:text="• A half rest occupies the same amount of time as a half note."
                 android:textColor="@color/black"
                 android:textSize="16sp" />
 
+
+
             <ImageView
-                android:id="@+id/l1_img11"
+                android:id="@+id/img9"
                 android:layout_width="match_parent"
                 android:layout_height="130dp"
                 android:layout_below="@+id/l1_text12"
-                android:background="@drawable/basics_l2_img12"
+                android:background="@drawable/basics_l4_img06"
                 android:layout_marginTop="10dp"
                 />
 
             <View
-                android:id="@+id/line13"
+                android:id="@+id/line10"
                 android:layout_width="450dp"
                 android:layout_height="1dp"
-                android:layout_below="@+id/l1_img11"
+                android:layout_below="@+id/img9"
                 android:layout_marginTop="15dp"
                 android:background="@color/black" />
 
@@ -399,28 +352,28 @@
                 android:id="@+id/l1_text13"
                 android:layout_width="380sp"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/line13"
+                android:layout_below="@+id/line10"
                 android:layout_marginStart="10dp"
                 android:layout_marginTop="20dp"
                 android:fontFamily="@font/tienneregular"
-                android:text="• Although it is possible to have notes with three or more flags, they are seldom used."
+                android:text="• It is drawn as a box ascending from the middle staff line."
                 android:textColor="@color/black"
                 android:textSize="16sp" />
 
             <ImageView
-                android:id="@+id/l1_img12"
+                android:id="@+id/img10"
                 android:layout_width="match_parent"
                 android:layout_height="130dp"
                 android:layout_below="@+id/l1_text13"
-                android:background="@drawable/basics_l2_img13"
+                android:background="@drawable/basics_l4_img07"
                 android:layout_marginTop="10dp"
                 />
 
             <View
-                android:id="@+id/line14"
+                android:id="@+id/line11"
                 android:layout_width="450dp"
                 android:layout_height="1dp"
-                android:layout_below="@+id/l1_img12"
+                android:layout_below="@+id/img10"
                 android:layout_marginTop="15dp"
                 android:background="@color/black" />
 
@@ -428,22 +381,156 @@
                 android:id="@+id/l1_text14"
                 android:layout_width="380sp"
                 android:layout_height="wrap_content"
+                android:layout_below="@+id/line11"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/tienneregular"
+                android:text="• Like notes, rests can have flags.
+
+"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+
+            <ImageView
+                android:id="@+id/img11"
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:layout_below="@+id/l1_text14"
+                android:background="@drawable/basics_l4_img08"
+                android:layout_marginTop="10dp"
+                />
+
+            <View
+                android:id="@+id/line12"
+                android:layout_width="450dp"
+                android:layout_height="1dp"
+                android:layout_below="@+id/img11"
+                android:layout_marginTop="15dp"
+                android:background="@color/black" />
+
+            <TextView
+                android:id="@+id/l1_text15"
+                android:layout_width="380sp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/line12"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/tienneregular"
+                android:text="• With one flag, an eighth rest has the same duration as an eighth note."
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+
+            <ImageView
+                android:id="@+id/img12"
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:layout_below="@+id/l1_text15"
+                android:background="@drawable/basics_l4_img09"
+                android:layout_marginTop="10dp"
+                />
+
+            <View
+                android:id="@+id/line13"
+                android:layout_width="450dp"
+                android:layout_height="1dp"
+                android:layout_below="@+id/img12"
+                android:layout_marginTop="15dp"
+                android:background="@color/black" />
+
+            <TextView
+                android:id="@+id/l1_text16"
+                android:layout_width="380sp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/line13"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/tienneregular"
+                android:text="• With two flags, a sixteenth rest has the same duration as a sixteenth note."
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+
+
+            <ImageView
+                android:id="@+id/img13"
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:layout_below="@+id/l1_text16"
+                android:background="@drawable/basics_l4_img10"
+                android:layout_marginTop="10dp"
+                />
+
+            <View
+                android:id="@+id/line14"
+                android:layout_width="450dp"
+                android:layout_height="1dp"
+                android:layout_below="@+id/img13"
+                android:layout_marginTop="15dp"
+                android:background="@color/black" />
+
+            <TextView
+                android:id="@+id/l1_text17"
+                android:layout_width="380sp"
+                android:layout_height="wrap_content"
                 android:layout_below="@+id/line14"
                 android:layout_marginStart="10dp"
                 android:layout_marginTop="20dp"
                 android:fontFamily="@font/tienneregular"
-                android:text="• This chart displays the relationship of all five note types discussed in this lesson."
+                android:text="• Although rare, rests can have three or more flags."
                 android:textColor="@color/black"
                 android:textSize="16sp" />
 
+
+
             <ImageView
-                android:id="@+id/l1_img13"
+                android:id="@+id/img14"
                 android:layout_width="match_parent"
                 android:layout_height="130dp"
-                android:layout_below="@+id/l1_text14"
-                android:background="@drawable/basics_l2_img14"
+                android:layout_below="@+id/l1_text17"
+                android:background="@drawable/basics_l4_img11"
                 android:layout_marginTop="10dp"
                 />
+
+            <View
+                android:id="@+id/line15"
+                android:layout_width="450dp"
+                android:layout_height="1dp"
+                android:layout_below="@+id/img14"
+                android:layout_marginTop="15dp"
+                android:background="@color/black" />
+
+            <TextView
+                android:id="@+id/l1_text18"
+                android:layout_width="380sp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/line15"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/tienneregular"
+                android:text="• Use this chart for reference to rest duration."
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+
+
+            <ImageView
+                android:id="@+id/img15"
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:layout_below="@+id/l1_text18"
+                android:background="@drawable/basics_l4_img12"
+                android:layout_marginTop="10dp"
+                />
+
+            <View
+                android:id="@+id/line16"
+                android:layout_width="450dp"
+                android:layout_height="1dp"
+                android:layout_below="@+id/img15"
+                android:layout_marginTop="15dp"
+                android:background="@color/black" />
 
         </RelativeLayout>
     </ScrollView>
