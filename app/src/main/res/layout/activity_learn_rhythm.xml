@@ -64,7 +64,7 @@
             android:id="@+id/basics_Lesson1"
             android:layout_width="300dp"
             android:layout_height="90dp"
-            android:layout_marginTop="240dp"
+            android:layout_marginTop="300dp"
             android:layout_centerHorizontal="true"
             android:text="Lesson 1"
             android:textColor="@color/lavender"

@@ -30,7 +30,8 @@ public class Learn_Basics extends AppCompatActivity {
         Lesson2 = findViewById(R.id.basics_Lesson2);
         Lesson3 = findViewById(R.id.basics_Lesson3);
         Lesson4 = findViewById(R.id.basics_Lesson4);
-        //Lesson5 = findViewById(R.id.basics_Lesson5);
+        Lesson5 = findViewById(R.id.basics_Lesson5);
+        //Lesson6 = findViewById(R.id.basics_Lesson6);
     }
 
     @Override
@@ -60,12 +61,12 @@ public class Learn_Basics extends AppCompatActivity {
                 Intent intent = new Intent(this, Learn_Basics_L4.class);
                 startActivity(intent);
             });
-/*
-                Lesson5.setOnClickListener(view -> {
-                Intent intent = new Intent(this, Lesson5.class);
+
+            Lesson5.setOnClickListener(view -> {
+                Intent intent = new Intent(this, Learn_Basics_L5.class);
                 startActivity(intent);
             });
-
+/*
                 Lesson6.setOnClickListener(view -> {
                 Intent intent = new Intent(this, Lesson6.class);
                 startActivity(intent);

@@ -16,10 +16,13 @@
         android:theme="@style/Theme.AppCompat.Light.NoActionBar"
         tools:targetApi="31">
         <activity
-            android:name=".Learn_Basics_L4"
+            android:name=".Learn_Basics_L6"
             android:exported="false" />
         <activity
-            android:name=".learn_basics_l4"
+            android:name=".Learn_Basics_L5"
+            android:exported="false" />
+        <activity
+            android:name=".Learn_Basics_L4"
             android:exported="false" />
         <activity
             android:name=".Learn_Rhythm_L2"

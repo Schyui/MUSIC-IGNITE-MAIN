@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EDE7F6"
+    tools:context=".Learn_Basics_L6">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:id="@+id/backBtn"
+                android:layout_width="30dp"
+                android:layout_height="40dp"
+                android:src="@drawable/backbtn"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="35dp"
+                />
+
+            <TextView
+                android:id="@+id/l1_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:layout_centerHorizontal="true"
+                android:text="Steps and Accidentals"
+                android:textSize="28sp"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:fontFamily="@font/tagesschriftregular"
+                />
+
+            <View
+                android:id="@+id/line1"
+                android:layout_width="450dp"
+                android:layout_height="1dp"
+                android:layout_below="@+id/l1_title"
+                android:layout_marginTop="15dp"
+                android:background="@color/black" />
+
+            <TextView
+                android:id="@+id/text1"
+                android:layout_width="380sp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/line1"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/tienneregular"
+                android:text="• Augmentation dots and tenuto ties are two types of markings used to alter a note's duration."
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/img1"
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:layout_below="@+id/text1"
+                android:background="@drawable/basics_l5_img1"
+                android:layout_marginTop="10dp"
+                />
+
+            <View
+                android:id="@+id/line2"
+                android:layout_width="450dp"
+                android:layout_height="1dp"
+                android:layout_below="@+id/img1"
+                android:layout_marginTop="15dp"
+                android:background="@color/black" />
+
+            <TextView
+                android:id="@+id/text2"
+                android:layout_width="380sp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/line2"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/tienneregular"
+                android:text="• A dot increases duration by one half."
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/img2"
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:layout_below="@+id/text2"
+                android:background="@drawable/basics_l5_img2"
+                android:layout_marginTop="10dp"
+                />
+
+            <View
+                android:id="@+id/line3"
+                android:layout_width="450dp"
+                android:layout_height="1dp"
+                android:layout_below="@+id/img2"
+                android:layout_marginTop="15dp"
+                android:background="@color/black" />
+
+            <TextView
+                android:id="@+id/text3"
+                android:layout_width="380sp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/line3"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/tienneregular"
+                android:text="• Since an eighth note is half the duration of a quarter note, we will substitute it for the 1/2 symbol."
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/img3"
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:layout_below="@+id/text3"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/basics_l5_img3"
+                />
+
+            <TextView
+                android:id="@+id/text4"
+                android:layout_width="380sp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/img3"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/tienneregular"
+                android:text="• As you can see, a dotted quarter note is equal to a quarter note plus an eighth note."
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <View
+                android:id="@+id/line4"
+                android:layout_width="450dp"
+                android:layout_height="1dp"
+                android:layout_below="@+id/text4"
+                android:layout_marginTop="15dp"
+                android:background="@color/black" />
+
+            <TextView
+                android:id="@+id/text5"
+                android:layout_width="380sp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/line4"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/tienneregular"
+                android:text="• A dotted quarter note can also equal three eighth notes."
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/img4"
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:layout_below="@+id/text5"
+                android:background="@drawable/basics_l5_img4"
+                android:layout_marginTop="10dp"
+                />
+
+            <View
+                android:id="@+id/line5"
+                android:layout_width="450dp"
+                android:layout_height="1dp"
+                android:layout_below="@+id/img4"
+                android:layout_marginTop="15dp"
+                android:background="@color/black" />
+
+            <TextView
+                android:id="@+id/text6"
+                android:layout_width="380sp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/line5"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/tienneregular"
+                android:text="• Ties merge multiple notes of the same pitch."
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/img5"
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:layout_below="@+id/text6"
+                android:background="@drawable/basics_l5_img5"
+                android:layout_marginTop="10dp"
+                />
+
+            <View
+                android:id="@+id/line6"
+                android:layout_width="450dp"
+                android:layout_height="1dp"
+                android:layout_below="@+id/img5"
+                android:layout_marginTop="15dp"
+                android:background="@color/black" />
+
+            <TextView
+                android:id="@+id/text7"
+                android:layout_width="380sp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/line6"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/tienneregular"
+                android:text="• They are used to let the duration of a note travel across barriers (such as the measure line in this example)."
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/img6"
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:layout_below="@+id/text7"
+                android:background="@drawable/basics_l5_img6"
+                android:layout_marginTop="10dp"
+                />
+
+            <View
+                android:id="@+id/line7"
+                android:layout_width="450dp"
+                android:layout_height="1dp"
+                android:layout_below="@+id/img6"
+                android:layout_marginTop="15dp"
+                android:background="@color/black" />
+
+            <TextView
+                android:id="@+id/text8"
+                android:layout_width="380sp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/line7"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/tienneregular"
+                android:text="• The fourth and fifth notes are now combined."
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+
+            <androidx.media3.ui.PlayerView
+                android:id="@+id/vid1"
+                android:layout_width="match_parent"
+                android:layout_height="140dp"
+                android:layout_below="@+id/text8"
+                app:use_controller="true"
+                app:resize_mode="fit"
+                android:layout_marginTop="10dp"
+                />
+
+
+            <View
+                android:id="@+id/line8"
+                android:layout_width="450dp"
+                android:layout_height="1dp"
+                android:layout_below="@+id/vid1"
+                android:layout_marginTop="15dp"
+                android:background="@color/black" />
+
+            <TextView
+                android:id="@+id/text9"
+                android:layout_width="380sp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/line8"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/tienneregular"
+                android:text="• If the measure line were not there, we could have written a half note instead."
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/gif1"
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:layout_below="@+id/text9"
+                android:background="@drawable/basics_l5_gif1"
+                android:layout_marginTop="10dp"
+                />
+
+            <View
+                android:id="@+id/line10"
+                android:layout_width="450dp"
+                android:layout_height="1dp"
+                android:layout_below="@+id/gif1"
+                android:layout_marginTop="15dp"
+                android:background="@color/black" />
+
+            <TextView
+                android:id="@+id/text11"
+                android:layout_width="380sp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/line10"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/tienneregular"
+                android:text="• Use this chart for reference to augmentation dots."
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/img9"
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:layout_below="@+id/text11"
+                android:background="@drawable/basics_l5_img8"
+                android:layout_marginTop="10dp"
+                />
+
+        </RelativeLayout>
+    </ScrollView>
+
+
+</RelativeLayout>

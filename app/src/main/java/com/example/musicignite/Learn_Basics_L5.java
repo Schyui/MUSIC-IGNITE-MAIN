@@ -1,5 +1,6 @@
 package com.example.musicignite;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
@@ -11,25 +12,24 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
-
 import androidx.media3.common.MediaItem;
 import androidx.media3.common.util.UnstableApi;
 import androidx.media3.exoplayer.ExoPlayer;
 import androidx.media3.ui.PlayerView;
 
+import com.bumptech.glide.Glide;
 
-
-public class Learn_Basics_L4 extends AppCompatActivity {
+public class Learn_Basics_L5 extends AppCompatActivity {
 
     ImageView backBtn;
-    PlayerView playerView1, playerView2;
-    ExoPlayer player1, player2;
+    PlayerView playerView1;
+    ExoPlayer player1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_learn_basics_l4);
+        setContentView(R.layout.activity_learn_basics_l5);
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
@@ -37,22 +37,21 @@ public class Learn_Basics_L4 extends AppCompatActivity {
         });
         backBtn = findViewById(R.id.backBtn);
         playerView1 = findViewById(R.id.vid1);
-        playerView2 = findViewById(R.id.vid2);
-
-
+        @SuppressLint({"MissingInflatedId", "LocalSuppress"}) ImageView gif = findViewById(R.id.gif1);
+        Glide.with(this)
+                .load(R.drawable.basics_l5_gif1)
+                .into(gif);
     }
-
     @Override
     public void onStart() {
         super.onStart();
         backBtn.setOnClickListener(v -> {
-            Intent intent = new Intent(Learn_Basics_L4.this, Learn_Basics.class);
+            Intent intent = new Intent(Learn_Basics_L5.this, Learn_Basics.class);
             startActivity(intent);
         });
 
         initializePlayer();
     }
-
     @OptIn(markerClass = UnstableApi.class)
     private void initializePlayer() {
         // Player 1
@@ -61,19 +60,9 @@ public class Learn_Basics_L4 extends AppCompatActivity {
         playerView1.setControllerShowTimeoutMs(500);
         playerView1.setControllerAutoShow(true);
 
-        Uri videoUri1 = Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.basics_lesson4_vid1);
+        Uri videoUri1 = Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.basics_lesson5_vid2);
         player1.setMediaItem(MediaItem.fromUri(videoUri1));
         player1.prepare();
-
-        // Player 2
-        player2 = new ExoPlayer.Builder(this).build();
-        playerView2.setPlayer(player2);
-        playerView2.setControllerShowTimeoutMs(500);
-        playerView2.setControllerAutoShow(true);
-
-        Uri videoUri2 = Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.basics_lesson4_vid2);
-        player2.setMediaItem(MediaItem.fromUri(videoUri2));
-        player2.prepare();
     }
 
     @Override
@@ -83,10 +72,6 @@ public class Learn_Basics_L4 extends AppCompatActivity {
         if (player1 != null) {
             player1.release();
             player1 = null;
-        }
-        if (player2 != null) {
-            player2.release();
-            player2 = null;
         }
     }
 }
