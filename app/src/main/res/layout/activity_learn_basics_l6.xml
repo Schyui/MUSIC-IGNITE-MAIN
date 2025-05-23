@@ -9,6 +9,7 @@
     tools:context=".Learn_Basics_L6">
 
     <ScrollView
+        android:id="@+id/lesson_scroll_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
@@ -55,53 +56,53 @@
                 android:layout_marginStart="10dp"
                 android:layout_marginTop="20dp"
                 android:fontFamily="@font/tienneregular"
-                android:text="• Augmentation dots and tenuto ties are two types of markings used to alter a note's duration."
+                android:text="• A half step (or &quot;semitone&quot;) is the distance from one key on the keyboard to the next adjacent key."
                 android:textColor="@color/black"
                 android:textSize="16sp" />
-
-            <ImageView
-                android:id="@+id/img1"
-                android:layout_width="match_parent"
-                android:layout_height="130dp"
-                android:layout_below="@+id/text1"
-                android:background="@drawable/basics_l5_img1"
-                android:layout_marginTop="10dp"
-                />
-
-            <View
-                android:id="@+id/line2"
-                android:layout_width="450dp"
-                android:layout_height="1dp"
-                android:layout_below="@+id/img1"
-                android:layout_marginTop="15dp"
-                android:background="@color/black" />
 
             <TextView
                 android:id="@+id/text2"
                 android:layout_width="380sp"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/line2"
+                android:layout_below="@+id/text1"
                 android:layout_marginStart="10dp"
                 android:layout_marginTop="20dp"
                 android:fontFamily="@font/tienneregular"
-                android:text="• A dot increases duration by one half."
+                android:text="• Key 1 to Key 2 is a half step since they are next to each other."
                 android:textColor="@color/black"
                 android:textSize="16sp" />
 
-            <ImageView
-                android:id="@+id/img2"
-                android:layout_width="match_parent"
-                android:layout_height="130dp"
+            <FrameLayout
+                android:id="@+id/frame_vid1"
                 android:layout_below="@+id/text2"
-                android:background="@drawable/basics_l5_img2"
-                android:layout_marginTop="10dp"
-                />
+                android:layout_width="match_parent"
+                android:layout_height="140dp"
+                android:layout_marginTop="10dp">
+
+
+                <androidx.media3.ui.PlayerView
+                    android:id="@+id/vid1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:use_controller="false"
+                     />
+
+                <ImageView
+                    android:id="@+id/playButton1"
+                    android:layout_width="68dp"
+                    android:layout_height="68dp"
+                    android:layout_gravity="center"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:background="@android:color/transparent"
+                    android:src="@android:drawable/ic_media_play" />
+            </FrameLayout>
 
             <View
-                android:id="@+id/line3"
+                android:id="@+id/line2"
                 android:layout_width="450dp"
                 android:layout_height="1dp"
-                android:layout_below="@+id/img2"
+                android:layout_below="@+id/frame_vid1"
                 android:layout_marginTop="15dp"
                 android:background="@color/black" />
 
@@ -109,40 +110,57 @@
                 android:id="@+id/text3"
                 android:layout_width="380sp"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/line3"
+                android:layout_below="@+id/line2"
                 android:layout_marginStart="10dp"
                 android:layout_marginTop="20dp"
                 android:fontFamily="@font/tienneregular"
-                android:text="• Since an eighth note is half the duration of a quarter note, we will substitute it for the 1/2 symbol."
+                android:text="• A half step is not always from a white key to a black key."
                 android:textColor="@color/black"
                 android:textSize="16sp" />
-
-            <ImageView
-                android:id="@+id/img3"
-                android:layout_width="match_parent"
-                android:layout_height="130dp"
-                android:layout_below="@+id/text3"
-                android:layout_marginTop="10dp"
-                android:background="@drawable/basics_l5_img3"
-                />
 
             <TextView
                 android:id="@+id/text4"
                 android:layout_width="380sp"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/img3"
+                android:layout_below="@+id/text3"
                 android:layout_marginStart="10dp"
                 android:layout_marginTop="20dp"
                 android:fontFamily="@font/tienneregular"
-                android:text="• As you can see, a dotted quarter note is equal to a quarter note plus an eighth note."
+                android:text="• In this example, Key 1 and Key 2 are still next to each other."
                 android:textColor="@color/black"
                 android:textSize="16sp" />
 
+            <FrameLayout
+                android:id="@+id/frame_vid2"
+                android:layout_below="@+id/text4"
+                android:layout_width="match_parent"
+                android:layout_height="140dp"
+                android:layout_marginTop="10dp">
+
+                <androidx.media3.ui.PlayerView
+                    android:id="@+id/vid2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:use_controller="false"
+                    />
+
+                <ImageView
+                    android:id="@+id/playButton2"
+                    android:layout_width="68dp"
+                    android:layout_height="68dp"
+                    android:layout_gravity="center"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:background="@android:color/transparent"
+                    android:src="@android:drawable/ic_media_play" />
+
+            </FrameLayout>
+
             <View
-                android:id="@+id/line4"
+                android:id="@+id/line3"
                 android:layout_width="450dp"
                 android:layout_height="1dp"
-                android:layout_below="@+id/text4"
+                android:layout_below="@+id/frame_vid2"
                 android:layout_marginTop="15dp"
                 android:background="@color/black" />
 
@@ -150,11 +168,92 @@
                 android:id="@+id/text5"
                 android:layout_width="380sp"
                 android:layout_height="wrap_content"
+                android:layout_below="@+id/line3"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/tienneregular"
+                android:text="• A whole step (or &quot;whole tone&quot; or simply &quot;tone&quot;) is the same distance as two half steps."
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/text6"
+                android:layout_width="380sp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/text5"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/tienneregular"
+                android:text="• Key 1 to Key 3 is a whole step."
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <FrameLayout
+                android:id="@+id/frame_vid3"
+                android:layout_below="@+id/text6"
+                android:layout_width="match_parent"
+                android:layout_height="140dp"
+                android:layout_marginTop="10dp">
+
+                <androidx.media3.ui.PlayerView
+                    android:id="@+id/vid3"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:use_controller="false"/>
+
+                <ImageView
+                    android:id="@+id/playButton3"
+                    android:layout_width="68dp"
+                    android:layout_height="68dp"
+                    android:layout_gravity="center"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:background="@android:color/transparent"
+                    android:src="@android:drawable/ic_media_play" />
+            </FrameLayout>
+
+            <TextView
+                android:id="@+id/text7"
+                android:layout_width="380sp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/frame_vid3"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/tienneregular"
+                android:text="• Key 1 to Key 2 is the first half step. Key 2 to Key 3 is the second half step."
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <View
+                android:id="@+id/line4"
+                android:layout_width="450dp"
+                android:layout_height="1dp"
+                android:layout_below="@+id/text7"
+                android:layout_marginTop="15dp"
+                android:background="@color/black" />
+
+
+            <TextView
+                android:id="@+id/text8"
+                android:layout_width="380sp"
+                android:layout_height="wrap_content"
                 android:layout_below="@+id/line4"
                 android:layout_marginStart="10dp"
                 android:layout_marginTop="20dp"
                 android:fontFamily="@font/tienneregular"
-                android:text="• A dotted quarter note can also equal three eighth notes."
+                android:text="• An accidental is a sign used to raise or lower the pitch of a note."
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/modify_text1"
+                android:layout_width="380sp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/text8"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/tienneregular"
+                android:text="• The first accidentals that we will discuss are the flat and the sharp."
                 android:textColor="@color/black"
                 android:textSize="16sp" />
 
@@ -162,28 +261,52 @@
                 android:id="@+id/img4"
                 android:layout_width="match_parent"
                 android:layout_height="130dp"
-                android:layout_below="@+id/text5"
-                android:background="@drawable/basics_l5_img4"
+                android:layout_below="@+id/modify_text1"
+                android:background="@drawable/basics_l6_img1"
                 android:layout_marginTop="10dp"
                 />
+
+            <TextView
+                android:id="@+id/text9"
+                android:layout_width="380sp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/img4"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/tienneregular"
+                android:text="• The flat lowers a note by a half step while the sharp raises a note by a half step."
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/text10"
+                android:layout_width="380sp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/text9"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/tienneregular"
+                android:text="• When typing, you can use a # to represent a sharp and a b to represent a flat."
+                android:textColor="@color/black"
+                android:textSize="16sp" />
 
             <View
                 android:id="@+id/line5"
                 android:layout_width="450dp"
                 android:layout_height="1dp"
-                android:layout_below="@+id/img4"
+                android:layout_below="@+id/text10"
                 android:layout_marginTop="15dp"
                 android:background="@color/black" />
 
             <TextView
-                android:id="@+id/text6"
+                android:id="@+id/text11"
                 android:layout_width="380sp"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/line5"
                 android:layout_marginStart="10dp"
                 android:layout_marginTop="20dp"
                 android:fontFamily="@font/tienneregular"
-                android:text="• Ties merge multiple notes of the same pitch."
+                android:text="• Let's examine the black key in between C and D."
                 android:textColor="@color/black"
                 android:textSize="16sp" />
 
@@ -191,8 +314,8 @@
                 android:id="@+id/img5"
                 android:layout_width="match_parent"
                 android:layout_height="130dp"
-                android:layout_below="@+id/text6"
-                android:background="@drawable/basics_l5_img5"
+                android:layout_below="@+id/text11"
+                android:background="@drawable/basics_l6_img2"
                 android:layout_marginTop="10dp"
                 />
 
@@ -205,14 +328,14 @@
                 android:background="@color/black" />
 
             <TextView
-                android:id="@+id/text7"
+                android:id="@+id/text12"
                 android:layout_width="380sp"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/line6"
                 android:layout_marginStart="10dp"
                 android:layout_marginTop="20dp"
                 android:fontFamily="@font/tienneregular"
-                android:text="• They are used to let the duration of a note travel across barriers (such as the measure line in this example)."
+                android:text="• This key could be called C# since it is a half step above C."
                 android:textColor="@color/black"
                 android:textSize="16sp" />
 
@@ -220,8 +343,8 @@
                 android:id="@+id/img6"
                 android:layout_width="match_parent"
                 android:layout_height="130dp"
-                android:layout_below="@+id/text7"
-                android:background="@drawable/basics_l5_img6"
+                android:layout_below="@+id/text12"
+                android:background="@drawable/basics_l6_img3"
                 android:layout_marginTop="10dp"
                 />
 
@@ -234,25 +357,23 @@
                 android:background="@color/black" />
 
             <TextView
-                android:id="@+id/text8"
+                android:id="@+id/text13"
                 android:layout_width="380sp"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/line7"
                 android:layout_marginStart="10dp"
                 android:layout_marginTop="20dp"
                 android:fontFamily="@font/tienneregular"
-                android:text="• The fourth and fifth notes are now combined."
+                android:text="• It could also be called Db since it is a half step below D."
                 android:textColor="@color/black"
                 android:textSize="16sp" />
 
-
-            <androidx.media3.ui.PlayerView
-                android:id="@+id/vid1"
+            <ImageView
+                android:id="@+id/modify_img1"
                 android:layout_width="match_parent"
-                android:layout_height="140dp"
-                android:layout_below="@+id/text8"
-                app:use_controller="true"
-                app:resize_mode="fit"
+                android:layout_height="130dp"
+                android:layout_below="@+id/text13"
+                android:background="@drawable/basics_l6_img4"
                 android:layout_marginTop="10dp"
                 />
 
@@ -261,28 +382,40 @@
                 android:id="@+id/line8"
                 android:layout_width="450dp"
                 android:layout_height="1dp"
-                android:layout_below="@+id/vid1"
+                android:layout_below="@+id/modify_img1"
                 android:layout_marginTop="15dp"
                 android:background="@color/black" />
 
             <TextView
-                android:id="@+id/text9"
+                android:id="@+id/text14"
                 android:layout_width="380sp"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/line8"
                 android:layout_marginStart="10dp"
                 android:layout_marginTop="20dp"
                 android:fontFamily="@font/tienneregular"
-                android:text="• If the measure line were not there, we could have written a half note instead."
+                android:text="• Another example would be E and F."
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/text15"
+                android:layout_width="380sp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/text14"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/tienneregular"
+                android:text="• E could also be called Fb since it is half step below F."
                 android:textColor="@color/black"
                 android:textSize="16sp" />
 
             <ImageView
-                android:id="@+id/gif1"
+                android:id="@+id/modify_img2"
                 android:layout_width="match_parent"
                 android:layout_height="130dp"
-                android:layout_below="@+id/text9"
-                android:background="@drawable/basics_l5_gif1"
+                android:layout_below="@+id/text15"
+                android:background="@drawable/basics_l6_img5"
                 android:layout_marginTop="10dp"
                 />
 
@@ -290,19 +423,19 @@
                 android:id="@+id/line10"
                 android:layout_width="450dp"
                 android:layout_height="1dp"
-                android:layout_below="@+id/gif1"
+                android:layout_below="@+id/modify_img2"
                 android:layout_marginTop="15dp"
                 android:background="@color/black" />
 
             <TextView
-                android:id="@+id/text11"
+                android:id="@+id/text16"
                 android:layout_width="380sp"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/line10"
                 android:layout_marginStart="10dp"
                 android:layout_marginTop="20dp"
                 android:fontFamily="@font/tienneregular"
-                android:text="• Use this chart for reference to augmentation dots."
+                android:text="• Likewise, F could be called E#."
                 android:textColor="@color/black"
                 android:textSize="16sp" />
 
@@ -310,10 +443,185 @@
                 android:id="@+id/img9"
                 android:layout_width="match_parent"
                 android:layout_height="130dp"
-                android:layout_below="@+id/text11"
-                android:background="@drawable/basics_l5_img8"
+                android:layout_below="@+id/text16"
+                android:background="@drawable/basics_l6_img6"
                 android:layout_marginTop="10dp"
                 />
+
+            <TextView
+                android:id="@+id/text17"
+                android:layout_width="380sp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/img9"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/tienneregular"
+                android:text="• Whenever a certain pitch has multiple names, it is called an enharmonic spelling."
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <View
+                android:id="@+id/line11"
+                android:layout_width="450dp"
+                android:layout_height="1dp"
+                android:layout_below="@+id/text17"
+                android:layout_marginTop="15dp"
+                android:background="@color/black" />
+
+            <TextView
+                android:id="@+id/text18"
+                android:layout_width="380sp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/line11"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/tienneregular"
+                android:text="• Next, let's discuss the double flat and the double sharp."
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/img10"
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:layout_below="@+id/text18"
+                android:background="@drawable/basics_l6_img7"
+                android:layout_marginTop="10dp"
+                />
+
+            <TextView
+                android:id="@+id/text19"
+                android:layout_width="380sp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/img10"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/tienneregular"
+                android:text="• While flats and sharps alter a note by a half step, the double flat and double sharp alter a note by a whole step."
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/text20"
+                android:layout_width="380sp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/text19"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/tienneregular"
+                android:text="• When typing, you can use a x to represent a double sharp and a bb to represent a double flat."
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <View
+                android:id="@+id/line12"
+                android:layout_width="450dp"
+                android:layout_height="1dp"
+                android:layout_below="@+id/text20"
+                android:layout_marginTop="15dp"
+                android:background="@color/black" />
+
+            <TextView
+                android:id="@+id/text21"
+                android:layout_width="380sp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/line12"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/tienneregular"
+                android:text="• For example, both D and Ebb have the same pitch since you can reach D by going a whole step (or two half steps) down from E."
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/gif1"
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:layout_below="@+id/text21"
+                android:background="@drawable/basics_l6_gif1"
+                android:layout_marginTop="10dp"
+                />
+
+            <View
+                android:id="@+id/line13"
+                android:layout_width="450dp"
+                android:layout_height="1dp"
+                android:layout_below="@+id/gif1"
+                android:layout_marginTop="15dp"
+                android:background="@color/black" />
+
+            <TextView
+                android:id="@+id/text22"
+                android:layout_width="380sp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/line13"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/tienneregular"
+                android:text="• D also sounds the same as C## since it is a whole step above C."
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/gif2"
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:layout_below="@+id/text22"
+                android:background="@drawable/basics_l6_gif2"
+                android:layout_marginTop="10dp"
+                />
+
+            <View
+                android:id="@+id/line14"
+                android:layout_width="450dp"
+                android:layout_height="1dp"
+                android:layout_below="@+id/gif2"
+                android:layout_marginTop="15dp"
+                android:background="@color/black" />
+
+            <TextView
+                android:id="@+id/text23"
+                android:layout_width="380sp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/line14"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/tienneregular"
+                android:text="• Finally, a natural cancels out any accidental and returns a note to its original white key."
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/img13"
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:layout_below="@+id/text23"
+                android:background="@drawable/basics_l6_img8"
+                android:layout_marginTop="10dp"
+                />
+
+            <TextView
+                android:id="@+id/text24"
+                android:layout_width="380sp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/img13"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/tienneregular"
+                android:text="• We will learn more about naturals in an upcoming lesson."
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <View
+                android:id="@+id/line15"
+                android:layout_width="450dp"
+                android:layout_height="1dp"
+                android:layout_below="@+id/text24"
+                android:layout_marginTop="15dp"
+                android:background="@color/black" />
+
+
+
 
         </RelativeLayout>
     </ScrollView>
