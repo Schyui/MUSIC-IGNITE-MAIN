@@ -6,6 +6,11 @@
     android:background="#EDE7F6"
     android:orientation="vertical"
    >
+    <FrameLayout
+        android:id="@+id/fragment_con_settings"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
     <ImageView
         android:layout_width="100dp"
         android:layout_height="100dp"
