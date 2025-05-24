@@ -1,18 +1,107 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/settingsFragment"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SettingsFragment">
-
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Settings Fragment"
-        android:textSize="30sp"
-        android:layout_centerInParent="true"
-        android:textColor="#6B6B65"
+    android:background="#EDE7F6"
+    android:orientation="vertical"
+   >
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/profileicon"
         />
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/baseline_edit_24"
+
+        android:layout_marginTop="60dp"
+        android:layout_marginLeft="220dp"
+        />
+    <ScrollView
+        android:id="@+id/settingsScroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:padding="24dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="60dp"
+            android:orientation="vertical"
+            android:divider="?android:attr/listDivider"
+            android:showDividers="middle"
+            android:dividerPadding="8dp">
+
+
+            <!-- Profile Settings -->
+            <TextView
+                android:id="@+id/profileSettings"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Profile Settings"
+                android:textSize="18sp"
+                android:textColor="#000000"
+                android:paddingVertical="16dp"
+                android:clickable="true"
+                android:focusable="true" />
+
+            <!-- Change Account Settings -->
+            <TextView
+                android:id="@+id/accountSettings"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Change Account Settings"
+                android:textSize="18sp"
+                android:textColor="#000000"
+                android:paddingVertical="16dp"
+
+                android:clickable="true"
+                android:focusable="true" />
+
+            <!-- Help -->
+            <TextView
+                android:id="@+id/help"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Help"
+                android:textSize="18sp"
+                android:textColor="#000000"
+                android:paddingVertical="16dp"
+                android:clickable="true"
+                android:focusable="true" />
+
+            <!-- Terms and Conditions -->
+            <TextView
+                android:id="@+id/terms"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Terms and Conditions"
+                android:textSize="18sp"
+                android:textColor="#000000"
+                android:paddingVertical="16dp"
+                android:clickable="true"
+                android:focusable="true" />
+
+            <!-- Logout -->
+            <TextView
+                android:id="@+id/logoutBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Logout"
+                android:textSize="18sp"
+                android:textColor="#FF0000"
+                android:paddingVertical="16dp"
+                android:clickable="true"
+                android:focusable="true" />
+
+        </LinearLayout>
+    </ScrollView>
+
 
 </RelativeLayout>

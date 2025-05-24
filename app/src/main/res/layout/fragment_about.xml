@@ -1,36 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="370dp"
-    android:layout_gravity="center"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:scrollbars="vertical"
     tools:context=".AboutFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <ImageView
-        android:id="@+id/musicIgniteLbl"
-        android:layout_width="450dp"
-        android:layout_height="200dp"
-        android:src="@drawable/bgmenu2"
-        android:layout_marginTop="80dp"
-        android:layout_centerHorizontal="true" />
-    <TextView
-        android:id="@+id/aboutText"
-        android:layout_below="@+id/musicIgniteLbl"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Welcome to Music Ignite – your gateway to mastering music, one note at a time!
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:gravity="center_horizontal">
 
-\n\nAt General Ignite, we believe that music is for everyone. Whether you're just starting out or already on your musical journey, Music Ignite is here to guide, teach, and inspire you. Our mission is to make learning music fun, easy, and accessible for all.
+        <!-- Image Banner -->
+        <ImageView
+            android:id="@+id/musicIgniteLbl"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:src="@drawable/bgmenu2"
+            android:scaleType="centerCrop"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="16dp" />
 
-\n\n   Through interactive lessons, practice tools, and a growing library of music sheets, Music Ignite empowers you to learn at your own pace, anytime, anywhere.
-
-We’re passionate about sparking creativity and helping you unlock your full musical potential.
-
-Let's ignite your passion for music—together."
-        android:textSize="15sp"
-        android:layout_centerInParent="true"
-        android:textColor="#6B6B65"
-        />
-
-</RelativeLayout>
+        <!-- Scrollable About Text -->
+        <TextView
+            android:id="@+id/aboutText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#6B6B65"
+            android:textSize="18sp"
+            android:lineSpacingExtra="6dp"
+            android:text="" />
+    </LinearLayout>
+</ScrollView>
