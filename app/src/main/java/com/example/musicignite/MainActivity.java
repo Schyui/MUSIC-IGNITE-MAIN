@@ -47,9 +47,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
 
         //IDS
-        learnBtn = findViewById(R.id.learnBtn);
-        practiceBtn = findViewById(R.id.practiceBtn);
-        musicSheetBtn = findViewById(R.id.musicSheetBtn);
 
 
         //TOOLBAR
@@ -89,10 +86,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             getSupportFragmentManager().beginTransaction()
                     .replace(R.id.fragment_container, new SettingsFragment())
                     .commit();
-        } else if (id == R.id.nav_share) {
-            getSupportFragmentManager().beginTransaction()
-                    .replace(R.id.fragment_container, new ShareFragment())
-                    .commit();
         } else if (id == R.id.nav_about) {
             getSupportFragmentManager().beginTransaction()
                     .replace(R.id.fragment_container, new AboutFragment())
@@ -121,18 +114,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         super.onStart();
         Toast.makeText(this,"STARTED", Toast.LENGTH_SHORT).show();
 
-        learnBtn.setOnClickListener(view -> {
-            Intent intent = new Intent(this, Learn_Activity.class);
-            startActivity(intent);
-        });
-        practiceBtn.setOnClickListener(view -> {
-            Intent intent = new Intent(this, Practice_Activity.class);
-            startActivity(intent);
-        });
-        musicSheetBtn.setOnClickListener(view -> {
-            Intent intent = new Intent(this, MusicSheets_Activity.class);
-            startActivity(intent);
-        });
+
 
     }
 

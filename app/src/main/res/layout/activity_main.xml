@@ -39,73 +39,7 @@
                 android:layout_height="match_parent" />
         </LinearLayout>
 
-        <ImageView
-            android:id="@+id/musicIgniteLbl"
-            android:layout_width="450dp"
-            android:layout_height="300dp"
-            android:scaleType="fitCenter"
-            android:src="@drawable/bgmenu2"
-            android:layout_marginTop="130dp"
-            android:layout_marginBottom="60dp"
-            android:layout_centerHorizontal="true" />
-        <!--
-        <ImageView
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:src="@drawable/moreicon"
-            android:layout_marginTop="50dp"
-            android:layout_marginLeft="20dp" />
-        -->
 
-        <Button
-            android:id="@+id/learnBtn"
-            android:layout_width="250dp"
-            android:layout_height="70dp"
-            android:text="Learn"
-            android:textColor="@color/lavender"
-            android:background="@drawable/btn_border"
-            android:layout_centerVertical="true"
-            android:layout_centerHorizontal="true"
-            android:layout_marginBottom="20dp"
-            android:fontFamily="@font/irish"
-            android:textSize="25sp" />
-
-        <Button
-            android:id="@+id/practiceBtn"
-            android:layout_width="250dp"
-            android:layout_height="70dp"
-            android:text="Practice"
-            android:layout_below="@id/learnBtn"
-            android:textColor="@color/lavender"
-            android:background="@drawable/btn_border"
-            android:layout_centerHorizontal="true"
-            android:layout_marginBottom="20dp"
-            android:fontFamily="@font/irish"
-            android:textSize="25sp" />
-
-        <Button
-            android:id="@+id/musicSheetBtn"
-            android:layout_width="250dp"
-            android:layout_height="70dp"
-            android:text="Music Sheets"
-            android:layout_below="@id/practiceBtn"
-            android:textColor="@color/lavender"
-            android:background="@drawable/btn_border"
-            android:layout_centerHorizontal="true"
-            android:fontFamily="@font/irish"
-            android:textSize="25sp" />
-
-
-        <ImageView
-            android:id="@+id/bgmenu1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/bgmenuu"
-            android:layout_alignParentBottom="true"
-            android:layout_centerHorizontal="true"
-            android:layout_marginBottom="16dp"
-            android:adjustViewBounds="true"
-            android:scaleType="centerCrop" />
     </RelativeLayout>
 
     <!-- Navigation Drawer -->
