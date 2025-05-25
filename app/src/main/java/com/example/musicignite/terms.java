@@ -40,7 +40,7 @@ public class terms extends AppCompatActivity {
                 "Welcome to <b>Music Ignite</b>, a mobile application developed by <b>General Ignite</b>. By using this app, you agree to the following terms and conditions. Please read them carefully.<br><br>" +
 
                 "<b>1. Use of the App</b><br>" +
-                "- You must be at least 13 years old to use Music Ignite.<br>" +
+                "- Any age can freely use Music Ignite.<br>" +
                 "- You agree to use the app for learning and personal use only.<br>" +
                 "- Do not use the app for illegal or harmful purposes.<br><br>" +
 
