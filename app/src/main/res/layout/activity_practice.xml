@@ -80,8 +80,21 @@
         android:layout_marginBottom="20dp"
         android:textSize="25sp"
         />
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+
+    <Button
+        android:id="@+id/BookIconBtn"
+        android:layout_width="250dp"
+        android:layout_height="70dp"
+        android:text="Book Icon"
+        android:layout_below="@+id/guessBtn"
+        android:textColor="@color/lavender"
+        android:background="@drawable/btn_border"
+        android:fontFamily="@font/irish"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp"
+        android:textSize="25sp"
+        />
+
 
 </RelativeLayout>

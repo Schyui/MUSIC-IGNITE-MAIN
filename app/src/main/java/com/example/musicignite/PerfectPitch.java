@@ -1,5 +1,6 @@
 package com.example.musicignite;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -17,9 +18,10 @@ import androidx.core.view.WindowInsetsCompat;
 public class PerfectPitch extends AppCompatActivity {
 
     ImageView backBtn;
-    Button TimeRushBtn;
-    Button AllInBtn;
+    Button TimeRushBtn, AllInBtn;
 
+
+    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -33,6 +35,24 @@ public class PerfectPitch extends AppCompatActivity {
         backBtn = findViewById(R.id.backBtn);
         TimeRushBtn = findViewById(R.id.TimeRushBtn);
         AllInBtn = findViewById(R.id.allInBtn);
+
+
+    }
+
+    @Override
+    protected void onStart(){
+        super.onStart();
+        backBtn.setOnClickListener(v -> {
+            Intent intent = new Intent(this, Practice_Activity.class);
+            startActivity(intent);
+        });
+
+        TimeRushBtn.setOnClickListener(v -> timeOptions());
+
+        AllInBtn.setOnClickListener(v -> {
+            Intent intent = new Intent (this, AllIn.class);
+            startActivity(intent);
+        });
 
     }
 
@@ -83,19 +103,5 @@ public class PerfectPitch extends AppCompatActivity {
         Intent intent = new Intent(this, TimeRush.class);
         intent.putExtra("timeLimit", minutes); // pag pasa nung selected time
         startActivity(intent);
-    }
-
-    @Override
-    protected void onStart(){
-        super.onStart();
-        backBtn.setOnClickListener(v -> {
-            Intent intent = new Intent(this, Practice_Activity.class);
-            startActivity(intent);
-        });
-        TimeRushBtn.setOnClickListener(v -> timeOptions());
-        AllInBtn.setOnClickListener(v -> {
-            Intent intent = new Intent (this, AllIn.class);
-            startActivity(intent);
-        });
     }
 }
