@@ -1,54 +1,58 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     android:background="#EDE7F6"
+    android:gravity="top|center_horizontal"
     tools:context=".TimeRush">
 
-    <ImageView
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:src="@drawable/backbtn"
-        android:layout_marginTop="50dp"
-        android:layout_marginLeft="20dp"
-        android:id="@+id/backBtn"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp" >
 
-    <ImageView
-        android:id="@+id/musicIgniteLbl"
-        android:layout_width="130dp"
-        android:layout_height="130dp"
-        android:src="@drawable/bgmenu2"
-        android:layout_marginBottom="60dp"
-        android:layout_marginTop="25dp"
-        android:layout_alignParentEnd="true"/>
+        <ImageView
+            android:id="@+id/backBtn"
+            android:layout_width="40dp"
+            android:layout_height="80dp"
+            android:src="@drawable/backbtn" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1" />
+
+        <ImageView
+            android:id="@+id/musicIgniteLbl"
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:src="@drawable/bgmenu2" />
+    </LinearLayout>
 
     <ImageView
         android:id="@+id/speakerQuizBtn"
         android:layout_width="300dp"
         android:layout_height="200dp"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="150dp"
-        android:textAlignment="center"
-        android:layout_marginBottom="30dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="20dp"
         android:scaleType="fitCenter"
         android:src="@drawable/speakerquiz_btn"
-        android:background="@drawable/btn_border"/>
-
-
+        android:background="@drawable/btn_border" />
 
     <GridLayout
         android:id="@+id/choicesGrid"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/speakerQuizBtn"
-        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
         android:columnCount="3"
         android:rowCount="2"
-        android:gravity="center"
-        android:layout_marginTop="20dp">
+        android:gravity="center">
 
         <Button
             android:id="@+id/choice1"
@@ -56,7 +60,7 @@
             android:layout_height="wrap_content"
             android:text="Choice 1"
             android:background="@drawable/btn_border"
-            android:layout_margin="10dp"/>
+            android:layout_margin="10dp" />
 
         <Button
             android:id="@+id/choice2"
@@ -64,7 +68,7 @@
             android:layout_height="wrap_content"
             android:text="Choice 2"
             android:background="@drawable/btn_border"
-            android:layout_margin="10dp"/>
+            android:layout_margin="10dp" />
 
         <Button
             android:id="@+id/choice3"
@@ -72,7 +76,7 @@
             android:layout_height="wrap_content"
             android:text="Choice 3"
             android:background="@drawable/btn_border"
-            android:layout_margin="10dp"/>
+            android:layout_margin="10dp" />
 
         <Button
             android:id="@+id/choice4"
@@ -80,7 +84,7 @@
             android:layout_height="wrap_content"
             android:text="Choice 4"
             android:background="@drawable/btn_border"
-            android:layout_margin="10dp"/>
+            android:layout_margin="10dp" />
 
         <Button
             android:id="@+id/choice5"
@@ -88,7 +92,7 @@
             android:layout_height="wrap_content"
             android:text="Choice 5"
             android:background="@drawable/btn_border"
-            android:layout_margin="10dp"/>
+            android:layout_margin="10dp" />
 
         <Button
             android:id="@+id/choice6"
@@ -96,7 +100,7 @@
             android:layout_height="wrap_content"
             android:text="Choice 6"
             android:background="@drawable/btn_border"
-            android:layout_margin="10dp"/>
+            android:layout_margin="10dp" />
     </GridLayout>
 
-</RelativeLayout>
+</LinearLayout>
