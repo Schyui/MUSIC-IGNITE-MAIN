@@ -352,11 +352,21 @@
                 android:layout_height="140dp"
                 android:layout_marginTop="10dp">
 
+
                 <androidx.media3.ui.PlayerView
                     android:id="@+id/vid1"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    app:use_controller="false" />
+                    app:use_controller="false"
+                    />
+
+                <ImageView
+                    android:id="@+id/thumb1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/scales_l1_thumbnail1" />
+
 
                 <ImageView
                     android:id="@+id/playButton1"
@@ -366,8 +376,8 @@
                     android:clickable="true"
                     android:focusable="true"
                     android:background="@android:color/transparent"
-                    android:src="@android:drawable/ic_media_play" />
-
+                    android:src="@android:drawable/ic_media_play"
+                    />
             </FrameLayout>
 
             <View
@@ -653,7 +663,15 @@
                     android:id="@+id/vid2"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    app:use_controller="false" />
+                    app:use_controller="false"
+                    />
+
+                <ImageView
+                    android:id="@+id/thumb2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/scales_l1_thumbnail2" />
 
                 <ImageView
                     android:id="@+id/playButton2"
@@ -973,7 +991,14 @@
                     android:id="@+id/vid3"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    app:use_controller="false" />
+                    app:use_controller="false"/>
+
+                <ImageView
+                    android:id="@+id/thumb3"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/scales_l1_thumbnail3" />
 
                 <ImageView
                     android:id="@+id/playButton3"
@@ -984,7 +1009,6 @@
                     android:focusable="true"
                     android:background="@android:color/transparent"
                     android:src="@android:drawable/ic_media_play" />
-
             </FrameLayout>
 
             <View

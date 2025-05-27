@@ -3,6 +3,7 @@ package com.example.musicignite;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ImageView;
 
 import androidx.activity.EdgeToEdge;
@@ -13,17 +14,27 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 import androidx.media3.common.MediaItem;
+import androidx.media3.common.Player;
 import androidx.media3.common.util.UnstableApi;
 import androidx.media3.exoplayer.ExoPlayer;
 import androidx.media3.ui.PlayerView;
 
+import java.util.ArrayList;
+import java.util.List;
 
 
 public class Learn_Basics_L4 extends AppCompatActivity {
 
-    ImageView backBtn;
+    ImageView backBtn, playButton1, playButton2;
     PlayerView playerView1, playerView2;
-    ExoPlayer player1, player2;
+    List<PlayerView> playerViews = new ArrayList<>();
+    List<Uri> videoUris = new ArrayList<>();
+    List<ImageView> playButtons = new ArrayList<>();
+    List<ImageView> thumbnailViews = new ArrayList<>();
+    ExoPlayer sharedPlayer;
+    PlayerView currentPlayerView;
+    Uri currentUri;
+    int currentIndex = -1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,8 +47,23 @@ public class Learn_Basics_L4 extends AppCompatActivity {
             return insets;
         });
         backBtn = findViewById(R.id.backBtn);
+        playButton1 = findViewById(R.id.playButton1);
+        playButton2 = findViewById(R.id.playButton2);
         playerView1 = findViewById(R.id.vid1);
         playerView2 = findViewById(R.id.vid2);
+
+        thumbnailViews.add(findViewById(R.id.thumb1));
+        thumbnailViews.add(findViewById(R.id.thumb2));
+
+        playerViews.add(playerView1);
+        playerViews.add(playerView2);
+
+
+        playButtons.add(playButton1);
+        playButtons.add(playButton2);
+
+        videoUris.add(Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.basics_lesson4_vid1));
+        videoUris.add(Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.basics_lesson4_vid2));
 
 
     }
@@ -55,38 +81,104 @@ public class Learn_Basics_L4 extends AppCompatActivity {
 
     @OptIn(markerClass = UnstableApi.class)
     private void initializePlayer() {
-        // Player 1
-        player1 = new ExoPlayer.Builder(this).build();
-        playerView1.setPlayer(player1);
-        playerView1.setControllerShowTimeoutMs(500);
-        playerView1.setControllerAutoShow(true);
+        sharedPlayer = new ExoPlayer.Builder(this).build();
 
-        Uri videoUri1 = Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.basics_lesson4_vid1);
-        player1.setMediaItem(MediaItem.fromUri(videoUri1));
-        player1.prepare();
+        for (int i = 0; i < playerViews.size(); i++) {
+            final PlayerView pvCopy = playerViews.get(i);
+            final ImageView playBtn = playButtons.get(i);
+            final Uri uri = videoUris.get(i);
 
-        // Player 2
-        player2 = new ExoPlayer.Builder(this).build();
-        playerView2.setPlayer(player2);
-        playerView2.setControllerShowTimeoutMs(500);
-        playerView2.setControllerAutoShow(true);
+            pvCopy.setTag(uri);
+            pvCopy.setControllerAutoShow(false);
+            pvCopy.setControllerShowTimeoutMs(500);
+            playBtn.setVisibility(View.VISIBLE);
 
-        Uri videoUri2 = Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.basics_lesson4_vid2);
-        player2.setMediaItem(MediaItem.fromUri(videoUri2));
-        player2.prepare();
+            // Clicking play button
+            playBtn.setOnClickListener(v -> playInView(pvCopy, uri));
+
+            // Clicking the video
+            pvCopy.setOnClickListener(v -> playInView(pvCopy, uri));
+        }
+
+        // Show/hide play button depending on state
+        sharedPlayer.addListener(new Player.Listener() {
+            @Override
+            public void onIsPlayingChanged(boolean isPlaying) {
+                for (int i = 0; i < playerViews.size(); i++) {
+                    if (playerViews.get(i) == currentPlayerView) {
+                        playButtons.get(i).setVisibility(isPlaying ? View.GONE : View.VISIBLE);
+                    } else {
+                        playButtons.get(i).setVisibility(View.VISIBLE);
+                    }
+                }
+            }
+
+            @Override
+            public void onPlaybackStateChanged(int state) {
+                if (state == Player.STATE_ENDED && currentPlayerView != null) {
+                    int idx = playerViews.indexOf(currentPlayerView);
+                    if (idx != -1) {
+                        playButtons.get(idx).setVisibility(View.VISIBLE);
+                        thumbnailViews.get(idx).setVisibility(View.VISIBLE);
+                    }
+                }
+            }
+        });
+    }
+
+    private void playInView(PlayerView playerView, Uri uri) {
+
+        int newIndex = playerViews.indexOf(playerView);
+
+        if (currentPlayerView == playerView && uri.equals(currentUri)) {
+            if (sharedPlayer.getPlaybackState() == Player.STATE_ENDED) {
+                sharedPlayer.seekTo(0);
+                sharedPlayer.play();
+                thumbnailViews.get(newIndex).setVisibility(View.GONE);
+                playButtons.get(newIndex).setVisibility(View.GONE);
+            } else if (sharedPlayer.isPlaying()) {
+                sharedPlayer.pause();
+            } else {
+                sharedPlayer.play();
+            }
+            return;
+        }
+
+        // Stop and detach previous player view
+        if (currentPlayerView != null && currentPlayerView != playerView) {
+            if (currentIndex != -1) {
+                thumbnailViews.get(currentIndex).setVisibility(View.VISIBLE);
+                playButtons.get(currentIndex).setVisibility(View.VISIBLE);
+                playerViews.get(currentIndex).setPlayer(null);
+            }
+        }
+
+        currentPlayerView = playerView;
+        currentUri = uri;
+        currentIndex = newIndex;
+
+        playerView.setPlayer(sharedPlayer);
+        thumbnailViews.get(currentIndex).setVisibility(View.GONE);
+        playButtons.get(currentIndex).setVisibility(View.GONE);
+
+        sharedPlayer.setMediaItem(MediaItem.fromUri(uri));
+        sharedPlayer.prepare();
+        sharedPlayer.play();
     }
 
     @Override
-    protected void onStop() {
-        super.onStop();
-
-        if (player1 != null) {
-            player1.release();
-            player1 = null;
+    protected void onPause() {
+        super.onPause();
+        if (sharedPlayer != null && sharedPlayer.isPlaying()) {
+            sharedPlayer.pause();
         }
-        if (player2 != null) {
-            player2.release();
-            player2 = null;
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        if (sharedPlayer != null) {
+            sharedPlayer.release();
         }
     }
 }

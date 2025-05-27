@@ -1,0 +1,1400 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EDE7F6"
+    tools:context=".Learn_ScalesAndSignatures_L2">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/l1_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:layout_centerHorizontal="true"
+                android:text="The Minor Scale"
+                android:textSize="33sp"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:fontFamily="@font/tagesschriftregular"
+                />
+
+            <View
+                android:id="@+id/line1"
+                android:layout_width="450dp"
+                android:layout_height="1dp"
+                android:layout_below="@+id/l1_title"
+                android:layout_marginTop="15dp"
+                android:background="@color/black" />
+
+            <TextView
+                android:id="@+id/l1_text1"
+                android:layout_width="380sp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/line1"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/tienneregular"
+                android:text="• While there is only one major scale, three different variations of the minor scale exist."
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/l1_text2"
+                android:layout_width="380sp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/l1_text1"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/tienneregular"
+                android:text="• The first minor scale that will we discuss is natural minor. It is constructed with this formula."
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/img1"
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:layout_below="@+id/l1_text2"
+                android:background="@drawable/rhythm_l2_img01"
+                android:layout_marginTop="10dp"
+                />
+
+            <View
+                android:id="@+id/line2"
+                android:layout_width="450dp"
+                android:layout_height="1dp"
+                android:layout_below="@+id/img1"
+                android:layout_marginTop="15dp"
+                android:background="@color/black" />
+
+            <ImageView
+                android:id="@+id/img2"
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:layout_below="@+id/l1_text2"
+                android:background="@drawable/scales_l2_img01"
+                android:layout_marginTop="10dp"
+                />
+
+            <View
+                android:id="@+id/line3"
+                android:layout_width="450dp"
+                android:layout_height="1dp"
+                android:layout_below="@+id/img2"
+                android:layout_marginTop="15dp"
+                android:background="@color/black" />
+
+            <TextView
+                android:id="@+id/l1_text3"
+                android:layout_width="380sp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/line3"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/tienneregular"
+                android:text="•  Let's build an A Natural Minor Scale. Our starting note will be A."
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/img3"
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:layout_below="@+id/l1_text3"
+                android:background="@drawable/scales_l2_img02"
+                android:layout_marginTop="10dp"
+                />
+
+
+            <View
+                android:id="@+id/line4"
+                android:layout_width="450dp"
+                android:layout_height="1dp"
+                android:layout_below="@+id/img3"
+                android:layout_marginTop="15dp"
+                android:background="@color/black" />
+
+            <TextView
+                android:id="@+id/l1_text5"
+                android:layout_width="380sp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/line4"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/tienneregular"
+                android:text="•  From A, we take a whole step to B."
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/modify_img3"
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:layout_below="@+id/l1_text5"
+                android:background="@drawable/scales_l2_img03"
+                android:layout_marginTop="10dp"
+                />
+
+            <View
+                android:id="@+id/line5"
+                android:layout_width="450dp"
+                android:layout_height="1dp"
+                android:layout_below="@+id/modify_img3"
+                android:layout_marginTop="15dp"
+                android:background="@color/black" />
+
+            <TextView
+                android:id="@+id/l1_text7"
+                android:layout_width="380sp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/line5"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/tienneregular"
+                android:text="•  Next, we take a half step to C."
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/modify_img4"
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:layout_below="@+id/l1_text7"
+                android:background="@drawable/scales_l2_img04"
+                android:layout_marginTop="10dp"
+                />
+
+            <View
+                android:id="@+id/line6"
+                android:layout_width="450dp"
+                android:layout_height="1dp"
+                android:layout_below="@+id/modify_img4"
+                android:layout_marginTop="15dp"
+                android:background="@color/black" />
+
+            <TextView
+                android:id="@+id/l1_text9"
+                android:layout_width="380sp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/line6"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/tienneregular"
+                android:text="• From C, a whole step takes us to D."
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/img6"
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:layout_below="@+id/l1_text9"
+                android:background="@drawable/scales_l2_img05"
+                android:layout_marginTop="10dp"
+                />
+
+            <View
+                android:id="@+id/line7"
+                android:layout_width="450dp"
+                android:layout_height="1dp"
+                android:layout_below="@+id/img6"
+                android:layout_marginTop="15dp"
+                android:background="@color/black" />
+
+            <TextView
+                android:id="@+id/l1_text10"
+                android:layout_width="380sp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/line7"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/tienneregular"
+                android:text="•  Another whole step takes us to E."
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+
+
+            <ImageView
+                android:id="@+id/img7"
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:layout_below="@+id/l1_text10"
+                android:background="@drawable/scales_l2_img06"
+                android:layout_marginTop="10dp"
+                />
+
+            <View
+                android:id="@+id/line8"
+                android:layout_width="450dp"
+                android:layout_height="1dp"
+                android:layout_below="@+id/img7"
+                android:layout_marginTop="15dp"
+                android:background="@color/black" />
+
+            <TextView
+                android:id="@+id/l1_text11"
+                android:layout_width="380sp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/line8"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/tienneregular"
+                android:text="• From E, we go up a half step to F."
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/img8"
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:layout_below="@+id/l1_text11"
+                android:background="@drawable/scales_l2_img07"
+                android:layout_marginTop="10dp"
+                />
+
+            <View
+                android:id="@+id/line9"
+                android:layout_width="450dp"
+                android:layout_height="1dp"
+                android:layout_below="@+id/img8"
+                android:layout_marginTop="15dp"
+                android:background="@color/black" />
+
+            <TextView
+                android:id="@+id/l1_text12"
+                android:layout_width="380sp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/line9"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/tienneregular"
+                android:text="•  From F, a whole step takes us to G."
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+
+
+            <ImageView
+                android:id="@+id/img9"
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:layout_below="@+id/l1_text12"
+                android:background="@drawable/scales_l2_img08"
+                android:layout_marginTop="10dp"
+                />
+
+            <View
+                android:id="@+id/line10"
+                android:layout_width="450dp"
+                android:layout_height="1dp"
+                android:layout_below="@+id/img9"
+                android:layout_marginTop="15dp"
+                android:background="@color/black" />
+
+            <TextView
+                android:id="@+id/l1_text13"
+                android:layout_width="380sp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/line10"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/tienneregular"
+                android:text="• Finally, the last whole step returns us to A."
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/img10"
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:layout_below="@+id/l1_text13"
+                android:background="@drawable/scales_l2_img09"
+                android:layout_marginTop="10dp"
+                />
+
+            <View
+                android:id="@+id/line11"
+                android:layout_width="450dp"
+                android:layout_height="1dp"
+                android:layout_below="@+id/img10"
+                android:layout_marginTop="15dp"
+                android:background="@color/black" />
+
+            <TextView
+                android:id="@+id/l1_text14"
+                android:layout_width="380sp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/line11"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/tienneregular"
+                android:text="• A Natural Minor is: A, B, C, D, E, F, G, A."
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <FrameLayout
+                android:id="@+id/frame_vid1"
+                android:layout_below="@+id/l1_text14"
+                android:layout_width="match_parent"
+                android:layout_height="140dp"
+                android:layout_marginTop="10dp">
+
+
+                <androidx.media3.ui.PlayerView
+                    android:id="@+id/vid1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:use_controller="false"
+                    />
+
+                <ImageView
+                    android:id="@+id/thumb1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/scales_l2_thumbnail1" />
+
+
+                <ImageView
+                    android:id="@+id/playButton1"
+                    android:layout_width="68dp"
+                    android:layout_height="68dp"
+                    android:layout_gravity="center"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:background="@android:color/transparent"
+                    android:src="@android:drawable/ic_media_play"
+                    />
+            </FrameLayout>
+
+            <View
+                android:id="@+id/line12"
+                android:layout_width="450dp"
+                android:layout_height="1dp"
+                android:layout_below="@+id/frame_vid1"
+                android:layout_marginTop="15dp"
+                android:background="@color/black" />
+
+            <TextView
+                android:id="@+id/l1_text15"
+                android:layout_width="380sp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/line12"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/tienneregular"
+                android:text="• Notice that the A Natural Minor Scale has no notes with accidentals."
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/img11"
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:layout_below="@+id/l1_text15"
+                android:background="@drawable/scales_l2_img09"
+                android:layout_marginTop="10dp"
+                />
+
+            <View
+                android:id="@+id/line13"
+                android:layout_width="450dp"
+                android:layout_height="1dp"
+                android:layout_below="@+id/img11"
+                android:layout_marginTop="15dp"
+                android:background="@color/black" />
+
+            <TextView
+                android:id="@+id/l1_text16"
+                android:layout_width="380sp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/line13"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/tienneregular"
+                android:text="• Let's build an G# Natural Minor Scale. Our starting note will be G#."
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+
+
+            <ImageView
+                android:id="@+id/img13"
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:layout_below="@+id/l1_text16"
+                android:background="@drawable/scales_l2_img11"
+                android:layout_marginTop="10dp"
+                />
+
+            <View
+                android:id="@+id/line14"
+                android:layout_width="450dp"
+                android:layout_height="1dp"
+                android:layout_below="@+id/img13"
+                android:layout_marginTop="15dp"
+                android:background="@color/black" />
+
+            <TextView
+                android:id="@+id/l1_text17"
+                android:layout_width="380sp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/line14"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/tienneregular"
+                android:text="• From G#, we take a whole step to A#."
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+
+
+            <ImageView
+                android:id="@+id/img14"
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:layout_below="@+id/l1_text17"
+                android:background="@drawable/scales_l2_img12"
+                android:layout_marginTop="10dp"
+                />
+
+            <View
+                android:id="@+id/line15"
+                android:layout_width="450dp"
+                android:layout_height="1dp"
+                android:layout_below="@+id/img14"
+                android:layout_marginTop="15dp"
+                android:background="@color/black" />
+
+            <TextView
+                android:id="@+id/l1_text18"
+                android:layout_width="380sp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/line15"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/tienneregular"
+                android:text="• Next, we take a half step to B."
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+
+
+            <ImageView
+                android:id="@+id/img15"
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:layout_below="@+id/l1_text18"
+                android:background="@drawable/scales_l2_img13"
+                android:layout_marginTop="10dp"
+                />
+
+            <View
+                android:id="@+id/line16"
+                android:layout_width="450dp"
+                android:layout_height="1dp"
+                android:layout_below="@+id/img15"
+                android:layout_marginTop="15dp"
+                android:background="@color/black" />
+
+            <TextView
+                android:id="@+id/l1_text19"
+                android:layout_width="380sp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/line16"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/tienneregular"
+                android:text="• From B, a whole step takes us to C#"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/img16"
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:layout_below="@+id/l1_text19"
+                android:background="@drawable/scales_l2_img14"
+                android:layout_marginTop="10dp"
+                />
+
+            <View
+                android:id="@+id/line17"
+                android:layout_width="450dp"
+                android:layout_height="1dp"
+                android:layout_below="@+id/img16"
+                android:layout_marginTop="15dp"
+                android:background="@color/black" />
+
+            <TextView
+                android:id="@+id/l1_text20"
+                android:layout_width="380sp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/line17"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/tienneregular"
+                android:text="• Another whole step takes us to D#."
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/img17"
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:layout_below="@+id/l1_text20"
+                android:background="@drawable/scales_l2_img15"
+                android:layout_marginTop="10dp"
+                />
+
+            <View
+                android:id="@+id/line18"
+                android:layout_width="450dp"
+                android:layout_height="1dp"
+                android:layout_below="@+id/img17"
+                android:layout_marginTop="15dp"
+                android:background="@color/black" />
+
+            <TextView
+                android:id="@+id/l1_text21"
+                android:layout_width="380sp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/line18"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/tienneregular"
+                android:text="• From D#, we go up a half step to E."
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+
+
+            <ImageView
+                android:id="@+id/img18"
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:layout_below="@+id/l1_text21"
+                android:background="@drawable/scales_l2_img16"
+                android:layout_marginTop="10dp"
+                />
+
+            <View
+                android:id="@+id/line19"
+                android:layout_width="450dp"
+                android:layout_height="1dp"
+                android:layout_below="@+id/img18"
+                android:layout_marginTop="15dp"
+                android:background="@color/black" />
+
+            <TextView
+                android:id="@+id/l1_text22"
+                android:layout_width="380sp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/line19"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/tienneregular"
+                android:text="• From E, a whole step takes us to F#."
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/img19"
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:layout_below="@+id/l1_text22"
+                android:background="@drawable/scales_l2_img17"
+                android:layout_marginTop="10dp"
+                />
+
+            <View
+                android:id="@+id/line20"
+                android:layout_width="450dp"
+                android:layout_height="1dp"
+                android:layout_below="@+id/img19"
+                android:layout_marginTop="15dp"
+                android:background="@color/black" />
+
+            <TextView
+                android:id="@+id/l1_text23"
+                android:layout_width="380sp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/line20"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/tienneregular"
+                android:text="• Finally, the last whole step returns us to G#."
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/img21"
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:layout_below="@+id/l1_text23"
+                android:background="@drawable/scales_l2_img18"
+                android:layout_marginTop="10dp"
+                />
+
+
+            <View
+                android:id="@+id/modify_line22"
+                android:layout_width="450dp"
+                android:layout_height="1dp"
+                android:layout_below="@+id/img21"
+                android:layout_marginTop="15dp"
+                android:background="@color/black" />
+
+            <TextView
+                android:id="@+id/l1_text24"
+                android:layout_width="380sp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/modify_line22"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/tienneregular"
+                android:text="• G# Natural Minor is: G#, A#, B, C#, D#, E, F#, G#."
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <FrameLayout
+                android:id="@+id/frame_vid2"
+                android:layout_below="@+id/l1_text24"
+                android:layout_width="match_parent"
+                android:layout_height="140dp"
+                android:layout_marginTop="10dp">
+
+                <androidx.media3.ui.PlayerView
+                    android:id="@+id/vid2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:use_controller="false"
+                    />
+
+                <ImageView
+                    android:id="@+id/thumb2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/scales_l2_thumbnail2" />
+
+                <ImageView
+                    android:id="@+id/playButton2"
+                    android:layout_width="68dp"
+                    android:layout_height="68dp"
+                    android:layout_gravity="center"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:background="@android:color/transparent"
+                    android:src="@android:drawable/ic_media_play" />
+
+            </FrameLayout>
+
+
+            <View
+                android:id="@+id/line22"
+                android:layout_width="450dp"
+                android:layout_height="1dp"
+                android:layout_below="@+id/frame_vid2"
+                android:layout_marginTop="15dp"
+                android:background="@color/black" />
+
+            <TextView
+                android:id="@+id/l1_text25"
+                android:layout_width="380sp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/line22"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/tienneregular"
+                android:text="•  Notice that the G# Natural Minor Scale has five sharps."
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+
+
+            <ImageView
+                android:id="@+id/img22"
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:layout_below="@+id/l1_text25"
+                android:background="@drawable/scales_l2_img20"
+                android:layout_marginTop="10dp"
+                />
+
+            <View
+                android:id="@+id/line23"
+                android:layout_width="450dp"
+                android:layout_height="1dp"
+                android:layout_below="@+id/img22"
+                android:layout_marginTop="15dp"
+                android:background="@color/black" />
+
+            <TextView
+                android:id="@+id/l1_text26"
+                android:layout_width="380sp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/line23"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/tienneregular"
+                android:text="• Next, we will construct the C Natural Minor Scale. Our starting note will be C."
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+
+
+            <ImageView
+                android:id="@+id/img23"
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:layout_below="@+id/l1_text26"
+                android:background="@drawable/scales_l2_img21"
+                android:layout_marginTop="10dp"
+                />
+
+            <View
+                android:id="@+id/line24"
+                android:layout_width="450dp"
+                android:layout_height="1dp"
+                android:layout_below="@+id/img23"
+                android:layout_marginTop="15dp"
+                android:background="@color/black" />
+
+            <TextView
+                android:id="@+id/l1_text27"
+                android:layout_width="380sp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/line24"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/tienneregular"
+                android:text="• The whole step takes us to D."
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+
+
+            <ImageView
+                android:id="@+id/img24"
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:layout_below="@+id/l1_text27"
+                android:background="@drawable/scales_l2_img22"
+                android:layout_marginTop="10dp"
+                />
+
+            <View
+                android:id="@+id/line25"
+                android:layout_width="450dp"
+                android:layout_height="1dp"
+                android:layout_below="@+id/img24"
+                android:layout_marginTop="15dp"
+                android:background="@color/black" />
+
+            <TextView
+                android:id="@+id/l1_text28"
+                android:layout_width="380sp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/line25"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/tienneregular"
+                android:text="• From D, a half step takes us to E♭."
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+
+
+            <ImageView
+                android:id="@+id/img25"
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:layout_below="@+id/l1_text28"
+                android:background="@drawable/scales_l2_img23"
+                android:layout_marginTop="10dp"
+                />
+
+            <View
+                android:id="@+id/line26"
+                android:layout_width="450dp"
+                android:layout_height="1dp"
+                android:layout_below="@+id/img25"
+                android:layout_marginTop="15dp"
+                android:background="@color/black" />
+
+            <TextView
+                android:id="@+id/l1_text29"
+                android:layout_width="380sp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/line26"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/tienneregular"
+                android:text="• The following whole step takes us to F."
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+
+
+            <ImageView
+                android:id="@+id/img26"
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:layout_below="@+id/l1_text29"
+                android:background="@drawable/scales_l2_img24"
+                android:layout_marginTop="10dp"
+                />
+
+            <View
+                android:id="@+id/line27"
+                android:layout_width="450dp"
+                android:layout_height="1dp"
+                android:layout_below="@+id/img26"
+                android:layout_marginTop="15dp"
+                android:background="@color/black" />
+
+            <TextView
+                android:id="@+id/l1_text30"
+                android:layout_width="380sp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/line27"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/tienneregular"
+                android:text="• From F, a whole step takes us to G."
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+
+
+            <ImageView
+                android:id="@+id/img27"
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:layout_below="@+id/l1_text30"
+                android:background="@drawable/scales_l2_img25"
+                android:layout_marginTop="10dp"
+                />
+
+            <View
+                android:id="@+id/line28"
+                android:layout_width="450dp"
+                android:layout_height="1dp"
+                android:layout_below="@+id/img27"
+                android:layout_marginTop="15dp"
+                android:background="@color/black" />
+
+            <TextView
+                android:id="@+id/l1_text31"
+                android:layout_width="380sp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/line28"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/tienneregular"
+                android:text="• The half step from G takes us to A♭."
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/img28"
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:layout_below="@+id/l1_text31"
+                android:background="@drawable/scales_l2_img26"
+                android:layout_marginTop="10dp"
+                />
+
+            <View
+                android:id="@+id/line29"
+                android:layout_width="450dp"
+                android:layout_height="1dp"
+                android:layout_below="@+id/img28"
+                android:layout_marginTop="15dp"
+                android:background="@color/black" />
+
+            <TextView
+                android:id="@+id/l1_text32"
+                android:layout_width="380sp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/line29"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/tienneregular"
+                android:text="• From A♭, we take a whole step to B♭."
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+
+
+            <ImageView
+                android:id="@+id/img29"
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:layout_below="@+id/l1_text32"
+                android:background="@drawable/scales_l2_img27"
+                android:layout_marginTop="10dp"
+                />
+
+            <View
+                android:id="@+id/line30"
+                android:layout_width="450dp"
+                android:layout_height="1dp"
+                android:layout_below="@+id/img29"
+                android:layout_marginTop="15dp"
+                android:background="@color/black" />
+
+            <TextView
+                android:id="@+id/l1_text33"
+                android:layout_width="380sp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/line30"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/tienneregular"
+                android:text="• The final whole step returns us to C."
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/img31"
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:layout_below="@+id/l1_text33"
+                android:background="@drawable/scales_l2_img28"
+                android:layout_marginTop="10dp"
+                />
+
+            <View
+                android:id="@+id/line31"
+                android:layout_width="450dp"
+                android:layout_height="1dp"
+                android:layout_below="@+id/img31"
+                android:layout_marginTop="15dp"
+                android:background="@color/black" />
+
+            <TextView
+                android:id="@+id/l1_text34"
+                android:layout_width="380sp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/line31"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/tienneregular"
+                android:text="• C natural minor is: C, D, E♭, F, G, A♭, B♭."
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <FrameLayout
+                android:id="@+id/frame_vid3"
+                android:layout_below="@+id/l1_text34"
+                android:layout_width="match_parent"
+                android:layout_height="140dp"
+                android:layout_marginTop="10dp">
+
+                <androidx.media3.ui.PlayerView
+                    android:id="@+id/vid3"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:use_controller="false"/>
+
+                <ImageView
+                    android:id="@+id/thumb3"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/scales_l2_thumbnail3" />
+
+                <ImageView
+                    android:id="@+id/playButton3"
+                    android:layout_width="68dp"
+                    android:layout_height="68dp"
+                    android:layout_gravity="center"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:background="@android:color/transparent"
+                    android:src="@android:drawable/ic_media_play" />
+            </FrameLayout>
+
+
+            <View
+                android:id="@+id/line32"
+                android:layout_width="450dp"
+                android:layout_height="1dp"
+                android:layout_below="@+id/frame_vid3"
+                android:layout_marginTop="15dp"
+                android:background="@color/black" />
+
+            <TextView
+                android:id="@+id/l1_text35"
+                android:layout_width="380sp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/line32"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/tienneregular"
+                android:text="• Notice that the C Natural Minor Scale has three flats."
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/img32"
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:layout_below="@+id/l1_text35"
+                android:background="@drawable/scales_l2_img29"
+                android:layout_marginTop="10dp"
+                />
+
+            <View
+                android:id="@+id/line33"
+                android:layout_width="450dp"
+                android:layout_height="1dp"
+                android:layout_below="@+id/img32"
+                android:layout_marginTop="15dp"
+                android:background="@color/black" />
+
+            <TextView
+                android:id="@+id/l1_text36"
+                android:layout_width="380sp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/line33"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/tienneregular"
+                android:text="• Next, we will discuss harmonic minor."
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/l1_text37"
+                android:layout_width="380sp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/l1_text36"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/tienneregular"
+                android:text="• To convert any natural minor scale into harmonic minor, raise the seventh note by a half step."
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/l1_text38"
+                android:layout_width="380sp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/l1_text37"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/tienneregular"
+                android:text="• Let's convert C Natural Minor into C Harmonic Minor."
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/img33"
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:layout_below="@+id/l1_text38"
+                android:background="@drawable/scales_l2_img30"
+                android:layout_marginTop="10dp"
+                />
+
+            <View
+                android:id="@+id/line41"
+                android:layout_width="450dp"
+                android:layout_height="1dp"
+                android:layout_below="@+id/img33"
+                android:layout_marginTop="15dp"
+                android:background="@color/black" />
+
+            <TextView
+                android:id="@+id/l1_text39"
+                android:layout_width="380sp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/img33"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/tienneregular"
+                android:text="• Simply raise the seventh note (B♭) by a half step, resulting in B."
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/img34"
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:layout_below="@+id/l1_text39"
+                android:background="@drawable/scales_l2_img31"
+                android:layout_marginTop="10dp"
+                />
+
+            <View
+                android:id="@+id/line35"
+                android:layout_width="450dp"
+                android:layout_height="1dp"
+                android:layout_below="@+id/img34"
+                android:layout_marginTop="15dp"
+                android:background="@color/black" />
+
+            <TextView
+                android:id="@+id/l1_text40"
+                android:layout_width="380sp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/line35"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/tienneregular"
+                android:text="• C harmonic minor is: C, D, E♭, F, G, A♭, B."
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <FrameLayout
+                android:id="@+id/frame_vid4"
+                android:layout_below="@+id/l1_text40"
+                android:layout_width="match_parent"
+                android:layout_height="140dp"
+                android:layout_marginTop="10dp">
+
+                <androidx.media3.ui.PlayerView
+                    android:id="@+id/vid4"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:use_controller="false"/>
+
+                <ImageView
+                    android:id="@+id/thumb4"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/scales_l2_thumbnail4" />
+
+                <ImageView
+                    android:id="@+id/playButton4"
+                    android:layout_width="68dp"
+                    android:layout_height="68dp"
+                    android:layout_gravity="center"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:background="@android:color/transparent"
+                    android:src="@android:drawable/ic_media_play" />
+            </FrameLayout>
+
+            <View
+                android:id="@+id/line36"
+                android:layout_width="450dp"
+                android:layout_height="1dp"
+                android:layout_below="@+id/frame_vid4"
+                android:layout_marginTop="15dp"
+                android:background="@color/black" />
+
+            <TextView
+                android:id="@+id/l1_text41"
+                android:layout_width="380sp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/line36"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/tienneregular"
+                android:text="• Finally, we will discuss melodic minor."
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/l1_text42"
+                android:layout_width="380sp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/l1_text41"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/tienneregular"
+                android:text="• To convert a natural minor scale into melodic minor, raise both the sixth and seventh notes by a half step."
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/img39"
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:layout_below="@+id/l1_text42"
+                android:background="@drawable/scales_l2_img30"
+                android:layout_marginTop="10dp"
+                />
+
+            <View
+                android:id="@+id/line37"
+                android:layout_width="450dp"
+                android:layout_height="1dp"
+                android:layout_below="@+id/img39"
+                android:layout_marginTop="15dp"
+                android:background="@color/black" />
+
+            <TextView
+                android:id="@+id/l1_text43"
+                android:layout_width="380sp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/line37"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/tienneregular"
+                android:text="• For example, to convert C Natural Minor into C Melodic Minor, simply raise the A♭ and B♭ a half step to A and B."
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/img36"
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:layout_below="@+id/l1_text43"
+                android:background="@drawable/scales_l2_img32"
+                android:layout_marginTop="10dp"
+                />
+
+            <View
+                android:id="@+id/line38"
+                android:layout_width="450dp"
+                android:layout_height="1dp"
+                android:layout_below="@+id/img36"
+                android:layout_marginTop="15dp"
+                android:background="@color/black" />
+
+            <TextView
+                android:id="@+id/l1_text44"
+                android:layout_width="380sp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/line38"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/tienneregular"
+                android:text="• C melodic minor is: C, D, E♭, F, G, A, B."
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <FrameLayout
+                android:id="@+id/frame_vid5"
+                android:layout_below="@+id/l1_text44"
+                android:layout_width="match_parent"
+                android:layout_height="140dp"
+                android:layout_marginTop="10dp">
+
+                <androidx.media3.ui.PlayerView
+                    android:id="@+id/vid5"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:use_controller="false"/>
+
+                <ImageView
+                    android:id="@+id/thumb5"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/scales_l2_thumbnail5" />
+
+                <ImageView
+                    android:id="@+id/playButton5"
+                    android:layout_width="68dp"
+                    android:layout_height="68dp"
+                    android:layout_gravity="center"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:background="@android:color/transparent"
+                    android:src="@android:drawable/ic_media_play" />
+            </FrameLayout>
+
+            <View
+                android:id="@+id/line39"
+                android:layout_width="450dp"
+                android:layout_height="1dp"
+                android:layout_below="@+id/frame_vid5"
+                android:layout_marginTop="15dp"
+                android:background="@color/black" />
+
+            <TextView
+                android:id="@+id/l1_text45"
+                android:layout_width="380sp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/line39"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/tienneregular"
+                android:text="• Usually, melodic minor is used only when ascending."
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/l1_text46"
+                android:layout_width="380sp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/l1_text45"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/tienneregular"
+                android:text="• When descending, composers prefer to use the natural minor scale."
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <FrameLayout
+                android:id="@+id/frame_vid6"
+                android:layout_below="@+id/l1_text46"
+                android:layout_width="match_parent"
+                android:layout_height="140dp"
+                android:layout_marginTop="10dp">
+
+                <androidx.media3.ui.PlayerView
+                    android:id="@+id/vid6"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:use_controller="false"/>
+
+                <ImageView
+                    android:id="@+id/thumb6"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/scales_l2_thumbnail6" />
+
+                <ImageView
+                    android:id="@+id/playButton6"
+                    android:layout_width="68dp"
+                    android:layout_height="68dp"
+                    android:layout_gravity="center"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:background="@android:color/transparent"
+                    android:src="@android:drawable/ic_media_play" />
+            </FrameLayout>
+
+            <View
+                android:id="@+id/line40"
+                android:layout_width="450dp"
+                android:layout_height="1dp"
+                android:layout_below="@+id/frame_vid6"
+                android:layout_marginTop="15dp"
+                android:background="@color/black" />
+
+        </RelativeLayout>
+    </ScrollView>
+
+    <ImageView
+        android:id="@+id/backBtn"
+        android:layout_width="30dp"
+        android:layout_height="40dp"
+        android:src="@drawable/backbtn"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="35dp"
+        />
+
+</RelativeLayout>

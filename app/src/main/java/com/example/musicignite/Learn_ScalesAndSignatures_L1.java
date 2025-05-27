@@ -28,9 +28,11 @@ public class Learn_ScalesAndSignatures_L1 extends AppCompatActivity {
     List<PlayerView> playerViews = new ArrayList<>();
     List<Uri> videoUris = new ArrayList<>();
     List<ImageView> playButtons = new ArrayList<>();
+    List<ImageView> thumbnailViews = new ArrayList<>();
     ExoPlayer sharedPlayer;
     PlayerView currentPlayerView;
     Uri currentUri;
+    int currentIndex = -1;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -49,14 +51,18 @@ public class Learn_ScalesAndSignatures_L1 extends AppCompatActivity {
         playerView2 = findViewById(R.id.vid2);
         playerView3 = findViewById(R.id.vid3);
 
+        thumbnailViews.add(findViewById(R.id.thumb1));
+        thumbnailViews.add(findViewById(R.id.thumb2));
+        thumbnailViews.add(findViewById(R.id.thumb3));
+
         playerViews.add(playerView1);
         playerViews.add(playerView2);
         playerViews.add(playerView3);
 
-
         playButtons.add(playButton1);
         playButtons.add(playButton2);
         playButtons.add(playButton3);
+
 
         videoUris.add(Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.scales_lesson1_vid1));
         videoUris.add(Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.scales_lesson1_vid2));
@@ -65,7 +71,7 @@ public class Learn_ScalesAndSignatures_L1 extends AppCompatActivity {
 
     }
     @Override
-    protected void onStart() {
+    public void onStart() {
         super.onStart();
         backBtn.setOnClickListener(v -> {
             Intent intent = new Intent(this, Learn_ScalesAndSignatures.class);
@@ -73,6 +79,7 @@ public class Learn_ScalesAndSignatures_L1 extends AppCompatActivity {
         });
         initializePlayer();
     }
+
     @OptIn(markerClass = UnstableApi.class)
     private void initializePlayer() {
         sharedPlayer = new ExoPlayer.Builder(this).build();
@@ -85,7 +92,6 @@ public class Learn_ScalesAndSignatures_L1 extends AppCompatActivity {
             pvCopy.setTag(uri);
             pvCopy.setControllerAutoShow(false);
             pvCopy.setControllerShowTimeoutMs(500);
-
             playBtn.setVisibility(View.VISIBLE);
 
             // Clicking play button
@@ -114,6 +120,7 @@ public class Learn_ScalesAndSignatures_L1 extends AppCompatActivity {
                     int idx = playerViews.indexOf(currentPlayerView);
                     if (idx != -1) {
                         playButtons.get(idx).setVisibility(View.VISIBLE);
+                        thumbnailViews.get(idx).setVisibility(View.VISIBLE);
                     }
                 }
             }
@@ -121,32 +128,43 @@ public class Learn_ScalesAndSignatures_L1 extends AppCompatActivity {
     }
 
     private void playInView(PlayerView playerView, Uri uri) {
-        if (currentPlayerView != null && currentPlayerView != playerView) {
-            int prevIndex = playerViews.indexOf(currentPlayerView);
-            if (prevIndex != -1) {
-                playButtons.get(prevIndex).setVisibility(View.VISIBLE);
-                currentPlayerView.setPlayer(null);
-            }
-        }
 
-        if (currentPlayerView != playerView || !uri.equals(currentUri)) {
-            currentPlayerView = playerView;
-            currentUri = uri;
-            playerView.setPlayer(sharedPlayer);
-            sharedPlayer.setMediaItem(MediaItem.fromUri(uri));
-            sharedPlayer.prepare();
-            sharedPlayer.play();
-        } else {
-            // Same video clicked again
+        int newIndex = playerViews.indexOf(playerView);
+
+        if (currentPlayerView == playerView && uri.equals(currentUri)) {
             if (sharedPlayer.getPlaybackState() == Player.STATE_ENDED) {
                 sharedPlayer.seekTo(0);
                 sharedPlayer.play();
+                thumbnailViews.get(newIndex).setVisibility(View.GONE);
+                playButtons.get(newIndex).setVisibility(View.GONE);
             } else if (sharedPlayer.isPlaying()) {
                 sharedPlayer.pause();
             } else {
                 sharedPlayer.play();
             }
+            return;
         }
+
+        // Stop and detach previous player view
+        if (currentPlayerView != null && currentPlayerView != playerView) {
+            if (currentIndex != -1) {
+                thumbnailViews.get(currentIndex).setVisibility(View.VISIBLE);
+                playButtons.get(currentIndex).setVisibility(View.VISIBLE);
+                playerViews.get(currentIndex).setPlayer(null);
+            }
+        }
+
+        currentPlayerView = playerView;
+        currentUri = uri;
+        currentIndex = newIndex;
+
+        playerView.setPlayer(sharedPlayer);
+        thumbnailViews.get(currentIndex).setVisibility(View.GONE);
+        playButtons.get(currentIndex).setVisibility(View.GONE);
+
+        sharedPlayer.setMediaItem(MediaItem.fromUri(uri));
+        sharedPlayer.prepare();
+        sharedPlayer.play();
     }
 
     @Override

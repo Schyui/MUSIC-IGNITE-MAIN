@@ -160,21 +160,46 @@
                 android:textColor="@color/black"
                 android:textSize="16sp" />
 
-            <androidx.media3.ui.PlayerView
-                android:id="@+id/vid1"
-                android:layout_width="430dp"
-                android:layout_height="180dp"
+            <FrameLayout
+                android:id="@+id/frame_vid1"
                 android:layout_below="@+id/l1_text6"
-                app:use_controller="true"
-                app:resize_mode="fit"
-                android:layout_marginTop="10dp"
-                />
+                android:layout_width="match_parent"
+                android:layout_height="140dp"
+                android:layout_marginTop="10dp">
+
+
+                <androidx.media3.ui.PlayerView
+                    android:id="@+id/vid1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:use_controller="false"
+                    />
+
+                <ImageView
+                    android:id="@+id/thumb1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/basics_l4_thumbnail1" />
+
+
+                <ImageView
+                    android:id="@+id/playButton1"
+                    android:layout_width="68dp"
+                    android:layout_height="68dp"
+                    android:layout_gravity="center"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:background="@android:color/transparent"
+                    android:src="@android:drawable/ic_media_play"
+                    />
+            </FrameLayout>
 
             <View
                 android:id="@+id/line5"
                 android:layout_width="450dp"
                 android:layout_height="1dp"
-                android:layout_below="@+id/vid1"
+                android:layout_below="@+id/frame_vid1"
                 android:layout_marginTop="15dp"
                 android:background="@color/black" />
 
@@ -202,20 +227,44 @@
                 android:textColor="@color/black"
                 android:textSize="16sp" />
 
-            <androidx.media3.ui.PlayerView
-                android:id="@+id/vid2"
-                android:layout_width="430dp"
-                android:layout_height="180dp"
+            <FrameLayout
+                android:id="@+id/frame_vid2"
                 android:layout_below="@+id/l1_text8"
-                app:use_controller="true"
-                app:resize_mode="fit"
-                android:layout_marginTop="10dp" />
+                android:layout_width="match_parent"
+                android:layout_height="140dp"
+                android:layout_marginTop="10dp">
+
+                <androidx.media3.ui.PlayerView
+                    android:id="@+id/vid2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:use_controller="false"
+                    />
+
+                <ImageView
+                    android:id="@+id/thumb2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/basics_l4_thumbnail2" />
+
+                <ImageView
+                    android:id="@+id/playButton2"
+                    android:layout_width="68dp"
+                    android:layout_height="68dp"
+                    android:layout_gravity="center"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:background="@android:color/transparent"
+                    android:src="@android:drawable/ic_media_play" />
+
+            </FrameLayout>
 
             <View
                 android:id="@+id/line6"
                 android:layout_width="450dp"
                 android:layout_height="1dp"
-                android:layout_below="@+id/vid2"
+                android:layout_below="@+id/frame_vid2"
                 android:layout_marginTop="15dp"
                 android:background="@color/black" />
 
