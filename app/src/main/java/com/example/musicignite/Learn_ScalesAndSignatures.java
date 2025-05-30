@@ -50,7 +50,7 @@ public class Learn_ScalesAndSignatures extends AppCompatActivity {
             Intent intent = new Intent(this, Learn_ScalesAndSignatures_L2.class);
             startActivity(intent);
         });
-/*
+
         scales_Lesson3.setOnClickListener(view -> {
             Intent intent = new Intent(this, Learn_ScalesAndSignatures_L3.class);
             startActivity(intent);
@@ -65,6 +65,6 @@ public class Learn_ScalesAndSignatures extends AppCompatActivity {
             Intent intent = new Intent(this, Learn_ScalesAndSignatures_L5.class);
             startActivity(intent);
         });
-        */
+
     }
 }

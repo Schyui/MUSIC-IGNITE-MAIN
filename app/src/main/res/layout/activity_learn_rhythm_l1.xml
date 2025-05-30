@@ -18,13 +18,26 @@
             android:orientation="vertical" >
 
             <TextView
+                android:id="@+id/l1_title2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_centerHorizontal="true"
+                android:text="Lesson 1:"
+                android:textSize="28sp"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:fontFamily="@font/tagesschriftregular"
+                />
+
+            <TextView
                 android:id="@+id/l1_title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="40dp"
+                android:layout_below="@id/l1_title2"
                 android:layout_centerHorizontal="true"
                 android:text="Simple and Compound Meter"
-                android:textSize="21sp"
+                android:textSize="26sp"
                 android:textAlignment="center"
                 android:textColor="@color/black"
                 android:fontFamily="@font/tagesschriftregular"
@@ -817,6 +830,21 @@
                 android:layout_below="@+id/img26"
                 android:layout_marginTop="15dp"
                 android:background="@color/black" />
+
+            <Button
+                android:id="@+id/nextBtn"
+                android:layout_width="120dp"
+                android:layout_height="40dp"
+                android:layout_below="@id/line27"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/btn_border"
+                android:fontFamily="@font/irish"
+                android:text="Next"
+                android:stateListAnimator="@null"
+                android:drawableRight="@drawable/baseline_arrow_circle_right_24"
+                android:paddingEnd="15dp"
+                android:paddingStart="15dp"/>
 
         </RelativeLayout>
     </ScrollView>

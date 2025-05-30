@@ -1,0 +1,556 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EDE7F6"
+    tools:context=".Learn_ScalesAndSignatures_L3">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/lesson"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_centerHorizontal="true"
+                android:text="Lesson 3:"
+                android:textSize="28sp"
+                android:layout_gravity="center"
+                android:textColor="@color/black"
+                android:fontFamily="@font/tagesschriftregular"
+                />
+
+
+            <TextView
+                android:id="@+id/l1_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="Scale Degrees"
+                android:textSize="33sp"
+                android:layout_gravity="center"
+                android:textColor="@color/black"
+                android:fontFamily="@font/tagesschriftregular"
+                />
+
+            <View
+                android:id="@+id/line1"
+                android:layout_width="450dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="15dp"
+                android:background="@color/black" />
+
+            <TextView
+                android:id="@+id/l1_text1"
+                android:layout_width="380sp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/tienneregular"
+                android:text="• Each note of a scale has a special name, called a scale degree."
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/l1_text2"
+                android:layout_width="380sp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/tienneregular"
+                android:text="• The first (and last) note is called the tonic."
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/img2"
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:background="@drawable/scales_l3_img01"
+                android:layout_marginTop="10dp"
+                />
+
+            <View
+                android:id="@+id/line3"
+                android:layout_width="450dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="15dp"
+                android:background="@color/black" />
+
+            <TextView
+                android:id="@+id/l1_text3"
+                android:layout_width="380sp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/tienneregular"
+                android:text="• The fifth note is called the dominant."
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/img3"
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:background="@drawable/scales_l3_img02"
+                android:layout_marginTop="10dp"
+                />
+
+
+            <View
+                android:id="@+id/line4"
+                android:layout_width="450dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="15dp"
+                android:background="@color/black" />
+
+            <TextView
+                android:id="@+id/l1_text5"
+                android:layout_width="380sp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/tienneregular"
+                android:text="• The fourth note is called the subdominant."
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/modify_img3"
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:background="@drawable/scales_l3_img03"
+                android:layout_marginTop="10dp"
+                />
+
+            <View
+                android:id="@+id/line5"
+                android:layout_width="450dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="15dp"
+                android:background="@color/black" />
+
+            <TextView
+                android:id="@+id/l1_text7"
+                android:layout_width="380sp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/tienneregular"
+                android:text="• Notice that the subdominant is the same distance below the tonic as the dominant is above it (a generic fifth)."
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/modify_img4"
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:background="@drawable/scales_l3_img04"
+                android:layout_marginTop="10dp"
+                />
+
+            <TextView
+                android:id="@+id/modified_text7"
+                android:layout_width="380sp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/tienneregular"
+                android:text="•  The prefix sub is Latin for &quot;under&quot; or &quot;beneath&quot;"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <View
+                android:id="@+id/line6"
+                android:layout_width="450dp"
+                android:layout_height="1dp"
+                android:layout_below="@+id/modify_img4"
+                android:layout_marginTop="15dp"
+                android:background="@color/black" />
+
+            <TextView
+                android:id="@+id/l1_text9"
+                android:layout_width="380sp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/tienneregular"
+                android:text="• The third note is called the mediant since it is in the middle of the tonic and dominant."
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/img6"
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:background="@drawable/scales_l3_img05"
+                android:layout_marginTop="10dp"
+                />
+
+            <View
+                android:id="@+id/line7"
+                android:layout_width="450dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="15dp"
+                android:background="@color/black" />
+
+            <TextView
+                android:id="@+id/l1_text10"
+                android:layout_width="380sp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/tienneregular"
+                android:text="• Likewise, the sixth note is called the submediant since it is in the middle of the upper tonic and subdominant."
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+
+
+            <ImageView
+                android:id="@+id/img7"
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:background="@drawable/scales_l3_img06"
+                android:layout_marginTop="10dp"
+                />
+
+            <View
+                android:id="@+id/line8"
+                android:layout_width="450dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="15dp"
+                android:background="@color/black" />
+
+            <TextView
+                android:id="@+id/l1_text11"
+                android:layout_width="380sp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/tienneregular"
+                android:text="• The second note is called the supertonic. Super is Latin for &quot;above&quot;."
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/img8"
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:background="@drawable/scales_l3_img07"
+                android:layout_marginTop="10dp"
+                />
+
+            <View
+                android:id="@+id/line9"
+                android:layout_width="450dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="15dp"
+                android:background="@color/black" />
+
+            <TextView
+                android:id="@+id/l1_text12"
+                android:layout_width="380sp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/tienneregular"
+                android:text="• While the scale degrees for the first six notes are the same for both major and minor scales, the seventh one is special."
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+
+
+            <ImageView
+                android:id="@+id/img9"
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:background="@drawable/scales_l3_img08"
+                android:layout_marginTop="10dp"
+                />
+
+            <View
+                android:id="@+id/line10"
+                android:layout_width="450dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="15dp"
+                android:background="@color/black" />
+
+            <TextView
+                android:id="@+id/l1_text13"
+                android:layout_width="380sp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/tienneregular"
+                android:text="• If the seventh note is a half step below the tonic, it is called a leading tone."
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/img10"
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:background="@drawable/scales_l3_img09"
+                android:layout_marginTop="10dp"
+                />
+
+            <View
+                android:id="@+id/line11"
+                android:layout_width="450dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="15dp"
+                android:background="@color/black" />
+
+            <TextView
+                android:id="@+id/l1_text14"
+                android:layout_width="380sp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/tienneregular"
+                android:text="• Play the C Major Scale, notice how the seventh note wants to lead into the tonic."
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <FrameLayout
+                android:id="@+id/frame_vid1"
+                android:layout_width="match_parent"
+                android:layout_height="140dp"
+                android:layout_marginTop="10dp">
+
+
+                <androidx.media3.ui.PlayerView
+                    android:id="@+id/vid1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:use_controller="false"
+                    />
+
+                <ImageView
+                    android:id="@+id/thumb1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/scales_l3_thumbnail1" />
+
+
+                <ImageView
+                    android:id="@+id/playButton1"
+                    android:layout_width="68dp"
+                    android:layout_height="68dp"
+                    android:layout_gravity="center"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:background="@android:color/transparent"
+                    android:src="@android:drawable/ic_media_play"
+                    />
+            </FrameLayout>
+
+            <TextView
+                android:id="@+id/modified_text15"
+                android:layout_width="380sp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/tienneregular"
+                android:text="• Leading tones also occur in harmonic minor and melodic minor."
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <View
+                android:id="@+id/line12"
+                android:layout_width="450dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="15dp"
+                android:background="@color/black" />
+
+            <TextView
+                android:id="@+id/l1_text15"
+                android:layout_width="380sp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/tienneregular"
+                android:text="• In natural minor, the seventh note is a whole step below the tonic. In this case, the note is called a subtonic."
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/img11"
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:background="@drawable/scales_l3_img10"
+                android:layout_marginTop="10dp"
+                />
+
+            <View
+                android:id="@+id/line13"
+                android:layout_width="450dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="15dp"
+                android:background="@color/black" />
+
+            <TextView
+                android:id="@+id/l1_text16"
+                android:layout_width="380sp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/tienneregular"
+                android:text="• Play the C Natural Minor scale, notice how the seventh tone lacks the desire to lead into the tonic."
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <FrameLayout
+                android:id="@+id/frame_vid2"
+                android:layout_width="match_parent"
+                android:layout_height="140dp"
+                android:layout_marginTop="10dp">
+
+                <androidx.media3.ui.PlayerView
+                    android:id="@+id/vid2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:use_controller="false"
+                    />
+
+                <ImageView
+                    android:id="@+id/thumb2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/scales_l3_thumbnail2" />
+
+                <ImageView
+                    android:id="@+id/playButton2"
+                    android:layout_width="68dp"
+                    android:layout_height="68dp"
+                    android:layout_gravity="center"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:background="@android:color/transparent"
+                    android:src="@android:drawable/ic_media_play" />
+
+            </FrameLayout>
+
+            <View
+                android:id="@+id/line14"
+                android:layout_width="450dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="15dp"
+                android:background="@color/black" />
+
+            <TextView
+                android:id="@+id/l1_text17"
+                android:layout_width="380sp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/tienneregular"
+                android:text="• A number with a caret may also be used to indicate a scale degree."
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+
+
+            <ImageView
+                android:id="@+id/img14"
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:background="@drawable/scales_l3_img11"
+                android:layout_marginTop="10dp"
+                />
+
+            <View
+                android:id="@+id/line15"
+                android:layout_width="450dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="15dp"
+                android:background="@color/black" />
+
+            <TextView
+                android:id="@+id/l1_text18"
+                android:layout_width="380sp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/tienneregular"
+                android:text="• For example, the dominant of a scale (G in the above example), may be labelled as a 5 with a caret"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+
+
+            <ImageView
+                android:id="@+id/img15"
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:background="@drawable/scales_l3_img12"
+                android:layout_marginTop="10dp"
+                />
+
+            <View
+                android:id="@+id/line16"
+                android:layout_width="450dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="15dp"
+                android:background="@color/black" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/previousBtn"
+                    android:layout_width="120dp"
+                    android:layout_height="40dp"
+                    android:layout_marginRight="100dp"
+                    android:background="@drawable/btn_border"
+                    android:fontFamily="@font/irish"
+                    android:stateListAnimator="@null"
+                    android:text="Previous"
+                    android:drawableLeft="@drawable/baseline_arrow_circle_left_24"
+                    android:paddingEnd="15dp"
+                    android:paddingStart="15dp"
+                    android:textColor="@color/black"/>
+
+                <Button
+                    android:id="@+id/nextBtn"
+                    android:layout_width="120dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/btn_border"
+                    android:fontFamily="@font/irish"
+                    android:text="Next"
+                    android:stateListAnimator="@null"
+                    android:drawableRight="@drawable/baseline_arrow_circle_right_24"
+                    android:paddingEnd="15dp"
+                    android:paddingStart="15dp"
+                    android:textColor="@color/black"/>
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <ImageView
+        android:id="@+id/backBtn"
+        android:layout_width="30dp"
+        android:layout_height="40dp"
+        android:src="@drawable/backbtn"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="35dp"
+        />
+
+</RelativeLayout>

@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 
 import androidx.activity.EdgeToEdge;
@@ -25,6 +26,7 @@ import java.util.List;
 
 public class Learn_Basics_L4 extends AppCompatActivity {
 
+    Button NextBtn, PreviousBtn;
     ImageView backBtn, playButton1, playButton2;
     PlayerView playerView1, playerView2;
     List<PlayerView> playerViews = new ArrayList<>();
@@ -51,6 +53,8 @@ public class Learn_Basics_L4 extends AppCompatActivity {
         playButton2 = findViewById(R.id.playButton2);
         playerView1 = findViewById(R.id.vid1);
         playerView2 = findViewById(R.id.vid2);
+        NextBtn = findViewById(R.id.nextBtn);
+        PreviousBtn = findViewById(R.id.previousBtn);
 
         thumbnailViews.add(findViewById(R.id.thumb1));
         thumbnailViews.add(findViewById(R.id.thumb2));
@@ -73,6 +77,16 @@ public class Learn_Basics_L4 extends AppCompatActivity {
         super.onStart();
         backBtn.setOnClickListener(v -> {
             Intent intent = new Intent(Learn_Basics_L4.this, Learn_Basics.class);
+            startActivity(intent);
+        });
+
+        NextBtn.setOnClickListener(v -> {
+            Intent intent = new Intent(Learn_Basics_L4.this, Learn_Basics_L5.class);
+            startActivity(intent);
+        });
+
+        PreviousBtn.setOnClickListener(v -> {
+            Intent intent = new Intent(Learn_Basics_L4.this, Learn_Basics_L3.class);
             startActivity(intent);
         });
 

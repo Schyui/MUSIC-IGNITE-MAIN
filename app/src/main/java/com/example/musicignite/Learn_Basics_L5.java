@@ -4,6 +4,7 @@ import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.widget.Button;
 import android.widget.ImageView;
 
 import androidx.activity.EdgeToEdge;
@@ -20,7 +21,7 @@ import androidx.media3.ui.PlayerView;
 import com.bumptech.glide.Glide;
 
 public class Learn_Basics_L5 extends AppCompatActivity {
-
+    Button NextBtn, PreviousBtn;
     ImageView backBtn;
     PlayerView playerView1;
     ExoPlayer player1;
@@ -37,6 +38,9 @@ public class Learn_Basics_L5 extends AppCompatActivity {
         });
         backBtn = findViewById(R.id.backBtn);
         playerView1 = findViewById(R.id.vid1);
+        NextBtn = findViewById(R.id.nextBtn);
+        PreviousBtn = findViewById(R.id.previousBtn);
+
         @SuppressLint({"MissingInflatedId", "LocalSuppress"}) ImageView gif = findViewById(R.id.gif1);
         Glide.with(this)
                 .load(R.drawable.basics_l5_gif1)
@@ -47,6 +51,16 @@ public class Learn_Basics_L5 extends AppCompatActivity {
         super.onStart();
         backBtn.setOnClickListener(v -> {
             Intent intent = new Intent(Learn_Basics_L5.this, Learn_Basics.class);
+            startActivity(intent);
+        });
+
+        NextBtn.setOnClickListener(v -> {
+            Intent intent = new Intent(Learn_Basics_L5.this, Learn_Basics_L6.class);
+            startActivity(intent);
+        });
+
+        PreviousBtn.setOnClickListener(v -> {
+            Intent intent = new Intent(Learn_Basics_L5.this, Learn_Basics_L4.class);
             startActivity(intent);
         });
 

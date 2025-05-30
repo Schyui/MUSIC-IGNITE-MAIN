@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 
 import androidx.activity.EdgeToEdge;
@@ -22,7 +23,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Learn_ScalesAndSignatures_L1 extends AppCompatActivity {
-
+    Button NextBtn;
     ImageView backBtn, playButton1, playButton2, playButton3;
     PlayerView playerView1, playerView2, playerView3;
     List<PlayerView> playerViews = new ArrayList<>();
@@ -44,6 +45,7 @@ public class Learn_ScalesAndSignatures_L1 extends AppCompatActivity {
             return insets;
         });
         backBtn = findViewById(R.id.backBtn);
+        NextBtn = findViewById(R.id.nextBtn);
         playButton1 = findViewById(R.id.playButton1);
         playButton2 = findViewById(R.id.playButton2);
         playButton3 = findViewById(R.id.playButton3);
@@ -77,6 +79,12 @@ public class Learn_ScalesAndSignatures_L1 extends AppCompatActivity {
             Intent intent = new Intent(this, Learn_ScalesAndSignatures.class);
             startActivity(intent);
         });
+
+        NextBtn.setOnClickListener(v -> {
+            Intent intent = new Intent(this, Learn_ScalesAndSignatures_L2.class);
+            startActivity(intent);
+        });
+
         initializePlayer();
     }
 

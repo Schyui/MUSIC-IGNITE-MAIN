@@ -18,13 +18,26 @@
                     android:orientation="vertical" >
 
                         <TextView
+                            android:id="@+id/l1_title2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="20dp"
+                            android:layout_centerHorizontal="true"
+                            android:text="Lesson 1:"
+                            android:textSize="28sp"
+                            android:textAlignment="center"
+                            android:textColor="@color/black"
+                            android:fontFamily="@font/tagesschriftregular"
+                            />
+
+                        <TextView
                             android:id="@+id/l1_title"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginTop="40dp"
+                            android:layout_below="@id/l1_title2"
                             android:layout_centerHorizontal="true"
-                            android:text="The Staff, Clefs, and Ledger Lines"
-                            android:textSize="21sp"
+                            android:text="The Staff, Clefs, and \nLedger Lines"
+                            android:textSize="30sp"
                             android:textAlignment="center"
                             android:textColor="@color/black"
                             android:fontFamily="@font/tagesschriftregular"
@@ -582,6 +595,31 @@
                             android:background="@drawable/basics_l1_img18"
                             android:layout_marginTop="10dp"
                             />
+
+                        <View
+                            android:id="@+id/line20"
+                            android:layout_width="450dp"
+                            android:layout_height="1dp"
+                            android:layout_below="@+id/l1_img18"
+                            android:layout_marginTop="15dp"
+                            android:background="@color/black" />
+
+                        <Button
+                            android:id="@+id/nextBtn"
+                            android:layout_width="120dp"
+                            android:layout_height="40dp"
+                            android:layout_below="@id/line20"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="20dp"
+                            android:background="@drawable/btn_border"
+                            android:fontFamily="@font/irish"
+                            android:text="Next"
+                            android:stateListAnimator="@null"
+                            android:drawableRight="@drawable/baseline_arrow_circle_right_24"
+                            android:paddingEnd="15dp"
+                            android:paddingStart="15dp"/>
+
+
 
                 </RelativeLayout>
         </ScrollView>

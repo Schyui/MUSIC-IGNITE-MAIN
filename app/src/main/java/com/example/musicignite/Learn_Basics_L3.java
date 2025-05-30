@@ -12,7 +12,7 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 public class Learn_Basics_L3 extends AppCompatActivity {
-
+    Button NextBtn, PreviousBtn;
     ImageView backBtn;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,6 +25,8 @@ public class Learn_Basics_L3 extends AppCompatActivity {
             return insets;
         });
         backBtn = findViewById(R.id.backBtn);
+        NextBtn = findViewById(R.id.nextBtn);
+        PreviousBtn = findViewById(R.id.previousBtn);
     }
 
     @Override
@@ -34,5 +36,17 @@ public class Learn_Basics_L3 extends AppCompatActivity {
             Intent intent = new Intent(Learn_Basics_L3.this, Learn_Basics.class);
             startActivity(intent);
         });
+
+        NextBtn.setOnClickListener(v -> {
+            Intent intent = new Intent(Learn_Basics_L3.this, Learn_Basics_L4.class);
+            startActivity(intent);
+        });
+
+        PreviousBtn.setOnClickListener(v -> {
+            Intent intent = new Intent(Learn_Basics_L3.this, Learn_Basics_L2.class);
+            startActivity(intent);
+        });
+
+
     }
 }

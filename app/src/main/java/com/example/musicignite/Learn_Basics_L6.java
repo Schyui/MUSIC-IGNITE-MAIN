@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 
 import androidx.activity.EdgeToEdge;
@@ -25,7 +26,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Learn_Basics_L6 extends AppCompatActivity {
-
+    Button PreviousBtn;
     ImageView backBtn, playButton1, playButton2, playButton3;
     PlayerView playerView1, playerView2, playerView3;
     List<PlayerView> playerViews = new ArrayList<>();
@@ -48,6 +49,7 @@ public class Learn_Basics_L6 extends AppCompatActivity {
             return insets;
         });
         backBtn = findViewById(R.id.backBtn);
+        PreviousBtn = findViewById(R.id.previousBtn);
         playButton1 = findViewById(R.id.playButton1);
         playButton2 = findViewById(R.id.playButton2);
         playButton3 = findViewById(R.id.playButton3);
@@ -89,6 +91,12 @@ public class Learn_Basics_L6 extends AppCompatActivity {
             Intent intent = new Intent(Learn_Basics_L6.this, Learn_Basics.class);
             startActivity(intent);
         });
+
+        PreviousBtn.setOnClickListener(v -> {
+            Intent intent = new Intent(Learn_Basics_L6.this, Learn_Basics_L5.class);
+            startActivity(intent);
+        });
+
         initializePlayer();
     }
 
