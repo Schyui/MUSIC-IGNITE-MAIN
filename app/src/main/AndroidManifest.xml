@@ -16,6 +16,7 @@
         android:theme="@style/Theme.AppCompat.Light.NoActionBar"
         tools:targetApi="31">
 
+
         <activity
             android:name=".Learn_Rhythm"
             android:exported="false" />

@@ -73,7 +73,7 @@ public class GtnMedium extends AppCompatActivity {
             builder.setTitle("Warning!")
                     .setMessage("Are you sure you want to go back? Your progress will be lost.")
                     .setPositiveButton("Yes", (dialog, which) -> {
-                        Intent backIntent = new Intent(this, PerfectPitch.class);
+                        Intent backIntent = new Intent(this, Practice_Activity.class);
                         startActivity(backIntent);
                         finish();
                     })

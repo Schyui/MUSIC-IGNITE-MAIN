@@ -37,13 +37,35 @@ public class TimeRush extends AppCompatActivity {
 
     // tunog ng mga quiz and answer, yung may"" yung ans na nandun sa loob ng button yung raw naman ano sha location nung tunog
     private final HashMap<String, Integer> soundMap = new HashMap<String, Integer>() {{
-        put("A", R.raw.note_a);
-        put("B", R.raw.note_b);
-        put("C", R.raw.note_c);
-        put("D", R.raw.note_d);
-        put("E", R.raw.note_e);
-        put("F", R.raw.note_f);
-        put("G", R.raw.note_g);
+        put("A", R.raw.bass_a1);
+        put("B", R.raw.bass_b1);
+        put("C", R.raw.bass_c1);
+        put("D", R.raw.bass_d1);
+        put("E", R.raw.bass_e1);
+        put("F", R.raw.bass_f1);
+        put("G", R.raw.bass_g1);
+
+        put("A", R.raw.gcleftrble_a);
+        put("B", R.raw.gcleftreble_b);
+        put("C", R.raw.gcleftreble_c);
+        put("D", R.raw.gcleftreble_d);
+        put("E", R.raw.gcleftreble_e);
+        put("F", R.raw.gcleftreble_f);
+        put("G", R.raw.gcleftreble_g);
+
+        put("A♭", R.raw.flata_gsharp);
+        put("B♭", R.raw.flatb_asharp);
+        put("D♭", R.raw.flatd_csharp);
+        put("E♭", R.raw.flate_dsharp);
+        put("G♭", R.raw.flatg_fsharp);
+
+        put("G♯", R.raw.flata_gsharp);
+        put("A♯", R.raw.flatb_asharp);
+        put("C♯", R.raw.flatd_csharp);
+        put("D♯", R.raw.flate_dsharp);
+        put("F♯", R.raw.flatg_fsharp);
+
+
     }};
 
     private long totalTimeInMillis; // <-- added to hold selected time

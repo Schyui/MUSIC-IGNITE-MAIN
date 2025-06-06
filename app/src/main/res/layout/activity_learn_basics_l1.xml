@@ -97,9 +97,8 @@
                             android:layout_width="match_parent"
                             android:layout_height="130dp"
                             android:layout_below="@+id/l1_text2"
-                            android:background="@drawable/basics_l1_img02"
-                            android:layout_marginTop="10dp"
-                            />
+                            android:layout_marginTop="-124dp"
+                            android:background="@drawable/basics_l1_img02" />
 
                         <View
                             android:id="@+id/line3"
