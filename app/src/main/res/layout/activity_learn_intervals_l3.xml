@@ -23,7 +23,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
                 android:layout_centerHorizontal="true"
-                android:text="Lesson 1:"
+                android:text="Lesson 3:"
                 android:textSize="28sp"
                 android:layout_gravity="center"
                 android:textColor="@color/black"
@@ -37,7 +37,7 @@
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
                 android:textAlignment="center"
-                android:text="Generic Intevals"
+                android:text="Writing Intevals"
                 android:textSize="33sp"
                 android:layout_gravity="center"
                 android:textColor="@color/black"
@@ -52,21 +52,48 @@
                 android:background="@color/black" />
 
             <TextView
-                android:id="@+id/text1"
                 android:layout_width="380sp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
                 android:layout_marginTop="20dp"
+                android:text="• When writing intervals on the staff, it is common to confuse intervals with the same number of half steps."
                 android:fontFamily="@font/tienneregular"
                 android:textColor="@color/black"
                 android:textSize="16sp" />
 
             <TextView
-                android:id="@+id/text2"
                 android:layout_width="380sp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
                 android:layout_marginTop="20dp"
+                android:text="• For example, one may accidentally write C to F♯ (an augmented fourth) instead of C to G♭ (a diminished fifth)."
+                android:fontFamily="@font/tienneregular"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:background="@drawable/interval_l3_img01"
+                android:layout_marginTop="10dp"
+                />
+
+            <TextView
+                android:layout_width="380sp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:text="• Although both intervals sound the same and look identical on the keyboard, one is a fourth and the other is a fifth."
+                android:fontFamily="@font/tienneregular"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="380sp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:text="• Fortunately, an easy three-step process exists to reduce the risk of this mistake."
                 android:fontFamily="@font/tienneregular"
                 android:textColor="@color/black"
                 android:textSize="16sp" />
@@ -78,22 +105,11 @@
                 android:background="@color/black" />
 
             <TextView
-                android:id="@+id/text3"
                 android:layout_width="380sp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
                 android:layout_marginTop="20dp"
-                android:fontFamily="@font/tienneregular"
-                android:textColor="@color/black"
-                android:textSize="16sp" />
-
-            <TextView
-                android:id="@+id/l1_text3"
-                android:layout_width="380sp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
-                android:layout_marginTop="20dp"
-                android:text="• C to C is an example of a first."
+                android:text="• Let's write a minor third from C."
                 android:fontFamily="@font/tienneregular"
                 android:textColor="@color/black"
                 android:textSize="16sp" />
@@ -101,7 +117,7 @@
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="130dp"
-                android:background="@drawable/interval_l1_img1"
+                android:background="@drawable/interval_l3_img02"
                 android:layout_marginTop="10dp"
                 />
 
@@ -118,14 +134,14 @@
                 android:layout_marginStart="10dp"
                 android:layout_marginTop="20dp"
                 android:fontFamily="@font/tienneregular"
-                android:text="• D to D and E to E are also firsts."
+                android:text="• First, write the generic interval on the staff. For this example, we will write a generic third."
                 android:textColor="@color/black"
                 android:textSize="16sp" />
 
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="130dp"
-                android:background="@drawable/interval_l1_img2"
+                android:background="@drawable/interval_l3_img03"
                 android:layout_marginTop="10dp"
                 />
 
@@ -141,24 +157,14 @@
                 android:layout_marginStart="10dp"
                 android:layout_marginTop="20dp"
                 android:fontFamily="@font/tienneregular"
-                android:text="• Accidentals are ignored when measuring generic intervals, only staff position matters."
-                android:textColor="@color/black"
-                android:textSize="16sp" />
-
-            <TextView
-                android:id="@+id/text4"
-                android:layout_width="380sp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
-                android:layout_marginTop="20dp"
-                android:fontFamily="@font/tienneregular"
+                android:text="• Next, figure out the number of half steps on the keyboard. Since a major third is 4 half steps, our minor third will be 3 half steps."
                 android:textColor="@color/black"
                 android:textSize="16sp" />
 
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="130dp"
-                android:background="@drawable/interval_l1_img3"
+                android:background="@drawable/interval_l3_img04"
                 android:layout_marginTop="10dp"
                 />
 
@@ -175,24 +181,14 @@
                 android:layout_marginStart="10dp"
                 android:layout_marginTop="20dp"
                 android:fontFamily="@font/tienneregular"
-                android:text="• As the notes become further apart on the staff, the interval type increases."
-                android:textColor="@color/black"
-                android:textSize="16sp" />
-
-            <TextView
-                android:id="@+id/text5"
-                android:layout_width="380sp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
-                android:layout_marginTop="20dp"
-                android:fontFamily="@font/tienneregular"
+                android:text="• Finally, compare the staff and keyboard results. Add any needed accidentals to the staff."
                 android:textColor="@color/black"
                 android:textSize="16sp" />
 
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="130dp"
-                android:background="@drawable/interval_l1_img4"
+                android:background="@drawable/interval_l3_img05"
                 android:layout_marginTop="10dp"
                 />
 
@@ -203,30 +199,48 @@
                 android:background="@color/black" />
 
             <TextView
-                android:id="@+id/text6"
                 android:layout_width="380sp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
                 android:layout_marginTop="20dp"
+                android:text="• C–E♭ is a minor third."
                 android:fontFamily="@font/tienneregular"
                 android:textColor="@color/black"
                 android:textSize="16sp" />
 
-            <ImageView
+            <FrameLayout
+                android:id="@+id/frame_vid1"
                 android:layout_width="match_parent"
-                android:layout_height="130dp"
-                android:background="@drawable/interval_l1_img5"
-                android:layout_marginTop="10dp"/>
+                android:layout_height="140dp"
+                android:layout_marginTop="10dp">
 
-            <TextView
-                android:layout_width="380sp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
-                android:layout_marginTop="20dp"
-                android:fontFamily="@font/tienneregular"
-                android:text="• Notice that thirds will always share the same staff position type — either both on a line or both on a space."
-                android:textColor="@color/black"
-                android:textSize="16sp" />
+
+                <androidx.media3.ui.PlayerView
+                    android:id="@+id/vid1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:use_controller="false"
+                    />
+
+                <ImageView
+                    android:id="@+id/thumb1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/scales_l3_thumbnail1" />
+
+
+                <ImageView
+                    android:id="@+id/playButton1"
+                    android:layout_width="68dp"
+                    android:layout_height="68dp"
+                    android:layout_gravity="center"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:background="@android:color/transparent"
+                    android:src="@android:drawable/ic_media_play"
+                    />
+            </FrameLayout>
 
             <View
                 android:layout_width="450dp"
@@ -235,11 +249,11 @@
                 android:background="@color/black" />
 
             <TextView
-                android:id="@+id/text7"
                 android:layout_width="380sp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
                 android:layout_marginTop="20dp"
+                android:text="• For our next example, let’s try a major sixth from F#."
                 android:fontFamily="@font/tienneregular"
                 android:textColor="@color/black"
                 android:textSize="16sp" />
@@ -247,7 +261,7 @@
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="130dp"
-                android:background="@drawable/interval_l1_img6"
+                android:background="@drawable/interval_l3_img06"
                 android:layout_marginTop="10dp"
                 />
 
@@ -258,11 +272,11 @@
                 android:background="@color/black" />
 
             <TextView
-                android:id="@+id/text8"
                 android:layout_width="380sp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
                 android:layout_marginTop="20dp"
+                android:text="• First, write the generic sixth on the staff."
                 android:fontFamily="@font/tienneregular"
                 android:textColor="@color/black"
                 android:textSize="16sp" />
@@ -272,7 +286,7 @@
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="130dp"
-                android:background="@drawable/interval_l1_img7"
+                android:background="@drawable/interval_l3_img07"
                 android:layout_marginTop="10dp"
                 />
 
@@ -284,11 +298,11 @@
                 android:background="@color/black" />
 
             <TextView
-                android:id="@+id/text9"
                 android:layout_width="380sp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
                 android:layout_marginTop="20dp"
+                android:text="• Next, figure out the half steps on the keyboard. A major sixth is 9 half steps."
                 android:fontFamily="@font/tienneregular"
                 android:textColor="@color/black"
                 android:textSize="16sp" />
@@ -296,7 +310,7 @@
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="130dp"
-                android:background="@drawable/interval_l1_img8"
+                android:background="@drawable/interval_l3_img08"
                 android:layout_marginTop="10dp"
                 />
 
@@ -308,11 +322,11 @@
                 android:background="@color/black" />
 
             <TextView
-                android:id="@+id/text10"
                 android:layout_width="380sp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
                 android:layout_marginTop="20dp"
+                android:text="• Finally, add any needed accidentals."
                 android:fontFamily="@font/tienneregular"
                 android:textColor="@color/black"
                 android:textSize="16sp" />
@@ -321,7 +335,7 @@
                 android:id="@+id/img9"
                 android:layout_width="match_parent"
                 android:layout_height="130dp"
-                android:background="@drawable/interval_l1_img9"
+                android:background="@drawable/interval_l3_img09"
                 android:layout_marginTop="10dp"
                 />
 
@@ -333,19 +347,69 @@
                 android:background="@color/black" />
 
             <TextView
-                android:id="@+id/text11"
+                android:layout_width="380sp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:text="• F♯–D♯ is a major sixth."
+                android:fontFamily="@font/tienneregular"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <FrameLayout
+                android:id="@+id/frame_vid2"
+                android:layout_width="match_parent"
+                android:layout_height="140dp"
+                android:layout_marginTop="10dp">
+
+
+                <androidx.media3.ui.PlayerView
+                    android:id="@+id/vid2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:use_controller="false"
+                    />
+
+                <ImageView
+                    android:id="@+id/thumb2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/scales_l3_thumbnail1" />
+
+
+                <ImageView
+                    android:id="@+id/playButton2"
+                    android:layout_width="68dp"
+                    android:layout_height="68dp"
+                    android:layout_gravity="center"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:background="@android:color/transparent"
+                    android:src="@android:drawable/ic_media_play"
+                    />
+            </FrameLayout>
+
+            <View
+                android:layout_width="450dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="15dp"
+                android:background="@color/black" />
+
+            <TextView
                 android:layout_width="380sp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
                 android:layout_marginTop="20dp"
                 android:fontFamily="@font/tienneregular"
+                android:text="• For our final example, we will write a diminished fifth from B."
                 android:textColor="@color/black"
                 android:textSize="16sp" />
 
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="130dp"
-                android:background="@drawable/interval_l1_img10"
+                android:background="@drawable/interval_l3_img10"
                 android:layout_marginTop="10dp"
                 />
 
@@ -356,51 +420,180 @@
                 android:background="@color/black" />
 
             <TextView
-                android:id="@+id/l1_text13"
                 android:layout_width="380sp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
                 android:layout_marginTop="20dp"
                 android:fontFamily="@font/tienneregular"
-                android:text="• Use this chart to reference generic intervals."
+                android:text="• First, write the generic fifth on the staff."
                 android:textColor="@color/black"
                 android:textSize="16sp" />
 
             <ImageView
-                android:id="@+id/img10"
                 android:layout_width="match_parent"
                 android:layout_height="130dp"
-                android:background="@drawable/interval_l1_img11"
+                android:background="@drawable/interval_l3_img10"
                 android:layout_marginTop="10dp"
                 />
 
             <View
-                android:id="@+id/line11"
                 android:layout_width="450dp"
                 android:layout_height="1dp"
                 android:layout_marginTop="15dp"
                 android:background="@color/black" />
 
-            <RelativeLayout
+            <TextView
+                android:layout_width="380sp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/tienneregular"
+                android:text="• Next, figure out the half steps on the keyboard. Since a perfect fifth is 7 half steps, our diminished fifth has 6"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:background="@drawable/interval_l3_img11"
+                android:layout_marginTop="10dp"
+                />
+
+            <View
+                android:layout_width="450dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="15dp"
+                android:background="@color/black" />
+
+            <TextView
+                android:layout_width="380sp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/tienneregular"
+                android:text="• Finally, add any needed accidentals. In this examples, no accidentals is needed."
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:background="@drawable/interval_l3_img11"
+                android:layout_marginTop="10dp"
+                />
+
+            <View
+                android:layout_width="450dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="15dp"
+                android:background="@color/black" />
+
+            <TextView
+                android:layout_width="380sp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/tienneregular"
+                android:text="• B-F is a diminished fifth."
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <FrameLayout
+                android:id="@+id/frame_vid3"
+                android:layout_width="match_parent"
+                android:layout_height="140dp"
+                android:layout_marginTop="10dp">
+
+
+                <androidx.media3.ui.PlayerView
+                    android:id="@+id/vid3"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:use_controller="false"
+                    />
+
+                <ImageView
+                    android:id="@+id/thumb3"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/scales_l3_thumbnail1" />
+
+
+                <ImageView
+                    android:id="@+id/playButton3"
+                    android:layout_width="68dp"
+                    android:layout_height="68dp"
+                    android:layout_gravity="center"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:background="@android:color/transparent"
+                    android:src="@android:drawable/ic_media_play"
+                    />
+            </FrameLayout>
+
+            <View
+                android:layout_width="450dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="15dp"
+                android:background="@color/black" />
+
+            <TextView
+                android:layout_width="380sp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/tienneregular"
+                android:text="• Use this chart to reference the interal-writing process."
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:background="@drawable/interval_l3_img12"
+                android:layout_marginTop="10dp"
+                />
+
+            <View
+                android:layout_width="450dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="15dp"
+                android:background="@color/black" />
+
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="70dp"
-                android:orientation="vertical"
-                android:gravity="center">
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/prevBtn"
+                    android:layout_width="120dp"
+                    android:layout_height="40dp"
+                    android:layout_marginRight="100dp"
+                    android:background="@drawable/btn_border"
+                    android:fontFamily="@font/irish"
+                    android:stateListAnimator="@null"
+                    android:text="Previous"
+                    android:drawableLeft="@drawable/baseline_arrow_circle_left_24"
+                    android:paddingEnd="15dp"
+                    android:paddingStart="15dp"
+                    android:textColor="@color/black"/>
 
                 <Button
                     android:id="@+id/nextBtn"
                     android:layout_width="120dp"
                     android:layout_height="40dp"
-                    android:layout_centerHorizontal="true"
                     android:background="@drawable/btn_border"
                     android:fontFamily="@font/irish"
                     android:text="Next"
                     android:stateListAnimator="@null"
                     android:drawableRight="@drawable/baseline_arrow_circle_right_24"
                     android:paddingEnd="15dp"
-                    android:paddingStart="15dp"/>
-
-            </RelativeLayout>
+                    android:paddingStart="15dp"
+                    android:textColor="@color/black"/>
+            </LinearLayout>
 
         </LinearLayout>
     </ScrollView>

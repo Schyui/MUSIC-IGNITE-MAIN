@@ -70,12 +70,12 @@ public class Learn_Intervals_L1 extends AppCompatActivity {
         public void onStart() {
             super.onStart();
             backBtn.setOnClickListener(v -> {
-                Intent intent = new Intent(this, Learn_Rhythm.class);
+                Intent intent = new Intent(this, Learn_Intervals.class);
                 startActivity(intent);
             });
 
             NextBtn.setOnClickListener(v -> {
-                Intent intent = new Intent(this, Learn_Rhythm_L2.class);
+                Intent intent = new Intent(this, Learn_Intervals_L2.class);
                 startActivity(intent);
             });
 

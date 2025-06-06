@@ -44,7 +44,7 @@ public class Learn_Intervals extends AppCompatActivity {
             Intent intent = new Intent(this, Learn_Intervals_L1.class);
             startActivity(intent);
         });
-      /*
+
         Lesson2.setOnClickListener(view -> {
             Intent intent = new Intent(this, Learn_Intervals_L2.class);
             startActivity(intent);
@@ -59,7 +59,6 @@ public class Learn_Intervals extends AppCompatActivity {
             Intent intent = new Intent(this, Learn_Intervals_L4.class);
             startActivity(intent);
         });
-*/
 
     }
 }
