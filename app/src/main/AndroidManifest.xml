@@ -89,13 +89,14 @@
             android:name=".GtnEasy"
             android:exported="false" />
         <activity
+            android:name=".terms"
+            android:exported="false" />
+        <activity
             android:name=".AllIn"
             android:exported="false" />
-
         <activity
             android:name=".BookIcon"
             android:exported="false" />
-
         <activity
             android:name=".TimeRush"
             android:exported="false" />
