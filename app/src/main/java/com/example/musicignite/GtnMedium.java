@@ -26,13 +26,29 @@ public class GtnMedium extends AppCompatActivity {
     private boolean quizStarted = false;
 
     private final HashMap<String, Integer> soundMap = new HashMap<String, Integer>() {{
-        put("A", R.drawable.note_a);
-        put("B", R.drawable.note_b);
-        put("C", R.drawable.note_c);
-        put("D", R.drawable.note_d);
-        put("E", R.drawable.note_e);
-        put("F", R.drawable.note_f);
-        put("G", R.drawable.note_g);
+
+        put("A", R.drawable.agclef);
+        put("B", R.drawable.bgclef);
+        put("C", R.drawable.cgclef);
+        put("D", R.drawable.dgclef);
+        put("E", R.drawable.egclef);
+        put("E", R.drawable.eegclef);
+        put("F", R.drawable.fgclef);
+        put("F", R.drawable.ffgclef);
+        put("G", R.drawable.gclef);
+
+        put("A", R.drawable.a_bass);
+        put("A", R.drawable.aa_bass);
+        put("B", R.drawable.b_bass);
+        put("B", R.drawable.bb_bass);
+        put("C", R.drawable.c_bass);
+        put("C", R.drawable.cc_bass);
+        put("D", R.drawable.d_bass);
+        put("E", R.drawable.e_bass);
+        put("F", R.drawable.f_bass);
+        put("F", R.drawable.ff_bass);
+        put("G", R.drawable.g_bass);
+        put("G", R.drawable.gg_bass);
     }};
 
     @SuppressLint("MissingInflatedId")

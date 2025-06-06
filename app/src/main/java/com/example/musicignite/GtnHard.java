@@ -26,13 +26,69 @@ public class GtnHard extends AppCompatActivity {
     private boolean quizStarted = false;
 
     private final HashMap<String, Integer> soundMap = new HashMap<String, Integer>() {{
-        put("A", R.drawable.note_a);
-        put("B", R.drawable.note_b);
-        put("C", R.drawable.note_c);
-        put("D", R.drawable.note_d);
-        put("E", R.drawable.note_e);
-        put("F", R.drawable.note_f);
-        put("G", R.drawable.note_g);
+        //GCLEF
+        put("A", R.drawable.agclef);
+        put("B", R.drawable.bgclef);
+        put("C", R.drawable.cgclef);
+        put("D", R.drawable.dgclef);
+        put("E", R.drawable.egclef);
+        put("E", R.drawable.eegclef);
+        put("F", R.drawable.fgclef);
+        put("F", R.drawable.ffgclef);
+        put("G", R.drawable.gclef);
+
+        //BASS CLEF
+        put("A", R.drawable.a_bass);
+        put("A", R.drawable.aa_bass);
+        put("B", R.drawable.b_bass);
+        put("B", R.drawable.bb_bass);
+        put("C", R.drawable.c_bass);
+        put("C", R.drawable.cc_bass);
+        put("D", R.drawable.d_bass);
+        put("E", R.drawable.e_bass);
+        put("F", R.drawable.f_bass);
+        put("F", R.drawable.ff_bass);
+        put("G", R.drawable.g_bass);
+        put("G", R.drawable.gg_bass);
+
+        //GCLEF FLAT
+        put("A♭", R.drawable.ab);
+        put("B♭", R.drawable.bb);
+        put("C♭", R.drawable.cb);
+        put("D♭", R.drawable.db);
+        put("E♭", R.drawable.eb);
+        put("E♭", R.drawable.eeb);
+        put("F♭", R.drawable.fb);
+        put("F♭", R.drawable.ffb);
+        put("G♭", R.drawable.gb);
+
+        //GCLEF SHARP#
+        put("A♯", R.drawable.ab);
+        put("B♯", R.drawable.bb);
+        put("C♯", R.drawable.cb);
+        put("D♯", R.drawable.db);
+        put("E♯", R.drawable.eb);
+        put("E♯", R.drawable.eeb);
+        put("F♯", R.drawable.fb);
+        put("F♯", R.drawable.ffb);
+        put("G♯", R.drawable.gb);
+
+        //TREBLE CLEF NOTES
+        put("A", R.drawable.atc);
+        put("B", R.drawable.btc);
+        put("C", R.drawable.ctc);
+        put("C", R.drawable.cctc);
+        put("D", R.drawable.dtc);
+        put("D", R.drawable.ddtc);
+        put("E", R.drawable.etc);
+        put("E", R.drawable.eetc);
+        put("F", R.drawable.ftc);
+        put("F", R.drawable.fftc);
+        put("G", R.drawable.gtc);
+        put("G", R.drawable.ggtc);
+
+
+
     }};
 
     @SuppressLint("MissingInflatedId")

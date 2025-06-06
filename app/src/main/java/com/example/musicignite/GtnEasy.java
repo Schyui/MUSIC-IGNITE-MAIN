@@ -26,13 +26,15 @@ public class GtnEasy extends AppCompatActivity {
     private boolean quizStarted = false;
 
     private final HashMap<String, Integer> soundMap = new HashMap<String, Integer>() {{
-        put("A", R.drawable.note_a);
-        put("B", R.drawable.note_b);
-        put("C", R.drawable.note_c);
-        put("D", R.drawable.note_d);
-        put("E", R.drawable.note_e);
-        put("F", R.drawable.note_f);
-        put("G", R.drawable.note_g);
+        put("A", R.drawable.agclef);
+        put("B", R.drawable.bgclef);
+        put("C", R.drawable.cgclef);
+        put("D", R.drawable.dgclef);
+        put("E", R.drawable.egclef);
+        put("E", R.drawable.eegclef);
+        put("F", R.drawable.fgclef);
+        put("F", R.drawable.ffgclef);
+        put("G", R.drawable.ggclef);
     }};
 
     @SuppressLint("MissingInflatedId")
