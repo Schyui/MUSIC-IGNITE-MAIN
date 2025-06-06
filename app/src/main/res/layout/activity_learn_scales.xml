@@ -64,7 +64,7 @@
             android:id="@+id/basics_Lesson1"
             android:layout_width="130dp"
             android:layout_height="100dp"
-            android:layout_marginTop="220dp"
+            android:layout_marginTop="240dp"
             android:layout_marginStart="30dp"
             android:text="Lesson 1"
             android:textColor="@color/lavender"
@@ -76,13 +76,13 @@
             android:layout_width="130dp"
             android:layout_height="5dp"
             android:background="@color/lavender"
-            android:layout_marginTop="270dp"
+            android:layout_marginTop="290dp"
             android:layout_marginStart="160dp"/>
         <Button
             android:id="@+id/basics_Lesson2"
             android:layout_width="130dp"
             android:layout_height="100dp"
-            android:layout_marginTop="220dp"
+            android:layout_marginTop="240dp"
             android:layout_marginStart="250dp"
             android:text="Lesson 2"
             android:textColor="@color/lavender"
@@ -92,16 +92,16 @@
 
         <View
             android:layout_width="4dp"
-            android:layout_height="70dp"
+            android:layout_height="60dp"
             android:background="@color/lavender"
-            android:layout_marginTop="320dp"
+            android:layout_marginTop="340dp"
             android:layout_marginStart="310dp"/>
 
         <Button
             android:id="@+id/basics_Lesson3"
             android:layout_width="130dp"
             android:layout_height="100dp"
-            android:layout_marginTop="390dp"
+            android:layout_marginTop="400dp"
             android:layout_marginStart="250dp"
             android:text="Lesson 3"
             android:textColor="@color/lavender"
@@ -113,14 +113,14 @@
             android:layout_width="105dp"
             android:layout_height="5dp"
             android:background="@color/lavender"
-            android:layout_marginTop="440dp"
+            android:layout_marginTop="450dp"
             android:layout_marginStart="160dp"/>
 
         <Button
             android:id="@+id/basics_Lesson4"
             android:layout_width="130dp"
             android:layout_height="100dp"
-            android:layout_marginTop="390dp"
+            android:layout_marginTop="400dp"
             android:layout_marginStart="30dp"
             android:text="Lesson 4"
             android:textColor="@color/lavender"
@@ -130,17 +130,24 @@
 
         <View
             android:layout_width="4dp"
-            android:layout_height="70dp"
+            android:layout_height="100dp"
             android:background="@color/lavender"
-            android:layout_marginTop="490dp"
+            android:layout_marginTop="500dp"
+            android:layout_marginStart="90dp"/>
+
+        <View
+            android:layout_width="50dp"
+            android:layout_height="5dp"
+            android:background="@color/lavender"
+            android:layout_marginTop="595dp"
             android:layout_marginStart="90dp"/>
 
         <Button
             android:id="@+id/basics_Lesson5"
             android:layout_width="130dp"
             android:layout_height="100dp"
-            android:layout_marginTop="560dp"
-            android:layout_marginStart="30dp"
+            android:layout_marginTop="545dp"
+            android:layout_centerHorizontal="true"
             android:text="Lesson 5"
             android:textColor="@color/lavender"
             android:background="@drawable/btn_border"
