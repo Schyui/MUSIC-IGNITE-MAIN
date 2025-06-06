@@ -1,6 +1,9 @@
 package com.example.musicignite;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -9,39 +12,72 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentManager;
-import androidx.fragment.app.FragmentTransaction;
 
+import de.hdodenhof.circleimageview.CircleImageView;
 
 public class SettingsFragment extends Fragment {
 
-    TextView logout, terms;
+    TextView logout, terms, profileSettings;
+    CircleImageView profilePic;
+
+    private static final String PREFS_NAME = "user_prefs";
+    private static final String KEY_PROFILE_PIC_URI = "profile_pic_uri";
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout
         View view = inflater.inflate(R.layout.fragment_settings, container, false);
 
         logout = view.findViewById(R.id.logoutBtn);
         terms = view.findViewById(R.id.terms);
+        profileSettings = view.findViewById(R.id.profileSettings);
+        profilePic = view.findViewById(R.id.profilePic); // connect the image view
+
+        loadProfilePic(); // Load initially when view is created
+
+        return view;
+    }
+
+    @Override
+    public void onStart() {
+        super.onStart();
+
         logout.setOnClickListener(v -> {
             Toast.makeText(requireContext(), "Logout!", Toast.LENGTH_SHORT).show();
             Intent intent = new Intent(requireContext(), LoginActivity.class);
             startActivity(intent);
         });
 
-        return view;
+        profileSettings.setOnClickListener(v -> {
+            Intent intent = new Intent(requireContext(), ProfileSettingsAct.class);
+            startActivity(intent);
+        });
 
-    }
-
-    @Override
-    public void onStart() {
-        super.onStart();
         terms.setOnClickListener(v -> {
             Intent intent = new Intent(getActivity(), terms.class);
             startActivity(intent);
         });
+    }
 
+    @Override
+    public void onResume() {
+        super.onResume();
+        loadProfilePic(); // Refresh image when coming back from ProfileSettingsAct
+    }
+
+    private void loadProfilePic() {
+        SharedPreferences prefs = requireContext().getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE);
+        String uriString = prefs.getString(KEY_PROFILE_PIC_URI, null);
+
+        if (uriString != null) {
+            try {
+                Uri imageUri = Uri.parse(uriString);
+                profilePic.setImageURI(imageUri);
+            } catch (Exception e) {
+                profilePic.setImageResource(R.drawable.profileicon);
+            }
+        } else {
+            profilePic.setImageResource(R.drawable.profileicon);
+        }
     }
 }
