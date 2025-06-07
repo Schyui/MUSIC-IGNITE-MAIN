@@ -1,5 +1,7 @@
 package com.example.musicignite;
 
+import static android.content.Context.MODE_PRIVATE;
+
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -43,7 +45,12 @@ public class SettingsFragment extends Fragment {
         super.onStart();
 
         logout.setOnClickListener(v -> {
-            Toast.makeText(requireContext(), "Logout!", Toast.LENGTH_SHORT).show();
+            Context context = getContext();
+            if (context != null) {
+                SharedPreferences prefs = context.getSharedPreferences("MyPrefs", Context.MODE_PRIVATE);
+                prefs.edit().putBoolean("is_logged_in", true).apply();
+            }
+
             Intent intent = new Intent(requireContext(), LoginActivity.class);
             startActivity(intent);
         });
@@ -66,7 +73,7 @@ public class SettingsFragment extends Fragment {
     }
 
     public void loadProfilePic() {
-        SharedPreferences prefs = requireContext().getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE);
+        SharedPreferences prefs = requireContext().getSharedPreferences(PREFS_NAME, MODE_PRIVATE);
         String uriString = prefs.getString(KEY_PROFILE_PIC_URI, null);
 
         if (uriString != null) {

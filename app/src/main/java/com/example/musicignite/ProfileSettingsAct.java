@@ -84,7 +84,6 @@ public class ProfileSettingsAct extends AppCompatActivity {
     protected void onResume() {
         super.onResume();
         loadProfilePic();
-        Toast.makeText(this, "resumed", Toast.LENGTH_SHORT).show();
  
     }
 

@@ -47,6 +47,7 @@ public class LoginActivity extends AppCompatActivity {
 
             @Override
             public void onClick(View view) {
+
                 if (!validateUsername() | !validatePassword()) {
                 } else {
                     checkUser();
@@ -105,6 +106,7 @@ public class LoginActivity extends AppCompatActivity {
                     String passwordFromDB = snapshot.child(userUsername).child("password").getValue(String.class);
                     if (passwordFromDB.equals(userPassword)) {
                         loginUsername.setError(null);
+
                         String nameFromDB = snapshot.child(userUsername).child("name").getValue(String.class);
                         String emailFromDB = snapshot.child(userUsername).child("email").getValue(String.class);
                         String usernameFromDB = snapshot.child(userUsername).child("username").getValue(String.class);
@@ -114,11 +116,15 @@ public class LoginActivity extends AppCompatActivity {
                         intent.putExtra("username", usernameFromDB);
                         intent.putExtra("password", passwordFromDB);
 
+
                         //SEND TO MAIN ACTIVITY: para naka stay lang ang username
                         SharedPreferences prefs = getSharedPreferences("MyPrefs", MODE_PRIVATE);
                         SharedPreferences.Editor editor = prefs.edit();
                         editor.putString("username", usernameFromDB);
+                        editor.putBoolean("is_logged_in", false);
                         editor.apply();
+
+                        finish();
 
                         startActivity(intent);
                     } else {
