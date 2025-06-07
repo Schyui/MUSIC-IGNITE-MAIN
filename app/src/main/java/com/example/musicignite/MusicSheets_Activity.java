@@ -1,9 +1,13 @@
 package com.example.musicignite;
 
+import android.content.ContentValues;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.Environment;
+import android.provider.MediaStore;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.*;
@@ -130,7 +134,7 @@ public class MusicSheets_Activity extends AppCompatActivity {
         plusIconBtn = findViewById(R.id.plusIconImg);
         searchView = findViewById(R.id.search);
         listView = findViewById(R.id.listView);
-
+        requestWritePermission();
         loadData();
         if (itemList == null) itemList = new ArrayList<>();
 
@@ -230,27 +234,58 @@ public class MusicSheets_Activity extends AppCompatActivity {
             Uri fileUri = fileMap.get(songTitle);
             if (fileUri != null) {
                 try {
+                    InputStream inputStream = getContentResolver().openInputStream(fileUri);
+                    if (inputStream == null) throw new Exception("Unable to open input stream");
+
                     String fileName = songTitle.replaceAll("[^a-zA-Z0-9]", "_") + ".pdf";
 
-                    InputStream inputStream = getContentResolver().openInputStream(fileUri);
-                    File downloadsDir = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS);
-                    File outFile = new File(downloadsDir, fileName);
-                    OutputStream outputStream = new FileOutputStream(outFile);
+                    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
+                        // Use MediaStore API for Android 10+
+                        ContentValues values = new ContentValues();
+                        values.put(MediaStore.Downloads.DISPLAY_NAME, fileName);
+                        values.put(MediaStore.Downloads.MIME_TYPE, "application/pdf");
+                        values.put(MediaStore.Downloads.RELATIVE_PATH, Environment.DIRECTORY_DOWNLOADS);
 
-                    byte[] buffer = new byte[1024];
-                    int len;
-                    while ((len = inputStream.read(buffer)) > 0) {
-                        outputStream.write(buffer, 0, len);
+                        Uri externalUri = MediaStore.Downloads.getContentUri(MediaStore.VOLUME_EXTERNAL_PRIMARY);
+                        Uri fileOutUri = getContentResolver().insert(externalUri, values);
+
+                        if (fileOutUri == null) throw new Exception("Failed to create new file");
+
+                        OutputStream outputStream = getContentResolver().openOutputStream(fileOutUri);
+                        if (outputStream == null) throw new Exception("Unable to open output stream");
+
+                        byte[] buffer = new byte[1024];
+                        int len;
+                        while ((len = inputStream.read(buffer)) > 0) {
+                            outputStream.write(buffer, 0, len);
+                        }
+
+                        outputStream.close();
+                        inputStream.close();
+
+                    } else {
+                        // For Android 9 and below, write to Downloads directory
+                        File downloadsDir = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS);
+                        if (!downloadsDir.exists()) downloadsDir.mkdirs();
+
+                        File outFile = new File(downloadsDir, fileName);
+                        OutputStream outputStream = new FileOutputStream(outFile);
+
+                        byte[] buffer = new byte[1024];
+                        int len;
+                        while ((len = inputStream.read(buffer)) > 0) {
+                            outputStream.write(buffer, 0, len);
+                        }
+
+                        outputStream.close();
+                        inputStream.close();
                     }
-
-                    inputStream.close();
-                    outputStream.close();
 
                     Toast.makeText(this, "File saved to Downloads.", Toast.LENGTH_LONG).show();
 
                 } catch (Exception e) {
                     e.printStackTrace();
-                    Toast.makeText(this, "Failed to download file.", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(this, "Failed to download file: " + e.getMessage(), Toast.LENGTH_SHORT).show();
                 }
             } else {
                 Toast.makeText(this, "File not found!", Toast.LENGTH_SHORT).show();
@@ -258,9 +293,18 @@ public class MusicSheets_Activity extends AppCompatActivity {
         });
 
 
+
         builder.setNegativeButton("Close", (dialog, which) -> dialog.dismiss());
         builder.create().show();
 
     }
+    private static final int REQUEST_WRITE_PERMISSION = 100;
 
+    private void requestWritePermission() {
+        if (Build.VERSION.SDK_INT < Build.VERSION_CODES.Q) {
+            if (checkSelfPermission(android.Manifest.permission.WRITE_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED) {
+                requestPermissions(new String[]{android.Manifest.permission.WRITE_EXTERNAL_STORAGE}, REQUEST_WRITE_PERMISSION);
+            }
+        }
+    }
 }
