@@ -26,6 +26,11 @@ import androidx.core.view.WindowInsetsCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
 import com.google.android.material.navigation.NavigationView;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
@@ -144,5 +149,42 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         super.onResume();
         loadProfilePicIntoNavHeader();
 
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        // Get the saved username from SharedPreferences
+        SharedPreferences prefs = getSharedPreferences("MyPrefs", MODE_PRIVATE);
+        String userUsername = prefs.getString("username", "");  // key used in login
+
+        if (!userUsername.isEmpty()) {
+            // Reference to user's node in Firebase
+            DatabaseReference reference = FirebaseDatabase.getInstance().getReference("users");
+
+            // Query the data for the username
+            reference.child(userUsername).addListenerForSingleValueEvent(new ValueEventListener() {
+                @Override
+                public void onDataChange(@NonNull DataSnapshot snapshot) {
+                    if (snapshot.exists()) {
+                        String nameFromDB = snapshot.child("name").getValue(String.class);
+                        String emailFromDB = snapshot.child("email").getValue(String.class);
+                        String usernameFromDB = snapshot.child("username").getValue(String.class);
+
+                        // Update SharedPreferences with latest data
+                        SharedPreferences prefSettings = getSharedPreferences("MyPrefs", MODE_PRIVATE);
+                        SharedPreferences.Editor editorz = prefSettings.edit();
+                        editorz.putString("usernameSet", usernameFromDB);
+                        editorz.putString("nameSet", nameFromDB);
+                        editorz.apply();
+                    }
+                }
+
+                @Override
+                public void onCancelled(@NonNull DatabaseError error) {
+                    // Handle possible errors here (optional)
+                }
+            });
+        }
     }
 }
