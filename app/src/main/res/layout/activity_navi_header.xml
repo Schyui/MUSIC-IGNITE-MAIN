@@ -7,15 +7,13 @@
     android:padding="16dp"
     android:background="#D5CEE7"
     android:theme="@style/ThemeOverlay.AppCompat.Dark"
-    android:id="@+id/NaviHeader"
-    >
+    android:id="@+id/NaviHeader">
 
     <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/profilePic"
         android:layout_width="70dp"
         android:layout_height="70dp"
-        android:src="@drawable/profileicon"
-        android:id="@+id/profilePic"
-        />
+        android:src="@drawable/profileicon" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -24,8 +22,5 @@
         android:textColor="@color/black"
         android:textStyle="bold"
         android:layout_marginBottom="10dp"
-        android:layout_marginLeft="10dp"
-        />
-
-
+        android:layout_marginLeft="10dp" />
 </LinearLayout>

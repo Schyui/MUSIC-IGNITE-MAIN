@@ -62,16 +62,17 @@ public class SettingsFragment extends Fragment {
     @Override
     public void onResume() {
         super.onResume();
-        loadProfilePic(); // Refresh image when coming back from ProfileSettingsAct
+        loadProfilePic();
     }
 
-    private void loadProfilePic() {
+    public void loadProfilePic() {
         SharedPreferences prefs = requireContext().getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE);
         String uriString = prefs.getString(KEY_PROFILE_PIC_URI, null);
 
         if (uriString != null) {
             try {
                 Uri imageUri = Uri.parse(uriString);
+                profilePic.setImageURI(null); // clear cache
                 profilePic.setImageURI(imageUri);
             } catch (Exception e) {
                 profilePic.setImageResource(R.drawable.profileicon);
@@ -80,4 +81,5 @@ public class SettingsFragment extends Fragment {
             profilePic.setImageResource(R.drawable.profileicon);
         }
     }
+
 }

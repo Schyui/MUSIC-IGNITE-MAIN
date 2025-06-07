@@ -5,6 +5,8 @@
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
 
     <application
         android:allowBackup="true"
@@ -17,8 +19,9 @@
         android:theme="@style/Theme.AppCompat.Light.NoActionBar"
         tools:targetApi="31">
 
-        <activity
-            android:name=".ProfileSettingsAct"
+        <activity android:name=".terms"
+            android:exported="false"/>
+        <activity android:name=".ProfileSettingsAct"
             android:exported="false"/>
         <activity
             android:name=".Learn_Rhythm"
@@ -60,28 +63,10 @@
             android:name=".Learn_Chords_L2"
             android:exported="false" />
         <activity
-            android:name=".Learn_Chords_L3"
-            android:exported="false" />
-        <activity
-            android:name=".Learn_Chords_L4"
-            android:exported="false" />
-        <activity
-            android:name=".Learn_Chords_L5"
-            android:exported="false" />
-        <activity
             android:name=".Learn_Intervals"
             android:exported="false" />
         <activity
             android:name=".Learn_Intervals_L1"
-            android:exported="false" />
-        <activity
-            android:name=".Learn_Intervals_L2"
-            android:exported="false" />
-        <activity
-            android:name=".Learn_Intervals_L3"
-            android:exported="false" />
-        <activity
-            android:name=".Learn_Intervals_L4"
             android:exported="false" />
         <activity
             android:name=".Learn_ScalesAndSignatures"
@@ -113,9 +98,11 @@
         <activity
             android:name=".AllIn"
             android:exported="false" />
+
         <activity
             android:name=".BookIcon"
             android:exported="false" />
+
         <activity
             android:name=".TimeRush"
             android:exported="false" />
@@ -130,9 +117,6 @@
             android:exported="false" />
         <activity
             android:name=".LoginActivity"
-            android:exported="false" />
-        <activity
-            android:name=".terms"
             android:exported="false" />
         <activity
             android:name=".SignUpActivity"
@@ -155,6 +139,7 @@
         <activity
             android:name=".MainActivity"
             android:exported="false" />
+
     </application>
 
 </manifest>

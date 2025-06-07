@@ -70,16 +70,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         SharedPreferences sharedPrefs = getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE);
         String uriString = sharedPrefs.getString(KEY_PROFILE_PIC_URI, null);
 
-        if (uriString != null) {
-            try {
-                Uri imageUri = Uri.parse(uriString);
-                profilePic.setImageURI(imageUri);
-            } catch (Exception e) {
-                profilePic.setImageResource(R.drawable.profileicon);
-            }
-        } else {
-            profilePic.setImageResource(R.drawable.profileicon);
-        }
+        loadProfilePicIntoNavHeader();
 
         // Drawer toggle
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawerLayout, toolbar, R.string.open_nav, R.string.close_nav);
@@ -99,6 +90,27 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             navigationView.setCheckedItem(R.id.nav_home);
         }
     }
+    private void loadProfilePicIntoNavHeader() {
+        NavigationView navigationView = findViewById(R.id.nav_view);
+        View headerView = navigationView.getHeaderView(0);
+        ImageView profilePic = headerView.findViewById(R.id.profilePic);
+
+        SharedPreferences sharedPrefs = getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE);
+        String uriString = sharedPrefs.getString(KEY_PROFILE_PIC_URI, null);
+
+        if (uriString != null) {
+            try {
+                Uri imageUri = Uri.parse(uriString);
+                profilePic.setImageURI(null); // force refresh
+                profilePic.setImageURI(imageUri);
+            } catch (Exception e) {
+                profilePic.setImageResource(R.drawable.profileicon);
+            }
+        } else {
+            profilePic.setImageResource(R.drawable.profileicon);
+        }
+    }
+
 
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
@@ -125,5 +137,12 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         } else {
             super.onBackPressed();
         }
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        loadProfilePicIntoNavHeader();
+
     }
 }
