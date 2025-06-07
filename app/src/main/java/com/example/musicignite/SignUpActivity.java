@@ -42,20 +42,11 @@ public class SignUpActivity extends AppCompatActivity {
         signupPassword = findViewById(R.id.signup_password);
         loginRedirectText = findViewById(R.id.loginRedirectText);
         signupButton = findViewById(R.id.signup_button);
-        SharedPreferences prefs = getSharedPreferences("MyPrefs", MODE_PRIVATE);
-        boolean isLoggedIn = prefs.getBoolean("is_logged_in", false);
 
-        if (!isLoggedIn) {
-            // User is logged in, open MainActivity
-            startActivity(new Intent(this, MainActivity.class));
-        } else {
-            // User is NOT logged in, open LoginActivity
-            startActivity(new Intent(this, LoginActivity.class));
-        }
-        finish();
         signupButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
                 database = FirebaseDatabase.getInstance();
                 reference = database.getReference("users");
                 String name = signupName.getText().toString();
@@ -93,6 +84,7 @@ public class SignUpActivity extends AppCompatActivity {
         loginRedirectText.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
                 Intent intent = new Intent(SignUpActivity.this, LoginActivity.class);
                 startActivity(intent);
             }

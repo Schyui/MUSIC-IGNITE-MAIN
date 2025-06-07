@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.annotation.NonNull;
@@ -43,6 +44,21 @@ public class LoginActivity extends AppCompatActivity {
         loginPassword = findViewById(R.id.login_password);
         loginButton = findViewById(R.id.login_button);
         signupRedirectText = findViewById(R.id.signupRedirectText);
+
+        SharedPreferences prefs = getSharedPreferences("MyPrefs", MODE_PRIVATE);
+        boolean isLoggedIn = prefs.getBoolean("is_logged_in", true);
+
+        if (!isLoggedIn) {
+            // User is logged in → Open MainActivity
+            Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+            //Toast.makeText(LoginActivity.this, "To Main", Toast.LENGTH_SHORT).show();
+            startActivity(intent);
+            finish();
+        } else {
+            // User is already not logged in → Stay here
+            //Toast.makeText(LoginActivity.this, "Already logged in", Toast.LENGTH_SHORT).show();
+        }
+
         loginButton.setOnClickListener(new View.OnClickListener() {
 
             @Override
@@ -59,8 +75,24 @@ public class LoginActivity extends AppCompatActivity {
         signupRedirectText.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(LoginActivity.this, SignUpActivity.class);
-                startActivity(intent);
+                SharedPreferences prefs = getSharedPreferences("MyPrefs", MODE_PRIVATE);
+                prefs.edit().putBoolean("is_logged_in", true).apply();
+
+                if (isLoggedIn) {
+
+                    // User is NOT logged in, open LoginActivity
+                    Intent intent = new Intent(LoginActivity.this, SignUpActivity.class);
+                    //Toast.makeText(LoginActivity.this, "To Signup", Toast.LENGTH_SHORT).show();
+
+                    startActivity(intent);
+                } else {
+                    // User is logged in, open MainActivity
+                    Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+                    //Toast.makeText(LoginActivity.this, "To Main", Toast.LENGTH_SHORT).show();
+                    startActivity(intent);
+                }
+                //Toast.makeText(LoginActivity.this, "Go to Sign Up", Toast.LENGTH_SHORT).show();
+
             }
 
         });

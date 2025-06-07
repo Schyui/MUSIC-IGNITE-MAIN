@@ -35,6 +35,7 @@ public class SettingsFragment extends Fragment {
         profileSettings = view.findViewById(R.id.profileSettings);
         profilePic = view.findViewById(R.id.profilePic); // connect the image view
 
+
         loadProfilePic(); // Load initially when view is created
 
         return view;
@@ -49,6 +50,7 @@ public class SettingsFragment extends Fragment {
             if (context != null) {
                 SharedPreferences prefs = context.getSharedPreferences("MyPrefs", Context.MODE_PRIVATE);
                 prefs.edit().putBoolean("is_logged_in", true).apply();
+
             }
 
             Intent intent = new Intent(requireContext(), LoginActivity.class);
