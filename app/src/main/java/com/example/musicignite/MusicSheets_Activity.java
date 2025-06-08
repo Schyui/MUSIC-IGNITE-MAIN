@@ -3,6 +3,8 @@ package com.example.musicignite;
 import android.content.ContentValues;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
@@ -44,6 +46,9 @@ public class MusicSheets_Activity extends AppCompatActivity {
     HashMap<String, ArrayList<String>> commentMap = new HashMap<>();
     Uri selectedFileUri;
 
+    HashMap<String, String> uploaderMap = new HashMap<>();
+
+
     private final ActivityResultLauncher<Intent> filePickerLauncher =
             registerForActivityResult(new ActivityResultContracts.StartActivityForResult(), result -> {
                 if (result.getResultCode() == RESULT_OK && result.getData() != null) {
@@ -56,6 +61,7 @@ public class MusicSheets_Activity extends AppCompatActivity {
         SharedPreferences prefs = getSharedPreferences("music_data", MODE_PRIVATE);
         SharedPreferences.Editor editor = prefs.edit();
         Gson gson = new Gson();
+        editor.putString("uploaderMap", gson.toJson(uploaderMap));
 
         editor.putString("itemList", gson.toJson(itemList));
 
@@ -84,6 +90,9 @@ public class MusicSheets_Activity extends AppCompatActivity {
     private void loadData() {
         SharedPreferences prefs = getSharedPreferences("music_data", MODE_PRIVATE);
         Gson gson = new Gson();
+        String uploaderJson = prefs.getString("uploaderMap", null);
+        Type uploaderType = new TypeToken<HashMap<String, String>>(){}.getType();
+        uploaderMap = uploaderJson != null ? gson.fromJson(uploaderJson, uploaderType) : new HashMap<>();
 
         String listJson = prefs.getString("itemList", null);
         String fileJson = prefs.getString("fileMap", null);
@@ -176,7 +185,8 @@ public class MusicSheets_Activity extends AppCompatActivity {
     }
 
     private void showAddMusicSheetDialog() {
-        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        AlertDialog.Builder builder = new AlertDialog.Builder(this, R.style.CustomDialogTheme);
+
         View dialogView = LayoutInflater.from(this).inflate(R.layout.dialog_add_music_sheet, null);
         builder.setView(dialogView);
 
@@ -192,10 +202,14 @@ public class MusicSheets_Activity extends AppCompatActivity {
 
         builder.setPositiveButton("Add", (dialog, which) -> {
             String songName = songNameInput.getText().toString().trim();
+            SharedPreferences prefs = getSharedPreferences("MyPrefs", MODE_PRIVATE);
+            String currentUserName = prefs.getString("nameSet", "defaultName");
+
             if (!songName.isEmpty() && selectedFileUri != null) {
                 itemList.add(songName);
                 fileMap.put(songName, selectedFileUri);
                 commentMap.put(songName, new ArrayList<>());
+                uploaderMap.put(songName, currentUserName);  // <-- Save uploader here!
                 adapter.notifyDataSetChanged();
                 saveData();
                 Toast.makeText(this, "Music sheet added!", Toast.LENGTH_SHORT).show();
@@ -203,10 +217,14 @@ public class MusicSheets_Activity extends AppCompatActivity {
             } else {
                 Toast.makeText(this, "Please enter a song name and select a file!", Toast.LENGTH_SHORT).show();
             }
-        });
 
+        });
         builder.setNegativeButton("Cancel", (dialog, which) -> dialog.dismiss());
-        builder.create().show();
+
+        AlertDialog dialog = builder.create();
+        dialog.show();
+        dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.parseColor("#EDE7F6")));
+
     }
 
     private void showMusicSheetDetailsDialog(String songTitle) {
@@ -218,12 +236,16 @@ public class MusicSheets_Activity extends AppCompatActivity {
         TextView uploaderText = dialogView.findViewById(R.id.uploaderName);
         RatingBar ratingBar = dialogView.findViewById(R.id.ratingBar);
         EditText commentInput = dialogView.findViewById(R.id.commentInput);
-        Button sendCommentBtn = dialogView.findViewById(R.id.sendCommentBtn);
+        ImageView sendCommentBtn = dialogView.findViewById(R.id.sendCommentBtn);
         Button downloadBtn = dialogView.findViewById(R.id.downloadButton);
         ListView commentListView = dialogView.findViewById(R.id.commentListView);
 
         titleText.setText(songTitle);
-        uploaderText.setText("Uploaded by: John Doe");
+        SharedPreferences prefs = getSharedPreferences("MyPrefs", MODE_PRIVATE);
+
+        String uploaderName = uploaderMap.getOrDefault(songTitle, "Unknown uploader");
+        uploaderText.setText("Uploaded by: " + uploaderName);
+
 
         ArrayList<String> comments = commentMap.getOrDefault(songTitle, new ArrayList<>());
         ArrayAdapter<String> commentAdapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, comments);
@@ -239,10 +261,13 @@ public class MusicSheets_Activity extends AppCompatActivity {
 
         sendCommentBtn.setOnClickListener(v -> {
             String userComment = commentInput.getText().toString().trim();
+            SharedPreferences prefName = getSharedPreferences("MyPrefs",MODE_PRIVATE);
+            String commentorName = prefName.getString("nameSet", "defaultName");
             if (!userComment.isEmpty()) {
-                comments.add("You: " + userComment);
+                comments.add(commentorName+": " + userComment);
                 commentAdapter.notifyDataSetChanged();
                 commentInput.setText("");
+                saveData();
             }
         });
 
@@ -305,9 +330,11 @@ public class MusicSheets_Activity extends AppCompatActivity {
                 Toast.makeText(this, "File not found!", Toast.LENGTH_SHORT).show();
             }
         });
+        AlertDialog dialog = builder.create();
 
-        builder.setNegativeButton("Close", (dialog, which) -> dialog.dismiss());
-        builder.create().show();
+        ImageView closeButton = dialogView.findViewById(R.id.btnClose);
+        closeButton.setOnClickListener(v -> dialog.dismiss());
+        dialog.show();
     }
 
     private static final int REQUEST_WRITE_PERMISSION = 100;

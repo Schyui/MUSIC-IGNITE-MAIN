@@ -5,6 +5,9 @@
         <item name="colorPrimary">@color/cream</item>
         <item name="colorPrimaryVariant">@color/lavender</item>
     </style>
+    <style name="CustomDialogTheme" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="android:background">#EDE7F6</item>
+    </style>
 
     <style name="Theme.MusicIgnite" parent="Base.Theme.MusicIgnite" />
 </resources>

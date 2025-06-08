@@ -1,10 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:padding="16dp"
+    android:background="#EDE7F6"
     android:layout_width="match_parent" android:layout_height="wrap_content">
 
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_marginBottom="6dp"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/btnClose"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/baseline_close_24"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+
+            android:contentDescription="Close button"/>
+
+    </RelativeLayout>
+
     <TextView android:id="@+id/songTitle"
-        android:textSize="18sp"
+        android:textSize="22sp"
         android:textStyle="bold"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
@@ -31,25 +49,35 @@
         android:divider="@android:color/darker_gray"
         android:dividerHeight="1dp" />
 
-    <EditText
-        android:id="@+id/commentInput"
-        android:layout_marginTop="10dp"
-        android:hint="Write a comment..."
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
-
-    <Button
-        android:id="@+id/sendCommentBtn"
-        android:layout_marginTop="6dp"
-        android:text="Send"
+    <RelativeLayout
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content">
+        <EditText
+            android:id="@+id/commentInput"
+            android:layout_marginTop="10dp"
+            android:hint="Write a comment..."
+            android:layout_width="290dp"
+            android:layout_height="wrap_content" />
+
+        <ImageView
+            android:id="@+id/sendCommentBtn"
+            android:layout_marginTop="6dp"
+            android:text="Send"
+            android:layout_centerVertical="true"
+            android:src="@drawable/baseline_send_24"
+            android:layout_toRightOf="@+id/commentInput"
+            android:layout_width="35dp"
+            android:layout_height="35dp" />
+    </RelativeLayout>
+
 
     <Button
         android:id="@+id/downloadButton"
         android:layout_marginTop="12dp"
-        android:text="Download PDF"
-        android:layout_width="wrap_content"
+        android:text="Download"
+        android:background="@drawable/btn_border"
+        android:layout_width="150dp"
+        android:layout_gravity="center"
         android:layout_height="wrap_content" />
 
 </LinearLayout>
