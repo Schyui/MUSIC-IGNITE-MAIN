@@ -55,7 +55,7 @@
                 android:layout_marginStart="10dp"
                 android:layout_marginTop="20dp"
                 android:fontFamily="@font/tienneregular"
-                android:text="G Clef"
+                android:text="Treble"
                 android:textColor="@color/black"
                 android:textSize="16sp" />
 
@@ -84,7 +84,7 @@
                 android:layout_marginStart="10dp"
                 android:layout_marginTop="20dp"
                 android:fontFamily="@font/tienneregular"
-                android:text="G Clef #"
+                android:text="Treble #"
                 android:textColor="@color/black"
                 android:textSize="16sp" />
 
@@ -113,7 +113,7 @@
                 android:layout_marginStart="10dp"
                 android:layout_marginTop="20dp"
                 android:fontFamily="@font/tienneregular"
-                android:text="G Clef Flat"
+                android:text="Treble Flat"
                 android:textColor="@color/black"
                 android:textSize="16sp" />
 
@@ -134,32 +134,13 @@
                 android:layout_marginTop="15dp"
                 android:background="@color/black" />
 
-            <TextView
-                android:id="@+id/l1_text4"
-                android:layout_width="380sp"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/line4"
-                android:layout_marginStart="10dp"
-                android:layout_marginTop="20dp"
-                android:fontFamily="@font/tienneregular"
-                android:text="Trebor Clef Notes"
-                android:textColor="@color/black"
-                android:textSize="16sp" />
 
-            <ImageView
-                android:id="@+id/l1_img3"
-                android:layout_width="match_parent"
-                android:layout_height="130dp"
-                android:layout_below="@+id/l1_text4"
-                android:background="@drawable/treble_clef_note_real"
-                android:layout_marginTop="10dp"
-                />
 
             <View
                 android:id="@+id/line5"
                 android:layout_width="450dp"
                 android:layout_height="1dp"
-                android:layout_below="@+id/l1_img3"
+                android:layout_below="@+id/line4"
                 android:layout_marginTop="15dp"
                 android:background="@color/black" />
 
@@ -171,7 +152,7 @@
                 android:layout_marginStart="10dp"
                 android:layout_marginTop="20dp"
                 android:fontFamily="@font/tienneregular"
-                android:text="Bass Clef Notes"
+                android:text="Bass"
                 android:textColor="@color/black"
                 android:textSize="16sp" />
 
