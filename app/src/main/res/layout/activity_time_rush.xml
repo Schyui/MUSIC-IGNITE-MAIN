@@ -36,6 +36,17 @@
         android:scaleType="fitCenter"
         android:src="@drawable/speakerquiz_btn"
         android:background="@drawable/btn_border"/>
+    <TextView
+        android:fontFamily="@font/irish"
+        android:id="@+id/label"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/speakerQuizBtn"
+        android:layout_marginBottom="10dp"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:text="Click to start"
+        android:textStyle="bold"/>
 
     <TextView
         android:id="@+id/timerText"

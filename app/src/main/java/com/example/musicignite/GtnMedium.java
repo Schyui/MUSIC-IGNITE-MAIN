@@ -1,5 +1,8 @@
 package com.example.musicignite;
 
+import static android.view.View.INVISIBLE;
+import static android.view.View.VISIBLE;
+
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
@@ -7,6 +10,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.GridLayout;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
@@ -24,7 +28,7 @@ public class GtnMedium extends AppCompatActivity {
     private int currentQuestionIndex = 0;
     private int score = 0;
     private boolean quizStarted = false;
-
+     TextView label;
     private final HashMap<String, Integer> soundMap = new HashMap<String, Integer>() {{
 
         put("A", R.drawable.agclef);
@@ -60,6 +64,7 @@ public class GtnMedium extends AppCompatActivity {
         backBtn = findViewById(R.id.backBtn);
         ImageQuizBtn = findViewById(R.id.ImageQuizNote_btn);
         choicesGrid = findViewById(R.id.choicesGrid);
+        label = findViewById(R.id.label);
 
         choiceButtons[0] = findViewById(R.id.choice1);
         choiceButtons[1] = findViewById(R.id.choice2);
@@ -68,12 +73,13 @@ public class GtnMedium extends AppCompatActivity {
         choiceButtons[4] = findViewById(R.id.choice5);
         choiceButtons[5] = findViewById(R.id.choice6);
 
+
         backBtn.setOnClickListener(v -> {
             AlertDialog.Builder builder = new AlertDialog.Builder(GtnMedium.this);
             builder.setTitle("Warning!")
                     .setMessage("Are you sure you want to go back? Your progress will be lost.")
                     .setPositiveButton("Yes", (dialog, which) -> {
-                        Intent backIntent = new Intent(this, Practice_Activity.class);
+                        Intent backIntent = new Intent(this, GuessTheNote.class);
                         startActivity(backIntent);
                         finish();
                     })
@@ -88,6 +94,7 @@ public class GtnMedium extends AppCompatActivity {
                 score = 0;
                 quizStarted = true;
                 playQuestion(currentQuestionIndex);
+                label.setVisibility(INVISIBLE);
             }
         });
 
@@ -187,4 +194,11 @@ public class GtnMedium extends AppCompatActivity {
             this.choices = choices;
         }
     }
-}
+        @Override
+        protected void onStart() {
+            super.onStart();
+            label.setVisibility(VISIBLE);
+        }
+    }
+
+

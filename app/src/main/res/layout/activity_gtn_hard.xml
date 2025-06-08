@@ -36,6 +36,17 @@
         android:src="@drawable/music_note_btn"
         android:background="@drawable/btn_border"
         android:padding="20dp"/>
+    <TextView
+        android:fontFamily="@font/irish"
+        android:id="@+id/label"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/ImageQuizNote_btn"
+        android:layout_marginBottom="10dp"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:text="Click to start"
+        android:textStyle="bold"/>
 
     <TextView
         android:id="@+id/timerText"

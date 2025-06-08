@@ -1,5 +1,8 @@
 package com.example.musicignite;
 
+import static android.view.View.INVISIBLE;
+import static android.view.View.VISIBLE;
+
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -26,7 +29,8 @@ public class TimeRush extends AppCompatActivity {
     ImageView backBtn, speakerQuizBtn;
     Button[] choiceButtons = new Button[6];
     GridLayout choicesGrid;
-    TextView timerText;
+    TextView timerText, label;
+
 
     private List<Question> questions = new ArrayList<>();
     private int currentQuestionIndex = 0;
@@ -89,6 +93,7 @@ public class TimeRush extends AppCompatActivity {
         speakerQuizBtn = findViewById(R.id.speakerQuizBtn);
         choicesGrid = findViewById(R.id.choicesGrid);
         timerText = findViewById(R.id.timerText);
+        label =findViewById(R.id.label);
 
         choiceButtons[0] = findViewById(R.id.choice1);
         choiceButtons[1] = findViewById(R.id.choice2);
@@ -123,6 +128,7 @@ public class TimeRush extends AppCompatActivity {
             } else {
                 playCurrentSound(); // Play sound without restarting the quiz
             }
+            label.setVisibility(INVISIBLE);
         });
 
         for (Button button : choiceButtons) {
@@ -296,5 +302,10 @@ public class TimeRush extends AppCompatActivity {
             this.choices = new ArrayList<>(choices);
             Collections.shuffle(this.choices);
         }
+    }
+    @Override
+    protected void onStart() {
+        super.onStart();
+        label.setVisibility(VISIBLE);
     }
 }

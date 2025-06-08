@@ -1,5 +1,8 @@
 package com.example.musicignite;
 
+import static android.view.View.INVISIBLE;
+import static android.view.View.VISIBLE;
+
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.media.MediaPlayer;
@@ -24,6 +27,7 @@ public class AllIn extends AppCompatActivity {
     ImageView backBtn, speakerQuizBtn;
     Button[] choiceButtons = new Button[6];
     GridLayout choicesGrid;
+    TextView label;
 
 
     private List<Question> questions = new ArrayList<>();
@@ -73,6 +77,7 @@ public class AllIn extends AppCompatActivity {
         backBtn = findViewById(R.id.backBtn);
         speakerQuizBtn = findViewById(R.id.speakerQuizBtn);
         choicesGrid = findViewById(R.id.choicesGrid);
+        label = findViewById(R.id.label);
 
 
         choiceButtons[0] = findViewById(R.id.choice1);
@@ -105,6 +110,7 @@ public class AllIn extends AppCompatActivity {
             } else {
                 playCurrentSound(); // play lang ng tunog kung pinindot ulit
             }
+            label.setVisibility(INVISIBLE);
         });
 
         for (Button button : choiceButtons) {
@@ -231,4 +237,12 @@ public class AllIn extends AppCompatActivity {
             Collections.shuffle(this.choices);
         }
     }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        label.setVisibility(VISIBLE);
+    }
 }
+
+
