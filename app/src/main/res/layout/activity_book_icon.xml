@@ -17,14 +17,15 @@
             android:layout_height="wrap_content"
             android:orientation="vertical" >
 
+            <!-- All your original views -->
+
             <ImageView
                 android:id="@+id/backBtn"
                 android:layout_width="30dp"
                 android:layout_height="40dp"
                 android:src="@drawable/backbtn"
                 android:layout_marginStart="10dp"
-                android:layout_marginTop="35dp"
-                />
+                android:layout_marginTop="35dp" />
 
             <TextView
                 android:id="@+id/l1_title"
@@ -36,8 +37,7 @@
                 android:textSize="21sp"
                 android:textAlignment="center"
                 android:textColor="@color/black"
-                android:fontFamily="@font/tagesschriftregular"
-                />
+                android:fontFamily="@font/tagesschriftregular" />
 
             <View
                 android:id="@+id/line1"
@@ -65,8 +65,7 @@
                 android:layout_height="130dp"
                 android:layout_below="@+id/l1_text1"
                 android:background="@drawable/gclef"
-                android:layout_marginTop="10dp"
-                />
+                android:layout_marginTop="10dp" />
 
             <View
                 android:id="@+id/line2"
@@ -94,8 +93,7 @@
                 android:layout_height="130dp"
                 android:layout_below="@+id/l1_text2"
                 android:background="@drawable/gclef_sharp"
-                android:layout_marginTop="10dp"
-                />
+                android:layout_marginTop="10dp" />
 
             <View
                 android:id="@+id/line3"
@@ -123,8 +121,7 @@
                 android:layout_height="130dp"
                 android:layout_below="@+id/l1_text3"
                 android:layout_marginTop="10dp"
-                android:background="@drawable/gclef_flat"
-                />
+                android:background="@drawable/gclef_flat" />
 
             <View
                 android:id="@+id/line4"
@@ -133,8 +130,6 @@
                 android:layout_below="@+id/l1_gif1"
                 android:layout_marginTop="15dp"
                 android:background="@color/black" />
-
-
 
             <View
                 android:id="@+id/line5"
@@ -162,13 +157,1413 @@
                 android:layout_height="130dp"
                 android:layout_below="@+id/l1_text5"
                 android:background="@drawable/bass_cleft"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="30dp"
-                />
+                android:layout_marginTop="10dp" />
 
+            <!-- Section: G Clef - Note A -->
+            <TextView
+                android:id="@+id/l1_text6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/l1_img4"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/tienneregular"
+                android:text="G Clef - Note A"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/gclef_a_img"
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:layout_below="@+id/l1_text6"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/agclef" />
+
+            <Button
+                android:id="@+id/play_gclef_a"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/gclef_a_img"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/btn_border"
+                android:text="Play Sound" />
+
+            <!-- Section: G Clef - Note B -->
+            <TextView
+                android:id="@+id/l1_text7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/play_gclef_a"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/tienneregular"
+                android:text="G Clef - Note B"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/gclef_b_img"
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:layout_below="@+id/l1_text7"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bgclef" />
+
+            <Button
+                android:id="@+id/play_gclef_b"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/gclef_b_img"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/btn_border"
+                android:text="Play Sound" />
+
+            <!-- Section: G Clef - Note C -->
+            <TextView
+                android:id="@+id/l1_text8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/play_gclef_b"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/tienneregular"
+                android:text="G Clef - Note C"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/gclef_c_img"
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:layout_below="@+id/l1_text8"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/cgclef" />
+
+            <Button
+                android:id="@+id/play_gclef_c"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/gclef_c_img"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/btn_border"
+                android:text="Play Sound" />
+
+            <!-- Section: G Clef - Note D -->
+            <TextView
+                android:id="@+id/l1_text9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/play_gclef_c"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/tienneregular"
+                android:text="G Clef - Note D"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/gclef_d_img"
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:layout_below="@+id/l1_text9"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/dgclef" />
+
+            <Button
+                android:id="@+id/play_gclef_d"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/gclef_d_img"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/btn_border"
+                android:text="Play Sound" />
+
+            <!-- Section: G Clef - Note E -->
+            <TextView
+                android:id="@+id/l1_text10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/play_gclef_d"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/tienneregular"
+                android:text="G Clef - Note E"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/gclef_e_img"
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:layout_below="@+id/l1_text10"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/egclef" />
+
+            <Button
+                android:id="@+id/play_gclef_e"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/gclef_e_img"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/btn_border"
+                android:text="Play Sound" />
+
+            <!-- Section: G Clef - Note EE (Duplicate) -->
+            <TextView
+                android:id="@+id/l1_text11"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/play_gclef_e"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/tienneregular"
+                android:text="G Clef - Note E"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/gclef_ee_img"
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:layout_below="@+id/l1_text11"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/eegclef" />
+
+            <Button
+                android:id="@+id/play_gclef_ee"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/gclef_ee_img"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/btn_border"
+                android:text="Play Sound" />
+
+            <!-- Section: G Clef - Note F -->
+            <TextView
+                android:id="@+id/l1_text12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/play_gclef_ee"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/tienneregular"
+                android:text="G Clef - Note F"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/gclef_f_img"
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:layout_below="@+id/l1_text12"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/fgclef" />
+
+            <Button
+                android:id="@+id/play_gclef_f"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/gclef_f_img"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/btn_border"
+                android:text="Play Sound" />
+
+            <!-- Section: G Clef - Note FF (Duplicate) -->
+            <TextView
+                android:id="@+id/l1_text13"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/play_gclef_f"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/tienneregular"
+                android:text="G Clef - Note F"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/gclef_ff_img"
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:layout_below="@+id/l1_text13"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/ffgclef" />
+
+            <Button
+                android:id="@+id/play_gclef_ff"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/gclef_ff_img"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/btn_border"
+                android:text="Play Sound" />
+
+            <!-- Section: G Clef - Note G -->
+            <TextView
+                android:id="@+id/l1_text14"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/play_gclef_ff"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/tienneregular"
+                android:text="G Clef - Note G"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/gclef_g_img"
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:layout_below="@+id/l1_text14"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/ggclef" />
+
+            <Button
+                android:id="@+id/play_gclef_g"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/gclef_g_img"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/btn_border"
+                android:text="Play Sound" />
+
+            <!-- Section: Bass Clef - Note A -->
+            <TextView
+                android:id="@+id/l1_text15"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/play_gclef_g"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="30dp"
+                android:fontFamily="@font/tienneregular"
+                android:text="Bass Clef - Note A"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/bass_a_img"
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:layout_below="@+id/l1_text15"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/a_bass" />
+
+            <Button
+                android:id="@+id/play_bass_a"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/bass_a_img"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/btn_border"
+                android:text="Play Sound" />
+
+            <!-- Section: Bass Clef - Note A (Duplicate) -->
+            <TextView
+                android:id="@+id/l1_text16"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/play_bass_a"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/tienneregular"
+                android:text="Bass Clef - Note A"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/bass_aa_img"
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:layout_below="@+id/l1_text16"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/aa_bass" />
+
+            <Button
+                android:id="@+id/play_bass_aa"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/bass_aa_img"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/btn_border"
+                android:text="Play Sound" />
+
+            <!-- Section: Bass Clef - Note B -->
+            <TextView
+                android:id="@+id/l1_text17"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/play_bass_aa"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/tienneregular"
+                android:text="Bass Clef - Note B"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/bass_b_img"
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:layout_below="@+id/l1_text17"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/b_bass" />
+
+            <Button
+                android:id="@+id/play_bass_b"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/bass_b_img"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/btn_border"
+                android:text="Play Sound" />
+
+            <!-- Section: Bass Clef - Note BB -->
+            <TextView
+                android:id="@+id/l1_text18"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/play_bass_b"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/tienneregular"
+                android:text="Bass Clef - Note B"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/bass_bb_img"
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:layout_below="@+id/l1_text18"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bb_bass" />
+
+            <Button
+                android:id="@+id/play_bass_bb"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/bass_bb_img"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/btn_border"
+                android:text="Play Sound" />
+
+            <!-- Section: Bass Clef - Note C -->
+            <TextView
+                android:id="@+id/l1_text19"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/play_bass_bb"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/tienneregular"
+                android:text="Bass Clef - Note C"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/bass_c_img"
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:layout_below="@+id/l1_text19"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/c_bass" />
+
+            <Button
+                android:id="@+id/play_bass_c"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/bass_c_img"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/btn_border"
+                android:text="Play Sound" />
+
+            <!-- Section: Bass Clef - Note CC -->
+            <TextView
+                android:id="@+id/l1_text20"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/play_bass_c"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/tienneregular"
+                android:text="Bass Clef - Note C"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/bass_cc_img"
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:layout_below="@+id/l1_text20"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/cc_bass" />
+
+            <Button
+                android:id="@+id/play_bass_cc"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/bass_cc_img"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/btn_border"
+                android:text="Play Sound" />
+
+            <!-- Section: Bass Clef - Note D -->
+            <TextView
+                android:id="@+id/l1_text21"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/play_bass_cc"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/tienneregular"
+                android:text="Bass Clef - Note D"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/bass_d_img"
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:layout_below="@+id/l1_text21"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/d_bass" />
+
+            <Button
+                android:id="@+id/play_bass_d"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/bass_d_img"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/btn_border"
+                android:text="Play Sound" />
+
+            <!-- Section: Bass Clef - Note E -->
+            <TextView
+                android:id="@+id/l1_text22"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/play_bass_d"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/tienneregular"
+                android:text="Bass Clef - Note E"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/bass_e_img"
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:layout_below="@+id/l1_text22"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/e_bass" />
+
+            <Button
+                android:id="@+id/play_bass_e"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/bass_e_img"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/btn_border"
+                android:text="Play Sound" />
+
+            <!-- Section: Bass Clef - Note F -->
+            <TextView
+                android:id="@+id/l1_text23"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/play_bass_e"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/tienneregular"
+                android:text="Bass Clef - Note F"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/bass_f_img"
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:layout_below="@+id/l1_text23"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/f_bass" />
+
+            <Button
+                android:id="@+id/play_bass_f"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/bass_f_img"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/btn_border"
+                android:text="Play Sound" />
+
+            <!-- Section: Bass Clef - Note FF -->
+            <TextView
+                android:id="@+id/l1_text24"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/play_bass_f"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/tienneregular"
+                android:text="Bass Clef - Note F"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/bass_ff_img"
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:layout_below="@+id/l1_text24"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/ff_bass" />
+
+            <Button
+                android:id="@+id/play_bass_ff"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/bass_ff_img"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/btn_border"
+                android:text="Play Sound" />
+
+            <!-- Section: Bass Clef - Note G -->
+            <TextView
+                android:id="@+id/l1_text25"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/play_bass_ff"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/tienneregular"
+                android:text="Bass Clef - Note G"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/bass_g_img"
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:layout_below="@+id/l1_text25"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/g_bass" />
+
+            <Button
+                android:id="@+id/play_bass_g"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/bass_g_img"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/btn_border"
+                android:text="Play Sound" />
+
+            <!-- Section: Bass Clef - Note GG -->
+            <TextView
+                android:id="@+id/l1_text26"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/play_bass_g"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/tienneregular"
+                android:text="Bass Clef - Note G"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/bass_gg_img"
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:layout_below="@+id/l1_text26"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/gg_bass" />
+
+            <Button
+                android:id="@+id/play_bass_gg"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/bass_gg_img"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/btn_border"
+                android:text="Play Sound" />
+
+            <!-- Section: G Clef Flat - Note A♭ -->
+            <TextView
+                android:id="@+id/l1_text27"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/play_bass_gg"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="30dp"
+                android:fontFamily="@font/tienneregular"
+                android:text="G Clef Flat - Note A♭"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/gclef_ab_img"
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:layout_below="@+id/l1_text27"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/ab" />
+
+            <Button
+                android:id="@+id/play_gclef_ab"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/gclef_ab_img"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/btn_border"
+                android:text="Play Sound" />
+
+            <!-- Section: G Clef Flat - Note B♭ -->
+            <TextView
+                android:id="@+id/l1_text28"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/play_gclef_ab"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/tienneregular"
+                android:text="G Clef Flat - Note B♭"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/gclef_bb_img"
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:layout_below="@+id/l1_text28"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bb" />
+
+            <Button
+                android:id="@+id/play_gclef_bb"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/gclef_bb_img"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/btn_border"
+                android:text="Play Sound" />
+
+
+
+            <!-- Section: G Clef Flat - Note D♭ -->
+            <TextView
+                android:id="@+id/l1_text30"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/play_gclef_bb"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/tienneregular"
+                android:text="G Clef Flat - Note D♭"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/gclef_db_img"
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:layout_below="@+id/l1_text30"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/db" />
+
+            <Button
+                android:id="@+id/play_gclef_db"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/gclef_db_img"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/btn_border"
+                android:text="Play Sound" />
+
+            <!-- Section: G Clef Flat - Note E♭ -->
+            <TextView
+                android:id="@+id/l1_text31"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/play_gclef_db"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/tienneregular"
+                android:text="G Clef Flat - Note E♭"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/gclef_eb_img"
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:layout_below="@+id/l1_text31"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/eb" />
+
+            <Button
+                android:id="@+id/play_gclef_eb"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/gclef_eb_img"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/btn_border"
+                android:text="Play Sound" />
+
+            <!-- Section: G Clef Flat - Note E♭ (Alt: EEB) -->
+            <TextView
+                android:id="@+id/l1_text32"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/play_gclef_eb"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/tienneregular"
+                android:text="G Clef Flat - Note E♭ (Alt)"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/gclef_eeb_img"
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:layout_below="@+id/l1_text32"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/eeb" />
+
+            <Button
+                android:id="@+id/play_gclef_eeb"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/gclef_eeb_img"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/btn_border"
+                android:text="Play Sound" />
+
+
+
+            <!-- Section: G Clef Flat - Note G♭ -->
+            <TextView
+                android:id="@+id/l1_text35"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/play_gclef_eeb"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/tienneregular"
+                android:text="G Clef Flat - Note G♭"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/gclef_gb_img"
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:layout_below="@+id/l1_text35"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/gb" />
+
+            <Button
+                android:id="@+id/play_gclef_gb"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/gclef_gb_img"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/btn_border"
+                android:text="Play Sound" />
+
+            <!-- Section: G Clef Sharp - Note A♯ -->
+            <TextView
+                android:id="@+id/l1_text36"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/play_gclef_gb"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="30dp"
+                android:fontFamily="@font/tienneregular"
+                android:text="G Clef Sharp - Note A♯"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/gclef_as_img"
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:layout_below="@+id/l1_text36"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/ab" />
+
+            <Button
+                android:id="@+id/play_gclef_as"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/gclef_as_img"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/btn_border"
+                android:text="Play Sound" />
+
+
+
+            <!-- Section: G Clef Sharp - Note C♯ -->
+            <TextView
+                android:id="@+id/l1_text38"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/play_gclef_as"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/tienneregular"
+                android:text="G Clef Sharp - Note C♯"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/gclef_cs_img"
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:layout_below="@+id/l1_text38"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/cb" />
+
+            <Button
+                android:id="@+id/play_gclef_cs"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/gclef_cs_img"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/btn_border"
+                android:text="Play Sound" />
+
+            <!-- Section: G Clef Sharp - Note D♯ -->
+            <TextView
+                android:id="@+id/l1_text39"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/play_gclef_cs"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/tienneregular"
+                android:text="G Clef Sharp - Note D♯"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/gclef_ds_img"
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:layout_below="@+id/l1_text39"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/db" />
+
+            <Button
+                android:id="@+id/play_gclef_ds"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/gclef_ds_img"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/btn_border"
+                android:text="Play Sound" />
+
+
+
+            <!-- Section: G Clef Sharp - Note F♯ -->
+            <TextView
+                android:id="@+id/l1_text42"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/play_gclef_ds"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/tienneregular"
+                android:text="G Clef Sharp - Note F♯"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/gclef_fs_img"
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:layout_below="@+id/l1_text42"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/fb" />
+
+            <Button
+                android:id="@+id/play_gclef_fs"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/gclef_fs_img"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/btn_border"
+                android:text="Play Sound" />
+
+            <!-- Section: G Clef Sharp - Note F♯ (Alt: FFB) -->
+            <TextView
+                android:id="@+id/l1_text43"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/play_gclef_fs"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/tienneregular"
+                android:text="G Clef Sharp - Note F♯ (Alt)"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/gclef_ffs_img"
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:layout_below="@+id/l1_text43"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/ffb" />
+
+            <Button
+                android:id="@+id/play_gclef_ffs"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/gclef_ffs_img"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/btn_border"
+                android:text="Play Sound" />
+
+            <!-- Section: G Clef Sharp - Note G♯ -->
+            <TextView
+                android:id="@+id/l1_text44"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/play_gclef_ffs"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/tienneregular"
+                android:text="G Clef Sharp - Note G♯"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/gclef_gs_img"
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:layout_below="@+id/l1_text44"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/gb" />
+
+            <Button
+                android:id="@+id/play_gclef_gs"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/gclef_gs_img"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/btn_border"
+                android:text="Play Sound" />
+
+            <!-- Section: Treble Clef - Note A -->
+            <TextView
+                android:id="@+id/l1_text45"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/play_gclef_gs"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="30dp"
+                android:fontFamily="@font/tienneregular"
+                android:text="Treble Clef - Note A"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/treble_a_img"
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:layout_below="@+id/l1_text45"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/atc" />
+
+            <Button
+                android:id="@+id/play_treble_a"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/treble_a_img"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/btn_border"
+                android:text="Play Sound" />
+
+            <!-- Section: Treble Clef - Note B -->
+            <TextView
+                android:id="@+id/l1_text46"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/play_treble_a"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/tienneregular"
+                android:text="Treble Clef - Note B"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/treble_b_img"
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:layout_below="@+id/l1_text46"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/btc" />
+
+            <Button
+                android:id="@+id/play_treble_b"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/treble_b_img"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/btn_border"
+                android:text="Play Sound" />
+
+            <!-- Section: Treble Clef - Note C -->
+            <TextView
+                android:id="@+id/l1_text47"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/play_treble_b"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/tienneregular"
+                android:text="Treble Clef - Note C"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/treble_c_img"
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:layout_below="@+id/l1_text47"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/ctc" />
+
+            <Button
+                android:id="@+id/play_treble_c"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/treble_c_img"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/btn_border"
+                android:text="Play Sound" />
+
+            <!-- Section: Treble Clef - Note C (Duplicate) -->
+            <TextView
+                android:id="@+id/l1_text48"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/play_treble_c"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/tienneregular"
+                android:text="Treble Clef - Note C"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/treble_cc_img"
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:layout_below="@+id/l1_text48"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/cctc" />
+
+            <Button
+                android:id="@+id/play_treble_cc"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/treble_cc_img"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/btn_border"
+                android:text="Play Sound" />
+
+            <!-- Section: Treble Clef - Note D -->
+            <TextView
+                android:id="@+id/l1_text49"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/play_treble_cc"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/tienneregular"
+                android:text="Treble Clef - Note D"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/treble_d_img"
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:layout_below="@+id/l1_text49"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/dtc" />
+
+            <Button
+                android:id="@+id/play_treble_d"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/treble_d_img"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/btn_border"
+                android:text="Play Sound" />
+
+            <!-- Section: Treble Clef - Note D (Duplicate) -->
+            <TextView
+                android:id="@+id/l1_text50"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/play_treble_d"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/tienneregular"
+                android:text="Treble Clef - Note D"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/treble_dd_img"
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:layout_below="@+id/l1_text50"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/ddtc" />
+
+            <Button
+                android:id="@+id/play_treble_dd"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/treble_dd_img"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/btn_border"
+                android:text="Play Sound" />
+
+            <!-- Section: Treble Clef - Note E -->
+            <TextView
+                android:id="@+id/l1_text51"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/play_treble_dd"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/tienneregular"
+                android:text="Treble Clef - Note E"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/treble_e_img"
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:layout_below="@+id/l1_text51"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/etc" />
+
+            <Button
+                android:id="@+id/play_treble_e"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/treble_e_img"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/btn_border"
+                android:text="Play Sound" />
+
+            <!-- Section: Treble Clef - Note E (Duplicate) -->
+            <TextView
+                android:id="@+id/l1_text52"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/play_treble_e"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/tienneregular"
+                android:text="Treble Clef - Note E"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/treble_ee_img"
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:layout_below="@+id/l1_text52"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/eetc" />
+
+            <Button
+                android:id="@+id/play_treble_ee"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/treble_ee_img"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/btn_border"
+                android:text="Play Sound" />
+
+            <!-- Section: Treble Clef - Note F -->
+            <TextView
+                android:id="@+id/l1_text53"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/play_treble_ee"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/tienneregular"
+                android:text="Treble Clef - Note F"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/treble_f_img"
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:layout_below="@+id/l1_text53"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/ftc" />
+
+            <Button
+                android:id="@+id/play_treble_f"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/treble_f_img"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/btn_border"
+                android:text="Play Sound" />
+
+            <!-- Section: Treble Clef - Note F (Duplicate) -->
+            <TextView
+                android:id="@+id/l1_text54"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/play_treble_f"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/tienneregular"
+                android:text="Treble Clef - Note F"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/treble_ff_img"
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:layout_below="@+id/l1_text54"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/fftc" />
+
+            <Button
+                android:id="@+id/play_treble_ff"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/treble_ff_img"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/btn_border"
+                android:text="Play Sound" />
+
+            <!-- Section: Treble Clef - Note G -->
+            <TextView
+                android:id="@+id/l1_text55"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/play_treble_ff"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/tienneregular"
+                android:text="Treble Clef - Note G"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/treble_g_img"
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:layout_below="@+id/l1_text55"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/gtc" />
+
+            <Button
+                android:id="@+id/play_treble_g"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/treble_g_img"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/btn_border"
+                android:text="Play Sound" />
+
+            <!-- Section: Treble Clef - Note G (Duplicate) -->
+            <TextView
+                android:id="@+id/l1_text56"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/play_treble_g"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/tienneregular"
+                android:text="Treble Clef - Note G"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/treble_gg_img"
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:layout_below="@+id/l1_text56"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/ggtc" />
+
+            <Button
+                android:id="@+id/play_treble_gg"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/treble_gg_img"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/btn_border"
+                android:text="Play Sound"
+                android:layout_marginBottom="40dp"/>
 
         </RelativeLayout>
     </ScrollView>
-
 
 </RelativeLayout>

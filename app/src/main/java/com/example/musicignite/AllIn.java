@@ -34,6 +34,7 @@ public class AllIn extends AppCompatActivity {
 
     // tunog ng mga quiz and answer, yung may"" yung ans na nandun sa loob ng button yung raw naman ano sha location nung tunog
     private final HashMap<String, Integer> soundMap = new HashMap<String, Integer>() {{
+        //BASS NOTES
         put("A", R.raw.bass_a1);
         put("B", R.raw.bass_b1);
         put("C", R.raw.bass_c1);
@@ -42,25 +43,25 @@ public class AllIn extends AppCompatActivity {
         put("F", R.raw.bass_f1);
         put("G", R.raw.bass_g1);
 
-        put("A", R.raw.gcleftrble_a);
-        put("B", R.raw.gcleftreble_b);
-        put("C", R.raw.gcleftreble_c);
-        put("D", R.raw.gcleftreble_d);
-        put("E", R.raw.gcleftreble_e);
-        put("F", R.raw.gcleftreble_f);
-        put("G", R.raw.gcleftreble_g);
+        put("A", R.raw.gcleftrble_a); //gclef and treble answer = A
+        put("B", R.raw.gcleftreble_b); //gclef and treble answer = B
+        put("C", R.raw.gcleftreble_c); //gclef and treble answer = C
+        put("D", R.raw.gcleftreble_d); //gclef and treble answer = D
+        put("E", R.raw.gcleftreble_e); //gclef and treble answer = E
+        put("F", R.raw.gcleftreble_f); //gclef and treble answer = F
+        put("G", R.raw.gcleftreble_g); //gclef and treble answer = G
 
-        put("A♭", R.raw.flata_gsharp);
-        put("B♭", R.raw.flatb_asharp);
-        put("D♭", R.raw.flatd_csharp);
-        put("E♭", R.raw.flate_dsharp);
-        put("G♭", R.raw.flatg_fsharp);
+        put("A♭", R.raw.flata_gsharp); // flat a == g sharp sound, they are same
+        put("B♭", R.raw.flatb_asharp); // flat b == a sharp sound, they are same
+        put("D♭", R.raw.flatd_csharp); // flat d == c sharp sound, they are same
+        put("E♭", R.raw.flate_dsharp); // flat e == d sharp sound, they are same
+        put("G♭", R.raw.flatg_fsharp); // flat g == f sharp sound, they are same
 
-        put("G♯", R.raw.flata_gsharp);
-        put("A♯", R.raw.flatb_asharp);
-        put("C♯", R.raw.flatd_csharp);
-        put("D♯", R.raw.flate_dsharp);
-        put("F♯", R.raw.flatg_fsharp);
+        put("G♯", R.raw.flata_gsharp); // flat a == g sharp sound, they are same
+        put("A♯", R.raw.flatb_asharp); // flat b == a sharp sound, they are same
+        put("C♯", R.raw.flatd_csharp); // flat d == c sharp sound, they are same
+        put("D♯", R.raw.flate_dsharp); // flat e == d sharp sound, they are same
+        put("F♯", R.raw.flatg_fsharp); // flat g == f sharp sound, they are same
     }};
 
     @SuppressLint("MissingInflatedId")

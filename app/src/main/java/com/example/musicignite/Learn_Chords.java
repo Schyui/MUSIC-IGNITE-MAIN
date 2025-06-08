@@ -13,7 +13,7 @@ import androidx.core.view.WindowInsetsCompat;
 
 public class Learn_Chords extends AppCompatActivity {
 
-    Button lesson1, lesson2;
+    Button lesson1, lesson2, lesson3, lesson4;
     ImageView backBtn;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,10 +26,10 @@ public class Learn_Chords extends AppCompatActivity {
             return insets;
         });
         backBtn = findViewById(R.id.backBtn);
-        /*
         lesson1 = findViewById(R.id.basics_Lesson1);
         lesson2 = findViewById(R.id.basics_Lesson2);
-        */
+        lesson3 = findViewById(R.id.basics_Lesson3);
+        lesson4 = findViewById(R.id.basics_Lesson4);
     }
     @Override
     protected void onStart() {
@@ -38,7 +38,7 @@ public class Learn_Chords extends AppCompatActivity {
             Intent intent = new Intent(this, Learn_Activity.class);
             startActivity(intent);
         });
-/*
+
         lesson1.setOnClickListener(view -> {
             Intent intent = new Intent(this, Learn_Chords_L1.class);
             startActivity(intent);
@@ -48,6 +48,14 @@ public class Learn_Chords extends AppCompatActivity {
             Intent intent = new Intent(this, Learn_Chords_L2.class);
             startActivity(intent);
         });
-*/
+
+        lesson3.setOnClickListener(view -> {
+            Intent intent = new Intent(this, Learn_Chords_L3.class);
+            startActivity(intent);
+        });
+        lesson4.setOnClickListener(view -> {
+            Intent intent = new Intent(this, Learn_Chords_L4.class);
+            startActivity(intent);
+        });
     }
 }

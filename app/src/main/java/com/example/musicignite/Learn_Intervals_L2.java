@@ -3,6 +3,8 @@ package com.example.musicignite;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Looper;
 import android.text.Html;
 import android.view.View;
 import android.widget.Button;
@@ -102,15 +104,26 @@ public class Learn_Intervals_L2 extends AppCompatActivity {
             textViews[i] = findViewById(Text[i]);
             textViews[i].setText(Html.fromHtml(htmlTexts[i], Html.FROM_HTML_MODE_LEGACY));
         }
-        for (int rawId : rawIds) {
-            Uri uri = Uri.parse("android.resource://" + getPackageName() + "/" + rawId);
-            videoUris.add(uri);
-        }
-        for (int i = 0; i < 22; i++) {
-            playerViews.add(findViewById(playerViewIds[i]));
-            playButtons.add(findViewById(playButtonIds[i]));
-            thumbnailViews.add(findViewById(thumbnailIds[i]));
-        }
+        new Thread(() -> {
+            for (int rawId : rawIds) {
+                Uri uri = Uri.parse("android.resource://" + getPackageName() + "/" + rawId);
+                videoUris.add(uri);
+            }
+
+            // Back to UI thread after processing
+            new Handler(Looper.getMainLooper()).post(() -> {
+                // Start animation or enable buttons here
+            });
+        }).start();
+
+        new Handler(Looper.getMainLooper()).postDelayed(() -> {
+            for (int i = 0; i < 22; i++) {
+                playerViews.add(findViewById(playerViewIds[i]));
+                playButtons.add(findViewById(playButtonIds[i]));
+                thumbnailViews.add(findViewById(thumbnailIds[i]));
+            }
+            initializePlayer();
+        }, 100);
     }
 
     @Override
@@ -130,8 +143,6 @@ public class Learn_Intervals_L2 extends AppCompatActivity {
             Intent intent = new Intent(this, Learn_Intervals_L1.class);
             startActivity(intent);
         });
-
-        initializePlayer();
     }
 
     @OptIn(markerClass = UnstableApi.class)
