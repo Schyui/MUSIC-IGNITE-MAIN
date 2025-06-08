@@ -19,7 +19,7 @@ import de.hdodenhof.circleimageview.CircleImageView;
 
 public class SettingsFragment extends Fragment {
 
-    TextView logout, terms, profileSettings;
+    TextView logout, terms, profileSettings, displayName;
     CircleImageView profilePic;
 
     private static final String PREFS_NAME = "user_prefs";
@@ -34,7 +34,7 @@ public class SettingsFragment extends Fragment {
         terms = view.findViewById(R.id.terms);
         profileSettings = view.findViewById(R.id.profileSettings);
         profilePic = view.findViewById(R.id.profilePic); // connect the image view
-
+        displayName = view.findViewById(R.id.displayName);
 
         loadProfilePic(); // Load initially when view is created
 
@@ -44,7 +44,10 @@ public class SettingsFragment extends Fragment {
     @Override
     public void onStart() {
         super.onStart();
+        SharedPreferences prefName = requireContext().getSharedPreferences("MyPrefs", MODE_PRIVATE);
 
+        String name = prefName.getString("nameSet", "defaultName");
+        displayName.setText(name);
         logout.setOnClickListener(v -> {
             Context context = getContext();
             if (context != null) {
@@ -73,7 +76,6 @@ public class SettingsFragment extends Fragment {
         super.onResume();
         loadProfilePic();
     }
-
     public void loadProfilePic() {
         SharedPreferences prefs = requireContext().getSharedPreferences(PREFS_NAME, MODE_PRIVATE);
         String uriString = prefs.getString(KEY_PROFILE_PIC_URI, null);

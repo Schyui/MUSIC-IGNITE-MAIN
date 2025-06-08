@@ -1,6 +1,8 @@
 package com.example.musicignite;
 
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
@@ -9,6 +11,8 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import com.google.android.material.navigation.NavigationView;
+
 public class NaviHeader extends AppCompatActivity {
 
     @Override
@@ -16,7 +20,6 @@ public class NaviHeader extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_navi_header);
-
 
 
     }

@@ -38,7 +38,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     private static final String PREFS_NAME = "user_prefs";
     private static final String KEY_PROFILE_PIC_URI = "profile_pic_uri";
 
-    TextView username;
+    TextView username, displayName;
     Button learnBtn, practiceBtn, musicSheetBtn;
 
     @Override
@@ -52,6 +52,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+        // Display ang name
+
 
         // Show username in header
         username = findViewById(R.id.usernameShow);
@@ -98,7 +100,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     private void loadProfilePicIntoNavHeader() {
         NavigationView navigationView = findViewById(R.id.nav_view);
         View headerView = navigationView.getHeaderView(0);
-        ImageView profilePic = headerView.findViewById(R.id.profilePic);
+        ImageView profilePic = findViewById(R.id.profilePic);
 
         SharedPreferences sharedPrefs = getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE);
         String uriString = sharedPrefs.getString(KEY_PROFILE_PIC_URI, null);
@@ -154,6 +156,11 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     @Override
     protected void onStart() {
         super.onStart();
+
+        TextView displayName = findViewById(R.id.displayNameHeader);
+        SharedPreferences prefsDisplayName = getSharedPreferences("MyPrefs", MODE_PRIVATE);
+        String name = prefsDisplayName.getString("nameSet", "defaultName");
+        displayName.setText(name);
         // Get the saved username from SharedPreferences
         SharedPreferences prefs = getSharedPreferences("MyPrefs", MODE_PRIVATE);
         String userUsername = prefs.getString("username", "");  // key used in login
