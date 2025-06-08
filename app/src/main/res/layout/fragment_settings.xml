@@ -29,7 +29,7 @@
         android:textSize="20sp"
         android:layout_below="@+id/profilePic"
         android:textColor="#000000"
-        android:paddingVertical="16dp"/>
+        android:paddingVertical="10dp"/>
     <ScrollView
         android:id="@+id/settingsScroll"
         android:layout_width="match_parent"
@@ -42,7 +42,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="65dp"
+            android:layout_marginTop="60dp"
             android:orientation="vertical"
             android:divider="?android:attr/listDivider"
             android:showDividers="middle"
