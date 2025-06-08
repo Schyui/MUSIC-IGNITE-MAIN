@@ -19,7 +19,7 @@ import de.hdodenhof.circleimageview.CircleImageView;
 
 public class SettingsFragment extends Fragment {
 
-    TextView logout, terms, profileSettings, displayName;
+    TextView logout, terms, profileSettings, displayName, help;
     CircleImageView profilePic;
 
     private static final String PREFS_NAME = "user_prefs";
@@ -35,6 +35,7 @@ public class SettingsFragment extends Fragment {
         profileSettings = view.findViewById(R.id.profileSettings);
         profilePic = view.findViewById(R.id.profilePic); // connect the image view
         displayName = view.findViewById(R.id.displayName);
+        help = view.findViewById(R.id.help);
 
         loadProfilePic(); // Load initially when view is created
 
@@ -67,6 +68,10 @@ public class SettingsFragment extends Fragment {
 
         terms.setOnClickListener(v -> {
             Intent intent = new Intent(getActivity(), terms.class);
+            startActivity(intent);
+        });
+        help.setOnClickListener(v -> {
+            Intent intent = new Intent(getActivity(), help.class);
             startActivity(intent);
         });
     }

@@ -34,15 +34,14 @@ import java.util.ArrayList;
 import java.util.HashMap;
 
 public class MusicSheets_Activity extends AppCompatActivity {
-    HashMap<String, Float> ratingMap = new HashMap<>(); // song title → rating
-
+    HashMap<String, Float> ratingMap = new HashMap<>();
     ImageView backBtn, plusIconBtn;
     SearchView searchView;
     ListView listView;
     ArrayAdapter<String> adapter;
     ArrayList<String> itemList;
     HashMap<String, Uri> fileMap = new HashMap<>();
-    HashMap<String, ArrayList<String>> commentMap = new HashMap<>(); // song title → comments
+    HashMap<String, ArrayList<String>> commentMap = new HashMap<>();
     Uri selectedFileUri;
 
     private final ActivityResultLauncher<Intent> filePickerLauncher =
@@ -52,6 +51,7 @@ public class MusicSheets_Activity extends AppCompatActivity {
                     Toast.makeText(this, "File selected!", Toast.LENGTH_SHORT).show();
                 }
             });
+
     private void saveData() {
         SharedPreferences prefs = getSharedPreferences("music_data", MODE_PRIVATE);
         SharedPreferences.Editor editor = prefs.edit();
@@ -59,12 +59,10 @@ public class MusicSheets_Activity extends AppCompatActivity {
 
         editor.putString("itemList", gson.toJson(itemList));
 
-        // convert URI map to string map
         HashMap<String, String> uriMap = new HashMap<>();
         for (String key : fileMap.keySet()) {
             uriMap.put(key, fileMap.get(key).toString());
         }
-
 
         JSONArray ratingsArray = new JSONArray();
         for (String title : ratingMap.keySet()) {
@@ -156,6 +154,25 @@ public class MusicSheets_Activity extends AppCompatActivity {
             String songTitle = itemList.get(position);
             showMusicSheetDetailsDialog(songTitle);
         });
+
+        listView.setOnItemLongClickListener((parent, view, position, id) -> {
+            String songTitle = itemList.get(position);
+            new AlertDialog.Builder(this)
+                    .setTitle("Delete Music Sheet")
+                    .setMessage("Are you sure you want to delete \"" + songTitle + "\"?")
+                    .setPositiveButton("Delete", (dialog, which) -> {
+                        itemList.remove(songTitle);
+                        fileMap.remove(songTitle);
+                        ratingMap.remove(songTitle);
+                        commentMap.remove(songTitle);
+                        adapter.notifyDataSetChanged();
+                        saveData();
+                        Toast.makeText(this, "Music sheet deleted", Toast.LENGTH_SHORT).show();
+                    })
+                    .setNegativeButton("Cancel", null)
+                    .show();
+            return true;
+        });
     }
 
     private void showAddMusicSheetDialog() {
@@ -180,9 +197,9 @@ public class MusicSheets_Activity extends AppCompatActivity {
                 fileMap.put(songName, selectedFileUri);
                 commentMap.put(songName, new ArrayList<>());
                 adapter.notifyDataSetChanged();
-                saveData(); // ✅ save to SharedPreferences
+                saveData();
                 Toast.makeText(this, "Music sheet added!", Toast.LENGTH_SHORT).show();
-                selectedFileUri = null; // reset
+                selectedFileUri = null;
             } else {
                 Toast.makeText(this, "Please enter a song name and select a file!", Toast.LENGTH_SHORT).show();
             }
@@ -191,7 +208,6 @@ public class MusicSheets_Activity extends AppCompatActivity {
         builder.setNegativeButton("Cancel", (dialog, which) -> dialog.dismiss());
         builder.create().show();
     }
-
 
     private void showMusicSheetDetailsDialog(String songTitle) {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
@@ -212,12 +228,12 @@ public class MusicSheets_Activity extends AppCompatActivity {
         ArrayList<String> comments = commentMap.getOrDefault(songTitle, new ArrayList<>());
         ArrayAdapter<String> commentAdapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, comments);
         commentListView.setAdapter(commentAdapter);
-        ratingBar.setRating(ratingMap.getOrDefault(songTitle, 0f)); // Load rating
+        ratingBar.setRating(ratingMap.getOrDefault(songTitle, 0f));
 
         ratingBar.setOnRatingBarChangeListener((bar, rating, fromUser) -> {
             if (fromUser) {
-                ratingMap.put(songTitle, rating); // Save rating
-                saveData(); // Persist rating change
+                ratingMap.put(songTitle, rating);
+                saveData();
             }
         });
 
@@ -240,7 +256,6 @@ public class MusicSheets_Activity extends AppCompatActivity {
                     String fileName = songTitle.replaceAll("[^a-zA-Z0-9]", "_") + ".pdf";
 
                     if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
-                        // Use MediaStore API for Android 10+
                         ContentValues values = new ContentValues();
                         values.put(MediaStore.Downloads.DISPLAY_NAME, fileName);
                         values.put(MediaStore.Downloads.MIME_TYPE, "application/pdf");
@@ -264,7 +279,6 @@ public class MusicSheets_Activity extends AppCompatActivity {
                         inputStream.close();
 
                     } else {
-                        // For Android 9 and below, write to Downloads directory
                         File downloadsDir = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS);
                         if (!downloadsDir.exists()) downloadsDir.mkdirs();
 
@@ -292,12 +306,10 @@ public class MusicSheets_Activity extends AppCompatActivity {
             }
         });
 
-
-
         builder.setNegativeButton("Close", (dialog, which) -> dialog.dismiss());
         builder.create().show();
-
     }
+
     private static final int REQUEST_WRITE_PERMISSION = 100;
 
     private void requestWritePermission() {
