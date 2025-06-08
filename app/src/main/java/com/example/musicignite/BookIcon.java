@@ -1,8 +1,10 @@
 package com.example.musicignite;
 
+import android.content.Intent;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.widget.Button;
+import android.widget.ImageView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -12,11 +14,14 @@ public class BookIcon extends AppCompatActivity {
 
     private MediaPlayer mediaPlayer;
     private HashMap<String, Integer> soundMap;
+    ImageView backBtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_book_icon);
+
+        backBtn = findViewById(R.id.backBtn);
 
         // Initialize sound map with your raw sound resource IDs
         soundMap = new HashMap<>();
@@ -133,5 +138,14 @@ public class BookIcon extends AppCompatActivity {
             mediaPlayer.release();
             mediaPlayer = null;
         }
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        backBtn.setOnClickListener(v -> {
+            Intent intent = new Intent(this, Practice_Activity.class);
+            startActivity(intent);
+        });
     }
 }

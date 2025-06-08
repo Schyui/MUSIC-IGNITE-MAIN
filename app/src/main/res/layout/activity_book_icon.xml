@@ -945,7 +945,7 @@
                 android:layout_marginStart="10dp"
                 android:layout_marginTop="20dp"
                 android:fontFamily="@font/tienneregular"
-                android:text="G Clef Flat - Note E♭ (Alt)"
+                android:text="G Clef Flat - Note E♭"
                 android:textColor="@color/black"
                 android:textSize="16sp" />
 
@@ -1019,7 +1019,7 @@
                 android:layout_height="130dp"
                 android:layout_below="@+id/l1_text36"
                 android:layout_marginTop="10dp"
-                android:background="@drawable/ab" />
+                android:background="@drawable/asharp" />
 
             <Button
                 android:id="@+id/play_gclef_as"
@@ -1052,7 +1052,7 @@
                 android:layout_height="130dp"
                 android:layout_below="@+id/l1_text38"
                 android:layout_marginTop="10dp"
-                android:background="@drawable/cb" />
+                android:background="@drawable/csharp" />
 
             <Button
                 android:id="@+id/play_gclef_cs"
@@ -1083,7 +1083,7 @@
                 android:layout_height="130dp"
                 android:layout_below="@+id/l1_text39"
                 android:layout_marginTop="10dp"
-                android:background="@drawable/db" />
+                android:background="@drawable/dsharp" />
 
             <Button
                 android:id="@+id/play_gclef_ds"
@@ -1116,7 +1116,7 @@
                 android:layout_height="130dp"
                 android:layout_below="@+id/l1_text42"
                 android:layout_marginTop="10dp"
-                android:background="@drawable/fb" />
+                android:background="@drawable/fsharp" />
 
             <Button
                 android:id="@+id/play_gclef_fs"
@@ -1137,7 +1137,7 @@
                 android:layout_marginStart="10dp"
                 android:layout_marginTop="20dp"
                 android:fontFamily="@font/tienneregular"
-                android:text="G Clef Sharp - Note F♯ (Alt)"
+                android:text="G Clef Sharp - Note F♯"
                 android:textColor="@color/black"
                 android:textSize="16sp" />
 
@@ -1147,7 +1147,7 @@
                 android:layout_height="130dp"
                 android:layout_below="@+id/l1_text43"
                 android:layout_marginTop="10dp"
-                android:background="@drawable/ffb" />
+                android:background="@drawable/ffsharp" />
 
             <Button
                 android:id="@+id/play_gclef_ffs"
@@ -1178,7 +1178,7 @@
                 android:layout_height="130dp"
                 android:layout_below="@+id/l1_text44"
                 android:layout_marginTop="10dp"
-                android:background="@drawable/gb" />
+                android:background="@drawable/gsharp" />
 
             <Button
                 android:id="@+id/play_gclef_gs"
