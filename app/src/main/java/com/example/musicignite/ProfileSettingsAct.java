@@ -30,7 +30,7 @@ public class ProfileSettingsAct extends AppCompatActivity {
     private ImageView changePfp, back;
     private SharedPreferences prefs;
 
-    TextView usernameDisplay;
+    TextView usernameDisplay, emailDisplay;
     EditText EditDisplay, EditUsername;
     private ActivityResultLauncher<Intent> imagePickerLauncher;
 
@@ -47,7 +47,7 @@ public class ProfileSettingsAct extends AppCompatActivity {
         back = findViewById(R.id.backBtn);
         EditDisplay = findViewById(R.id.EditDisplay);
         usernameDisplay = findViewById(R.id.usernameDisplay);
-
+        emailDisplay = findViewById(R.id.emailDisplay);
         EditDisplay.setOnFocusChangeListener((v, hasFocus) -> {
             if (!hasFocus) {
                 String newName = EditDisplay.getText().toString().trim();
@@ -132,8 +132,10 @@ public class ProfileSettingsAct extends AppCompatActivity {
 
         String name = prefs.getString("nameSet", "defaultName");
         String uname = prefs.getString("usernameSet", "defaultUname");
+        String email = prefs.getString("emailSet","defaultEmail");
         usernameDisplay.setText("@" + uname);
         EditDisplay.setText(name);
+        emailDisplay.setText("Email: "+email);
         ImageView changePassword = findViewById(R.id.ChangePassword);
         changePassword.setOnClickListener(v -> {
             Intent intent = new Intent(ProfileSettingsAct.this, ChangePasswordActivity.class);

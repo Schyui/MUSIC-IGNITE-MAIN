@@ -27,7 +27,7 @@
 
             <TextView
                 android:id="@+id/emailDisplay"
-                android:layout_width="250dp"
+                android:layout_width="350dp"
                 android:layout_height="wrap_content"
                 android:text="Email: "
                 android:textSize="18sp"
@@ -49,7 +49,7 @@
                 android:id="@+id/passwordDisplay"
                 android:layout_width="210dp"
                 android:layout_height="wrap_content"
-                android:text="Password: ***********"
+                android:text="Password: ******"
                 android:textSize="18sp"
                 android:layout_marginTop="10dp"
                 android:textColor="#474646"
