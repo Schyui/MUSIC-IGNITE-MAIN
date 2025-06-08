@@ -26,8 +26,8 @@ public class Learn_Rhythm extends AppCompatActivity {
             return insets;
         });
         backBtn = findViewById(R.id.backBtn);
-        lesson1 = findViewById(R.id.basics_Lesson1);
-        lesson2 = findViewById(R.id.basics_Lesson2);
+        lesson1 = findViewById(R.id.rhythm_Lesson1);
+        lesson2 = findViewById(R.id.rhythm_Lesson2);
 
     }
     @Override

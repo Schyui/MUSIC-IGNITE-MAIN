@@ -67,10 +67,25 @@
             android:name=".Learn_Chords_L2"
             android:exported="false" />
         <activity
+            android:name=".Learn_Chords_L3"
+            android:exported="false" />
+        <activity
+            android:name=".Learn_Chords_L4"
+            android:exported="false" />
+        <activity
             android:name=".Learn_Intervals"
             android:exported="false" />
         <activity
             android:name=".Learn_Intervals_L1"
+            android:exported="false" />
+        <activity
+            android:name=".Learn_Intervals_L2"
+            android:exported="false" />
+        <activity
+            android:name=".Learn_Intervals_L3"
+            android:exported="false" />
+        <activity
+            android:name=".Learn_Intervals_L4"
             android:exported="false" />
         <activity
             android:name=".Learn_ScalesAndSignatures"

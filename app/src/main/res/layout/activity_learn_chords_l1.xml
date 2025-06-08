@@ -12,20 +12,34 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <RelativeLayout
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical" >
 
             <TextView
+                android:id="@+id/lesson"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_centerHorizontal="true"
+                android:text="Lesson 1:"
+                android:textSize="28sp"
+                android:layout_gravity="center"
+                android:textColor="@color/black"
+                android:fontFamily="@font/tagesschriftregular"
+                />
+
+
+            <TextView
                 android:id="@+id/l1_title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="40dp"
                 android:layout_centerHorizontal="true"
-                android:text="The Staff, Clefs, and Ledger Lines"
-                android:textSize="21sp"
                 android:textAlignment="center"
+                android:text="Introduction to Chords"
+                android:textSize="33sp"
+                android:layout_gravity="center"
                 android:textColor="@color/black"
                 android:fontFamily="@font/tagesschriftregular"
                 />
@@ -34,202 +48,331 @@
                 android:id="@+id/line1"
                 android:layout_width="450dp"
                 android:layout_height="1dp"
-                android:layout_below="@+id/l1_title"
                 android:layout_marginTop="15dp"
                 android:background="@color/black" />
 
             <TextView
-                android:id="@+id/l1_text1"
+                android:id="@+id/text1"
                 android:layout_width="380sp"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/line1"
                 android:layout_marginStart="10dp"
                 android:layout_marginTop="20dp"
                 android:fontFamily="@font/tienneregular"
-                android:text="• The staff is the foundation upon which notes are drawn."
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/text2"
+                android:layout_width="380sp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/tienneregular"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/text3"
+                android:layout_width="380sp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/tienneregular"
                 android:textColor="@color/black"
                 android:textSize="16sp" />
 
             <ImageView
-                android:id="@+id/l1_img1"
                 android:layout_width="match_parent"
                 android:layout_height="130dp"
-                android:layout_below="@+id/l1_text1"
-                android:background="@drawable/basics_l1_img01"
+                android:background="@drawable/chords_l1_img01"
                 android:layout_marginTop="10dp"
                 />
 
             <View
-                android:id="@+id/line2"
                 android:layout_width="450dp"
                 android:layout_height="1dp"
-                android:layout_below="@+id/l1_img1"
                 android:layout_marginTop="15dp"
                 android:background="@color/black" />
 
             <TextView
-                android:id="@+id/l1_text2"
+                android:id="@+id/text4"
                 android:layout_width="380sp"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/line2"
                 android:layout_marginStart="10dp"
                 android:layout_marginTop="20dp"
                 android:fontFamily="@font/tienneregular"
-                android:text="• The Modern staff compromises five lines and four spaces."
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="380sp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:text="• Let's write a C major triad. First, write the root (C) on the staff."
+                android:fontFamily="@font/tienneregular"
                 android:textColor="@color/black"
                 android:textSize="16sp" />
 
             <ImageView
-                android:id="@+id/l1_img2"
                 android:layout_width="match_parent"
                 android:layout_height="130dp"
-                android:layout_below="@+id/l1_text2"
-                android:background="@drawable/basics_l1_img02"
+                android:background="@drawable/chords_l1_img02"
                 android:layout_marginTop="10dp"
                 />
 
             <View
-                android:id="@+id/line3"
                 android:layout_width="450dp"
                 android:layout_height="1dp"
-                android:layout_below="@+id/l1_img2"
                 android:layout_marginTop="15dp"
                 android:background="@color/black" />
 
             <TextView
-                android:id="@+id/l1_text3"
                 android:layout_width="380sp"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/line3"
                 android:layout_marginStart="10dp"
                 android:layout_marginTop="20dp"
+                android:text="• Next, write the generic third and generic fifth from the root."
                 android:fontFamily="@font/tienneregular"
-                android:text="• Every line or space on the staff represents a white key on the keyboard."
                 android:textColor="@color/black"
                 android:textSize="16sp" />
 
             <ImageView
-                android:id="@+id/l1_gif1"
                 android:layout_width="match_parent"
                 android:layout_height="130dp"
-                android:layout_below="@+id/l1_text3"
+                android:background="@drawable/chords_l1_img03"
+                android:layout_marginTop="10dp"
+                />
+
+            <TextView
+                android:layout_width="380sp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/tienneregular"
+                android:text="• We now need to determine the specific intervals on the keyboard."
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <View
+                android:layout_width="450dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="15dp"
+                android:background="@color/black" />
+
+            <TextView
+                android:layout_width="380sp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/tienneregular"
+                android:text="• Since we need a major third, let's count up four half steps from the root."
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:background="@drawable/chords_l1_img04"
                 android:layout_marginTop="10dp"
                 />
 
             <View
-                android:id="@+id/line4"
                 android:layout_width="450dp"
                 android:layout_height="1dp"
-                android:layout_below="@+id/l1_gif1"
                 android:layout_marginTop="15dp"
                 android:background="@color/black" />
 
             <TextView
-                android:id="@+id/l1_text4"
                 android:layout_width="380sp"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/line4"
                 android:layout_marginStart="10dp"
                 android:layout_marginTop="20dp"
                 android:fontFamily="@font/tienneregular"
-                android:text="• Clefs assign individual notes to certain lines or spaces."
+                android:text="• For the perfect fifth, go back to the root and count up seven half steps."
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:background="@drawable/chords_l1_thumb01"
+                android:layout_marginTop="10dp"
+                />
+
+            <TextView
+                android:layout_width="380sp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/tienneregular"
+                android:text="• Since the chord contains no black keys, we do not need to write any accidentals on the staff."
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <View
+                android:layout_width="450dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="15dp"
+                android:background="@color/black" />
+
+            <TextView
+                android:layout_width="380sp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/tienneregular"
+                android:text="• A C major triad is C—E—G."
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <FrameLayout
+                android:id="@+id/frame_vid1"
+                android:layout_width="match_parent"
+                android:layout_height="140dp"
+                android:layout_marginTop="10dp">
+
+
+                <androidx.media3.ui.PlayerView
+                    android:id="@+id/vid1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:use_controller="false"
+                    />
+
+                <ImageView
+                    android:id="@+id/thumb1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/chords_l1_thumb01" />
+
+
+                <ImageView
+                    android:id="@+id/playButton1"
+                    android:layout_width="68dp"
+                    android:layout_height="68dp"
+                    android:layout_gravity="center"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:background="@android:color/transparent"
+                    android:src="@android:drawable/ic_media_play"
+                    />
+            </FrameLayout>
+
+            <View
+                android:layout_width="450dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="15dp"
+                android:background="@color/black" />
+
+            <TextView
+                android:layout_width="380sp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/tienneregular"
+                android:text="• Next, let's try an E♭ major triad."
                 android:textColor="@color/black"
                 android:textSize="16sp" />
 
             <ImageView
-                android:id="@+id/l1_img3"
                 android:layout_width="match_parent"
                 android:layout_height="130dp"
-                android:layout_below="@+id/l1_text4"
-                android:background="@drawable/basics_l1_img03"
+                android:background="@drawable/chords_l1_img05"
                 android:layout_marginTop="10dp"
                 />
 
             <View
-                android:id="@+id/line5"
                 android:layout_width="450dp"
                 android:layout_height="1dp"
-                android:layout_below="@+id/l1_img3"
                 android:layout_marginTop="15dp"
                 android:background="@color/black" />
 
             <TextView
-                android:id="@+id/l1_text5"
                 android:layout_width="380sp"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/line5"
                 android:layout_marginStart="10dp"
                 android:layout_marginTop="20dp"
                 android:fontFamily="@font/tienneregular"
-                android:text="• Two clefs are normally used: the Treble and Bass clefs."
+                android:text="• Write the generic third and fifth on the staff."
                 android:textColor="@color/black"
                 android:textSize="16sp" />
 
             <ImageView
-                android:id="@+id/l1_img4"
                 android:layout_width="match_parent"
                 android:layout_height="130dp"
-                android:layout_below="@+id/l1_text5"
-                android:background="@drawable/basics_l1_img04"
+                android:background="@drawable/chords_l1_img06"
                 android:layout_marginTop="10dp"
                 />
 
             <View
-                android:id="@+id/line6"
                 android:layout_width="450dp"
                 android:layout_height="1dp"
-                android:layout_below="@+id/l1_img4"
                 android:layout_marginTop="15dp"
                 android:background="@color/black" />
 
             <TextView
-                android:id="@+id/l1_text6"
                 android:layout_width="380sp"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/line6"
                 android:layout_marginStart="10dp"
                 android:layout_marginTop="20dp"
+                android:text="• Now, switch to the keyboard. Start at the E♭ and count up four half steps for the major third."
                 android:fontFamily="@font/tienneregular"
-                android:text="• First, we will discuss the Treble Clef (also called the G Clef)."
                 android:textColor="@color/black"
                 android:textSize="16sp" />
 
             <ImageView
-                android:id="@+id/l1_img5"
                 android:layout_width="match_parent"
                 android:layout_height="130dp"
-                android:layout_below="@+id/l1_text6"
-                android:background="@drawable/basics_l1_img05"
+                android:background="@drawable/chords_l1_img07"
                 android:layout_marginTop="10dp"
                 />
 
             <View
-                android:id="@+id/line7"
                 android:layout_width="450dp"
                 android:layout_height="1dp"
-                android:layout_below="@+id/l1_img5"
                 android:layout_marginTop="15dp"
                 android:background="@color/black" />
 
             <TextView
-                android:id="@+id/l1_text7"
                 android:layout_width="380sp"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/line7"
                 android:layout_marginStart="10dp"
                 android:layout_marginTop="20dp"
+                android:text="• Go back to the root and count up seven half steps for the perfect fifth."
                 android:fontFamily="@font/tienneregular"
-                android:text="• The staff line which the clef wraps around
-                            (shown in red) is known as G. Any note placed on this line becomes G."
                 android:textColor="@color/black"
                 android:textSize="16sp" />
 
             <ImageView
-                android:id="@+id/l1_img6"
                 android:layout_width="match_parent"
                 android:layout_height="130dp"
-                android:layout_below="@+id/l1_text7"
-                android:background="@drawable/basics_l1_img06"
+                android:background="@drawable/chords_l1_img08"
+                android:layout_marginTop="10dp"
+                />
+
+            <View
+                android:layout_width="450dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="15dp"
+                android:background="@color/black" />
+
+            <TextView
+                android:layout_width="380sp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:text="• Finally, write any needed accidentals. In addition to the already written E♭, we need a flat next to the B."
+                android:fontFamily="@font/tienneregular"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:background="@drawable/chords_l1_img09"
                 android:layout_marginTop="10dp"
                 />
 
@@ -237,353 +380,1607 @@
                 android:id="@+id/line8"
                 android:layout_width="450dp"
                 android:layout_height="1dp"
-                android:layout_below="@+id/l1_img6"
                 android:layout_marginTop="15dp"
                 android:background="@color/black" />
 
             <TextView
-                android:id="@+id/l1_text8"
                 android:layout_width="380sp"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/line8"
                 android:layout_marginStart="10dp"
                 android:layout_marginTop="20dp"
+                android:text="• An E♭ major triad is E♭—G—B♭."
                 android:fontFamily="@font/tienneregular"
-                android:text="• The note on the space above G is A.
-                            (Remember, there is not an H note.)"
                 android:textColor="@color/black"
                 android:textSize="16sp" />
 
-            <ImageView
-                android:id="@+id/l1_img7"
+            <FrameLayout
+                android:id="@+id/frame_vid2"
                 android:layout_width="match_parent"
-                android:layout_height="130dp"
-                android:layout_below="@+id/l1_text8"
-                android:background="@drawable/basics_l1_img07"
-                android:layout_marginTop="10dp"
-                />
+                android:layout_height="140dp"
+                android:layout_marginTop="10dp">
+
+
+                <androidx.media3.ui.PlayerView
+                    android:id="@+id/vid2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:use_controller="false"
+                    />
+
+                <ImageView
+                    android:id="@+id/thumb2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/chords_l1_thumb02" />
+
+
+                <ImageView
+                    android:id="@+id/playButton2"
+                    android:layout_width="68dp"
+                    android:layout_height="68dp"
+                    android:layout_gravity="center"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:background="@android:color/transparent"
+                    android:src="@android:drawable/ic_media_play"
+                    />
+            </FrameLayout>
+
 
             <View
                 android:id="@+id/line9"
                 android:layout_width="450dp"
                 android:layout_height="1dp"
-                android:layout_below="@+id/l1_img7"
                 android:layout_marginTop="15dp"
                 android:background="@color/black" />
 
             <TextView
-                android:id="@+id/l1_text9"
                 android:layout_width="380sp"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/line9"
                 android:layout_marginStart="10dp"
                 android:layout_marginTop="20dp"
+                android:text="• Next, let's try a B major triad."
                 android:fontFamily="@font/tienneregular"
-                android:text="• The note on the line above A is B."
                 android:textColor="@color/black"
                 android:textSize="16sp" />
 
             <ImageView
-                android:id="@+id/l1_img8"
                 android:layout_width="match_parent"
                 android:layout_height="130dp"
-                android:layout_below="@+id/l1_text9"
-                android:background="@drawable/basics_l1_img08"
+                android:background="@drawable/chords_l1_img10"
                 android:layout_marginTop="10dp"
                 />
+
 
             <View
                 android:id="@+id/line10"
                 android:layout_width="450dp"
                 android:layout_height="1dp"
-                android:layout_below="@+id/l1_img8"
                 android:layout_marginTop="15dp"
                 android:background="@color/black" />
 
             <TextView
-                android:id="@+id/l1_text10"
                 android:layout_width="380sp"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/line10"
                 android:layout_marginStart="10dp"
                 android:layout_marginTop="20dp"
+                android:text="• Write the generic third and fifth on the staff."
                 android:fontFamily="@font/tienneregular"
-                android:text="• This process continues. Uh-oh.
-                            We just ran out of room to place notes, what happens now?"
                 android:textColor="@color/black"
                 android:textSize="16sp" />
 
             <ImageView
-                android:id="@+id/l1_img9"
                 android:layout_width="match_parent"
                 android:layout_height="130dp"
-                android:layout_below="@+id/l1_text10"
-                android:background="@drawable/basics_l1_img09"
+                android:background="@drawable/chords_l1_img11"
+                android:layout_marginTop="10dp"
+                />
+
+
+            <View
+                android:layout_width="450dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="15dp"
+                android:background="@color/black" />
+
+            <TextView
+                android:layout_width="380sp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/tienneregular"
+                android:text="• Count the major third (4 half steps) and perfect fifth (7 half steps)."
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:background="@drawable/chords_l1_img12"
                 android:layout_marginTop="10dp"
                 />
 
             <View
-                android:id="@+id/line11"
                 android:layout_width="450dp"
                 android:layout_height="1dp"
-                android:layout_below="@+id/l1_img9"
                 android:layout_marginTop="15dp"
                 android:background="@color/black" />
 
             <TextView
-                android:id="@+id/l1_text11"
                 android:layout_width="380sp"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/line11"
                 android:layout_marginStart="10dp"
                 android:layout_marginTop="20dp"
                 android:fontFamily="@font/tienneregular"
-                android:text="• Ledger Lines will solve our dilemma. A ledger line is a small line that extends the staff when we run out of room."
+                android:text="• Finally, write the needed accidentals on the staff. We need two sharps: one for the D and one for the F."
                 android:textColor="@color/black"
                 android:textSize="16sp" />
 
             <ImageView
-                android:id="@+id/l1_img10"
                 android:layout_width="match_parent"
                 android:layout_height="130dp"
-                android:layout_below="@+id/l1_text11"
-                android:background="@drawable/basics_l1_img10"
+                android:background="@drawable/chords_l1_img13"
                 android:layout_marginTop="10dp"
                 />
 
             <View
-                android:id="@+id/line12"
                 android:layout_width="450dp"
                 android:layout_height="1dp"
-                android:layout_below="@+id/l1_img10"
                 android:layout_marginTop="15dp"
                 android:background="@color/black" />
 
             <TextView
-                android:id="@+id/l1_text12"
                 android:layout_width="380sp"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/line12"
                 android:layout_marginStart="10dp"
                 android:layout_marginTop="20dp"
                 android:fontFamily="@font/tienneregular"
-                android:text="• With the ledger line drawn, we can place the A."
+                android:text="• A B major triad is B—D♯—F♯."
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <FrameLayout
+                android:id="@+id/frame_vid3"
+                android:layout_width="match_parent"
+                android:layout_height="140dp"
+                android:layout_marginTop="10dp">
+
+
+                <androidx.media3.ui.PlayerView
+                    android:id="@+id/vid3"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:use_controller="false"
+                    />
+
+                <ImageView
+                    android:id="@+id/thumb3"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/chords_l1_thumb03" />
+
+
+                <ImageView
+                    android:id="@+id/playButton3"
+                    android:layout_width="68dp"
+                    android:layout_height="68dp"
+                    android:layout_gravity="center"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:background="@android:color/transparent"
+                    android:src="@android:drawable/ic_media_play"
+                    />
+
+            </FrameLayout>
+
+            <View
+                android:layout_width="450dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="15dp"
+                android:background="@color/black" />
+
+            <TextView
+                android:id="@+id/text5"
+                android:layout_width="380sp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/tienneregular"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="380sp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/tienneregular"
+                android:text="• Let's build a C minor triad."
                 android:textColor="@color/black"
                 android:textSize="16sp" />
 
             <ImageView
-                android:id="@+id/l1_img11"
                 android:layout_width="match_parent"
                 android:layout_height="130dp"
-                android:layout_below="@+id/l1_text12"
-                android:background="@drawable/basics_l1_img11"
+                android:background="@drawable/chords_l1_img14"
                 android:layout_marginTop="10dp"
                 />
 
             <View
-                android:id="@+id/line13"
                 android:layout_width="450dp"
                 android:layout_height="1dp"
-                android:layout_below="@+id/l1_img11"
                 android:layout_marginTop="15dp"
                 android:background="@color/black" />
 
             <TextView
-                android:id="@+id/l1_text13"
                 android:layout_width="380sp"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/line13"
                 android:layout_marginStart="10dp"
                 android:layout_marginTop="20dp"
                 android:fontFamily="@font/tienneregular"
-                android:text="• Next, let's discuss the Bass Clef (also called the F Clef)."
+                android:text="• Write the generic third and fifth on the staff."
                 android:textColor="@color/black"
                 android:textSize="16sp" />
 
             <ImageView
-                android:id="@+id/l1_img12"
                 android:layout_width="match_parent"
                 android:layout_height="130dp"
-                android:layout_below="@+id/l1_text13"
-                android:background="@drawable/basics_l1_img12"
+                android:background="@drawable/chords_l1_img15"
                 android:layout_marginTop="10dp"
                 />
 
             <View
-                android:id="@+id/line14"
                 android:layout_width="450dp"
                 android:layout_height="1dp"
-                android:layout_below="@+id/l1_img12"
                 android:layout_marginTop="15dp"
                 android:background="@color/black" />
 
             <TextView
-                android:id="@+id/l1_text14"
                 android:layout_width="380sp"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/line14"
                 android:layout_marginStart="10dp"
                 android:layout_marginTop="20dp"
                 android:fontFamily="@font/tienneregular"
-                android:text="• The staff line in between the two dots of the clef is F."
+                android:text="• Now, switch to the keyboard. Start at the C and count up three half steps for the minor third."
                 android:textColor="@color/black"
                 android:textSize="16sp" />
 
             <ImageView
-                android:id="@+id/l1_img13"
                 android:layout_width="match_parent"
                 android:layout_height="130dp"
-                android:layout_below="@+id/l1_text14"
-                android:background="@drawable/basics_l1_img13"
+                android:background="@drawable/chords_l1_img16"
                 android:layout_marginTop="10dp"
                 />
 
             <View
-                android:id="@+id/line15"
                 android:layout_width="450dp"
                 android:layout_height="1dp"
-                android:layout_below="@+id/l1_img13"
                 android:layout_marginTop="15dp"
                 android:background="@color/black" />
 
             <TextView
-                android:id="@+id/l1_text15"
                 android:layout_width="380sp"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/line15"
                 android:layout_marginStart="10dp"
                 android:layout_marginTop="20dp"
                 android:fontFamily="@font/tienneregular"
-                android:text="• We can now fill the rest of the staff with notes."
+                android:text="• Go back to the root and count up seven half steps for the perfect fifth."
                 android:textColor="@color/black"
                 android:textSize="16sp" />
 
             <ImageView
-                android:id="@+id/l1_img14"
                 android:layout_width="match_parent"
                 android:layout_height="130dp"
-                android:layout_below="@+id/l1_text15"
-                android:background="@drawable/basics_l1_img14"
+                android:background="@drawable/chords_l1_img17"
                 android:layout_marginTop="10dp"
                 />
 
             <View
-                android:id="@+id/line16"
                 android:layout_width="450dp"
                 android:layout_height="1dp"
-                android:layout_below="@+id/l1_img14"
                 android:layout_marginTop="15dp"
                 android:background="@color/black" />
 
             <TextView
-                android:id="@+id/l1_text16"
                 android:layout_width="380sp"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/line16"
                 android:layout_marginStart="10dp"
                 android:layout_marginTop="20dp"
                 android:fontFamily="@font/tienneregular"
-                android:text="• Finally, we will discuss the Grand Staff, a theoretical staff consisting of eleven lines."
+                android:text="• Finally, write any needed accidentals."
                 android:textColor="@color/black"
                 android:textSize="16sp" />
 
             <ImageView
-                android:id="@+id/l1_img15"
                 android:layout_width="match_parent"
                 android:layout_height="130dp"
-                android:layout_below="@+id/l1_text16"
-                android:background="@drawable/basics_l1_img15"
+                android:background="@drawable/chords_l1_img18"
                 android:layout_marginTop="10dp"
                 />
 
             <View
-                android:id="@+id/line17"
                 android:layout_width="450dp"
                 android:layout_height="1dp"
-                android:layout_below="@+id/l1_img15"
                 android:layout_marginTop="15dp"
                 android:background="@color/black" />
 
             <TextView
-                android:id="@+id/l1_text17"
                 android:layout_width="380sp"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/line17"
                 android:layout_marginStart="10dp"
                 android:layout_marginTop="20dp"
                 android:fontFamily="@font/tienneregular"
-                android:text="• Watch what happens when we eliminate the middle line — we end up with two regular staffs."
+                android:text="• A C minor triad is C—E♭—G."
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <FrameLayout
+                android:id="@+id/frame_vid4"
+                android:layout_width="match_parent"
+                android:layout_height="140dp"
+                android:layout_marginTop="10dp">
+
+
+                <androidx.media3.ui.PlayerView
+                    android:id="@+id/vid4"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:use_controller="false"
+                    />
+
+                <ImageView
+                    android:id="@+id/thumb4"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/chords_l1_thumb04" />
+
+
+                <ImageView
+                    android:id="@+id/playButton4"
+                    android:layout_width="68dp"
+                    android:layout_height="68dp"
+                    android:layout_gravity="center"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:background="@android:color/transparent"
+                    android:src="@android:drawable/ic_media_play"
+                    />
+            </FrameLayout>
+
+            <View
+                android:layout_width="450dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="15dp"
+                android:background="@color/black" />
+
+            <TextView
+                android:layout_width="380sp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/tienneregular"
+                android:text="• Let's build an E♭ minor triad."
                 android:textColor="@color/black"
                 android:textSize="16sp" />
 
             <ImageView
-                android:id="@+id/l1_img16"
                 android:layout_width="match_parent"
                 android:layout_height="130dp"
-                android:layout_below="@+id/l1_text17"
-                android:background="@drawable/basics_l1_img16"
+                android:background="@drawable/chords_l1_img19"
                 android:layout_marginTop="10dp"
                 />
 
             <View
-                android:id="@+id/line18"
                 android:layout_width="450dp"
                 android:layout_height="1dp"
-                android:layout_below="@+id/l1_img16"
                 android:layout_marginTop="15dp"
                 android:background="@color/black" />
 
             <TextView
-                android:id="@+id/l1_text18"
                 android:layout_width="380sp"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/line18"
                 android:layout_marginStart="10dp"
                 android:layout_marginTop="20dp"
                 android:fontFamily="@font/tienneregular"
-                android:text="• By adding a Treble Clef to the top staff and a Bass Clef to the bottom staff, we can see the relationship between the two staffs."
+                android:text="• Write the generic third and fifth on the staff."
                 android:textColor="@color/black"
                 android:textSize="16sp" />
 
             <ImageView
-                android:id="@+id/l1_img17"
                 android:layout_width="match_parent"
                 android:layout_height="130dp"
-                android:layout_below="@+id/l1_text18"
-                android:background="@drawable/basics_l1_img17"
+                android:background="@drawable/chords_l1_img20"
                 android:layout_marginTop="10dp"
                 />
 
             <View
-                android:id="@+id/line19"
                 android:layout_width="450dp"
                 android:layout_height="1dp"
-                android:layout_below="@+id/l1_img17"
                 android:layout_marginTop="15dp"
                 android:background="@color/black" />
 
             <TextView
-                android:id="@+id/l1_text19"
                 android:layout_width="380sp"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/line19"
                 android:layout_marginStart="10dp"
                 android:layout_marginTop="20dp"
                 android:fontFamily="@font/tienneregular"
-                android:text="•  Notice how the two clefs are joined by the C (shown in red). This C is commonly called middle C since it corresponds to the middle staff line on the Grand Staff."
+                android:text="• Next, count the minor third (3 half steps) and perfect fifth (7 half steps)."
                 android:textColor="@color/black"
                 android:textSize="16sp" />
 
             <ImageView
-                android:id="@+id/l1_img18"
                 android:layout_width="match_parent"
                 android:layout_height="130dp"
-                android:layout_below="@+id/l1_text19"
-                android:background="@drawable/basics_l1_img18"
+                android:background="@drawable/chords_l1_img21"
                 android:layout_marginTop="10dp"
                 />
 
-        </RelativeLayout>
+            <View
+                android:layout_width="450dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="15dp"
+                android:background="@color/black" />
+
+            <TextView
+                android:layout_width="380sp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/tienneregular"
+                android:text="• Finally, write any needed accidentals."
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:background="@drawable/chords_l1_img22"
+                android:layout_marginTop="10dp"
+                />
+
+            <View
+                android:layout_width="450dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="15dp"
+                android:background="@color/black" />
+
+            <TextView
+                android:layout_width="380sp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/tienneregular"
+                android:text="• An E♭ minor triad is E♭—G♭—B♭."
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <FrameLayout
+                android:id="@+id/frame_vid5"
+                android:layout_width="match_parent"
+                android:layout_height="140dp"
+                android:layout_marginTop="10dp">
+
+
+                <androidx.media3.ui.PlayerView
+                    android:id="@+id/vid5"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:use_controller="false"
+                    />
+
+                <ImageView
+                    android:id="@+id/thumb5"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/chords_l1_thumb05" />
+
+
+                <ImageView
+                    android:id="@+id/playButton5"
+                    android:layout_width="68dp"
+                    android:layout_height="68dp"
+                    android:layout_gravity="center"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:background="@android:color/transparent"
+                    android:src="@android:drawable/ic_media_play"
+                    />
+            </FrameLayout>
+
+            <View
+                android:layout_width="450dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="15dp"
+                android:background="@color/black" />
+
+            <TextView
+                android:layout_width="380sp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/tienneregular"
+                android:text="• Let's build a B minor triad."
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:background="@drawable/chords_l1_img23"
+                android:layout_marginTop="10dp"
+                />
+
+            <View
+                android:layout_width="450dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="15dp"
+                android:background="@color/black" />
+
+            <TextView
+                android:layout_width="380sp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/tienneregular"
+                android:text="• Write the generic third and fifth on the staff."
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:background="@drawable/chords_l1_img24"
+                android:layout_marginTop="10dp"
+                />
+
+            <View
+                android:layout_width="450dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="15dp"
+                android:background="@color/black" />
+
+            <TextView
+                android:layout_width="380sp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/tienneregular"
+                android:text="• Next, count the minor third (3 half steps) and perfect fifth (7 half steps)."
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:background="@drawable/chords_l1_img25"
+                android:layout_marginTop="10dp"
+                />
+
+            <View
+                android:layout_width="450dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="15dp"
+                android:background="@color/black" />
+
+            <TextView
+                android:layout_width="380sp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/tienneregular"
+                android:text="• Finally, write any needed accidentals."
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:background="@drawable/chords_l1_img26"
+                android:layout_marginTop="10dp"
+                />
+
+            <View
+                android:layout_width="450dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="15dp"
+                android:background="@color/black" />
+
+            <TextView
+                android:layout_width="380sp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/tienneregular"
+                android:text="• A B minor triad is B—D—F♯."
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <FrameLayout
+                android:id="@+id/frame_vid6"
+                android:layout_width="match_parent"
+                android:layout_height="140dp"
+                android:layout_marginTop="10dp">
+
+
+                <androidx.media3.ui.PlayerView
+                    android:id="@+id/vid6"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:use_controller="false"
+                    />
+
+                <ImageView
+                    android:id="@+id/thumb6"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/chords_l1_thumb06" />
+
+
+                <ImageView
+                    android:id="@+id/playButton6"
+                    android:layout_width="68dp"
+                    android:layout_height="68dp"
+                    android:layout_gravity="center"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:background="@android:color/transparent"
+                    android:src="@android:drawable/ic_media_play"
+                    />
+            </FrameLayout>
+
+            <View
+                android:layout_width="450dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="15dp"
+                android:background="@color/black" />
+
+            <TextView
+                android:id="@+id/text6"
+                android:layout_width="380sp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/tienneregular"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="380sp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/tienneregular"
+                android:text="• Let's build a C augmented triad."
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:background="@drawable/chords_l1_img27"
+                android:layout_marginTop="10dp"
+                />
+
+            <View
+                android:layout_width="450dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="15dp"
+                android:background="@color/black" />
+
+            <TextView
+                android:layout_width="380sp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/tienneregular"
+                android:text="• Write the generic third and fifth on the staff."
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:background="@drawable/chords_l1_img28"
+                android:layout_marginTop="10dp"
+                />
+
+            <View
+                android:layout_width="450dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="15dp"
+                android:background="@color/black" />
+
+            <TextView
+                android:layout_width="380sp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/tienneregular"
+                android:text="• Now, switch to the keyboard. Start at the C and count up four half steps for the major third."
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:background="@drawable/chords_l1_img29"
+                android:layout_marginTop="10dp"
+                />
+
+            <View
+                android:layout_width="450dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="15dp"
+                android:background="@color/black" />
+
+            <TextView
+                android:layout_width="380sp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/tienneregular"
+                android:text="• Go back to the root and count up eight half steps for the augmented fifth."
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:background="@drawable/chords_l1_img30"
+                android:layout_marginTop="10dp"
+                />
+
+            <View
+                android:layout_width="450dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="15dp"
+                android:background="@color/black" />
+
+            <TextView
+                android:layout_width="380sp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/tienneregular"
+                android:text="• Finally, write any needed accidentals."
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:background="@drawable/chords_l1_img31"
+                android:layout_marginTop="10dp"
+                />
+
+            <View
+                android:layout_width="450dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="15dp"
+                android:background="@color/black" />
+
+            <TextView
+                android:layout_width="380sp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/tienneregular"
+                android:text="• A C augmented triad is C—E—G♯."
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <FrameLayout
+                android:id="@+id/frame_vid7"
+                android:layout_width="match_parent"
+                android:layout_height="140dp"
+                android:layout_marginTop="10dp">
+
+
+                <androidx.media3.ui.PlayerView
+                    android:id="@+id/vid7"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:use_controller="false"
+                    />
+
+                <ImageView
+                    android:id="@+id/thumb7"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/chords_l1_thumb07" />
+
+
+                <ImageView
+                    android:id="@+id/playButton7"
+                    android:layout_width="68dp"
+                    android:layout_height="68dp"
+                    android:layout_gravity="center"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:background="@android:color/transparent"
+                    android:src="@android:drawable/ic_media_play"
+                    />
+            </FrameLayout>
+
+            <View
+                android:layout_width="450dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="15dp"
+                android:background="@color/black" />
+
+            <TextView
+                android:layout_width="380sp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/tienneregular"
+                android:text="• Let's build an E♭ augmented triad."
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:background="@drawable/chords_l1_img32"
+                android:layout_marginTop="10dp"
+                />
+
+            <View
+                android:layout_width="450dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="15dp"
+                android:background="@color/black" />
+
+            <TextView
+                android:layout_width="380sp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/tienneregular"
+                android:text="• Write the generic third and fifth on the staff."
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:background="@drawable/chords_l1_img33"
+                android:layout_marginTop="10dp"
+                />
+
+            <View
+                android:layout_width="450dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="15dp"
+                android:background="@color/black" />
+
+            <TextView
+                android:layout_width="380sp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/tienneregular"
+                android:text="• Next, count the major third (4 half steps) and augmented fifth (8 half steps)."
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:background="@drawable/chords_l1_img34"
+                android:layout_marginTop="10dp"
+                />
+
+            <View
+                android:layout_width="450dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="15dp"
+                android:background="@color/black" />
+
+            <TextView
+                android:layout_width="380sp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/tienneregular"
+                android:text="• Finally, write any needed accidentals. In this example, no additional accidentals are needed."
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:background="@drawable/chords_l1_img34"
+                android:layout_marginTop="10dp"
+                />
+
+            <View
+                android:layout_width="450dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="15dp"
+                android:background="@color/black" />
+
+            <TextView
+                android:layout_width="380sp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/tienneregular"
+                android:text="• An E♭ augmented triad is E♭—G—B."
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <FrameLayout
+                android:id="@+id/frame_vid8"
+                android:layout_width="match_parent"
+                android:layout_height="140dp"
+                android:layout_marginTop="10dp">
+
+
+                <androidx.media3.ui.PlayerView
+                    android:id="@+id/vid8"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:use_controller="false"
+                    />
+
+                <ImageView
+                    android:id="@+id/thumb8"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/chords_l1_thumb08" />
+
+
+                <ImageView
+                    android:id="@+id/playButton8"
+                    android:layout_width="68dp"
+                    android:layout_height="68dp"
+                    android:layout_gravity="center"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:background="@android:color/transparent"
+                    android:src="@android:drawable/ic_media_play"
+                    />
+            </FrameLayout>
+
+            <View
+                android:layout_width="450dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="15dp"
+                android:background="@color/black" />
+
+            <TextView
+                android:layout_width="380sp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/tienneregular"
+                android:text="• Let's build a B augmented triad."
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:background="@drawable/chords_l1_img35"
+                android:layout_marginTop="10dp"
+                />
+
+            <View
+                android:layout_width="450dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="15dp"
+                android:background="@color/black" />
+
+            <TextView
+                android:layout_width="380sp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/tienneregular"
+                android:text="• Write the generic third and fifth on the staff."
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:background="@drawable/chords_l1_img36"
+                android:layout_marginTop="10dp"
+                />
+
+            <View
+                android:layout_width="450dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="15dp"
+                android:background="@color/black" />
+
+            <TextView
+                android:layout_width="380sp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/tienneregular"
+                android:text="• Next, count the major third (4 half steps) and augmented fifth (8 half steps)."
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:background="@drawable/chords_l1_img37"
+                android:layout_marginTop="10dp"
+                />
+
+            <View
+                android:layout_width="450dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="15dp"
+                android:background="@color/black" />
+
+            <TextView
+                android:layout_width="380sp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/tienneregular"
+                android:text="• Finally, write any needed accidentals."
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:background="@drawable/chords_l1_img38"
+                android:layout_marginTop="10dp"
+                />
+
+            <View
+                android:layout_width="450dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="15dp"
+                android:background="@color/black" />
+
+            <TextView
+                android:layout_width="380sp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/tienneregular"
+                android:text="• A B augmented triad is B—D♯—F×."
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <FrameLayout
+                android:id="@+id/frame_vid9"
+                android:layout_width="match_parent"
+                android:layout_height="140dp"
+                android:layout_marginTop="10dp">
+
+
+                <androidx.media3.ui.PlayerView
+                    android:id="@+id/vid9"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:use_controller="false"
+                    />
+
+                <ImageView
+                    android:id="@+id/thumb9"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/chords_l1_thumb09" />
+
+
+                <ImageView
+                    android:id="@+id/playButton9"
+                    android:layout_width="68dp"
+                    android:layout_height="68dp"
+                    android:layout_gravity="center"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:background="@android:color/transparent"
+                    android:src="@android:drawable/ic_media_play"
+                    />
+            </FrameLayout>
+
+            <View
+                android:layout_width="450dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="15dp"
+                android:background="@color/black" />
+
+            <TextView
+                android:id="@+id/text7"
+                android:layout_width="380sp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/tienneregular"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="380sp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/tienneregular"
+                android:text="• Let's build a C diminished triad."
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:background="@drawable/chords_l1_img39"
+                android:layout_marginTop="10dp"
+                />
+
+            <View
+                android:layout_width="450dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="15dp"
+                android:background="@color/black" />
+
+            <TextView
+                android:layout_width="380sp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/tienneregular"
+                android:text="• Write the generic third and fifth on the staff."
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:background="@drawable/chords_l1_img40"
+                android:layout_marginTop="10dp"
+                />
+
+            <View
+                android:layout_width="450dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="15dp"
+                android:background="@color/black" />
+
+            <TextView
+                android:layout_width="380sp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/tienneregular"
+                android:text="• Now, switch to the keyboard. Start at the C and count up three half steps for the minor third."
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:background="@drawable/chords_l1_img41"
+                android:layout_marginTop="10dp"
+                />
+
+            <View
+                android:layout_width="450dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="15dp"
+                android:background="@color/black" />
+
+            <TextView
+                android:layout_width="380sp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/tienneregular"
+                android:text="• Go back to the root and count up six half steps for the diminished fifth."
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:background="@drawable/chords_l1_img42"
+                android:layout_marginTop="10dp"
+                />
+
+            <View
+                android:layout_width="450dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="15dp"
+                android:background="@color/black" />
+            <TextView
+                android:layout_width="380sp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/tienneregular"
+                android:text="• Finally, write any needed accidentals."
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:background="@drawable/chords_l1_img43"
+                android:layout_marginTop="10dp"
+                />
+
+            <View
+                android:layout_width="450dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="15dp"
+                android:background="@color/black" />
+
+            <TextView
+                android:layout_width="380sp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/tienneregular"
+                android:text="• A C diminished triad is C—E♭—G♭."
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <FrameLayout
+                android:id="@+id/frame_vid10"
+                android:layout_width="match_parent"
+                android:layout_height="140dp"
+                android:layout_marginTop="10dp">
+
+
+                <androidx.media3.ui.PlayerView
+                    android:id="@+id/vid10"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:use_controller="false"
+                    />
+
+                <ImageView
+                    android:id="@+id/thumb10"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/chords_l1_thumb10" />
+
+
+                <ImageView
+                    android:id="@+id/playButton10"
+                    android:layout_width="68dp"
+                    android:layout_height="68dp"
+                    android:layout_gravity="center"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:background="@android:color/transparent"
+                    android:src="@android:drawable/ic_media_play"
+                    />
+            </FrameLayout>
+
+            <View
+                android:layout_width="450dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="15dp"
+                android:background="@color/black" />
+
+            <TextView
+                android:layout_width="380sp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/tienneregular"
+                android:text="• Let's build an E♭ diminished triad."
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:background="@drawable/chords_l1_img44"
+                android:layout_marginTop="10dp"
+                />
+
+            <View
+                android:layout_width="450dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="15dp"
+                android:background="@color/black" />
+
+            <TextView
+                android:layout_width="380sp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/tienneregular"
+                android:text="• Write the generic third and fifth on the staff."
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:background="@drawable/chords_l1_img45"
+                android:layout_marginTop="10dp"
+                />
+
+            <View
+                android:layout_width="450dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="15dp"
+                android:background="@color/black" />
+
+            <TextView
+                android:layout_width="380sp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/tienneregular"
+                android:text="• Next, count the minor third (3 half steps) and diminished fifth (6 half steps)."
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:background="@drawable/chords_l1_img46"
+                android:layout_marginTop="10dp"
+                />
+
+            <View
+                android:layout_width="450dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="15dp"
+                android:background="@color/black" />
+
+            <TextView
+                android:layout_width="380sp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/tienneregular"
+                android:text="• Finally, write any needed accidentals."
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:background="@drawable/chords_l1_img47"
+                android:layout_marginTop="10dp"
+                />
+
+            <View
+                android:layout_width="450dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="15dp"
+                android:background="@color/black" />
+
+            <TextView
+                android:layout_width="380sp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/tienneregular"
+                android:text="• An E♭ diminished triad is E♭—G♭—B♭♭."
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <FrameLayout
+                android:id="@+id/frame_vid11"
+                android:layout_width="match_parent"
+                android:layout_height="140dp"
+                android:layout_marginTop="10dp">
+
+
+                <androidx.media3.ui.PlayerView
+                    android:id="@+id/vid11"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:use_controller="false"
+                    />
+
+                <ImageView
+                    android:id="@+id/thumb11"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/chords_l1_thumb11" />
+
+
+                <ImageView
+                    android:id="@+id/playButton11"
+                    android:layout_width="68dp"
+                    android:layout_height="68dp"
+                    android:layout_gravity="center"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:background="@android:color/transparent"
+                    android:src="@android:drawable/ic_media_play"
+                    />
+            </FrameLayout>
+
+            <View
+                android:layout_width="450dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="15dp"
+                android:background="@color/black" />
+
+            <TextView
+                android:layout_width="380sp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/tienneregular"
+                android:text="• Next, let's build a B diminished triad. Write down the root and generic intervals."
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:background="@drawable/chords_l1_img48"
+                android:layout_marginTop="10dp"
+                />
+
+            <View
+                android:layout_width="450dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="15dp"
+                android:background="@color/black" />
+
+            <TextView
+                android:layout_width="380sp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/tienneregular"
+                android:text="• Write the generic third and fifth on the staff."
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:background="@drawable/chords_l1_img49"
+                android:layout_marginTop="10dp"
+                />
+
+            <View
+                android:layout_width="450dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="15dp"
+                android:background="@color/black" />
+
+            <TextView
+                android:layout_width="380sp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/tienneregular"
+                android:text="• Finally, write any needed accidentals. No accidentals are needed."
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:background="@drawable/chords_l1_img50"
+                android:layout_marginTop="10dp"
+                />
+
+
+            <View
+                android:layout_width="450dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="15dp"
+                android:background="@color/black" />
+
+            <TextView
+                android:layout_width="380sp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/tienneregular"
+                android:text="• A B diminished triad is B—D—F."
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <FrameLayout
+                android:id="@+id/frame_vid12"
+                android:layout_width="match_parent"
+                android:layout_height="140dp"
+                android:layout_marginTop="10dp">
+
+
+                <androidx.media3.ui.PlayerView
+                    android:id="@+id/vid12"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:use_controller="false"
+                    />
+
+                <ImageView
+                    android:id="@+id/thumb12"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/chords_l1_thumb12" />
+
+
+                <ImageView
+                    android:id="@+id/playButton12"
+                    android:layout_width="68dp"
+                    android:layout_height="68dp"
+                    android:layout_gravity="center"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:background="@android:color/transparent"
+                    android:src="@android:drawable/ic_media_play"
+                    />
+            </FrameLayout>
+
+
+            <View
+                android:layout_width="450dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="15dp"
+                android:background="@color/black" />
+
+            <TextView
+                android:layout_width="380sp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/tienneregular"
+                android:text="• Use this chart to reference the four types of triads."
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:background="@drawable/chords_l1_img51"
+                android:layout_marginTop="10dp"
+                />
+
+            <View
+                android:layout_width="450dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="15dp"
+                android:background="@color/black" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <Button
+                    android:id="@+id/nextBtn"
+                    android:layout_width="120dp"
+                    android:layout_height="40dp"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/btn_border"
+                    android:fontFamily="@font/irish"
+                    android:text="Next"
+                    android:stateListAnimator="@null"
+                    android:drawableRight="@drawable/baseline_arrow_circle_right_24"
+                    android:paddingEnd="15dp"
+                    android:paddingStart="15dp"/>
+
+            </RelativeLayout>
+
+        </LinearLayout>
     </ScrollView>
 
     <ImageView
