@@ -18,6 +18,7 @@
         />
     <TextView
         android:layout_width="200dp"
+        android:id="@+id/guessText"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="150dp"
@@ -49,50 +50,58 @@
         android:layout_marginTop="25dp"
         android:layout_alignParentEnd="true"
         />
-    <Button
-        android:id="@+id/easyBtn"
-        android:layout_width="250dp"
-        android:layout_height="70dp"
-        android:text="Easy"
-        android:textColor="#36C300"
-
-        android:background="@drawable/easy_btn"
-        android:layout_centerVertical="true"
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/guessText"
         android:layout_centerHorizontal="true"
-        android:fontFamily="@font/irish"
-        android:layout_marginBottom="20dp"
-        android:textSize="25sp"
-        />
+        android:orientation="vertical">
+        <Button
+            android:id="@+id/easyBtn"
+            android:layout_width="250dp"
+            android:layout_height="70dp"
+            android:text="Easy"
+            android:textColor="#36C300"
 
-    <Button
-        android:id="@+id/mediumBtn"
-        android:layout_width="250dp"
-        android:layout_height="70dp"
-        android:text="Medium"
-        android:layout_below="@+id/easyBtn"
-        android:textColor="#FADF04"
+            android:background="@drawable/easy_btn"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:fontFamily="@font/irish"
+            android:layout_marginBottom="20dp"
+            android:textSize="25sp"
+            />
 
-        android:background="@drawable/medium_btn"
-        android:fontFamily="@font/irish"
-        android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="20dp"
-        android:textSize="25sp"
-        />
+        <Button
+            android:id="@+id/mediumBtn"
+            android:layout_width="250dp"
+            android:layout_height="70dp"
+            android:text="Medium"
+            android:layout_below="@+id/easyBtn"
+            android:textColor="#FADF04"
 
-    <Button
-        android:id="@+id/hardBtn"
-        android:layout_width="250dp"
-        android:layout_height="70dp"
-        android:text="Hard"
-        android:layout_below="@id/mediumBtn"
-        android:textColor="#FD3F3F"
+            android:background="@drawable/medium_btn"
+            android:fontFamily="@font/irish"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="20dp"
+            android:textSize="25sp"
+            />
 
-        android:background="@drawable/hard_btn"
-        android:fontFamily="@font/irish"
-        android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true"
-        android:textSize="25sp"
-        />
+        <Button
+            android:id="@+id/hardBtn"
+            android:layout_width="250dp"
+            android:layout_height="70dp"
+            android:text="Hard"
+            android:layout_below="@id/mediumBtn"
+            android:textColor="#FD3F3F"
+
+            android:background="@drawable/hard_btn"
+            android:fontFamily="@font/irish"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:textSize="25sp"
+            />
+    </LinearLayout>
+
 
 </RelativeLayout>

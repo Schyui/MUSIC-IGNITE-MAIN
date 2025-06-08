@@ -2,8 +2,8 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:padding="16dp"
-    android:background="#EDE7F6"
+    android:padding="20dp"
+    android:background="@drawable/btn_border"
     android:orientation="vertical">
 
 
@@ -24,4 +24,32 @@
         android:background="@drawable/btn_border"
         android:textColor="@color/lavender"
         />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_gravity="center"
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/cancelBtn"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="Cancel"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/btn_cancel"
+            android:textColor="#FF1744"
+            android:layout_marginRight="15dp"
+            />
+        <Button
+            android:id="@+id/addBtn"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="Add"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/btn_addl"
+            android:textColor="#55B384"
+            />
+    </LinearLayout>
+
 </LinearLayout>

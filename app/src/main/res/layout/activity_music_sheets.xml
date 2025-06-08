@@ -50,10 +50,8 @@
         android:layout_marginTop="125dp"
         android:layout_marginLeft="15dp"
         android:queryHint="Search here..."
-
         android:iconifiedByDefault="false"
         android:background="@drawable/btn_border"
-        android:elevation="4dp"
         />
     <ListView
         android:id="@+id/listView"
