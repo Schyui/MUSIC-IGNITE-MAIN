@@ -180,7 +180,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                         SharedPreferences.Editor editorz = prefSettings.edit();
                         editorz.putString("usernameSet", usernameFromDB);
                         editorz.putString("nameSet", nameFromDB);
-
+                        editorz.putString("emailSet", emailFromDB);
                         TextView displayName = findViewById(R.id.displayNameHeader);
                         displayName.setText(nameFromDB);
                         editorz.apply();
