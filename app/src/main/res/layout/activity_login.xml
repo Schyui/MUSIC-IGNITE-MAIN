@@ -64,18 +64,33 @@
                 android:drawableLeft="@drawable/baseline_person_pin_24"
                 android:drawablePadding="8dp"
                 android:textColor="@color/black"/>
-            <EditText
+            <FrameLayout
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
-                android:id="@+id/login_password"
-                android:background="@drawable/custom_edit_text"
-                android:layout_marginTop="20dp"
-                android:padding="8dp"
-                android:hint="Password"
-                android:inputType="textPassword"
-                android:drawableLeft="@drawable/baseline_lock_24"
-                android:drawablePadding="8dp"
-                android:textColor="@color/black"/>
+                android:layout_marginTop="20dp">
+
+                <EditText
+                    android:id="@+id/login_password"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="Password"
+                    android:paddingStart="8dp"
+                    android:paddingEnd="48dp"
+                    android:inputType="textPassword"
+                    android:drawableLeft="@drawable/baseline_lock_24"
+                    android:drawablePadding="8dp"
+                    android:textColor="@color/black"
+                    android:background="@drawable/custom_edit_text" />
+
+                <ImageView
+                    android:id="@+id/password_toggle"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_gravity="end|center_vertical"
+                    android:layout_marginEnd="12dp"
+                    android:src="@drawable/hide"
+                    android:contentDescription="Toggle password visibility" />
+            </FrameLayout>
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
