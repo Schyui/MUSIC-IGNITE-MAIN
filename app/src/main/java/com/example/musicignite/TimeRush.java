@@ -2,6 +2,7 @@ package com.example.musicignite;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.os.CountDownTimer;
@@ -34,6 +35,9 @@ public class TimeRush extends AppCompatActivity {
     private CountDownTimer timer;
     private boolean quizStarted = false;
     private boolean timerRunning = false;
+    private static final String PREFS_NAME = "TimeRushPrefs";
+    private static final String HIGH_SCORE_KEY = "highscore";
+
 
     // tunog ng mga quiz and answer, yung may"" yung ans na nandun sa loob ng button yung raw naman ano sha location nung tunog
     private final HashMap<String, Integer> soundMap = new HashMap<String, Integer>() {{
@@ -234,9 +238,23 @@ public class TimeRush extends AppCompatActivity {
                 timerRunning = false;
             }
 
+            int highscore = getHighScore();
+            boolean isNewHighScore = false;
+
+            if (score > highscore) {
+                saveHighScore(score);
+                highscore = score;
+                isNewHighScore = true;
+            }
+
             AlertDialog.Builder builder = new AlertDialog.Builder(TimeRush.this);
+            String message = "Your score: " + score + "/10\n" +
+                    "Highscore: " + highscore + "/10\n\n" +
+                    (isNewHighScore ? "🎉 New Highscore! 🎉\n\n" : "") +
+                    "Do you want to take the quiz again?";
+
             builder.setTitle("Quiz Finished!")
-                    .setMessage("Your score: " + score + "/10\nDo you want to take the quiz again?")
+                    .setMessage(message)
                     .setPositiveButton("Yes", (dialog, which) -> {
                         quizStarted = false;
                         score = 0;
@@ -251,7 +269,17 @@ public class TimeRush extends AppCompatActivity {
                     .show();
         });
     }
+    private int getHighScore() {
+        SharedPreferences prefs = getSharedPreferences(PREFS_NAME, MODE_PRIVATE);
+        return prefs.getInt(HIGH_SCORE_KEY, 0);
+    }
 
+    private void saveHighScore(int newHighScore) {
+        SharedPreferences prefs = getSharedPreferences(PREFS_NAME, MODE_PRIVATE);
+        SharedPreferences.Editor editor = prefs.edit();
+        editor.putInt(HIGH_SCORE_KEY, newHighScore);
+        editor.apply();
+    }
     private void resetButtons() {
         for (Button b : choiceButtons) {
             b.setBackgroundResource(R.drawable.btn_border);
