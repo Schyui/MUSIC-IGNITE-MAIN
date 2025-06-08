@@ -33,31 +33,39 @@
         android:layout_marginTop="130dp"
         android:layout_marginLeft="15dp"
         /> -->
-    <ImageView
-        android:id="@+id/plusIconImg"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:src="@drawable/plusicon"
-        android:layout_marginTop="123dp"
-        android:layout_toRightOf="@+id/search"
-        android:layout_marginLeft="5dp"
-        />
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/lister"
+        android:layout_height="wrap_content">
+        <SearchView
+            android:id="@+id/search"
+            android:layout_width="325dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="125dp"
+            android:layout_marginLeft="15dp"
+            android:queryHint="Search here..."
+            android:iconifiedByDefault="false"
+            android:background="@drawable/btn_border"
+            />
+        <ImageView
+            android:id="@+id/plusIconImg"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/plusicon"
+            android:layout_marginTop="123dp"
+            android:layout_toRightOf="@+id/search"
+            android:layout_marginLeft="5dp"
+            />
 
-    <SearchView
-        android:id="@+id/search"
-        android:layout_width="325dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="125dp"
-        android:layout_marginLeft="15dp"
-        android:queryHint="Search here..."
-        android:iconifiedByDefault="false"
-        android:background="@drawable/btn_border"
-        />
+
+    </LinearLayout>
+
     <ListView
         android:id="@+id/listView"
         android:layout_width="380dp"
         android:layout_height="600dp"
-        android:layout_below="@id/search"
+        android:layout_below="@id/lister"
         android:layout_centerHorizontal="true"
         android:divider="@android:color/darker_gray"
         android:dividerHeight="1dp"
