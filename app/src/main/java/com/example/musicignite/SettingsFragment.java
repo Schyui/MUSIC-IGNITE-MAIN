@@ -18,7 +18,9 @@ import androidx.fragment.app.Fragment;
 import de.hdodenhof.circleimageview.CircleImageView;
 
 public class SettingsFragment extends Fragment {
-
+    public SettingsFragment() {
+        // Required empty public constructor
+    }
     TextView logout, terms, profileSettings, displayName, help;
     CircleImageView profilePic;
 
@@ -28,6 +30,7 @@ public class SettingsFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+
         View view = inflater.inflate(R.layout.fragment_settings, container, false);
 
         logout = view.findViewById(R.id.logoutBtn);

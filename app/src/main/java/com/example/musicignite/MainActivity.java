@@ -52,7 +52,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
-        // Display ang name
+
+
 
 
         // Show username in header
@@ -64,7 +65,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         // Setup Toolbar and Navigation Drawer
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
+        getSupportActionBar().setTitle("");
         drawerLayout = findViewById(R.id.drawer_layout);
         NavigationView navigationView = findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
@@ -157,6 +158,15 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     protected void onStart() {
         super.onStart();
 
+        NavigationView navigationView = findViewById(R.id.nav_view);
+        String frag = getIntent().getStringExtra("open_fragment");
+        if ("my_fragment".equals(frag)) {
+
+            getSupportFragmentManager().beginTransaction()
+                    .replace(R.id.fragment_container, new SettingsFragment())
+                    .commit();
+            navigationView.setCheckedItem(R.id.nav_settings);
+        }
         // Get the saved username from SharedPreferences
         SharedPreferences prefs = getSharedPreferences("MyPrefs", MODE_PRIVATE);
         String userUsername = prefs.getString("username", "");  // key used in login

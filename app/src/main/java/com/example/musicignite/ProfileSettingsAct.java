@@ -101,7 +101,14 @@ public class ProfileSettingsAct extends AppCompatActivity {
             imagePickerLauncher.launch(intent);
         });
 
-        back.setOnClickListener(v -> finish());
+        back.setOnClickListener(v -> {
+
+            Intent intent = new Intent(ProfileSettingsAct.this, MainActivity.class);
+            intent.putExtra("open_fragment", "my_fragment");
+            startActivity(intent);
+
+        });
+
     }
 
     @Override

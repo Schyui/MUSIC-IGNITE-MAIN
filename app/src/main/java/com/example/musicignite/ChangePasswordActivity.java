@@ -2,7 +2,9 @@ package com.example.musicignite;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.graphics.Typeface;
 import android.os.Bundle;
+import android.text.InputType;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
@@ -19,10 +21,11 @@ import java.util.Locale;
 
 public class ChangePasswordActivity extends AppCompatActivity {
 
-    EditText oldPassword, newPassword;
+    EditText oldPassword, newPassword, old_password, new_password;
     Button saveBtn;
-    ImageView backBtnPass;
+    ImageView backBtnPass, passwordToggle, passwordToggleNew;
     SharedPreferences prefs;
+    boolean isPasswordVisible = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,6 +37,32 @@ public class ChangePasswordActivity extends AppCompatActivity {
         newPassword = findViewById(R.id.new_password);
         saveBtn = findViewById(R.id.save_password_btn);
         prefs = getSharedPreferences("MyPrefs", MODE_PRIVATE);
+        passwordToggle = findViewById(R.id.password_toggle);
+        passwordToggleNew= findViewById(R.id.password_toggle_new);
+        passwordToggle.setOnClickListener(view -> {
+            if (isPasswordVisible) {
+                oldPassword.setInputType(InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_VARIATION_PASSWORD);
+                passwordToggle.setImageResource(R.drawable.unhide);
+            } else {
+                oldPassword.setInputType(InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD);
+                passwordToggle.setImageResource(R.drawable.hide);
+            }
+            oldPassword.setTypeface(Typeface.DEFAULT);
+            oldPassword.setSelection(oldPassword.getText().length());
+            isPasswordVisible = !isPasswordVisible;
+        });
+        passwordToggleNew.setOnClickListener(view -> {
+            if (isPasswordVisible) {
+                newPassword.setInputType(InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_VARIATION_PASSWORD);
+                passwordToggleNew.setImageResource(R.drawable.unhide);
+            } else {
+                newPassword.setInputType(InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD);
+                passwordToggleNew.setImageResource(R.drawable.hide);
+            }
+            newPassword.setTypeface(Typeface.DEFAULT);
+            newPassword.setSelection(newPassword.getText().length());
+            isPasswordVisible = !isPasswordVisible;
+        });
     }
 
     @Override
