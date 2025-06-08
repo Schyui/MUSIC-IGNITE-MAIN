@@ -15,7 +15,8 @@ import androidx.core.view.WindowInsetsCompat;
 public class Practice_Activity extends AppCompatActivity {
 
     ImageView backBtn;
-    Button PerfectPitchBtn, GuessTheNoteBtn, BookIconBtn;
+    Button PerfectPitchBtn, GuessTheNoteBtn;
+    ImageView BookIconBtn;
 
     @SuppressLint("MissingInflatedId")
     @Override

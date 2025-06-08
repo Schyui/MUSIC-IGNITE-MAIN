@@ -81,14 +81,14 @@
         android:textSize="25sp"
         />
 
-    <Button
+    <ImageView
         android:id="@+id/BookIconBtn"
-        android:layout_width="250dp"
+        android:layout_width="70dp"
         android:layout_height="70dp"
         android:text="Book Icon"
         android:layout_below="@+id/guessBtn"
         android:textColor="@color/lavender"
-        android:background="@drawable/btn_border"
+        android:src="@drawable/baseline_menu_book_24"
         android:fontFamily="@font/irish"
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true"
