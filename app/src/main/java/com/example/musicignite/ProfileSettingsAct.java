@@ -134,6 +134,12 @@ public class ProfileSettingsAct extends AppCompatActivity {
         String uname = prefs.getString("usernameSet", "defaultUname");
         usernameDisplay.setText("@" + uname);
         EditDisplay.setText(name);
+        ImageView changePassword = findViewById(R.id.ChangePassword);
+        changePassword.setOnClickListener(v -> {
+            Intent intent = new Intent(ProfileSettingsAct.this, ChangePasswordActivity.class);
+            startActivity(intent);
+        });
+
     }
 
     private void updateDisplayNameInFirebase(String newName) {

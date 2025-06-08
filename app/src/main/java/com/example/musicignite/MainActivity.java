@@ -157,13 +157,10 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     protected void onStart() {
         super.onStart();
 
-        TextView displayName = findViewById(R.id.displayNameHeader);
-        SharedPreferences prefsDisplayName = getSharedPreferences("MyPrefs", MODE_PRIVATE);
-        String name = prefsDisplayName.getString("nameSet", "defaultName");
-        displayName.setText(name);
         // Get the saved username from SharedPreferences
         SharedPreferences prefs = getSharedPreferences("MyPrefs", MODE_PRIVATE);
         String userUsername = prefs.getString("username", "");  // key used in login
+
 
         if (!userUsername.isEmpty()) {
             // Reference to user's node in Firebase
@@ -183,6 +180,9 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                         SharedPreferences.Editor editorz = prefSettings.edit();
                         editorz.putString("usernameSet", usernameFromDB);
                         editorz.putString("nameSet", nameFromDB);
+
+                        TextView displayName = findViewById(R.id.displayNameHeader);
+                        displayName.setText(nameFromDB);
                         editorz.apply();
                     }
                 }
@@ -193,5 +193,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 }
             });
         }
+
+
     }
 }
