@@ -3,6 +3,7 @@ package com.example.musicignite;
 import android.content.ContentValues;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.content.res.ColorStateList;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.net.Uri;
@@ -237,9 +238,12 @@ public class MusicSheets_Activity extends AppCompatActivity {
         RatingBar ratingBar = dialogView.findViewById(R.id.ratingBar);
         EditText commentInput = dialogView.findViewById(R.id.commentInput);
         ImageView sendCommentBtn = dialogView.findViewById(R.id.sendCommentBtn);
-        Button downloadBtn = dialogView.findViewById(R.id.downloadButton);
+        ImageView downloadBtn = dialogView.findViewById(R.id.downloadButton);
         ListView commentListView = dialogView.findViewById(R.id.commentListView);
-
+        // mga color
+        ratingBar.setProgressTintList(ColorStateList.valueOf(Color.parseColor("#FFA000"))); // filled star
+        ratingBar.setSecondaryProgressTintList(ColorStateList.valueOf(Color.parseColor("#FFA000"))); // half star
+        ratingBar.setBackgroundTintList(ColorStateList.valueOf(Color.LTGRAY)); // empty star
         titleText.setText(songTitle);
         SharedPreferences prefs = getSharedPreferences("MyPrefs", MODE_PRIVATE);
 
@@ -333,8 +337,12 @@ public class MusicSheets_Activity extends AppCompatActivity {
         AlertDialog dialog = builder.create();
 
         ImageView closeButton = dialogView.findViewById(R.id.btnClose);
+
+        dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
         closeButton.setOnClickListener(v -> dialog.dismiss());
         dialog.show();
+
+        dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
     }
 
     private static final int REQUEST_WRITE_PERMISSION = 100;

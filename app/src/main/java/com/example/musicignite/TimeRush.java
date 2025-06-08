@@ -96,6 +96,7 @@ public class TimeRush extends AppCompatActivity {
         backBtn.setOnClickListener(v -> {
 
             AlertDialog.Builder builder = new AlertDialog.Builder(TimeRush.this);
+
             builder.setTitle("Warning!")
                     .setMessage("You will lose your progress")
                     .setPositiveButton("Yes", (dialog, which) -> {
